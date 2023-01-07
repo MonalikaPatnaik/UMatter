@@ -1,0 +1,12 @@
+{
+  "files": {
+    "main.css": "/BugSmashers/static/css/main.31d6cfe0.css",
+    "main.js": "/BugSmashers/static/js/main.23b3a70c.js",
+    "index.html": "/BugSmashers/index.html",
+    "main.23b3a70c.js.map": "/BugSmashers/static/js/main.23b3a70c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.23b3a70c.js"
+  ]
+}
