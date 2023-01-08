@@ -31,17 +31,17 @@ export const HeroBg = styled.div`
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 100vh;
     overflow: hidden;
-
+   
 `
 
 export const VideoBg = styled.video`
     width: 100%;
-    height: 100%;
+    height: 100vh;
     -0-object-fit: cover;
     object-fit: cover;
-    background: #232a34;
+   
 `
 
 export const HeroContent = styled.div`

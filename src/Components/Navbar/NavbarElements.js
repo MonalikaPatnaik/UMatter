@@ -4,8 +4,13 @@ import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
   background: #000;
+<<<<<<< Updated upstream
   height: 80px;
   margin-top : -80px; 
+=======
+  height: 60px;
+  margin-top : -80px;
+>>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   align-items: center;

@@ -8,7 +8,7 @@ export const homeObjOne = {
     description: 'Come together and assist one another in kicking bad habits that are making your life unpleasant ',
     buttonLabel: 'Get Started',
     imgStart: false ,
-    img: require('../../images/svg-1.svg'),
+    img: require('../../images/about.png'),
     alt: 'Doctor',
     dark: true,
     primary: true,
