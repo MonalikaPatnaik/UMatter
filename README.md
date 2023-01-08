@@ -7,4 +7,3 @@ UMatter is a react based Website intended to engage the public and raise awarene
 > Concentrate on geo-tagged counselling and treatment facilities in hospitals and rehabilitation institutions. 
 > Service provider capacity building initiatives
 
-![image](https://user-images.githubusercontent.com/94298791/211193030-61f1fc81-e993-4d9e-8e1b-c116dfd9297e.png)
