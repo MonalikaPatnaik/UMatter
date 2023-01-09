@@ -1,18 +1,18 @@
 import React from 'react';  
 import './App.css';       
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import SigninPage from './pages/signin';
 
 
 function App() {
   return (
-    <Router>
+    <BrowserRouter>
       <Routes>
-        <Route path="/BugSmashers" component={Home} exact/>
-        <Route path="/signin" component={SigninPage} exact/>
+        <Route exact path="/BugSmashers" element={<Home/>} />
+        <Route exact path="/signin" element={<SigninPage/>}/>
       </Routes>
-    </Router>
+    </BrowserRouter>
   );
 }
 
