@@ -18,7 +18,7 @@ const HeroSection = () => {
         <HeroContent>
             <HeroH1>Make your life more Blissful</HeroH1>
             <HeroP>
-                Sign up now and join this beautiful journey of making memories together
+                Sign up now and give your life a second chance
             </HeroP>
             <HeroBtnWrapper>
                 <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true'>
