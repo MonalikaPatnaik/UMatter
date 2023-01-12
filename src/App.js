@@ -10,7 +10,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/BugSmashers" element={<Home/>} />
+        <Route exact path="/UMatter" element={<Home/>} />
         <Route exact path="/signin" element={<SigninPage/>}/>
       </Routes>
     </BrowserRouter>
