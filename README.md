@@ -1,6 +1,6 @@
 # UMatter
 
-**Check the Website [here](https://i-am-snehachauhan.github.io/UMatter/)**.
+**Check the Website [here](https://https://monalikapatnaik.github.io/UMatter/)**.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
 
