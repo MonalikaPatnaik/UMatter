@@ -1,12 +1,17 @@
 # UMatter
 
+<img src=""></img>
+
 **Check the Website [here](https://https://monalikapatnaik.github.io/UMatter/)**.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
 
 **Tech Stack Used**
 
- Html,Css,Javascript,ReactJs,Bootstrap.
+| 𝗛𝗧𝗠𝗟5  | 𝗖𝗦𝗦3 | 𝗕𝗢𝗢𝗦𝗧𝗥𝗔𝗣 | 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧 | REACTJS
+| ------------- | ------------- | ------------- | ------------- |------------- |
+| <img height="30px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="30px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/react.svg"> |
+ 
  
 **Components of Website**
  
