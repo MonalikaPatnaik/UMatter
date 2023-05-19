@@ -1,6 +1,6 @@
 # UMatter
 
-<img src=""></img>
+<img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
 
 **Check the Website [here](https://https://monalikapatnaik.github.io/UMatter/)**.
 
