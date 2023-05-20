@@ -39,7 +39,7 @@ display:flex;
 flex-direction:column;
 justify-content:flex-start;
 border-radius:10px;
-max-height:340px;
+max-height:380px;
 padding:30px;
 box-shadow: 0 1px 3px gray;
 transition: all 0.2s ease-in-out;
