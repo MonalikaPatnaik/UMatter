@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
  min-height: 692px;
+ height:100vh;
  position: fixed;
  bottom: 0;
  left: 0;
@@ -10,6 +11,7 @@ export const Container = styled.div`
  top: 0;
  z-index: 0;
  overflow: hidden;
+ padding-top:2rem;
  background: linear-gradient(
     108deg,
     rgba(1, 147, 86, 1) 0%,
@@ -18,11 +20,10 @@ export const Container = styled.div`
 `;
 
 export const FormWrap = styled.div`
- height: 100%;
+ height: 80%;
  display: flex;
  flex-direction: column;
  justify-content: center;
- 
  @media screen and (max-width: 400px) {
     height: 80%;
  }
@@ -47,6 +48,7 @@ export const FormContent = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: center;
+ padding-bottom:2rem;
 
  @media screen and (max-width: 480px) {
     padding: 10px;
@@ -56,12 +58,12 @@ export const FormContent = styled.div`
 export const Form = styled.form`
  background: #010101;
  max-width: 400px;
- height: auto;
  width: 100%;
  z-index: 1;
  display: grid;
- margin: 0 auto;
- padding: 80px 32px;
+ margin: auto ;
+ margin-bottom:3rem;
+ padding: 50px 32px;
  border-radius: 4px;
  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
@@ -71,7 +73,7 @@ export const Form = styled.form`
 `;
 
 export const FormH1 = styled.label`
- margin-bottom: 40px;
+ margin-bottom: 30px;
  color: #fff;
  font-size: 20px;
  font-weight: 400;
@@ -79,7 +81,7 @@ export const FormH1 = styled.label`
 `;
 
 export const FormLabel = styled.label`
-margin-bottom: 8px;
+margin-bottom: 4px;
 color: #fff;
 font-size: 14px;
 `;
