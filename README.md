@@ -116,7 +116,8 @@ another person in the queue.
 <td align="center"><a href="https://github.com/i-am-SnehaChauhan">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/28ccb9cb-743e-44bf-b5ae-990c7ac76145" width="100px;" alt=""/><br /><sub><b>Sneha Chauhan</b></sub></a></td>
  
-<td align="center"><a href="https://github.com/muditchoudhary"><img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" alt=""/><br /><sub><b>Mansi</b></sub></a></td>
+<td align="center"><a href="https://github.com/muditchoudhary">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" alt=""/><br /><sub><b>Mansi</b></sub></a></td>
    
  </tr>
 </table>
