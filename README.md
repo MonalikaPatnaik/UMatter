@@ -104,7 +104,7 @@ another person in the queue.
 19. Make sure your solution to any issue is better in terms of performance and other parameters in comparison to the previous work.
 20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right!.
 
-## 😃 Happy Contributing 😃
+
 
 ## 😎 Project Maintainers
 
@@ -121,6 +121,6 @@ another person in the queue.
  </tr>
 </table>
 
-
+## 😃 Happy Contributing 😃
   
  
