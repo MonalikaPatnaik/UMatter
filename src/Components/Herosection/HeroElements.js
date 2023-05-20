@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import {MdArrowForward, MdKeyboardArrowRight} from 'react-icons/md'
+import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md'
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
     justify-content: center;
     align-items: center;
     padding: 0 30px;
-    height: 600px;
+    height: 100vh;
     position: relative;
     z-index: 1;
 
@@ -95,6 +95,10 @@ export const HeroBtnWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+`
+
+export const Button = styled.button`
+    text-decoration: none;
 `
 
 export const ArrowForward = styled(MdArrowForward)`
