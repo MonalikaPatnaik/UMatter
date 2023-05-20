@@ -49,6 +49,10 @@ Following are the steps to guide you:
     ```
     git pull upstream main
     ```
+ * Step 3: Keep your cloned repo sync with upstream main by pushing from origin main (this will also avoid any merge conflicts while committing new changes)
+    ```
+    git push origin main
+    ```   
 * Step 4: Create your feature branch (This is a necessary step, so don't skip it)
     ```
     git checkout -b <feature-name>
