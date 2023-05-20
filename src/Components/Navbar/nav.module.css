@@ -1,0 +1,145 @@
+.navbar {
+    align-items: center;
+    background: rgb(0, 0, 0);
+    box-shadow: 0 5px 20px rgba(198, 198, 198, 0.5);
+    display: flex;
+    flex-direction: row;
+    font-family: sans-serif;
+    padding:2vh 3vw 2vh 3vw;
+    justify-content: center;
+    /* position: sticky; */
+  }
+
+  .name{
+    font-size: 1.5vmax;
+    font-weight: 900;
+    font-family: monospace;
+    color: #ffffff;
+  }
+
+  .pushLeft {
+    margin-left: auto;
+    font-size: 1.2vmax;
+  }
+  
+  /* Menu */
+  .hamburger {
+    color: #cdcdcd;
+    border: #01bf71 2px solid;
+    background: transparent;
+    border: none;
+    margin: 1px;
+    cursor: pointer;
+    display: none;
+    outline: none;
+    font-size: 1.2vmax;
+    height: 2rem;
+    position: relative;
+    width: 30px;
+    z-index: 1000;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hamburger {
+      display: inline-block;
+      font-size: 3vmax;
+    }
+    .name{
+      font-size: 3vmax;
+    }
+  }
+  
+
+  
+  .navMenu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    transition: all 0.25s ease-in;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navMenu {
+      background:rgb(29, 29, 29);
+      height: 100%;
+      z-index: 2;
+      flex-direction: column;
+      justify-content: center;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transform: translateY(-100%);
+      text-align: center;
+    }
+    
+    .menuActive .navMenu {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+  .navLink{
+    color: #cbcbcb;
+    display: block;
+    line-height: 30px;
+    margin: 0px 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+  
+  .navMenu .menuItem a:hover {
+    color: lighten(#444444, 20);
+  }
+  
+  @media screen and (max-width: 768px) {
+    .navMenu .menuItem a {
+      font-size: 20px;
+      margin: 8px;
+    }
+  }
+  
+  .subNav {
+    border: 1px solid #ccc;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 5px 5px;
+    list-style: none;
+    width: 230px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .subNav {
+      position: relative;
+      width: 100%;
+      display: none
+    }
+  }
+
+  .signinbtn:hover{
+    color: #000000;
+    background-color:#01bf71;
+    border: none;
+    padding: 1.1vh max(1vw,10px) 1.1vh max(1vw,10px);
+    margin-left: 1vw;
+    text-decoration: none;
+    font-size: 1.2vmax;
+    border-radius: 15px;
+
+  }
+  .signinbtn:hover:hover{
+    text-decoration: none !important;
+  }
+
+  @media screen and (max-width: 768px) {
+    .signinbtn:hover{
+      font-size: 2vmax;
+      padding: 1.3vh 2.4vw ;
+      margin-top: 10px;
+    }
+  }
