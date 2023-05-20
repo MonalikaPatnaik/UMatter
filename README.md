@@ -34,7 +34,7 @@ Following are the steps to guide you:
 
 * Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
     ```
-    git clone https://github.com/<your_github_username>/Njack_Hack_It_Out-Tur1ng-
+    git clone https://github.com/<your_github_username>/UMatter.git
     ```
 * Step 2: Add an upstream link to the main branch in your cloned repo
     ```
