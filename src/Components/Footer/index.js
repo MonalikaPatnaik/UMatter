@@ -44,7 +44,8 @@ const Footer = () => {
          </FooterLinksContainer>
          <SocialMedia>
             <SocialMediaWrap>
-                <SocialLogo to='/'>
+                {/* bug fix - #issue 36 change incorrect link  */}
+                <SocialLogo to='/UMatter/'>
                     UMatter
                 </SocialLogo>
                 <WebsiteRights>UMatter © {new Date().getFullYear()}
