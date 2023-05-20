@@ -4,17 +4,12 @@ import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
   background: #000;
-<<<<<<< Updated upstream
   height: 80px;
-  margin-top : -80px; 
-=======
-  height: 60px;
-  margin-top : -80px;
->>>>>>> Stashed changes
+  // margin-top : -80px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1rem;
+  font-size: 1.2rem;
   position: sticky;
   top: 0;
   z-index: 10;
@@ -30,8 +25,8 @@ export const NavbarContainer = styled.div`
   height: 80px;
   z-index: 1;
   width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
+  padding: 0 15px;
+  max-width: 900px;
 `
 
 export const NavLogo = styled(LinkR)`
@@ -41,22 +36,22 @@ export const NavLogo = styled(LinkR)`
   font-size: 1.5rem;
   display: flex;
   align-items: center;
-  margin-left: 24px;
+  // margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
 `
 export const MobileIcon = styled.div`
-  display: none;
+display: none;
 
-  @media screen and (max-width: 768px){
-    display: block;
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: #fff;
+@media screen and (max-width: 768px) {
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(-100%, 60%);
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #fff;
   }
 `
 export const NavMenu = styled.ul`
@@ -64,7 +59,7 @@ export const NavMenu = styled.ul`
   align-items: center;
   list-style: none;
   text-align: center;
-  margin-right: -22px; 
+  // margin-right: -22px; 
 
   @media screen and  (max-width: 768px){
     display: none;
@@ -73,14 +68,15 @@ export const NavMenu = styled.ul`
 `
 
 export const Navitem = styled.li`
-  height: 80px;
+  // height: 80px;
 `
 export const NavLinks = styled(LinkS)`
   color: #fff;
   display: flex;
+  margin-top:14px;
   align-items: center;
   text-decoration: none;
-  padding: 0 1rem;
+  padding: 0 1.5rem;
   height: 100%;
   cursor: pointer;
 
@@ -100,7 +96,7 @@ export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: #01bf71;
   white-space: nowrap;
-  padding: 10px 22px;
+  padding: 10px 25px;
   color: #010606;
   font-size: 16px;
   outline: none;
@@ -112,6 +108,6 @@ export const NavBtnLink = styled(LinkR)`
   &:hover {
     transition: all 0.2s ease-in-out;
     background: #fff;
-    color: #010606;
+    color: #000;
   }
 `
