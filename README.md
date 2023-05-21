@@ -117,7 +117,7 @@ another person in the queue.
 
 
 
-## 😎 Project Maintainers 🚀🚀
+## 😎 Project Maintainers
 
 <table>
   <tr>
