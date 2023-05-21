@@ -7,6 +7,8 @@ height:800px;
 
 import styled from "styled-components"
 export const ServicesContainer=styled.div
+
+ main
 padding : 30px;
 padding-bottom : 150px;
 
