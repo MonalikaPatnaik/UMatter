@@ -1,14 +1,13 @@
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { FooterContainer,FooterWrap, FooterLinksContainer,FooterLinksWrapper,FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights, SocialIconsLink, SocialIcons } from './FooterElements';
-
+import { FooterContainer,FooterWrap, FooterLinksContainer,FooterLinksWrapper,FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights } from './FooterElements';
 const Footer = () => {
   return (
     <FooterContainer>
        <FooterWrap>
          <FooterLinksContainer>
             <FooterLinksWrapper>
-                <FooterLinkItems>
+                <FooterLinkItems className='about'>
                     <FooterLinkTitle>About us</FooterLinkTitle>
                        <FooterLink to="/signin">How it Works</FooterLink>
                        <FooterLink to="/signin">Testimonials</FooterLink>
@@ -16,7 +15,7 @@ const Footer = () => {
                        <FooterLink to="/signin">Investors</FooterLink>
                        <FooterLink to="/signin">Terms of Services</FooterLink>
                 </FooterLinkItems>
-                <FooterLinkItems>
+                <FooterLinkItems className='contact'>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
                        <FooterLink to="/">Contact</FooterLink>
                        <FooterLink to="/">Support</FooterLink>
@@ -25,20 +24,21 @@ const Footer = () => {
                 </FooterLinkItems>
             </FooterLinksWrapper>
             <FooterLinksWrapper>
-                <FooterLinkItems>
+                <FooterLinkItems className='videos'>
                     <FooterLinkTitle>Videos</FooterLinkTitle>
                        <FooterLink to="/">Submit Video</FooterLink>
                        <FooterLink to="/">Ambassdors</FooterLink>
                        <FooterLink to="/">Agency</FooterLink>
                        <FooterLink to="/">Influencer</FooterLink>
                 </FooterLinkItems>
-                <FooterLinkItems>
-                    <FooterLinkTitle>Social Media</FooterLinkTitle>
-                       <FooterLink to="/">Instagram</FooterLink>
-                       <FooterLink to="/">Facebook</FooterLink>
-                       <FooterLink to="/">Youtube</FooterLink>
-                       <FooterLink to="/">Twitter</FooterLink>
-                       <FooterLink to="/">LinkedIn</FooterLink>
+
+                <FooterLinkItems className='socials' >
+                        <FooterLink style={{ fontSize: '20px',position:"relative",right:"3rem",top:"12rem" }}><FaInstagram /> </FooterLink> 
+                        <FooterLink><FaFacebook style={{ fontSize: '20px',position:"relative",right:"-0.3rem",top:"10rem" }} /> </FooterLink>
+                        <FooterLink><FaYoutube style={{ fontSize: '20px',position:"relative",right:"-4.3rem",top:"8rem" }} /> </FooterLink>
+                        <FooterLink><FaTwitter style={{ fontSize: '20px',position:"relative",right:"-8.7rem",top:"6.3rem" }} /> </FooterLink>
+                        <FooterLink><FaLinkedin style={{ fontSize: '20px',position:"relative",right:"-12.3rem",top:"4.5rem" }} /> </FooterLink>
+
                 </FooterLinkItems>
             </FooterLinksWrapper>
          </FooterLinksContainer>
@@ -50,28 +50,7 @@ const Footer = () => {
                 </SocialLogo>
                 <WebsiteRights>UMatter © {new Date().getFullYear()}
                 All rights reserved.</WebsiteRights>
-                <SocialIcons>
-                <SocialIconsLink href="/" target="_blank"
-                area-label="Facebook">
-                  <FaFacebook />
-                </SocialIconsLink>
-                <SocialIconsLink href="/" target="_blank"
-                area-label="Instagram">
-                  <FaInstagram />
-                </SocialIconsLink>
-                <SocialIconsLink href="/" target="_blank"
-                area-label="Youtube">
-                  <FaYoutube />
-                </SocialIconsLink>
-                <SocialIconsLink href="/" target="_blank"
-                area-label="Twitter">
-                  <FaTwitter />
-                </SocialIconsLink>
-                <SocialIconsLink href="/" target="_blank"
-                area-label="Linkedin">
-                  <FaLinkedin />
-                </SocialIconsLink>
-                </SocialIcons> 
+                
             </SocialMediaWrap>
          </SocialMedia>
        </FooterWrap>
