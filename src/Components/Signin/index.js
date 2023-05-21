@@ -34,10 +34,10 @@ const SignIn = () => {
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>
               <FormLabel htmlFor="for">Email</FormLabel>
-              <FormInput placeholder="email@example.com" type="email" require />
+              <FormInput type="email" require />
               <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput
-                placeholder="Must have at least 8 characters"
+               
                 type={passwordType}
                 require
               />
