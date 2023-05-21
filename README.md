@@ -3,15 +3,26 @@
 <img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
 
 **Check the Website [here](https://monalikapatnaik.github.io/UMatter/)**.
+Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
+
 
 **Tech Stack Used**
 
 | 𝗛𝗧𝗠𝗟5  | 𝗖𝗦𝗦3 | 𝗕𝗢𝗢𝗦𝗧𝗥𝗔𝗣 | 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧 | REACTJS
 | ------------- | ------------- | ------------- | ------------- |------------- |
 | <img height="30px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="30px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/react.svg"> |
- 
+
+# Website Overview
+
+UMatter is committed to supporting individuals on their journey to overcome bad habits. Our website offers a range of services and resources to help users make positive changes in their lives. With a user-friendly interface and a team of dedicated professionals, UMatter is here to guide and empower you every step of the way.
+
+# Key Features ✨
+
+- Landing Page: When you visit our website, you'll be greeted by an engaging landing page that captures the essence of UMatter. Get inspired to take the first step towards a healthier and happier life.
+
+- About Us: Learn more about UMatter and our mission. Discover how our platform can provide you with the necessary tools and support to break free from bad habits.
  
 **Components of Website**
  
@@ -33,7 +44,7 @@ This page provides the list of services which ae available on our website.
 
 ![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
 
-### 🔖Steps to Contribute
+### 🔖Steps to Contribute ✅
 
 Following are the steps to guide you:
 
@@ -72,14 +83,14 @@ Following are the steps to guide you:
 * Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
 
 
-### 🔨Note:
+### ✨🔨Note:
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
   > - Give a meaningful name to whatever file or folder you are adding. 
 
 
-## 🔑Guidelines
+## 🔑Guidelines✨
 
 1. Welcome to this repository, if you are here as an open-source program participant/contributor.
 2. Participants/contributors have to **comment** on issues they would like to work on, and mentors or the PA will assign you.
@@ -121,6 +132,10 @@ another person in the queue.
    
  </tr>
 </table>
+
+# License 🪪
+
+UMatter is released under the MIT license. See the LICENSE file for more details
 
 ## 😃 Happy Contributing 😃
   

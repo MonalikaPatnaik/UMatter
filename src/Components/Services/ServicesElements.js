@@ -1,19 +1,29 @@
+
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
 export const ServicesContainer= motion(styled.div`
 height:800px;
+
+import styled from "styled-components"
+export const ServicesContainer=styled.div`
+padding : 30px;
+padding-bottom : 150px;
+
 display:flex;
 flex-direction:column;
 justify-content:center;
 align-items: center;
-/* background:white; */
+background:var(--bg-clr); 
 
 @media screen and (max-width:768px){
-    height:1100px;
+    height:1400px;
+}
+@media screen and (max-width:992px){
+    height:1200px;
 }
 @media screen and (max-width:480px){
-    height:1300 px;
+     height:1500 px;
 }
 `);
 
@@ -24,7 +34,7 @@ display: grid;
 grid-template-columns: 1fr 1fr 1fr;
 align-items:center;
 grid-gap:16px;
-padding:0 50px;
+padding:0 30px;
 @media screen and (max-width:1000px){
     grid-template-columns: 1fr 1fr ;
 }
@@ -45,6 +55,7 @@ border-radius:10px;
 max-height:380px;
 padding:30px;
 box-shadow: 0 1px 3px gray;
+color : var(--text-clr);
 transition: all 0.2s ease-in-out;
 &:hover{
     transform:scale(1.02);
@@ -63,14 +74,14 @@ box-shadow:3px 3px 3px gray;
 `
 export const ServicesH1=styled.h1`
 /* font-size:5rem;
-color:black;
 margin-bottom:64px; */
 margin-bottom: 64px;
     font-size: 50px;
     line-height: 1.1;
     font-weight: 600;
     text-transform: uppercase;
-    color: ${({lightText})=> (lightText ? '#f7f8fa' : '#010606')};
+    // color: ${({lightText})=> (lightText ? '#f7f8fa' : '#010606')};
+    color:var(--text-clr);
 
 @media screen and (max-width:480px){
     font-size:2rem;
