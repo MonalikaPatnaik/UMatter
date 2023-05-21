@@ -34,12 +34,11 @@ const Footer = () => {
                        <FooterLink to="/">Influencer</FooterLink>
                 </FooterLinkItems>
                 <FooterLinkItems className='socials' >
-                    <FooterLinkTitle style={{position:"relative",right:"-2.5rem",top:"0.2rem"}} >Social Media</FooterLinkTitle>
-                        <FooterLink style={{ fontSize: '20px',position:"relative",right:"3rem" }}><FaInstagram /> </FooterLink> 
-                        <FooterLink><FaFacebook style={{ fontSize: '20px',position:"relative",right:"-1rem",top:"-1.98rem" }} /> </FooterLink>
-                        <FooterLink><FaYoutube style={{ fontSize: '20px',position:"relative",right:"-5rem",top:"-3.8rem" }} /> </FooterLink>
-                        <FooterLink><FaTwitter style={{ fontSize: '20px',position:"relative",right:"-9rem",top:"-5.5rem" }} /> </FooterLink>
-                        <FooterLink><FaLinkedin style={{ fontSize: '20px',position:"relative",right:"-13rem",top:"-7.2rem" }} /> </FooterLink>
+                        <FooterLink style={{ fontSize: '20px',position:"relative",right:"3rem",top:"12rem" }}><FaInstagram /> </FooterLink> 
+                        <FooterLink><FaFacebook style={{ fontSize: '20px',position:"relative",right:"-0.3rem",top:"10rem" }} /> </FooterLink>
+                        <FooterLink><FaYoutube style={{ fontSize: '20px',position:"relative",right:"-4.3rem",top:"8rem" }} /> </FooterLink>
+                        <FooterLink><FaTwitter style={{ fontSize: '20px',position:"relative",right:"-8.7rem",top:"6.3rem" }} /> </FooterLink>
+                        <FooterLink><FaLinkedin style={{ fontSize: '20px',position:"relative",right:"-12.3rem",top:"4.5rem" }} /> </FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper>
          </FooterLinksContainer>

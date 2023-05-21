@@ -43,19 +43,19 @@ color: #fff;
 &.about{
   position:relative;
   top:2rem;
-  left:-3rem;
+  right:-1rem;
 }
 
 &.contact{
   position:relative;
   top:1.9rem;
-  right:-3rem;
+  right:-11rem;
 }
 
 &.videos{
   position:relative;
   top:1.9rem;
-  right:-6rem;
+  right:-19rem;
 }
 
 &.socials {
