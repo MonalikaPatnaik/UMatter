@@ -3,7 +3,7 @@ import Footer from "../Components/Footer";
 import Navbar from "../Components/Navbar";
 import Blogs from "../Components/Blogs";
 
-const Blog = () => {
+const BlogPage = () => {
   return (
     <>
       <Navbar />
@@ -13,4 +13,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default BlogPage;
