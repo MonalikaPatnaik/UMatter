@@ -4,9 +4,6 @@ import { motion } from "framer-motion";
 
 export const ServicesContainer= motion(styled.div`
 height:800px;
-
-import styled from "styled-components"
-export const ServicesContainer=styled.div`
 padding : 30px;
 padding-bottom : 150px;
 
