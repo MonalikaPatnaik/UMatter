@@ -1,5 +1,6 @@
-import styled from 'styled-components'
-import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md'
+import styled from 'styled-components';
+import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md';
+import { motion } from 'framer-motion';
 
 export const HeroContainer = styled.div`
     background: #0c0c0c;
@@ -44,7 +45,7 @@ export const VideoBg = styled.video`
    
 `
 
-export const HeroContent = styled.div`
+export const HeroContent = motion(styled.div`
     z-index: 3;
     max-width: 1200px;
     position: absolute;
@@ -52,7 +53,7 @@ export const HeroContent = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-`
+`);
 
 export const HeroH1 = styled.h1`
     /* color: #fff;

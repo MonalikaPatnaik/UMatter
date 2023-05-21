@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const AboutContainer = styled.div`
     color : var(--text-clr);
@@ -7,7 +8,7 @@ export const AboutContainer = styled.div`
     @media screen and (max-width: 768px){
         padding: 100px 0;
     }
-`
+`;
 
 export const AboutWrapper = styled.div`
     display: grid;
@@ -41,11 +42,11 @@ export const Column2 = styled.div`
     padding: 0 15px;
     grid-area: col2;
 `;
-export const TextWrapper = styled.div`
+export const TextWrapper = motion(styled.div`
     max-width: 540px;
     padding-top: 0;
     padding-bottom: 60px;
-`
+`);
 export const TopLine = styled.p`
     color: #01bf71;
     font-size: 16px;
@@ -79,10 +80,10 @@ export const BtnWrap = styled.div`
     display: flex;
     justify-content: flex-start;
 `
-export const ImgWrap = styled.div`
+export const ImgWrap = motion(styled.div`
     max-width: 555px;
     height: 100%
-`
+`);
 export  const Img = styled.img`
     width: 100%;
     margin: 0 0 10px 0;

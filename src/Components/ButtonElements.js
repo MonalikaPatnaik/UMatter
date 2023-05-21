@@ -10,7 +10,10 @@ export const Button = styled(Link)`
     font-size: ${({fontBig})=> (fontBig ? '20px' : '16px')};
     outline: none;
     border: none;
-    curson: pointer;
+    // Issue #1: Type in cursor spelling was there earlier
+    // Issue #1 Fixed: Corrected the spelling of cursor.
+    cursor: pointer;
+
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,5 +22,6 @@ export const Button = styled(Link)`
     &:hover {
         transition: all 0.2s ease-in-out;
         background: ${({primary})=> (primary ? '#fff' : '#01BF71')};
+        box-shadow: 0 0 12px #fff;
     }
 `
