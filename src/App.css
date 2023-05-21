@@ -5,3 +5,16 @@
     font-family: 'Encode Sans Expanded',
     sans-serif;
 }
+
+.dark-theme{
+    --bg-clr : black;
+    --text-clr : white;
+    transition: all 0.3s ease-in-out;
+}
+
+.light-theme{
+    --bg-clr : white;
+    --text-clr : black;
+    transition: all 0.3s ease-in-out;
+
+}
