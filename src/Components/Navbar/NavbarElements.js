@@ -4,19 +4,18 @@ import {Link as LinkS} from 'react-scroll'
 
 export const Nav = styled.nav`
   background: #000;
-<<<<<<< Updated upstream
   height: 80px;
-  margin-top : -80px; 
-=======
-  height: 60px;
-  margin-top : -80px;
->>>>>>> Stashed changes
   display: flex;
   justify-content: center;
   align-items: center;
   font-size: 1rem;
-  position: sticky;
+
+  // Making the Navbar fixed at top...
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
+  
   z-index: 10;
 
   @media screen and (max-width: 960px){
@@ -27,11 +26,9 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
-  z-index: 1;
-  width: 100%;
-  padding: 0 24px;
-  max-width: 1100px;
+  align-items: center;
+  height: 100%;
+  width: 80%;
 `
 
 export const NavLogo = styled(LinkR)`
@@ -59,12 +56,12 @@ export const MobileIcon = styled.div`
     color: #fff;
   }
 `
-export const NavMenu = styled.ul`
+export const NavMenu = styled.div`
+  flex: 1;
   display: flex;
   align-items: center;
+  justify-content: center;
   list-style: none;
-  text-align: center;
-  margin-right: -22px; 
 
   @media screen and  (max-width: 768px){
     display: none;
