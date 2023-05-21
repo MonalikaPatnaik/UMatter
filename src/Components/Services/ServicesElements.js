@@ -8,10 +8,13 @@ align-items: center;
 /* background:white; */
 
 @media screen and (max-width:768px){
-    height:1100px;
+    height:1400px;
+}
+@media screen and (max-width:992px){
+    height:1200px;
 }
 @media screen and (max-width:480px){
-    height:1300 px;
+     height:1500 px;
 }
 `
 export const ServicesWrapper=styled.div`
