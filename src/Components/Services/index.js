@@ -5,7 +5,10 @@ import Icon3 from '../../images/image3.png'
 import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
 const Services = () => {
   return (
-    <ServicesContainer id="services">
+    <ServicesContainer id="services"
+        whileInView={{ y: [ 100, 50, 0], opacity: [0, 0, 1]}}
+        transition={{duration: 0.8}}
+    >
         <ServicesH1>Our Services</ServicesH1>
        
         <ServicesWrapper>

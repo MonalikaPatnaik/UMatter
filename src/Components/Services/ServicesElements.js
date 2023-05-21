@@ -1,5 +1,7 @@
-import styled from "styled-components"
-export const ServicesContainer=styled.div`
+import styled from "styled-components";
+import { motion } from "framer-motion";
+
+export const ServicesContainer= motion(styled.div`
 height:800px;
 display:flex;
 flex-direction:column;
@@ -13,7 +15,8 @@ align-items: center;
 @media screen and (max-width:480px){
     height:1300 px;
 }
-`
+`);
+
 export const ServicesWrapper=styled.div`
 max-width:1000px;
 margin: 0 auto;

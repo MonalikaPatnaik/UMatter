@@ -15,7 +15,10 @@ const HeroSection = () => {
             <HeroBg>
                 <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
             </HeroBg>
-            <HeroContent>
+            <HeroContent
+                whileInView={{ y: [ 100, 50, 0], opacity: [0, 0, 1]}}
+                transition={{duration: 0.8}}
+            >
                 <HeroH1>Make your life more Blissful</HeroH1>
                 <HeroP>
                     Sign up now and give your life a second chance
