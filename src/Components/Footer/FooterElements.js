@@ -108,8 +108,8 @@ export const SocialMediaWrap = styled.div`
 export const SocialLogo = styled(Link)`
  color: #fff;
  position:relative;
- top:-16rem;
- left:-6rem;
+ left:-16rem;
+ down:-6rem;
  cursor: pointer;
  // bugfix -- #issue 36 remarks->remove bad looking link underline
  text-decoration: none;
