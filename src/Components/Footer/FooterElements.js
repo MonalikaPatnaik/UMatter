@@ -8,7 +8,7 @@ export const FooterContainer = styled.footer`
 export const FooterWrap = styled.div`
  padding: 48px 24px;
  display: flex;
- flex-direction: column; 
+ flex-direction: column;
  justify-content: center;
  align-items: center;
  max-width: 1100px;
@@ -31,38 +31,14 @@ export const FooterLinksWrapper = styled.div`
 `
 
 export const FooterLinkItems = styled.div`
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-margin: 16px;
-text-align: left;
-width: 160px;
-box-sizing: border-box;
-color: #fff;
-
-&.about{
-  position:relative;
-  top:2rem;
-  left:-3rem;
-}
-
-&.contact{
-  position:relative;
-  top:1.9rem;
-  right:-3rem;
-}
-
-&.videos{
-  position:relative;
-  top:1.9rem;
-  right:-6rem;
-}
-
-&.socials {
-  position: relative;
-  top: 1.9rem;
-  right: -10rem;
-}
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ margin: 16px;
+ text-align: left;
+ width: 160px;
+ box-sizing: border-box;
+ color: #fff;
 
  @media screen and (max-width: 420px) {
     margin: 0;
@@ -71,7 +47,7 @@ color: #fff;
  }
 `
 export const FooterLinkTitle = styled.h1`
- font-size: 18px;
+ font-size: 14px;
  margin-bottom: 16px;
 `
 export const FooterLink = styled(Link)`
@@ -105,20 +81,19 @@ export const SocialMediaWrap = styled.div`
 
 export const SocialLogo = styled(Link)`
  color: #fff;
- position:relative;
- top:-16rem;
- left:-6rem;
+ justify-self: start;
  cursor: pointer;
  // bugfix -- #issue 36 remarks->remove bad looking link underline
  text-decoration: none;
  font-size: 1.5rem;
+ display: flex;
+ align-items: cener;
+ margin-bottom: 16px;
  font-weight: bold;
 `
 export const WebsiteRights = styled.small`
  color: #fff;
  margin-bottom: 16px;
- position:absolute;
- left:40rem;
 `
 
 export const SocialIcons = styled.div`
