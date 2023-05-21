@@ -17,4 +17,15 @@
     --text-clr : black;
     transition: all 0.3s ease-in-out;
 
+=======
+.error-404-img{
+    width: 100%;
+    margin-top:2rem ;
+}
+@media only screen and (max-width: 560px) {
+    .error-404-img{
+        margin-top: 5rem;
+        margin-bottom: 2rem;
+    }
+
 }
