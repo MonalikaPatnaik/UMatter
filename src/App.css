@@ -6,6 +6,18 @@
     sans-serif;
 }
 
+.dark-theme{
+    --bg-clr : black;
+    --text-clr : white;
+    transition: all 0.3s ease-in-out;
+}
+
+.light-theme{
+    --bg-clr : white;
+    --text-clr : black;
+    transition: all 0.3s ease-in-out;
+}
+
 .error-404-img{
     width: 100%;
     margin-top:2rem ;
@@ -15,4 +27,5 @@
         margin-top: 5rem;
         margin-bottom: 2rem;
     }
+
 }

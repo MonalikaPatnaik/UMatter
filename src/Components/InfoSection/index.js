@@ -5,14 +5,14 @@ import { AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, 
 const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2 }) => {
   return (
     <>
-      <AboutContainer lightBg={lightBg} id={id}>
+      <AboutContainer id={id}>
         <AboutWrapper>
           <AboutRow imgStart={imgStart}>
             <Column1>
               <TextWrapper>
                 <TopLine>{topLine}</TopLine>
-                <Heading lightText={lightText}>{headline}</Heading>
-                <SubTitle darkText={darkText}>{description}</SubTitle>
+                <Heading>{headline}</Heading>
+                <SubTitle>{description}</SubTitle>
                 <BtnWrap>
                   <Button to='home'
                     smooth={true}
