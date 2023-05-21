@@ -58,6 +58,12 @@ color: #fff;
   right:-6rem;
 }
 
+&.socials {
+  position: relative;
+  top: 1.9rem;
+  right: -10rem;
+}
+
  @media screen and (max-width: 420px) {
     margin: 0;
     padding: 10px;
@@ -67,10 +73,6 @@ color: #fff;
 export const FooterLinkTitle = styled.h1`
  font-size: 18px;
  margin-bottom: 16px;
- &.socials{
-  position:absolute;
-  right:-8rem;
- }
 `
 export const FooterLink = styled(Link)`
  color: #fff;
@@ -80,13 +82,7 @@ export const FooterLink = styled(Link)`
 
  &:hover {
     color: #01bf71;
-    transition: 0.3s ease-out;
- }
-
- &.socials {
-    position:relative;
-    display: flex;
-    flex-direction: row;
+    transition: 0.3s ease-out
  }
 `
 export const SocialMedia = styled.section`
