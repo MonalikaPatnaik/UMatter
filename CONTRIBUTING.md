@@ -1,27 +1,16 @@
-## Contributing
- 
-We're thrilled that you'd like to contribute to this project. Your help is essential for keeping it great.
+ ### 🧑‍💻 Contributor flow
+There are some steps that you need to follow before making any contribution in this project, the following steps are important to get start.
 
-## Issues and PRs
 
-If you have suggestions for how this project could be improved, or want to report a bug, open an issue! We'd love all and any contributions. If you have questions, too, we'd love to hear them.
+* Step 1: [Fork](https://github.com/MonalikaPatnaik/UMatter/fork) the repo first
 
-We'd also love PRs. If you're thinking of a large PR, we advise opening up an issue first to talk about it, though! Look at the links below if you're not sure how to open a PR.
-
-## Submitting a pull request
-Following are the steps to guide you:
-
-* Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
+* Step 2: Go to your Git terminal and clone it on your machine.
     ```
     git clone https://github.com/<your_github_username>/UMatter.git
     ```
-* Step 2: Add an upstream link to the main branch in your cloned repo
+* Step 3: Add an upstream link to the main branch in your cloned repo
     ```
     git remote add upstream https://github.com/MonalikaPatnaik/UMatter.git
-    ```
-* Step 3. Check the remotes for this repository.
-    ```
-    git remote -v
     ```
 * Step 4: Keep your cloned repo up to date by pulling from upstream (this will also avoid any merge conflicts while committing new changes)
     ```
@@ -37,9 +26,9 @@ Following are the steps to guide you:
      git status
 
      # Add changes to Index
-     git add .
+     git add . or git add <file_name>
      ```
-* Step 7: Commit all the changes (Write commit message as "Small Message")
+* Step 7: Commit your changes (Write commit message as "Small Message")
     ```
     git commit -m "Write a meaningful but small commit message"
     ```
@@ -48,24 +37,3 @@ Following are the steps to guide you:
     git push -u origin <branch-name>
     ```
 * Step 9: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
-
-
-## Best Practices for Pull Requests
-To increase the likelihood of your pull request being accepted, please follow these best practices:
-
-### Follow the coding style:
-Ensure that your changes align with the established coding style used in this project.
-
-### Write and update tests:
- Include tests that cover the functionality you are modifying or adding. If applicable, update existing tests to maintain code coverage.
-
-### Keep changes focused:
- If you have multiple changes that are independent of each other, consider submitting them as separate pull requests. This allows for better review and easier integration.
-
-### Write a good commit message:
- A well-written commit message is important for maintaining clear and concise commit history. Follow the guidelines outlined in this article to create informative commit messages.
-
-### Work in Progress (WIP) pull requests:
- Feel free to submit work-in-progress pull requests to gather early feedback or when you encounter any obstacles. This allows the community to provide assistance and ensures that your contributions align with the project's goals.
-
-We appreciate your contributions and look forward to reviewing your pull requests!
