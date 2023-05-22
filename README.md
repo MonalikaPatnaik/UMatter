@@ -45,42 +45,15 @@ This page provides the list of services which ae available on our website.
 ![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
 
 ### 🔖Steps to Contribute ✅
+ 
+- Contribution is the best way to support and get involved in community!
+ - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-Following are the steps to guide you:
+### If you have any idea or question 🤷
 
-* Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
-    ```
-    git clone https://github.com/<your_github_username>/UMatter.git
-    ```
-* Step 2: Add an upstream link to the main branch in your cloned repo
-    ```
-    git remote add upstream https://github.com/MonalikaPatnaik/UMatter.git
-    ```
-* Step 3: Keep your cloned repo up to date by pulling from upstream (this will also avoid any merge conflicts while committing new changes)
-    ```
-    git pull upstream main
-    ```
-* Step 4: Create your feature branch (This is a necessary step, so don't skip it)
-    ```
-    git checkout -b <feature-name>
-    ```
-* Step 5: Track and stage your changes.
-    ```
-     # Track the changes
-     git status
-
-     # Add changes to Index
-     git add .
-     ```
-* Step 6: Commit all the changes (Write commit message as "Small Message")
-    ```
-    git commit -m "Write a meaningful but small commit message"
-    ```
-* Step 7: Push the changes for review
-    ```
-    git push origin <branch-name>
-    ```
-* Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+- [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
 
 
 ### ✨🔨Note:
