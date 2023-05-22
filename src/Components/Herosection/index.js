@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Video from '../../videos/video1.mp4'
 import { HeroContainer, HeroBg, VideoBg, HeroContent, HeroBtnWrapper, HeroH1, HeroP, ArrowForward, ArrowRight } from './HeroElements'
 import { Button } from '../ButtonElements'
-
+import {Link} from "react-router-dom";
 const HeroSection = () => {
     const [hover, setHover] = useState(false)
 
@@ -24,7 +24,7 @@ const HeroSection = () => {
                     Sign up now and give your life a second chance
                 </HeroP>
                 <HeroBtnWrapper>
-                    <Button to='signup' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' style={{ textDecoration: 'none' }}>
+                    <Button as={Link} to='/signin' onMouseEnter={onHover} onMouseLeave={onHover} primary='true' dark='true' style={{ textDecoration: 'none' }}>
                         Get Started {hover ? <ArrowForward /> : <ArrowRight />}
                     </Button>
                 </HeroBtnWrapper>
