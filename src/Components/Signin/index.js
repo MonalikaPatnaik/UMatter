@@ -27,7 +27,7 @@ const SignIn = () => {
   };
   return (
     <>
-      <Container>
+      <Container style={{position: "absolute"}}>
         <FormWrap>
           <Icons to="/UMatter">UMatter</Icons>
           <FormContent>
@@ -36,33 +36,36 @@ const SignIn = () => {
               <FormLabel htmlFor="for">Email</FormLabel>
               <FormInput placeholder="email@example.com" type="email" require />
               <FormLabel htmlFor="for">Password</FormLabel>
-              <FormInput
-                placeholder="Must have at least 8 characters"
-                type={passwordType}
-                require
-              />
-              <button
-                onClick={handleclick}
-                style={{
-                  width: 'fit-content',
-                  position: 'absolute',
-                  right: '38rem',
-                  bottom: '17rem',
-                  background: 'transparent',
-                  border: 'none',
-                }}>
-                {passwordType === 'password' ? (
-                  <i class="fa-solid fa-eye-slash" id="eye"></i>
-                ) : (
-                  <i class="fa-solid fa-eye" id="eye"></i>
-                )}
-              </button>
+              <div>
+                <FormInput
+                  placeholder="Must have at least 8 characters"
+                  type={passwordType}
+                  require style={{width: "100%"}}
+                />
+                <button
+                  onClick={handleclick}
+                  style={{
+                    width: "fit-content",
+                    position: "relative",
+                    left: "10px",
+                    top: "-75px",
+                    border: "none",
+                    marginRight: "15px",
+                    float: "right",
+                  }}>
+                  {passwordType === 'password' ? (
+                    <i class="fa-solid fa-eye-slash" id="eye"></i>
+                  ) : (
+                    <i class="fa-solid fa-eye" id="eye"></i>
+                  )}
+                </button>
+              </div>
               <FormButton type="submit">Continue</FormButton>
               <Text>Forgot password?</Text>
             </Form>
           </FormContent>
         </FormWrap>
-      </Container>
+      </Container >
     </>
   );
 };
