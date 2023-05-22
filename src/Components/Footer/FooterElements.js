@@ -47,7 +47,8 @@ export const FooterLinkItems = styled.div`
  }
 `
 export const FooterLinkTitle = styled.h1`
- font-size: 14px;
+ font-size: 18px;
+ font-weight: bold;
  margin-bottom: 16px;
 `
 export const FooterLink = styled(Link)`
