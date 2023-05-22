@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -13,16 +13,22 @@ import {
 } from "./NavbarElements";
 import DarkMode from "../DarkMode/DarkMode";
 
-const Navbar = ({ toggle }) => {
+const Navbar = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">UMatter</NavLogo>
-          <MobileIcon onClick={toggle}>
+          <MobileIcon onClick={handleToggle}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
+          <NavMenu isOpen={isOpen}>
             <Navitem>
               <NavLinks to="home">Home</NavLinks>
             </Navitem>
@@ -32,14 +38,13 @@ const Navbar = ({ toggle }) => {
             <Navitem>
               <NavLinks to="services">Services</NavLinks>
             </Navitem>
-            <Navitem>
-              <NavLinks to="signup">Sign Up</NavLinks>
-            </Navitem>
+            
+              <NavBtnLink to="/signin">Login/SignUp</NavBtnLink>
+            
+            <NavBtn>
+              <DarkMode />
+            </NavBtn>
           </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            <DarkMode />
-          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

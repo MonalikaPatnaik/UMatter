@@ -1,6 +1,6 @@
 import React from 'react';  
 import './App.css';       
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import SigninPage from './pages/signin';
 import Error404 from './pages/Error404';
@@ -9,13 +9,13 @@ import Error404 from './pages/Error404';
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
-        <Route exact path="/UMatter" element={<Home/>} />
+        <Route exact path="/" element={<Home/>} />
         <Route exact path="/signin" element={<SigninPage/>}/>
         <Route path='/*' element = {<Error404/>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
