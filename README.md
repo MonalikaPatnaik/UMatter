@@ -45,6 +45,16 @@ This page provides the list of services which ae available on our website.
 ![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
 
 ### 🔖Steps to Contribute ✅
+ 
+- Contribution is the best way to support and get involved in community!
+ - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+### If you have any idea or question 🤷
+
+
+- [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
 
 Following are the steps to guide you:
 
@@ -85,6 +95,7 @@ Following are the steps to guide you:
     git push origin <branch-name>
     ```
 * Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+
 
 
 ### ✨🔨Note:
