@@ -120,7 +120,7 @@ export const WebsiteRights = styled.small`
  color: #fff;
  margin-bottom: 16px;
  position:absolute;
- left:40rem;
+ left:53rem;
 `
 
 export const SocialIcons = styled.div`
