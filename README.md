@@ -2,7 +2,8 @@
 
 <img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
 
-**Check the Website [here](https://monalikapatnaik.github.io/UMatter/)**.
+**Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/UMatter)**.
+
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
