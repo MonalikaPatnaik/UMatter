@@ -48,7 +48,7 @@ const Footer = () => {
                 <SocialLogo to='/UMatter/'>
                     UMatter
                 </SocialLogo>
-                <WebsiteRights>UMatter © {new Date().getFullYear()}
+                <WebsiteRights>UMatter © {new Date().getFullYear()}&nbsp;
                 All rights reserved.</WebsiteRights>
                 
             </SocialMediaWrap>
