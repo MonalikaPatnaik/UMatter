@@ -33,13 +33,14 @@ const Footer = () => {
                 </FooterLinkItems>
 
                 <FooterLinkItems className='socials' >
-                        <FooterLink style={{ fontSize: '20px',position:"relative",right:"3rem",top:"12rem" }}><FaInstagram /> </FooterLink> 
-                        <FooterLink><FaFacebook style={{ fontSize: '20px',position:"relative",right:"-0.3rem",top:"10rem" }} /> </FooterLink>
-                        <FooterLink><FaYoutube style={{ fontSize: '20px',position:"relative",right:"-4.3rem",top:"8rem" }} /> </FooterLink>
-                        <FooterLink><FaTwitter style={{ fontSize: '20px',position:"relative",right:"-8.7rem",top:"6.3rem" }} /> </FooterLink>
-                        <FooterLink><FaLinkedin style={{ fontSize: '20px',position:"relative",right:"-12.3rem",top:"4.5rem" }} /> </FooterLink>
+                        <FooterLink style={{ fontSize: '22px',position:"relative",right:"3rem",top:"12.1rem",left:"-8.2rem" }}><FaInstagram /> </FooterLink> 
+                        <FooterLink><FaFacebook style={{ fontSize: '22px',position:"relative",right:"-0.3rem",top:"9.9rem",left:"-5.9rem" }} /> </FooterLink>
+                        <FooterLink><FaYoutube style={{ fontSize: '22px',position:"relative",right:"-4.3rem",top:"8rem" ,left:"-3.5rem" }} /> </FooterLink>
+                        <FooterLink><FaTwitter style={{ fontSize: '22px',position:"relative",right:"-8.7rem",top:"6rem" ,left:"-1.3rem" }} /> </FooterLink>
+                        <FooterLink><FaLinkedin style={{ fontSize: '22px',position:"relative",right:"-12.3rem",top:"4.1rem" ,left:".8rem" }} /> </FooterLink>
 
                 </FooterLinkItems>
+                
             </FooterLinksWrapper>
          </FooterLinksContainer>
          <SocialMedia>
