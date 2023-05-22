@@ -14,7 +14,8 @@ import {
   Text,
 } from './SigninElements';
 import { useState } from 'react';
-
+import {forgotPassword} from '../Forgot_password/Forgot_password';
+import { NavLink } from 'react-router-dom';
 const SignIn = () => {
   const [passwordType, setPasswordType] = useState('password');
   const handleclick = (e) => {
@@ -58,7 +59,9 @@ const SignIn = () => {
                 )}
               </button>
               <FormButton type="submit">Continue</FormButton>
-              <Text>Forgot password?</Text>
+              <NavLink to="/signin/forgotPassword" style={{
+                textAlign:'center',color:'white',marginTop:'10px',textDecoration:'none'
+              }}>Forgot Password ?</NavLink>
             </Form>
           </FormContent>
         </FormWrap>
