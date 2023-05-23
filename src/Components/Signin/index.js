@@ -12,10 +12,11 @@ import {
   FormLabel,
   FormWrap,
   Text,
-} from "./SigninElements";
-import { useState } from "react";
-import { forgotPassword } from "../Forgot_password/Forgot_password";
-import { NavLink } from "react-router-dom";
+} from './SigninElements';
+import { useState } from 'react';
+import {forgotPassword} from '../Forgot_password/Forgot_password';
+import Navbar from '../Navbar';
+import { NavLink } from 'react-router-dom';
 const SignIn = () => {
   const [passwordType, setPasswordType] = useState("password");
   const handleclick = (e) => {
@@ -29,8 +30,11 @@ const SignIn = () => {
   return (
     <>
       <Container>
+
+    <Navbar/>
+    <br/>
+
         <FormWrap>
-          <Icons to="/UMatter">UMatter</Icons>
           <FormContent>
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>
