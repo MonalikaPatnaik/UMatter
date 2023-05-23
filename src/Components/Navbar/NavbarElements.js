@@ -64,7 +64,7 @@ export const NavMenu = styled.ul`
   list-style: none;
   font-size: 1.2rem;
   font-weight: 600;
-  margin-right: 30%;
+  margin-right: 0;
   @media screen and (max-width: 768px) {
     display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
     position: sticky;
@@ -106,9 +106,10 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-  margin-top: -20px;
+  margin-top: 0px;
+  margin-right:45px;
   @media screen and (max-width: 768px){
-    margin-top: 20px;
+    margin-top: 0px;
   }
 `;
 export const NavBtnLink = styled(LinkR)`
@@ -120,7 +121,7 @@ export const NavBtnLink = styled(LinkR)`
   font-size: 16px;
   outline: none;
   border: none;
-  margin-top: -15px;
+  margin-top: 0px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
