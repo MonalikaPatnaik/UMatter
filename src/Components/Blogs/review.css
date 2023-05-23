@@ -1,0 +1,30 @@
+.main{
+    padding: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main h3{
+    font-size: 2rem;
+}
+iframe{
+    width: 46vw;
+    height: 50vh;
+    margin-bottom: 50px;
+    margin-top: 70px;
+}
+.ele{
+    display: flex;
+    flex-direction: column;
+}
+@media only screen and (max-width: 768px) {
+    iframe{
+        width: 550px;
+        height: 300px;
+
+    }
+    .main{
+        padding: 10rem 5rem;
+    }
+}
