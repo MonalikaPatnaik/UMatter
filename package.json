@@ -1,5 +1,5 @@
 {
-  "homepage": "https://i-am-SnehaChauhan.github.io/UMatter",
+  "homepage": "http://MonalikaPatnaik.github.io/UMatter",
   "name": "website",
   "version": "0.1.0",
   "private": true,
@@ -7,8 +7,11 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+<<<<<<< HEAD
     "firebase": "^9.22.0",
     "gh-pages": "^4.0.0",
+=======
+>>>>>>> a4e0835697ebc48267aa35350764de1d7b1d2885
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
@@ -45,6 +48,10 @@
     ]
   },
   "devDependencies": {
+<<<<<<< HEAD
     "tailwindcss": "^3.3.2"
+=======
+    "gh-pages": "^5.0.0"
+>>>>>>> a4e0835697ebc48267aa35350764de1d7b1d2885
   }
 }
