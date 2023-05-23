@@ -12,14 +12,18 @@ import {
   NavBtnLink,
 } from "./NavbarElements";
 import DarkMode from "../DarkMode/DarkMode";
+import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ toggle }) => {
+  const navigate = useNavigate();
+
+  const handleBlogsClick = () => {
+    navigate("/blogs");
+  };
   const [isOpen, setIsOpen] = useState(false);
-
   const handleToggle = () => {
     setIsOpen(!isOpen);
-  };
-
+  }
   return (
     <>
       <Nav>
@@ -38,13 +42,19 @@ const Navbar = () => {
             <Navitem>
               <NavLinks to="services">Services</NavLinks>
             </Navitem>
-            
-              <NavBtnLink to="/signin">Login/SignUp</NavBtnLink>
-            
-            <NavBtn>
-              <DarkMode />
-            </NavBtn>
+            <Navitem>
+              <NavLinks to="#" onClick={handleBlogsClick}>
+                Blogs{" "}
+              </NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="signup">Sign Up</NavLinks>
+            </Navitem>
           </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <DarkMode />
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
