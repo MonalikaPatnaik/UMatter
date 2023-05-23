@@ -2,7 +2,8 @@
 
 <img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
 
-**Check the Website [here](https://monalikapatnaik.github.io/UMatter/)**.
+**Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/UMatter)**.
+
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
@@ -45,6 +46,16 @@ This page provides the list of services which ae available on our website.
 ![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
 
 ### 🔖Steps to Contribute ✅
+ 
+- Contribution is the best way to support and get involved in community!
+ - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+### If you have any idea or question 🤷
+
+
+- [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
 
 Following are the steps to guide you:
 
@@ -60,6 +71,10 @@ Following are the steps to guide you:
     ```
     git pull upstream main
     ```
+ * Step 3: Keep your cloned repo sync with upstream main by pushing from origin main (this will also avoid any merge conflicts while committing new changes)
+    ```
+    git push origin main
+    ```   
 * Step 4: Create your feature branch (This is a necessary step, so don't skip it)
     ```
     git checkout -b <feature-name>
@@ -81,6 +96,7 @@ Following are the steps to guide you:
     git push origin <branch-name>
     ```
 * Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+
 
 
 ### ✨🔨Note:
@@ -133,10 +149,10 @@ another person in the queue.
  </tr>
 </table>
 
-# License 🪪
+## License 🪪
 
-UMatter is released under the MIT license. See the LICENSE file for more details
+ [MIT license](https://opensource.org/license/mit/)
 
-## 😃 Happy Contributing 😃
-  
- 
+## Thanks to all the Contributors ❤️
+
+<img src="https://contrib.rocks/image?repo=MonalikaPatnaik/UMatter" />
