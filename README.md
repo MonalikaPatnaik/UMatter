@@ -1,8 +1,8 @@
 # UMatter
 
-<img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
+![main](https://github.com/Manice18/UMatter/assets/91601706/5909635d-211e-43c2-9028-c6b698fdc033)
 
-**Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/UMatter)**.
+**Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/)**.
 
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
@@ -13,7 +13,7 @@ UMatter is an one and all platform to help people quitting bad habits by providi
 
 | 𝗛𝗧𝗠𝗟5  | 𝗖𝗦𝗦3 | 𝗕𝗢𝗢𝗦𝗧𝗥𝗔𝗣 | 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧 | REACTJS
 | ------------- | ------------- | ------------- | ------------- |------------- |
-| <img height="30px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="30px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/react.svg"> |
+| <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/react.svg"> |
 
 # Website Overview
 
@@ -24,33 +24,46 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
 - Landing Page: When you visit our website, you'll be greeted by an engaging landing page that captures the essence of UMatter. Get inspired to take the first step towards a healthier and happier life.
 
 - About Us: Learn more about UMatter and our mission. Discover how our platform can provide you with the necessary tools and support to break free from bad habits.
+
+- Services Page: This page provides you with the list of serives that are provided by UMatter such as consulting a doctor, attending a working and connecting with friends.
+
+- Blogs Page: Provides you with useful blog posts on different matters and areas of concern in our life.
+
  
 **Components of Website**
+---
  
- **Landing Page**
+**Landing Page**
  
  This page appears when user clicks on the site and lands on the page.
- 
- ![image](https://user-images.githubusercontent.com/99353300/211297117-6c088613-ba7b-445a-97e8-3ab0f73fa37a.png)
+
+![home](https://github.com/Manice18/UMatter/assets/91601706/e8987905-c0f9-479c-8ce0-345a31e83527) 
 
 **About Us**
  
  This Page gives user the brief about the website and what they can expect.
  
-![image](https://user-images.githubusercontent.com/99353300/211297237-ee408977-5866-463d-b8f2-f06bf959d3c7.png)
+![about](https://github.com/Manice18/UMatter/assets/91601706/dfa34347-0f30-44d7-8019-fa5a0e429b7e)
 
 **Services Page**
 
-This page provides the list of services which ae available on our website.
+This page provides the list of services which aare available on our website.
 
-![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
+![services](https://github.com/Manice18/UMatter/assets/91601706/d481dbfe-83a2-4b79-8106-b7f09f2de97b)
 
-### 🔖Steps to Contribute ✅
+**Blogs Page**
+
+This page contains blogs on useful topics .
+
+![blogs](https://github.com/Manice18/UMatter/assets/91601706/3165666b-a388-4078-99da-81a439718be6)
+
+## 🔖Steps to Contribute ✅
  
 - Contribution is the best way to support and get involved in community!
  - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-### If you have any idea or question 🤷
+## If you have any idea or question 🤷
+
 
 
 - [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
@@ -58,6 +71,7 @@ This page provides the list of services which ae available on our website.
 - [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
 
 Following are the steps to guide you:
+---
 
 * Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
     ```
@@ -99,11 +113,11 @@ Following are the steps to guide you:
 
 
 
-### ✨🔨Note:
+## ✨🔨Note:
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
-  > - Give a meaningful name to whatever file or folder you are adding. 
+> - Give a meaningful name to whatever file or folder you are adding. 
 
 
 ## 🔑Guidelines✨
@@ -137,14 +151,14 @@ another person in the queue.
 
 <table>
   <tr>
-<td align="center"><a href="https://github.com/MonalikaPatnaik">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" alt=""/><br /><sub><b>Monalika Patnaik</b></sub></a></td>
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td>
 
-<td align="center"><a href="https://github.com/i-am-SnehaChauhan">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/28ccb9cb-743e-44bf-b5ae-990c7ac76145" width="100px;" alt=""/><br /><sub><b>Sneha Chauhan</b></sub></a></td>
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/28ccb9cb-743e-44bf-b5ae-990c7ac76145" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
  
-<td align="center"><a href="https://github.com/muditchoudhary">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" alt=""/><br /><sub><b>Mansi</b></sub></a></td>
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td>
    
  </tr>
 </table>
