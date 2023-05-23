@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Container, Icons, FormButton, FormContent, Form, FormH1, FormInput, FormLabel, FormWrap, Text } from './SigninElements';
+import { Container, Icons, FormButton, FormContent, Form, FormH1, FormInput, FormLabel, FormWrap } from './SigninElements';
 import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth'
 import { doc, getDoc, setDoc } from 'firebase/firestore'
 import { db } from '../../Firebase'
@@ -14,8 +14,8 @@ const SignIn = () => {
   `
 
   const navigate = useNavigate()
-  const [logInData, setLogInData] = useState('login')
-  const [logIn, setLogIn] = useState(false)
+  const [setLogInData] = useState('login')
+  const [ setLogIn] = useState(false)
   async function handleAuth() {
     try {
       const auth = getAuth()

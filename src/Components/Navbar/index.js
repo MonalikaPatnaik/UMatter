@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import { FaBars } from 'react-icons/fa';
 import { Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, Navitem, NavLinks, NavBtn, NavBtnLink } from './NavbarElements';
 import { getAuth, onAuthStateChanged } from 'firebase/auth';
-import { Link } from 'react-router-dom';
 
 const Navbar = ({ toggle }) => {
   const auth = getAuth();
