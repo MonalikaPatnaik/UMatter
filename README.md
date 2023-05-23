@@ -149,10 +149,10 @@ another person in the queue.
  </tr>
 </table>
 
-# License 🪪
+## License 🪪
 
-UMatter is released under the MIT license. See the LICENSE file for more details
+ [MIT license](https://opensource.org/license/mit/)
 
-## 😃 Happy Contributing 😃
-  
- 
+## Thanks to all the Contributors ❤️
+
+<img src="https://contrib.rocks/image?repo=MonalikaPatnaik/UMatter" />
