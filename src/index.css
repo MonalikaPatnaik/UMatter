@@ -1,11 +1,10 @@
-@media only screen and (max-width: 1166px){
- 
-  #root{
-    width: 1104px;
-    overflow-x: hidden;
+@media only screen and (max-width: 1166px) {
+  #root {
+    width: 100%;
+    overflow: hidden;
   }
 }
-@media only screen and (max-width: 1230px){
+/* @media only screen and (max-width: 1230px){
 
   #root{
     width: 1212px;
@@ -61,4 +60,4 @@
     width: 830px;
     overflow-x: hidden;
   }
-}
+} */
