@@ -4,6 +4,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './pages';
 import SigninPage from './pages/signin';
 import Error404 from './pages/Error404';
+import BlogPage from "./pages/blogs";
+import Forgot_password from './pages/ForgotPassword';
 import SignupPage from './pages/signup';
 import Profile from './pages/profile';
 // window.$crisp=[];
@@ -14,9 +16,11 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route exact path="/UMatter" element={<Home/>} />
+        <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SigninPage/>}/>
         <Route path='/*' element = {<Error404/>} />
+        <Route path="/blogs" element={<BlogPage />} />
+        <Route exact path="/signin/forgotPassword" element={<Forgot_password/>}/>
         <Route exact path="/signup" element={<SignupPage/>}/>
         <Route exact path="/profile" element={<Profile />}/>
       </Routes>

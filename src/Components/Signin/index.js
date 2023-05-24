@@ -2,7 +2,6 @@
 
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
-
 import {
   Container,
   Icons,
@@ -14,8 +13,17 @@ import {
   FormLabel,
   FormWrap,
   Text,
-} from './SigninElements';
-import { useState } from 'react';
+
+} from "./SigninElements";
+import { useState } from "react";
+import { forgotPassword } from "../Forgot_password/Forgot_password";
+import { NavLink } from "react-router-dom";
+
+// } from './SigninElements';
+// import { useState } from 'react';
+// import {forgotPassword} from '../Forgot_password/Forgot_password';
+import Navbar from '../Navbar';
+// import { NavLink } from 'react-router-dom';
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -24,10 +32,10 @@ const SignIn = () => {
   const [data, setData] = useState({});
   const handleclick = (e) => {
     e.preventDefault();
-    if (passwordType === 'text') {
-      setPasswordType('password');
+    if (passwordType === "text") {
+      setPasswordType("password");
     } else {
-      setPasswordType('text');
+      setPasswordType("text");
     }
   };
 
@@ -58,8 +66,11 @@ const SignIn = () => {
   return (
     <>
       <Container>
+
+        <Navbar />
+        <br />
+
         <FormWrap>
-          <Icons to="/UMatter">UMatter</Icons>
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
               <FormH1>Sign in to your account</FormH1>
@@ -71,6 +82,7 @@ const SignIn = () => {
               <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
+                style={{ width: "100%" }}
                 placeholder="Must have at least 8 characters"
                 type={passwordType}
                 require
@@ -78,12 +90,12 @@ const SignIn = () => {
               <button
                 onClick={handleclick}
                 style={{
-                  width: 'fit-content',
-                  position: 'absolute',
-                  right: '38rem',
-                  bottom: '17rem',
-                  background: 'transparent',
-                  border: 'none',
+                  width: "fit-content",
+                  position: "relative",
+                  left: "90%",
+                  bottom: "65%",
+                  background: "transparent",
+                    border: "none",
                 }}>
                 {passwordType === 'password' ? (
                   <i class="fa-solid fa-eye-slash" id="eye"></i>
@@ -92,7 +104,17 @@ const SignIn = () => {
                 )}
               </button>
               <FormButton type="submit">Continue</FormButton>
-              <Text>Forgot password?</Text>
+              <NavLink
+                to="/signin/forgotPassword"
+                style={{
+                  textAlign: "center",
+                  color: "white",
+                  marginTop: "10px",
+                  textDecoration: "none",
+                }}
+              >
+                Forgot Password ?
+              </NavLink>
             </Form>
           </FormContent>
         </FormWrap>
