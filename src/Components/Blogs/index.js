@@ -13,10 +13,6 @@ import {
 const Blogs = () => {
   return (
     <BlogsContainer id="Blogs">
-      <BlogsH1>
-        Immerse Yourself in a Comprehensive Smoke Alcohol Blog: Uncover the
-        Latest in Smoke Alcohol: Research, Tips, Stories, and More!
-      </BlogsH1>
       <BlogsWrapper>
         <BlogsCard>
           <BlogsIcon src={Icon1} />
