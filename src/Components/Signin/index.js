@@ -18,11 +18,11 @@ import { useState } from "react";
 import { forgotPassword } from "../Forgot_password/Forgot_password";
 import { NavLink } from "react-router-dom";
 
-} from './SigninElements';
-import { useState } from 'react';
-import {forgotPassword} from '../Forgot_password/Forgot_password';
+// } from './SigninElements';
+// import { useState } from 'react';
+// import {forgotPassword} from '../Forgot_password/Forgot_password';
 import Navbar from '../Navbar';
-import { NavLink } from 'react-router-dom';
+// import { NavLink } from 'react-router-dom';
 
 const SignIn = () => {
   const [passwordType, setPasswordType] = useState("password");
@@ -38,8 +38,8 @@ const SignIn = () => {
     <>
       <Container>
 
-    <Navbar/>
-    <br/>
+        <Navbar />
+        <br />
 
         <FormWrap>
           <FormContent>
@@ -67,9 +67,9 @@ const SignIn = () => {
                   }}
                 >
                   {passwordType === "password" ? (
-                    <i class="fa-solid fa-eye-slash" id="eye"></i>
+                    <i className="fa-solid fa-eye-slash" id="eye"></i>
                   ) : (
-                    <i class="fa-solid fa-eye" id="eye"></i>
+                    <i className="fa-solid fa-eye" id="eye"></i>
                   )}
                 </button>
               </div>
