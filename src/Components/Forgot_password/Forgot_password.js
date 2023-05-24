@@ -39,7 +39,7 @@ function Forgot_password() {
             return (
               <input
                 type="text"
-                maxlength="1"
+                maxLength="1"
                 className="input_otp"
                 key={index}
                 value={data}
