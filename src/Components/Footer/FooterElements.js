@@ -121,6 +121,10 @@ export const WebsiteRights = styled.small`
  margin-bottom: 16px;
  position:absolute;
  left:40rem;
+ &:hover {
+  color: #01bf71;
+  transition: 0.3s ease-out
+}
 `
 
 export const SocialIcons = styled.div`
