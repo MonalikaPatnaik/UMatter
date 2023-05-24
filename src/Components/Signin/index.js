@@ -14,10 +14,7 @@ import {
   Text,
 } from "./SigninElements";
 import { useState } from "react";
-
 import { NavLink } from "react-router-dom";
-
-import { forgotPassword } from "../Forgot_password/Forgot_password";
 import Navbar from "../Navbar";
 
 const SignIn = () => {
@@ -41,7 +38,11 @@ const SignIn = () => {
             <Form action="#">
               <FormH1>Sign in to your account</FormH1>
               <FormLabel htmlFor="for">Email</FormLabel>
-              <FormInput placeholder="email@example.com" type="email" require />
+              <FormInput
+                placeholder="email@example.com"
+                type="email"
+                require
+              />
               <FormLabel htmlFor="for">Password</FormLabel>
               <div>
                 <FormInput
@@ -62,9 +63,9 @@ const SignIn = () => {
                   }}
                 >
                   {passwordType === "password" ? (
-                    <i class="fa-solid fa-eye-slash" id="eye"></i>
+                    <i className="fa-solid fa-eye-slash" id="eye"></i>
                   ) : (
-                    <i class="fa-solid fa-eye" id="eye"></i>
+                    <i className="fa-solid fa-eye" id="eye"></i>
                   )}
                 </button>
               </div>
@@ -89,3 +90,4 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
