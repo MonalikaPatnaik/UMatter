@@ -8,6 +8,10 @@ import BlogPage from "./pages/blogs";
 import Forgot_password from './pages/ForgotPassword';
 import SignupPage from './pages/signup';
 import Profile from './pages/profile';
+
+import ContactPage from "./pages/contact";
+
+// import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
 // window.CRISP_WEBSITE_ID="e79efdd2-abee-4a1e-b868-c7929585ebd9";
 
@@ -19,6 +23,8 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SigninPage />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/contact" element={<ContactPage />} />
+
         <Route exact path="/signin/forgotPassword" element={<Forgot_password/>}/>
         <Route path="/*" element={<Error404 />} />
         <Route exact path="/signup" element={<SignupPage/>}/>

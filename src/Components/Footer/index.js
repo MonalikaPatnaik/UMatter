@@ -19,7 +19,7 @@ const Footer = () => {
                 <FooterLinkItems className='contact'>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
                     <FooterLinkTitleHr className='hr' />
-                       <FooterLink to="/">Contact</FooterLink>
+                       <FooterLink to="/contact">Contact</FooterLink>
                        <FooterLink to="/">Support</FooterLink>
                        <FooterLink to="/">Destinations</FooterLink>
                        <FooterLink to="/">Sponsorships</FooterLink>
