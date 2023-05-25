@@ -6,9 +6,10 @@ export const Nav = styled.nav`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   height: 80px;
   margin-top: -80px;
+  background: var(--bg-clr);
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: space-between;
   font-size: 1rem;
   position: sticky;
   top: 0;
@@ -39,11 +40,12 @@ export const NavLogo = styled(LinkR)`
   color: #fff;
   ${"" /* justify-self: flex-start; */}
   cursor: pointer;
-  font-size: 1.5rem;
+  font-size: 2rem;
   display: flex;
   align-items: center;
   ${"" /* margin-left: 24px; */}
   font-weight: bold;
+  z-index: 10;
   text-decoration: none;
 `;
 export const MobileIcon = styled.div`
@@ -64,28 +66,63 @@ export const MobileIcon = styled.div`
     display: flex;
   }
 `;
+// export const NavMenu = styled.ul`
+//   display: flex;
+//   gap: 20px;
+//   ${
+//     "" /* align-items: center;
+//   justify-content: center; */
+//   }
+//   list-style: none;
+//   ${"" /* text-align: center; */}
+//   ${"" /* margin-right: -22px; */}
+//   margin-bottom : 0;
+
+//   @media screen and (max-width: 768px) {
+//     display: none;
+//     color: var(--text-clr);
+//     z-index: 10;
+//     margin-top: -10px;
+//   }
+// `;
+
 export const NavMenu = styled.ul`
   display: flex;
-  gap: 20px;
-  ${
-    "" /* align-items: center;
-  justify-content: center; */
-  }
+  align-items: center;
+  justify-items: center;
+  margin-top: 30px;
   list-style: none;
-  ${"" /* text-align: center; */}
-  ${"" /* margin-right: -22px; */}
-  margin-bottom : 0;
-
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-right: 0;
   @media screen and (max-width: 768px) {
-    display: none;
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    position: sticky;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    position: absolute;
+    margin-left: 0;
+    top: 0px;
+    padding-left: 0px;
+    left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    opacity: 1;
+    z-index: 5;
+    transition: all 0.5s ease;
+    background-color: var(--bg-clr);
   }
 `;
 
 export const Navitem = styled.li`
   ${"" /* height: 80px; */}
+  ${"" /* height: 80px; */}
+  margin-top: -15px;
 `;
 export const NavLinks = styled(LinkS)`
-  color: #fff;
+  color: var(--text-clr);
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -129,6 +166,9 @@ export const NavBtn = styled.nav`
 
   @media screen and (max-width: 768px) {
     display: none;
+    margin-top: 0px;
+    margin-right: 45px;
+    ${"" /* margin-top: 0px; */}
   }
 `;
 export const NavBtnLink = styled(LinkR)`
@@ -136,17 +176,18 @@ export const NavBtnLink = styled(LinkR)`
   background: #01bf71;
   white-space: nowrap;
   padding: 10px 22px;
-  color: #010606;
+  color: white;
   font-size: 16px;
   outline: none;
   border: none;
+  margin-top: 0px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
 
   &:hover {
     transition: all 0.2s ease-in-out;
-    background: #fff;
-    color: #010606;
+    background: var(--text-clr);
+    color: var(--bg-clr);
   }
 `;

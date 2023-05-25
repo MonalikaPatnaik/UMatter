@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import DarkMode from "../DarkMode/DarkMode";
+import { useNavigate } from "react-router-dom";
 import {
   Nav,
   NavbarContainer,
@@ -28,17 +30,34 @@ const Navbar = ({ toggle }) => {
     };
   }, []);
 
+  const navigate = useNavigate();
+
+  const handleBlogsClick = () => {
+    navigate("/blogs");
+  };
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
     <>
       <Nav style={{ background: navbarBg }}>
         <NavbarContainer>
           <NavLogo to="/">UMatter</NavLogo>
-          <MobileIcon onClick={toggle}>
+          <MobileIcon onClick={handleToggle}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
+          <NavMenu isOpen={isOpen}>
             <Navitem>
-              <NavLinks to="home">Home</NavLinks>
+              <NavLinks to="home" onClick={handleHomeClick}>
+                Home
+              </NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="about">About</NavLinks>
@@ -47,11 +66,17 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="services">Services</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="signup">Sign Up</NavLinks>
+              <NavLinks to="#" onClick={handleBlogsClick}>
+                Blogs{" "}
+              </NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavBtnLink to="/signup">Sign Up</NavBtnLink>
             </Navitem>
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <DarkMode />
           </NavBtn>
         </NavbarContainer>
       </Nav>

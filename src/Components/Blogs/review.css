@@ -1,0 +1,30 @@
+.main{
+    padding: 2rem;
+    margin: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* justify-content: center; */
+    width: 100%;
+    
+}
+
+.main h3{
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 5rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+ 
+@media only screen and (max-width: 768px) {
+    iframe{
+        width: 550px;
+        height: 300px;
+
+    }
+    .main{
+        padding: 10rem 5rem;
+    }
+}

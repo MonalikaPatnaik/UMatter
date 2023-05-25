@@ -1,107 +1,145 @@
-import styled from 'styled-components'
-import {Link} from 'react-router-dom'
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
+// Footer container
 export const FooterContainer = styled.footer`
   background-color: #101522;
-`
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  z-index: 99;
+`;
 
+// Footer wrap
 export const FooterWrap = styled.div`
- padding: 48px 24px;
- display: flex;
- flex-direction: column;
- justify-content: center;
- align-items: center;
- max-width: 1100px;
- margin: 0 auto;
-`
-
-export const FooterLinksContainer = styled.div`
- display: flex;
- justify-content: center;
-
- @media screen and (max-width: 820px) {
-    padding-top: 32px;
- }
-`
-export const FooterLinksWrapper = styled.div`
   display: flex;
-  @media screen and(max-width: 820px) {
-    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 1100px;
+  flex-direction: column;
+`;
+
+// Footer links container
+export const FooterLinksContainer = styled.div`
+  width: 100%;
+  display: grid;
+
+  @media (min-width: 320px) {
+    justify-content: center;
   }
-`
 
+  @media (max-width: 786px) {
+    gap: 2rem;
+  }
+
+  @media (min-width: 786px) {
+    grid-template-columns: 1fr 0.5fr;
+  }
+`;
+
+// Footer links wrapper
+export const FooterLinksWrapper = styled.div`
+  @media (max-width: 786px) {
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media (min-width: 786px) {
+    &:nth-child(1) {
+      display: flex;
+      justify-content: space-around;
+    }
+    &:nth-child(2) {
+      width: 100%;
+      display: grid;
+      align-self: inherit;
+      align-content: center;
+      justify-content: center;
+    }
+  }
+`;
+
+// Footer link items
 export const FooterLinkItems = styled.div`
- display: flex;
- flex-direction: column;
- align-items: flex-start;
- margin: 16px;
- text-align: left;
- width: 160px;
- box-sizing: border-box;
- color: #fff;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  color: #fff;
 
- @media screen and (max-width: 420px) {
-    margin: 0;
-    padding: 10px;
-    width: 100%;
- }
-`
+  &.socials {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  @media (min-width: 320px) {
+    align-items: center;
+    &.socials {
+      margin: 1rem;
+    }
+  }
+
+  @media (min-width: 786px) {
+    align-items: flex-start;
+    text-align: left;
+  }
+`;
+
+// Footer link title
 export const FooterLinkTitle = styled.h1`
- font-size: 14px;
+ font-size: 18px;
+ font-weight: bold;
  margin-bottom: 16px;
+`
+export const FooterLinkTitleHr = styled.hr`
+  content: "";
+  border: 2px solid;
+  margin-top: 0;
+  width: 52%;
+  color: #01bf71;
+   
 `
 export const FooterLink = styled(Link)`
- color: #fff;
- text-decoration: none;
- margin-bottom: 0.5rem;
- font-size: 14px;
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  margin-bottom: 0.5rem;
+  font-size: 14px;
 
- &:hover {
+  &:hover {
     color: #01bf71;
-    transition: 0.3s ease-out
- }
-`
-export const SocialMedia = styled.section`
- max-width: 1000px;
- width: 100%;
-`
+    transition: 0.3s ease-out;
+  }
+`;
 
+// Social media
+export const SocialMedia = styled.section``;
+
+// Social media wrap
 export const SocialMediaWrap = styled.div`
- display: flex;
- justify-content: space-between;
- align-items: center;
- max-width: 1100px;
- margin: 40px auto 0 auto;
+  max-width: 1100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
 
- @media screen and (max-width: 820px) {
-    flex-direction: column;
- }
-`
-
+// Social logo
 export const SocialLogo = styled(Link)`
- color: #fff;
- justify-self: start;
- cursor: pointer;
- text-decoraton: none;
- font-size: 1.5rem;
- display: flex;
- align-items: cener;
- margin-bottom: 16px;
- font-weight: bold;
-`
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+`;
+
+// Website rights
 export const WebsiteRights = styled.small`
- color: #fff;
- margin-bottom: 16px;
-`
+  color: #fff;
+`;
 
-export const SocialIcons = styled.div`
- display: flex;
- justify-content: space-between;
- align-items: center;
- width: 250px;
-`
+// Social icons
+export const SocialIcons = styled.div``;
 
-export const SocialIconsLink = styled.a`
- color: #fff;
- font-size; 24px;
-`
+// Social icons link
+export const SocialIconsLink = styled.a``;
