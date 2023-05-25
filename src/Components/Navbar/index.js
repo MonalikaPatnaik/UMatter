@@ -20,9 +20,6 @@ const Navbar = ({ toggle }) => {
   const handleBlogsClick = () => {
     navigate("/blogs");
   };
-  const handleHomeClick = () => {
-    navigate("/");
-  };
 
   return (
     <>
@@ -34,9 +31,7 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu>
             <Navitem>
-              <NavLinks to="home" onClick={handleHomeClick}>
-                Home
-              </NavLinks>
+              <NavLinks to="home">Home</NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="about">About</NavLinks>
