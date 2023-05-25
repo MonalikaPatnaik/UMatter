@@ -5,9 +5,9 @@ import {Link as LinkS} from 'react-scroll'
 export const Nav = styled.nav`
   background: var(--bg-clr);
   height: 80px;
-  margin-top : -80px; 
   display: flex;
   align-items: center;
+  justify-content: space-between;
   font-size: 1rem;
   position: sticky;
   top: 0;
@@ -36,6 +36,7 @@ export const NavLogo = styled(LinkR)`
   align-items: center;
   margin-left: 24px;
   font-weight: bold;
+  z-index:10;
   text-decoration: none;
 `
 export const MobileIcon = styled.div`
@@ -50,23 +51,44 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     color: var(--text-clr);
+    z-index: 10;
+    margin-top: -10px;
   }
-`
+`;
+
 export const NavMenu = styled.ul`
   display: flex;
   align-items: center;
+  justify-items:center;
+  margin-top:30px;
   list-style: none;
-  margin-top : 15px;
   font-size: 1.2rem;
   font-weight: 600;
-  @media screen and  (max-width: 768px){
-    display: none;
+  margin-right: 0;
+  @media screen and (max-width: 768px) {
+    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    position: sticky;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 0;
+    position: absolute;
+    margin-left:0;
+    top: 0px;
+    padding-left: 0px;
+    left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    opacity: 1;
+    z-index:5;
+    transition: all 0.5s ease;
+    background-color: var(--bg-clr);
   }
-
-`
+`;
 
 export const Navitem = styled.li`
-  // height: 80px;
+  height: 80px;
+  margin-top: -15px;
 `
 export const NavLinks = styled(LinkS)`
   color: var(--text-clr);
@@ -84,11 +106,12 @@ export const NavLinks = styled(LinkS)`
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
-
-  @media screen and  (max-width: 768px){
-    display: none;  
+  margin-top: 0px;
+  margin-right:45px;
+  @media screen and (max-width: 768px){
+    margin-top: 0px;
   }
-`
+`;
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: #01bf71;
@@ -98,6 +121,7 @@ export const NavBtnLink = styled(LinkR)`
   font-size: 16px;
   outline: none;
   border: none;
+  margin-top: 0px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
