@@ -20,10 +20,17 @@ const Navbar = ({ toggle }) => {
   const handleBlogsClick = () => {
     navigate("/blogs");
   };
+
+  const handleHomeClick = () => {
+    navigate("/");
+  };
+
+
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   }
+
   return (
     <>
       <Nav>
@@ -34,7 +41,9 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu isOpen={isOpen}>
             <Navitem>
-              <NavLinks to="home">Home</NavLinks>
+              <NavLinks to="home" onClick={handleHomeClick}>
+                Home
+              </NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="about">About</NavLinks>
