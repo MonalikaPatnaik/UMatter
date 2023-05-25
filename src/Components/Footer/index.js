@@ -1,6 +1,6 @@
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaTwitter } from 'react-icons/fa';
-import { FooterContainer,FooterWrap, FooterLinksContainer,FooterLinksWrapper,FooterLinkItems, FooterLinkTitle, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights } from './FooterElements';
+import { FooterContainer,FooterWrap, FooterLinksContainer,FooterLinksWrapper,FooterLinkItems, FooterLinkTitle,FooterLinkTitleHr, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights } from './FooterElements';
 const Footer = () => {
   return (
     <FooterContainer>
@@ -9,6 +9,7 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems className='about'>
                     <FooterLinkTitle>About us</FooterLinkTitle>
+                    <FooterLinkTitleHr className='hr' />
                        <FooterLink to="/signin">How it Works</FooterLink>
                        <FooterLink to="/signin">Testimonials</FooterLink>
                        <FooterLink to="/signin">Careers</FooterLink>
@@ -17,6 +18,7 @@ const Footer = () => {
                 </FooterLinkItems>
                 <FooterLinkItems className='contact'>
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
+                    <FooterLinkTitleHr className='hr' />
                        <FooterLink to="/">Contact</FooterLink>
                        <FooterLink to="/">Support</FooterLink>
                        <FooterLink to="/">Destinations</FooterLink>
@@ -26,6 +28,7 @@ const Footer = () => {
             <FooterLinksWrapper>
                 <FooterLinkItems className='videos'>
                     <FooterLinkTitle>Videos</FooterLinkTitle>
+                    <FooterLinkTitleHr className='hr' />
                        <FooterLink to="/">Submit Video</FooterLink>
                        <FooterLink to="/">Ambassdors</FooterLink>
                        <FooterLink to="/">Agency</FooterLink>

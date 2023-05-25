@@ -77,6 +77,14 @@ export const FooterLinkTitle = styled.h1`
  font-weight: bold;
  margin-bottom: 16px;
 `
+export const FooterLinkTitleHr = styled.hr`
+  content: "";
+  border: 2px solid;
+  margin-top: 0;
+  width: 52%;
+  color: #01bf71;
+   
+`
 export const FooterLink = styled(Link)`
  color: #fff;
  text-decoration: none;
