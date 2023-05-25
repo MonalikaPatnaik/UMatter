@@ -47,13 +47,14 @@ export const FormContent = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: center;
+ align-items: center;
 
  @media screen and (max-width: 480px) {
     padding: 10px;
  } 
 `;
 
-export const Form = styled.form`
+export const OuterDiv = styled.div`
  background: #010101;
  max-width: 400px;
  height: auto;
@@ -98,7 +99,7 @@ export const FormButton = styled.button`
  background: #01bf71;
  padding: 16px 0;
  border: none;
- border-radius: 12px;
+ border-radius: 4px;
  color: #fff;
  font-size: 20px;
  cursor: pointer;

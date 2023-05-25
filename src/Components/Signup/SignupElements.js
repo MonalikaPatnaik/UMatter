@@ -4,12 +4,13 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
  min-height: 692px;
  position: fixed;
+ padding: 30px;
  bottom: 0;
  left: 0;
  right: 0;
  top: 0;
  z-index: 0;
- overflow: hidden;
+ overflow: scroll;
  background: linear-gradient(
     108deg,
     rgba(1, 147, 86, 1) 0%,
@@ -18,11 +19,12 @@ export const Container = styled.div`
 `;
 
 export const FormWrap = styled.div`
- height: 100%;
+ min-height: 100vh;
  display: flex;
  flex-direction: column;
  justify-content: center;
- 
+ flex-grow:1;
+ align-items: center;
  @media screen and (max-width: 400px) {
     height: 80%;
  }
@@ -85,7 +87,7 @@ font-size: 14px;
 `;
 
 export const FormInput = styled.input`
-margin-bottom: 40px;
+margin-bottom: 0px;
 padding: 10px;
 border: none;
 border-radius: 4px;
@@ -95,10 +97,11 @@ outline:none;
 `;
 
 export const FormButton = styled.button`
+ margin-top:40px;
  background: #01bf71;
  padding: 16px 0;
  border: none;
- border-radius: 12px;
+ border-radius: 4px;
  color: #fff;
  font-size: 20px;
  cursor: pointer;
