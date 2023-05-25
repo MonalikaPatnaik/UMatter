@@ -2,6 +2,7 @@
 
 import React from 'react';
 import {useNavigate} from 'react-router-dom';
+
 import {
   Container,
   Icons,
@@ -82,7 +83,6 @@ const SignIn = () => {
               <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
-                style={{ width: "100%" }}
                 placeholder="Must have at least 8 characters"
                 type={passwordType}
                 require

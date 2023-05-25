@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { FaBars } from "react-icons/fa";
 import {
   Nav,
@@ -20,16 +20,19 @@ const Navbar = ({ toggle }) => {
   const handleBlogsClick = () => {
     navigate("/blogs");
   };
-
+  const [isOpen, setIsOpen] = useState(false);
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  }
   return (
     <>
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">UMatter</NavLogo>
-          <MobileIcon onClick={toggle}>
+          <MobileIcon onClick={handleToggle}>
             <FaBars />
           </MobileIcon>
-          <NavMenu>
+          <NavMenu isOpen={isOpen}>
             <Navitem>
               <NavLinks to="home">Home</NavLinks>
             </Navitem>

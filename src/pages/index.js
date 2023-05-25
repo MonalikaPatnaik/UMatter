@@ -10,9 +10,10 @@ import Services from '../Components/Services';
 const Home = () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const toggle = () => {
-    setIsOpen(!isOpen)
-  };
+    const toggle = () => {
+        setIsOpen(!isOpen);
+        console.log("toggle");
+    };
 
   return (
     <>
