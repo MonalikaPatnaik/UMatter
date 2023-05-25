@@ -89,19 +89,18 @@ export const FooterLinkItems = styled.div`
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
-  font-size: 1.3rem;
-  font-weight: bold;
-
-  @media (min-width: 320px) {
-    margin-bottom: 0.5rem;
-  }
-
-  @media (min-width: 786px) {
-    margin-bottom: 1rem;
-  }
-`;
-
-// Footer link
+ font-size: 18px;
+ font-weight: bold;
+ margin-bottom: 16px;
+`
+export const FooterLinkTitleHr = styled.hr`
+  content: "";
+  border: 2px solid;
+  margin-top: 0;
+  width: 52%;
+  color: #01bf71;
+   
+`
 export const FooterLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
