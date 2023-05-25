@@ -20,7 +20,8 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(scrolled > 0 ? "rgba(0, 0, 0, 0.9)" : "");
+      // setNavbarBg(scrolled > 0 ? "rgba(0, 0, 0, 0.9)" : "");
+      setNavbarBg(scrolled > 0 ? "var(--bg-clr)" : "");
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -69,9 +70,6 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="#" onClick={handleBlogsClick}>
                 Blogs{" "}
               </NavLinks>
-            </Navitem>
-            <Navitem>
-              <NavBtnLink to="/signup">Sign Up</NavBtnLink>
             </Navitem>
           </NavMenu>
           <NavBtn>
