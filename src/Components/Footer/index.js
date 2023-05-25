@@ -35,29 +35,26 @@ const Footer = () => {
                        <FooterLink to="/">Influencer</FooterLink>
                 </FooterLinkItems>
 
-                <FooterLinkItems className='socials' >
-                        <FooterLink style={{ fontSize: '22px',position:"relative",right:"3rem",top:"12.1rem",left:"-8.2rem" }}><FaInstagram /> </FooterLink> 
-                        <FooterLink><FaFacebook style={{ fontSize: '22px',position:"relative",right:"-0.3rem",top:"9.9rem",left:"-5.9rem" }} /> </FooterLink>
-                        <FooterLink><FaYoutube style={{ fontSize: '22px',position:"relative",right:"-4.3rem",top:"8rem" ,left:"-3.5rem" }} /> </FooterLink>
-                        <FooterLink><FaTwitter style={{ fontSize: '22px',position:"relative",right:"-8.7rem",top:"6rem" ,left:"-1.3rem" }} /> </FooterLink>
-                        <FooterLink><FaLinkedin style={{ fontSize: '22px',position:"relative",right:"-12.3rem",top:"4.1rem" ,left:".8rem" }} /> </FooterLink>
+            <FooterLinkItems className='socials' >
+              <FooterLink className="icons" ><FaInstagram style={{ fontSize: '22px' }} /> </FooterLink>
+              <FooterLink className="icons"><FaFacebook style={{ fontSize: '22px' }}  /> </FooterLink>
+              <FooterLink className="icons"><FaYoutube style={{ fontSize: '22px' }}  /> </FooterLink>
+              <FooterLink className="icons"><FaTwitter style={{ fontSize: '22px' }}  /> </FooterLink>
+              <FooterLink className="icons"><FaLinkedin style={{ fontSize: '22px' }}  /> </FooterLink>
 
-                </FooterLinkItems>
-                
-            </FooterLinksWrapper>
-         </FooterLinksContainer>
-         <SocialMedia>
-            <SocialMediaWrap>
-                {/* bug fix - #issue 36 change incorrect link  */}
-                <SocialLogo to='/UMatter/'>
-                    UMatter
-                </SocialLogo>
-                <WebsiteRights>UMatter © {new Date().getFullYear()}&nbsp;
-                All rights reserved.</WebsiteRights>
-                
-            </SocialMediaWrap>
-         </SocialMedia>
-       </FooterWrap>
+            </FooterLinkItems>
+
+          </FooterLinksWrapper>
+        </FooterLinksContainer>
+        <SocialMedia>
+          <SocialMediaWrap>
+            <SocialLogo to='/UMatter/'>
+              UMatter
+            </SocialLogo>
+            <WebsiteRights>UMatter © {new Date().getFullYear()}&nbsp;All rights reserved.</WebsiteRights>
+          </SocialMediaWrap>
+        </SocialMedia>
+      </FooterWrap>
     </FooterContainer>
   )
 }
