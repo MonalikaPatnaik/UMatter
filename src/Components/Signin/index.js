@@ -73,6 +73,7 @@ const SignIn = () => {
                 placeholder="email@example.com" type="email" id="email"
                 require />
               <FormLabel htmlFor="password">Password</FormLabel>
+              <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
                 placeholder="Must have at least 8 characters"
