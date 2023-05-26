@@ -1,6 +1,7 @@
 import React from "react";
 import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
+import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
 import {
   BlogsContainer,
   BlogsH1,
@@ -37,6 +38,15 @@ const Blogs = () => {
             issues like high blood pressure, strokes, heart conditions and
             various forms of cancer? Smoking and vaping can also cause blockages
             in your body.
+          </BlogsP>
+        </BlogsCard>
+        <BlogsCard>
+          <BlogsIcon src={Icon3} />
+          <BlogsH2>
+            <b>Embracing the Power of Menstruation</b>
+          </BlogsH2>
+          <BlogsP>
+            Embracing the power of menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.
           </BlogsP>
         </BlogsCard>
         <BlogsCard>
