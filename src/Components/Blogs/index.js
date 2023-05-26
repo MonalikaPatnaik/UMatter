@@ -46,7 +46,7 @@ const Blogs = () => {
             <b>Embracing the Power of Menstruation</b>
           </BlogsH2>
           <BlogsP>
-            Embracing the power of menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.
+            Menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.
           </BlogsP>
         </BlogsCard>
         <BlogsCard>
