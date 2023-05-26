@@ -66,13 +66,12 @@ export const FooterLinkItems = styled.div`
   box-sizing: border-box;
   color: #fff;
 
-  &.socials {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    align-items: center;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
+.social-link:hover {
+  /* Apply hover effect styles here */
+  /* Example: */
+  background-color: white ;
+  
+}
 
   @media (min-width: 320px) {
     align-items: center;
