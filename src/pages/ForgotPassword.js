@@ -1,10 +1,10 @@
 import React from 'react'
-import Forgot_password from '../Components/Forgot_password/Forgot_password';
+import Forgot_Password from '../Components/Forgot_Password/Forgot_Password';
 
 const SigninPage = () => {
   return (
     <div>
-        <Forgot_password />
+        <Forgot_Password />
     </div>
   );
 };

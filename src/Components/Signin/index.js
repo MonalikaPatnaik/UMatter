@@ -17,7 +17,7 @@ import {
 
 } from "./SigninElements";
 import { useState } from "react";
-import { forgotPassword } from "../Forgot_password/Forgot_password";
+import { forgotPassword } from "../Forgot_Password/Forgot_Password";
 import { NavLink } from "react-router-dom";
 
 // } from './SigninElements';

@@ -5,7 +5,7 @@ import Home from "./pages";
 import SigninPage from "./pages/signin";
 import Error404 from "./pages/Error404";
 import BlogPage from "./pages/blogs";
-import Forgot_password from "./pages/ForgotPassword";
+import Forgot_Password from "./pages/ForgotPassword";
 import SignupPage from "./pages/signup";
 import Profile from "./pages/profile";
 
@@ -27,7 +27,7 @@ function App() {
         <Route
           exact
           path="/signin/forgotPassword"
-          element={<Forgot_password />}
+          element={<Forgot_Password />}
         />
         <Route path="/*" element={<Error404 />} />
         <Route exact path="/signup" element={<SignupPage />} />

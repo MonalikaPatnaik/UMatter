@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useEffect } from "react";
 import './Forgot_password.css';
 import { Container,Icons,FormContent,FormWrap,Form,FormButton } from "../Signin/SigninElements";
-function Forgot_password() {
+function Forgot_Password() {
   const [Otp, setotp] = useState(new Array(4).fill(""));
   const handleChange = (element, index) => {
     if (isNaN(element.value)) return false;
@@ -74,4 +74,4 @@ function Forgot_password() {
   );
 }
 
-export default Forgot_password;
+export default Forgot_Password;
