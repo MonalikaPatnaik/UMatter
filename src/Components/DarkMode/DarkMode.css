@@ -6,8 +6,8 @@
 }
 
 .dark_mode_label {
-  width: 65px;
-  height: 30px;
+  width: 70px;
+  height: 35px;
   position: relative;
   display: block;
   background: #ebebeb;
@@ -16,6 +16,7 @@
     inset 0px -5px 15px rgba(255, 255, 255, 0.4);
   cursor: pointer;
   transition: 0.3s;
+  border: 2px solid rgba(156, 152, 152, 0.4);
 }
 .dark_mode_label:after {
   content: "";

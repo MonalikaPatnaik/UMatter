@@ -152,13 +152,13 @@ text-decoration: none;
 
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
-  background: #01bf71;
+  background: #d2f7d3;
   white-space: nowrap;
   padding: 10px 22px;
-  color: white;
+  color: #010606;
   font-size: 16px;
   outline: none;
-  border: none;
+  border: 2px solid black;
   margin-top: 0px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
@@ -168,5 +168,6 @@ export const NavBtnLink = styled(LinkR)`
     transition: all 0.2s ease-in-out;
     background: var(--text-clr);
     color: var(--bg-clr);
+    border: 2px solid #d2f7d3;
   }
 `;
