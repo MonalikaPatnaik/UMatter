@@ -1,15 +1,31 @@
-import React from 'react'
+import React, {  useEffect, useRef } from 'react';
+import Typed from 'typed.js';
 import Icon1 from '../../images/image1.png'
 import Icon2 from '../../images/image2.png'
 import Icon3 from '../../images/image3.png'
 import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
 const Services = () => {
+    const el = useRef(null);
+
+    useEffect(() => {
+      const typed = new Typed(el.current, {
+        strings: ['Our service'],
+        typeSpeed: 50,
+        backSpeed: 50,
+        loop: true,
+        showCursor: false,
+      });
+  
+      return () => {
+        typed.destroy();
+      };
+    }, []);
   return (
     <ServicesContainer id="services"
         whileInView={{ y: [ 100, 50, 0], opacity: [0, 0, 1]}}
         transition={{duration: 0.8}}
     >
-        <ServicesH1>Our Services</ServicesH1>
+        <ServicesH1><span ref={el} style={{ display: 'inline-block' }} /></ServicesH1>
        
         <ServicesWrapper>
             <ServicesCard> 
