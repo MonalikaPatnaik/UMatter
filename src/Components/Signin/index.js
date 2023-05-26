@@ -75,16 +75,16 @@ const SignIn = () => {
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
               <FormH1>Sign in to your account</FormH1>
-              <FormLabel htmlFor="for">Email</FormLabel>
+              <FormLabel htmlFor="email">Email</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, email: e.target.value })}
-                placeholder="email@example.com" type="email"
+                placeholder="email@example.com" type="email" id="email"
                 require />
-              <FormLabel htmlFor="for">Password</FormLabel>
+              <FormLabel htmlFor="password">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
                 placeholder="Must have at least 8 characters"
-                type={passwordType}
+                type={passwordType} id="password"
                 require
               />
               <button
@@ -92,10 +92,10 @@ const SignIn = () => {
                 style={{
                   width: "fit-content",
                   position: "relative",
-                  left: "90%",
-                  bottom: "65%",
+                  left: "92%",
+                  bottom: "314%",
                   background: "transparent",
-                    border: "none",
+                  border: "none",
                 }}>
                 {passwordType === 'password' ? (
                   <i class="fa-solid fa-eye-slash" id="eye"></i>
