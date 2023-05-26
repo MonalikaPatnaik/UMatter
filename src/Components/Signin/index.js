@@ -14,17 +14,10 @@ import {
   FormLabel,
   FormWrap,
   Text,
-
 } from "./SigninElements";
 import { useState } from "react";
-import { forgotPassword } from "../Forgot_password/Forgot_password";
 import { NavLink } from "react-router-dom";
-
-// } from './SigninElements';
-// import { useState } from 'react';
-// import {forgotPassword} from '../Forgot_password/Forgot_password';
-import Navbar from '../Navbar';
-// import { NavLink } from 'react-router-dom';
+import Navbar from "../Navbar";
 
 const SignIn = () => {
   const navigate = useNavigate();
@@ -67,7 +60,6 @@ const SignIn = () => {
   return (
     <>
       <Container>
-
         <Navbar />
         <br />
 
@@ -75,11 +67,6 @@ const SignIn = () => {
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
               <FormH1>Sign in to your account</FormH1>
-              <FormLabel htmlFor="for">Email</FormLabel>
-              <FormInput
-                onChange={e => setData({ ...data, email: e.target.value })}
-                placeholder="email@example.com" type="email"
-                require />
               <FormLabel htmlFor="for">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
@@ -124,3 +111,4 @@ const SignIn = () => {
 };
 
 export default SignIn;
+
