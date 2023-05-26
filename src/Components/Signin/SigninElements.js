@@ -96,7 +96,7 @@ outline:none;
 
 export const FormButton = styled.button`
  background: #01bf71;
- padding: 16px 0;
+ padding: 16px 10px;
  border: none;
  border-radius: 12px;
  color: #fff;

@@ -68,3 +68,22 @@
 .dark_mode_input:checked + .dark_mode_label svg.moon {
   fill: #fff;
 }
+
+@media screen and (max-width: 490px) {
+    .dark_mode{
+        font-size: 12px;
+        line-height: 8px;
+        margin: 10px;
+    }
+
+    /* .gpt3__header-content p {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button {
+        font-size: 12px;
+        line-height: 16px;
+    } */
+}

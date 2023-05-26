@@ -1,9 +1,9 @@
-@media only screen and (max-width: 1166px) {
+/* @media only screen and (max-width: 1166px) {
   #root {
     width: 100%;
     overflow: hidden;
   }
-}
+} */
 /* @media only screen and (max-width: 1230px){
 
   #root{
@@ -47,17 +47,17 @@
     overflow-x: hidden;
   }
 }
-@media only screen and (max-width: 430px){
-
-  #root{
-    width: 907px;
-    overflow-x: hidden;
-  }
-}
 @media only screen and (max-width: 350px){
-
+  
   #root{
     width: 830px;
+    @media only screen and (max-width: 430px){
+    
+      #root{
+        width: 907px;
+        overflow-x: hidden;
+      }
+    }
     overflow-x: hidden;
   }
 } */

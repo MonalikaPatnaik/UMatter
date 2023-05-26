@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
+import Typed from "typed.js";
 import Video from "../../videos/video1.mp4";
 import {
   HeroContainer,
@@ -16,6 +17,21 @@ import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Make your life more blissful"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+      showCursor: false,
+    });
+
+    return () => {
+      typed.destroy();
+    };
+  }, []);
 
   const onHover = () => {
     setHover(!hover);
@@ -30,7 +46,9 @@ const HeroSection = () => {
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.8 }}
       >
-        <HeroH1>Make your life more Blissful</HeroH1>
+        <HeroH1>
+          <span ref={el} style={{ display: "inline-block" }} />
+        </HeroH1>
         <HeroP>Sign up now and give your life a second chance</HeroP>
         <HeroBtnWrapper>
           <Button

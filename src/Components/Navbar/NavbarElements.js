@@ -130,7 +130,26 @@ export const NavBtn = styled.nav`
     margin-top: 0px;
     margin-right: 45px;
   }
+  ${
+    "" /* border-radius: 50px;
+background: #01bf71;
+padding: 10px 10px;
+color: white;
+font-size: 16px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover {
+  transition: all 0.2s ease-in-out;
+  background: var(--text-clr);
+  color: var(--bg-clr);
+} */
+  }
 `;
+
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: #01bf71;
