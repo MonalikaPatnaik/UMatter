@@ -75,12 +75,10 @@ export const NavMenu = styled.ul`
     height: 100vh;
     margin-top: 0;
     position: absolute;
-    margin-left:0;
     top: 0px;
     padding-left: 0px;
     left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
     opacity: 1;
-    z-index:5;
     transition: all 0.5s ease;
     background-color: var(--bg-clr);
   }
@@ -88,7 +86,6 @@ export const NavMenu = styled.ul`
 
 export const Navitem = styled.li`
   height: 80px;
-  margin-top: -15px;
 `
 export const NavLinks = styled(LinkS)`
   color: var(--text-clr);
@@ -104,14 +101,25 @@ export const NavLinks = styled(LinkS)`
   }
 `
 export const NavBtn = styled.nav`
-  display: flex;
-  align-items: center;
-  margin-top: 0px;
-  margin-right:45px;
-  @media screen and (max-width: 768px){
-    margin-top: 0px;
-  }
+border-radius: 50px;
+background: #01bf71;
+padding: 10px 10px;
+color: white;
+font-size: 16px;
+outline: none;
+border: none;
+cursor: pointer;
+transition: all 0.2s ease-in-out;
+text-decoration: none;
+
+&:hover {
+  transition: all 0.2s ease-in-out;
+  background: var(--text-clr);
+  color: var(--bg-clr);
+}
+
 `;
+
 export const NavBtnLink = styled(LinkR)`
   border-radius: 50px;
   background: #01bf71;

@@ -59,11 +59,11 @@ const Navbar = ({ toggle }) => {
             <Navitem>
               <NavBtnLink to="/signup">Sign Up</NavBtnLink>
             </Navitem>
-          </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            <DarkMode />
           </NavBtn>
+            <DarkMode />
+          </NavMenu>
         </NavbarContainer>
       </Nav>
     </>
