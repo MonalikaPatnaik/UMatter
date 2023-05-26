@@ -1,5 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa";
+import DarkMode from "../DarkMode/DarkMode";
+import { useNavigate } from "react-router-dom";
 import {
   Nav,
   NavbarContainer,
@@ -11,10 +13,24 @@ import {
   NavBtn,
   NavBtnLink,
 } from "./NavbarElements";
-import DarkMode from "../DarkMode/DarkMode";
-import { useNavigate } from "react-router-dom";
 
 const Navbar = ({ toggle }) => {
+  const [navbarBg, setNavbarBg] = useState("transparent");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrolled = window.scrollY;
+      // setNavbarBg(scrolled > 0 ? "rgba(0, 0, 0, 0.9)" : "");
+      setNavbarBg(scrolled > 0 ? "var(--bg-clr)" : "");
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const navigate = useNavigate();
 
   const handleBlogsClick = () => {
@@ -25,15 +41,14 @@ const Navbar = ({ toggle }) => {
     navigate("/");
   };
 
-
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
-  }
+  };
 
   return (
     <>
-      <Nav>
+      <Nav style={{ background: navbarBg }}>
         <NavbarContainer>
           <NavLogo to="/">UMatter</NavLogo>
           <MobileIcon onClick={handleToggle}>
@@ -56,14 +71,12 @@ const Navbar = ({ toggle }) => {
                 Blogs{" "}
               </NavLinks>
             </Navitem>
-            <Navitem>
-              <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-            </Navitem>
+          </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          </NavBtn>
+            <NavBtnLink to="/signup">Sign Up</NavBtnLink>
             <DarkMode />
-          </NavMenu>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>
