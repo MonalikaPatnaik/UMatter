@@ -17,7 +17,7 @@ const Home = () => {
 
   return (
     <>
-      <Navbar toggle={toggle} />
+      {/* <Navbar toggle={toggle} /> */}
       <HeroSection />
       <InfoSection {...homeObjOne} />
       <Services />
