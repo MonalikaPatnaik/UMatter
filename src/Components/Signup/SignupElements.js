@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
  min-height: 692px;
  position: fixed;
- padding: 30px;
+ margin-top:0px;
+ padding: 20px;
  bottom: 0;
  left: 0;
  right: 0;
@@ -20,6 +21,7 @@ export const Container = styled.div`
 
 export const FormWrap = styled.div`
  min-height: 100vh;
+ margin-top: 50px;
  display: flex;
  flex-direction: column;
  justify-content: center;
