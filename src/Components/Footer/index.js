@@ -36,11 +36,11 @@ const Footer = () => {
                 </FooterLinkItems>
 
             <FooterLinkItems className='socials' >
-              <FooterLink className="icons" ><FaInstagram style={{ fontSize: '22px' }} /> </FooterLink>
-              <FooterLink className="icons"><FaFacebook style={{ fontSize: '22px' }}  /> </FooterLink>
-              <FooterLink className="icons"><FaYoutube style={{ fontSize: '22px' }}  /> </FooterLink>
-              <FooterLink className="icons"><FaTwitter style={{ fontSize: '22px' }}  /> </FooterLink>
-              <FooterLink className="icons"><FaLinkedin style={{ fontSize: '22px' }}  /> </FooterLink>
+              <FooterLink className="icons" ><FaInstagram style={{ fontSize: '22px',color:"#E4405F" }} /> </FooterLink>
+              <FooterLink className="icons"><FaFacebook style={{ fontSize: '22px',color:"#1877F2" }}  /> </FooterLink>
+              <FooterLink className="icons"><FaYoutube style={{ fontSize: '22px',color:"#1877F2" }}  /> </FooterLink>
+              <FooterLink className="icons"><FaTwitter style={{ fontSize: '22px',color:"#1DA1F2" }}  /> </FooterLink>
+              <FooterLink className="icons"><FaLinkedin style={{ fontSize: '22px',color:"#0077B5" }}  /> </FooterLink>
 
             </FooterLinkItems>
 
