@@ -14,6 +14,8 @@ import {
   Text,
 } from './SignupElements';
 import { useState } from 'react';
+import Navbar from '../Navbar'
+
 
 const SignUp = () => {
   const [passwordType, setPasswordType] = useState('password');
@@ -44,7 +46,9 @@ const SignUp = () => {
 
   return (
     <>
+    
       <Container>
+      <Navbar />
         <FormWrap>
           <div>
             <Icons to="/UMatter">UMatter</Icons>
