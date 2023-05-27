@@ -64,6 +64,23 @@ export const NavLogo = styled(LinkR)`
   z-index: 10;
   text-decoration: none;
   text-align: center; /* Center the NavLogo on small screens */
+
+  &:hover {
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    animation: shine 3s infinite;
+    color: #00FFCA;
+  }
+
+  @keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  
+  to {
+    mask-position: -50%;
+  }
+}
 `;
 export const MobileIcon = styled.div`
   display: none;

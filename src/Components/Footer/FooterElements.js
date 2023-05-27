@@ -131,6 +131,23 @@ export const SocialLogo = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+
+  &:hover {
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    animation: shine 2s infinite;
+    color: lightcyan;
+  }
+
+  @keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  
+  to {
+    mask-position: -50%;
+  }
+}
 `;
 
 // Website rights
