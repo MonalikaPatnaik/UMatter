@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaBars } from "react-icons/fa";
+import { FaAcquisitionsIncorporated, FaBars, FaBox, FaClosedCaptioning, FaCross, FaCrow, FaExclamationTriangle, FaMicrophoneSlash, FaRegWindowClose } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
 import { useNavigate } from "react-router-dom";
 import {
@@ -13,6 +13,7 @@ import {
   NavBtn,
   NavBtnLink,
   LogoContainer,
+  LogoinnerContainer,
 } from "./NavbarElements";
 import manifest from "../../../src/assests/manifest.json";
 
@@ -55,17 +56,20 @@ const Navbar = ({ toggle }) => {
       <Nav style={{ background: navbarBg }}>
         <NavbarContainer>
           <LogoContainer>
-          <img src ={faviconSrc} 
-          alt = "favicon" 
-          width ="46"
-          height="46"
-          />
-
-          <NavLogo to="/">UMatter</NavLogo>
-          </LogoContainer>
+            <LogoinnerContainer>
+              <img src ={faviconSrc} 
+                alt = "favicon" 
+                width ="46"
+                height="46"
+              />
+              <NavLogo to="/">UMatter</NavLogo>
+            </LogoinnerContainer>
           <MobileIcon onClick={handleToggle}>
-            <FaBars />
-          </MobileIcon>
+            {
+              isOpen ? <FaRegWindowClose/> : <FaBars /> 
+            }
+            </MobileIcon>
+          </LogoContainer>
           <NavMenu isOpen={isOpen}>
             <Navitem>
               <NavLinks to="home" onClick={handleHomeClick}>
