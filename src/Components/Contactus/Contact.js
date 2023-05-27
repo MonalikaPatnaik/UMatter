@@ -21,9 +21,10 @@ const Contact = () => {
         <textarea id="message" name="message" required></textarea>
       </div>
       
-      <div class="form-group">
-        <button type="submit">Submit</button>
-      </div>
+    <div className="form-group" style={{ border: "1px solid black", padding: "10px", borderRadius: "5px" }}>
+  <button type="submit">Submit</button>
+</div>
+
     </form>
   </div>
 
