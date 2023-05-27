@@ -50,9 +50,7 @@ const SignUp = () => {
       <Container>
       <Navbar />
         <FormWrap>
-          <div>
-            <Icons to="/UMatter">UMatter</Icons>
-          </div>
+          
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
               <FormH1>Sign up your account</FormH1>
