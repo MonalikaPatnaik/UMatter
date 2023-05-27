@@ -55,6 +55,7 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav style={{ background: navbarBg }}>
         <NavbarContainer>
+        <DarkMode />
           <LogoContainer>
             <LogoinnerContainer>
               <img src ={faviconSrc} 
@@ -91,7 +92,7 @@ const Navbar = ({ toggle }) => {
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-            <DarkMode />
+          
           </NavBtn>
         </NavbarContainer>
       </Nav>
