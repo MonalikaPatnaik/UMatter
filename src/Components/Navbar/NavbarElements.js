@@ -32,8 +32,10 @@ export const NavbarContainer = styled.div`
   }
 `;
 
-export const NavLogo = styled(LinkR)`
-  color: var(--text-clr);
+ const breakpoints = {
+  sm: "640px",
+};
+export const LogoContainer = styled(LinkR)`
   cursor: pointer;
   font-size: 2rem;
   display: flex;
@@ -41,6 +43,27 @@ export const NavLogo = styled(LinkR)`
   font-weight: bold;
   z-index: 10;
   text-decoration: none;
+  margin-right: 1rem; /* Add margin between logo and name */
+  padding-bottom: 0.5rem; /* Add padding below the components inside LogoContainer */
+
+  @media (max-width: ${breakpoints.sm}) {
+    justify-content: center;
+    margin-right: 0; /* Reset margin on small screens */
+    padding-bottom: 0; /* Reset padding on small screens */
+  }
+`;
+
+export const NavLogo = styled(LinkR)`
+  color: var(--text-clr);
+  cursor: pointer;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding:1rem;
+  z-index: 10;
+  text-decoration: none;
+  text-align: center; /* Center the NavLogo on small screens */
 `;
 export const MobileIcon = styled.div`
   display: none;
