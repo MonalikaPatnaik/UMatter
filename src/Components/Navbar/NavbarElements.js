@@ -34,6 +34,7 @@ export const NavbarContainer = styled.div`
 
  const breakpoints = {
   sm: "640px",
+  md: "1080px"
 };
 export const LogoContainer = styled(LinkR)`
   cursor: pointer;
@@ -46,11 +47,17 @@ export const LogoContainer = styled(LinkR)`
   margin-right: 1rem; /* Add margin between logo and name */
   padding-bottom: 0.5rem; /* Add padding below the components inside LogoContainer */
 
-  @media (max-width: ${breakpoints.sm}) {
-    justify-content: center;
+  @media (max-width: ${breakpoints.md}){
+    justify-content: space-between;
+    width:100%;
     margin-right: 0; /* Reset margin on small screens */
     padding-bottom: 0; /* Reset padding on small screens */
   }
+`;
+
+export const LogoinnerContainer = styled.div`
+  display:flex;
+  align-items:center
 `;
 
 export const NavLogo = styled(LinkR)`
