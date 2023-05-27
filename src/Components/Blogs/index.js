@@ -24,6 +24,7 @@ const Blogs = () => {
     }
   };
 
+  
   const handleButtonClick = () => {
     setSearchTerm("");
   };
