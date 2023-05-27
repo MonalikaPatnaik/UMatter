@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
+import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
 import {
   BlogsContainer,
   BlogsH1,
@@ -10,7 +11,6 @@ import {
   BlogsIcon,
   BlogsP,
 } from "./BlogsElements";
-
 const Blogs = () => {
   const [searchTerm, setSearchTerm] = useState("");
 
@@ -24,7 +24,7 @@ const Blogs = () => {
     }
   };
 
-  
+
   const handleButtonClick = () => {
     setSearchTerm("");
   };
@@ -32,10 +32,9 @@ const Blogs = () => {
   const filteredBlogs = blogsData.filter((blog) =>
     blog.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
-
   return (
     <BlogsContainer id="Blogs">
-    <div style={{ height: "150px" }}></div> {/* Add space at the beginning of the page */}
+      <div style={{ height: "150px" }}></div> {/* Add space at the beginning of the page */}
       <div className="search-container">
         <input
           type="text"
@@ -80,7 +79,6 @@ const Blogs = () => {
 };
 
 export default Blogs;
-
 const blogsData = [
   {
     icon: Icon1,
@@ -105,5 +103,10 @@ const blogsData = [
     title: "Learning how to say no",
     content:
       "As well as fear, people can sniff out indecision, so you need to make sure that your rebuttal to why you aren’t drinking is both confident and watertight. It doesn’t need to be lengthy.",
+  },
+  {
+    icon: Icon3,
+    title: "Embracing the Power of Menstruation",
+    content: "Menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.",
   },
 ];
