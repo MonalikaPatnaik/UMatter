@@ -1,19 +1,48 @@
 # UMatter
 
-![main](https://github.com/Manice18/UMatter/assets/91601706/5909635d-211e-43c2-9028-c6b698fdc033)
+<div align = "center">
+ <img src="./src/images/mental-health.png" />
+ <div>
 
+  
 **Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/)**.
 
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
 
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   <br>
+   <img src="https://img.shields.io/github/repo-size/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues-closed-raw/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/MonalikaPatnaik/UMatter?style=for-the-badge" />
+
+   <img src="https://img.shields.io/github/issues-pr/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/contributors/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/MonalikaPatnaik/UMatter?style=for-the-badge" />
+
+   <img src="https://img.shields.io/github/issues-pr-closed-raw/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/forks/MonalikaPatnaik/UMatter?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/MonalikaPatnaik/UMatter?style=for-the-badge" />
+ <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMonalikaPatnaik%2FUMatter&label=visitors&countColor=%2337d67a&style=for-the-badge&labelStyle=upper" />
+     </div>  
+  
+<br>
+<br>
 
 **Tech Stack Used**
 
-| 𝗛𝗧𝗠𝗟5  | 𝗖𝗦𝗦3 | 𝗕𝗢𝗢𝗦𝗧𝗥𝗔𝗣 | 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧 | REACTJS
-| ------------- | ------------- | ------------- | ------------- |------------- |
-| <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="35px" width="35px" src="https://cdn.svgporn.com/logos/react.svg"> |
+<div align="center">
+ <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
+ <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
+ <img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white">
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=white">
+ <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge">
+</div>
 
 # Website Overview
 
@@ -36,27 +65,32 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
 **Landing Page**
  
  This page appears when user clicks on the site and lands on the page.
+  <img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
 
-![home](https://github.com/Manice18/UMatter/assets/91601706/e8987905-c0f9-479c-8ce0-345a31e83527) 
-
+<br>
+  
 **About Us**
  
  This Page gives user the brief about the website and what they can expect.
- 
-![about](https://github.com/Manice18/UMatter/assets/91601706/dfa34347-0f30-44d7-8019-fa5a0e429b7e)
+ <img width="1440" alt="Screenshot 2023-05-26 at 4 31 44 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/88f95ad6-575c-401d-9b05-86a08cd9d45c">
+
+<br>
 
 **Services Page**
 
 This page provides the list of services which aare available on our website.
+<img width="1440" alt="Screenshot 2023-05-26 at 4 32 04 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/efd21624-ab89-4683-af46-f0a91c456240">
 
-![services](https://github.com/Manice18/UMatter/assets/91601706/d481dbfe-83a2-4b79-8106-b7f09f2de97b)
-
+<br>
+  
 **Blogs Page**
 
 This page contains blogs on useful topics .
 
-![blogs](https://github.com/Manice18/UMatter/assets/91601706/3165666b-a388-4078-99da-81a439718be6)
+<img width="1440" alt="Screenshot 2023-05-26 at 4 32 46 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/da82603f-6881-4153-bda7-fc8dd5f40e8a">
 
+<br>
+  
 ## 🔖Steps to Contribute ✅
  
 - Contribution is the best way to support and get involved in community!
