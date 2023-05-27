@@ -15,7 +15,7 @@ import {
   LogoContainer,
 } from "./NavbarElements";
 import manifest from "../../../src/assests/manifest.json";
-import { HashLink } from "react-router-hash-link";
+
 
 const faviconSrc = manifest.icons[0].src;
 
