@@ -2,9 +2,19 @@ name: Node.js GitHub Action
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
+    path-ignore:
+      - '.gitignore'
+      - '*.md'
+      - '*.txt'
+
+      
   pull_request:
+    branches: [main]
+    path-ignore:
+      - '.gitignore'
+      - '*.md'
+      - '*.txt'
 
 jobs:
   build:
