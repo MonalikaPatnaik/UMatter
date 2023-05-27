@@ -12,7 +12,11 @@ import {
   NavLinks,
   NavBtn,
   NavBtnLink,
+  LogoContainer,
 } from "./NavbarElements";
+import manifest from "../../../src/assests/manifest.json";
+
+const faviconSrc = manifest.icons[0].src;
 
 const Navbar = ({ toggle }) => {
   const [navbarBg, setNavbarBg] = useState("transparent");
@@ -50,7 +54,15 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav style={{ background: navbarBg }}>
         <NavbarContainer>
+          <LogoContainer>
+          <img src ={faviconSrc} 
+          alt = "favicon" 
+          width ="46"
+          height="46"
+          />
+
           <NavLogo to="/">UMatter</NavLogo>
+          </LogoContainer>
           <MobileIcon onClick={handleToggle}>
             <FaBars />
           </MobileIcon>
