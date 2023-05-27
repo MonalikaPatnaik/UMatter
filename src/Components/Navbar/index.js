@@ -15,6 +15,7 @@ import {
   LogoContainer,
 } from "./NavbarElements";
 import manifest from "../../../src/assests/manifest.json";
+import { HashLink } from "react-router-hash-link";
 
 const faviconSrc = manifest.icons[0].src;
 
@@ -45,6 +46,13 @@ const Navbar = ({ toggle }) => {
     navigate("/");
   };
 
+const handleAboutClick=()=>{
+  navigate("/");
+}
+
+const handleServicesClick=()=>{
+  navigate("/");
+}
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -73,10 +81,10 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="about">About</NavLinks>
+              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="services">Services</NavLinks>
+              <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="#" onClick={handleBlogsClick}>
