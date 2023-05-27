@@ -14,7 +14,8 @@ import {
   Text,
 } from './SignupElements';
 import { useState } from 'react';
-import Navbar from '../Navbar'
+import Navbar from '../Navbar';
+
 
 
 const SignUp = () => {
@@ -84,19 +85,79 @@ const SignUp = () => {
                 placeholder="enter phone number"
                 type="number"></FormInput>
 
-              <FormLabel htmlFor="PasswordInput">Password</FormLabel>
-              <FormInput
-                onChange={e => setData({ ...data, password1: e.target.value })}
-                id="PasswordInput"
-                placeholder='Enter Password'
-                type="password"></FormInput>
 
-              <FormLabel htmlFor='PasswordInput2'>Conferm Password</FormLabel>
-              <FormInput
-                onChange={e => setData({ ...data, password2: e.target.value })}
-                id="PasswordInput2"
-                placeholder='Re Enter Password'
-                type="password"></FormInput>
+<FormLabel htmlFor="PasswordInput">Password</FormLabel>
+<div style={{ position: 'relative' }}>
+  <FormInput
+    onChange={(e) => setData({ ...data, password1: e.target.value })}
+    id="PasswordInput"
+    placeholder="Enter Password"
+    type={passwordType}
+  />
+  {passwordType === 'password' ? (
+    <i
+      className="fa-solid fa-eye-slash"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  ) : (
+    <i
+      className="fa-solid fa-eye"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  )}
+</div>
+<FormLabel htmlFor="PasswordInput">Confirm Password</FormLabel>
+<div style={{ position: 'relative' }}>
+  <FormInput
+    onChange={(e) => setData({ ...data, password1: e.target.value })}
+    id="PasswordInput"
+    placeholder="Re Enter Password"
+    type={passwordType}
+  />
+  {passwordType === 'password' ? (
+    <i
+      className="fa-solid fa-eye-slash"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  ) : (
+    <i
+      className="fa-solid fa-eye"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  )}
+</div>
 
               <button
                 onClick={handleclick}
@@ -108,11 +169,7 @@ const SignUp = () => {
                   background: 'transparent',
                   border: 'none',
                 }}>
-                {passwordType === 'password' ? (
-                  <i class="fa-solid fa-eye-slash" id="eye"></i>
-                ) : (
-                  <i class="fa-solid fa-eye" id="eye"></i>
-                )}
+
               </button>
               <FormButton type="submit">Continue</FormButton>
               <Text>Forgot password?</Text>
