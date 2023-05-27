@@ -49,11 +49,20 @@ const Blogs = () => {
             // Add any other desired inline styles
           }}
         />
-        <button className="search-button" onClick={handleButtonClick}>
+        <button
+          className="search-button"
+          onClick={handleButtonClick}
+          style={{
+            backgroundColor: "green", // Set background color to green
+            color: "white", // Set text color to white
+            borderRadius: "8px",
+            padding: "8px",
+          }}
+        >
           Clear
         </button>
       </div>
-      <div style={{ height: "150px" }}></div>
+      <div style={{ height: "50px" }}></div>
       <BlogsWrapper>
         {filteredBlogs.map((blog, index) => (
           <BlogsCard key={index}>
