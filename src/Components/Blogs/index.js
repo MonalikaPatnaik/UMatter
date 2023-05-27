@@ -1,3 +1,4 @@
+
 import React from "react";
 import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
@@ -9,6 +10,7 @@ import {
   BlogsCard,
   BlogsIcon,
   BlogsP,
+  BlogButton,
 } from "./BlogsElements";
 const Blogs = () => {
   return (
@@ -26,6 +28,7 @@ const Blogs = () => {
             can be the perfect way to give your evening a touch of
             sophistication.
           </BlogsP>
+          <BlogButton>Read More</BlogButton>
         </BlogsCard>
         <BlogsCard>
           <BlogsIcon src={Icon2} />
@@ -38,6 +41,7 @@ const Blogs = () => {
             various forms of cancer? Smoking and vaping can also cause blockages
             in your body.
           </BlogsP>
+          <BlogButton>Read More</BlogButton>
         </BlogsCard>
         <BlogsCard>
           <BlogsIcon src={Icon1} />
@@ -50,10 +54,11 @@ const Blogs = () => {
             comforting to see the bigger picture when we step outside our
             bubbles.
           </BlogsP>
+          <BlogButton>Read More</BlogButton>
         </BlogsCard>
         <BlogsCard>
           <BlogsIcon src={Icon1} />
-          <BlogsH2>
+          <BlogsH2> 
             <b>Learning how to say no</b>
           </BlogsH2>
           <BlogsP>
@@ -61,6 +66,7 @@ const Blogs = () => {
             make sure that your rebuttal to why you aren’t drinking is both
             confident and watertight. It doesn’t need to be lengthy.
           </BlogsP>
+          <BlogButton>Read More</BlogButton>
         </BlogsCard>
       </BlogsWrapper>
     </BlogsContainer>

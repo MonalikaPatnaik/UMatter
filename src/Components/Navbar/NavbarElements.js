@@ -11,7 +11,7 @@ export const Nav = styled.nav`
   justify-content: space-between;
   font-size: 1rem;
   position: sticky;
-  top: 0;
+  top: 0; 
   z-index: 10;
 
   @media screen and (max-width: 960px) {
