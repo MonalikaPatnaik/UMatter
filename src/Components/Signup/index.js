@@ -62,28 +62,28 @@ const SignUp = () => {
                 id="emailInput"
                 placeholder="email@example.com"
                 type="email"
-                require />
+                require /><br/>
 
               <FormLabel htmlFor='usernameInput'>username</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, username: e.target.value })}
                 id="usernameInput"
                 placeholder="Enter Username"
-                type="text"></FormInput>
+                type="text"></FormInput><br/>
 
               <FormLabel>Full Name</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, name: e.target.value })}
                 id="FullNameInput"
                 placeholder="Enter your Full Name"
-                type="text"></FormInput>
+                type="text"></FormInput><br/>
 
               <FormLabel htmlFor='ContactNumber'>Contact Number</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, contactNumber: e.target.value })}
                 id="ContactNumber"
                 placeholder="enter phone number"
-                type="number"></FormInput>
+                type="number"></FormInput><br/>
 
 
 <FormLabel htmlFor="PasswordInput">Password</FormLabel>
@@ -121,7 +121,7 @@ const SignUp = () => {
       onClick={handleclick}
     ></i>
   )}
-</div>
+</div><br/>
 <FormLabel htmlFor="PasswordInput">Confirm Password</FormLabel>
 <div style={{ position: 'relative' }}>
   <FormInput
