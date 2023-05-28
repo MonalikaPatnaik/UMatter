@@ -84,8 +84,8 @@ const SignIn = () => {
                 style={{
                   width: "fit-content",
                   position: "relative",
-                  left: "92%",
-                  bottom: "314%",
+                  top: "50%",
+                  bottom: "10px",
                   background: "transparent",
                   border: "none",
                 }}>
