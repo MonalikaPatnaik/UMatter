@@ -82,12 +82,13 @@ const SignIn = () => {
               <button
                 onClick={handleclick}
                 style={{
-                  width: "fit-content",
-                  position: "relative",
-                  left: "92%",
-                  bottom: "314%",
+                  position: "absolute",
+                  left: "10%",
+                  top: "55%",
+                  transform: "translateY(-50%)",
                   background: "transparent",
                   border: "none",
+                  cursor: "pointer",
                 }}>
                 {passwordType === 'password' ? (
                   <i class="fa-solid fa-eye-slash" id="eye"></i>
