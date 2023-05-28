@@ -109,7 +109,7 @@ export const MobileIcon = styled.div`
 
 export const NavMenu = styled.ul`
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
   justify-items: center;
   margin-top: 30px;
