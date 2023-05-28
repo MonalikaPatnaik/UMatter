@@ -29,7 +29,6 @@ export const NavbarContainer = styled.div`
     justify-content: space-between;
     padding-left: 4%;
     padding-right: 4%;
-    background-color:black;
   }
 `;
 
