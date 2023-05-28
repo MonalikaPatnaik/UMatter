@@ -35,7 +35,7 @@
   visibility: hidden;
 }
 .dark_mode_input:checked + .dark_mode_label {
-  background: #242424;
+  background: white;
 }
 .dark_mode_input:checked + .dark_mode_label:after {
   left: 62px;
