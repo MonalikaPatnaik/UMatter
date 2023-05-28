@@ -9,8 +9,8 @@ export const Button = styled(Link)`
     padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
     font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
     outline: none;
-    border: 1.5px solid white;
-    box-shadow: 0 3px 0 black, 0 6px 0 #01BF71;
+    border: 2px solid white;
+    box-shadow: 0 3px 0 black, 0px 3px 6px #fff;
     // Issue #1: Type in cursor spelling was there earlier
     // Issue #1 Fixed: Corrected the spelling of cursor.
     cursor: pointer;
@@ -23,7 +23,7 @@ export const Button = styled(Link)`
 
     &:hover {
         background: #fff;
-        border: 1.5px solid #01BF71; 
+        border: 2px solid #01BF71, 0px 4px 6px #fff; 
         background: ${({ primary }) => (primary ? '#fff' : '#01BF71')};
         box-shadow: 0 0 #01BF71;
     }
