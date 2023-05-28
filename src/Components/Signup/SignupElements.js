@@ -71,17 +71,19 @@ export const Form = styled.form`
 `;
 
 export const FormH1 = styled.label`
- margin-bottom: 10px;
+ margin-bottom: 15px;
  color: #fff;
  font-family:'League Spartan';
- font-size: 40px;
+ font-size: 50px;
  font-weight: 400;
  text-align: left;
+ 
 
 `;
 
 
 export const FormInput = styled.input`
+font-family:'Poppins';
 margin-bottom: 0px;
 padding: 10px;
 border: none;

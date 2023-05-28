@@ -60,7 +60,7 @@ const SignUp = () => {
               <FormInput
                 onChange={e => setData({ ...data, email: e.target.value })}
                 id="emailInput"
-                placeholder="email@example.com"
+                placeholder="Email"
                 type="email"
                 require /><br/>
 
