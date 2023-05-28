@@ -14,6 +14,7 @@ import {
   NavBtnLink,
   LogoContainer,
   LogoinnerContainer,
+  NavBtnMobile,
 } from "./NavbarElements";
 import manifest from "../../../src/assests/manifest.json";
 
@@ -103,6 +104,11 @@ const Navbar = ({ toggle }) => {
                 Blogs{" "}
               </NavLinks>
             </Navitem>
+            <NavBtnMobile>
+            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+            <NavBtnLink to="/signup">Sign Up</NavBtnLink>
+          
+          </NavBtnMobile>
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>

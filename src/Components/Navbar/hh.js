@@ -90,6 +90,7 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="#" onClick={handleBlogsClick}>
                 Blogs{" "}
               </NavLinks>
+              
             </Navitem>
           </NavMenu>
           <NavBtn>
