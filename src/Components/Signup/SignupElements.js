@@ -76,7 +76,7 @@ export const FormH1 = styled.label`
  font-family:'League Spartan';
  font-size: 50px;
  font-weight: 400;
- text-align: left;
+ text-align: center;
  
 
 `;
