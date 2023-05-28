@@ -61,7 +61,7 @@ export const LogoinnerContainer = styled.div`
 `;
 
 export const NavLogo = styled(LinkR)`
-  color: var(--text-clr);
+ color: var(--text-clr);
   cursor: pointer;
   font-size: 2rem;
   display: flex;
@@ -101,9 +101,13 @@ export const MobileIcon = styled.div`
     display: block;
     font-size: 1.8rem;
     cursor: pointer;
-    color: #fff;
+    //  color: #fff;
+    color: var(--text-clr);
     align-items: center;
     display: flex;
+    &: hover {
+      color: green;
+    }
   }
 `;
 
@@ -139,7 +143,7 @@ export const NavMenu = styled.ul`
 `;
 
 export const Navitem = styled.li`
-  
+
   margin-top: -15px;
 `;
 export const NavLinks = styled(LinkS)`
