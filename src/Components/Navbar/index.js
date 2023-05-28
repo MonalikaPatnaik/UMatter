@@ -50,6 +50,9 @@ const Navbar = ({ toggle }) => {
   const handleBlogsClick = () => {
     navigate("/blogs");
   };
+  const handleFeedbackClick = () => {
+    navigate("/feedback");
+  };
 
   const handleHomeClick = () => {
     navigate("/");
@@ -60,6 +63,10 @@ const Navbar = ({ toggle }) => {
   }
 
   const handleServicesClick = () => {
+    navigate("/");
+  }
+
+  const handleTestimonialsClick = () => {
     navigate("/");
   }
   const [isOpen, setIsOpen] = useState(false);
@@ -100,10 +107,19 @@ const Navbar = ({ toggle }) => {
               <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
             </Navitem>
             <Navitem>
+              <NavLinks to="testimonials" onClick={handleTestimonialsClick}>Testimonials</NavLinks>
+            </Navitem>
+            <Navitem>
               <NavLinks to="#" onClick={handleBlogsClick}>
                 Blogs{" "}
               </NavLinks>
             </Navitem>
+            <Navitem>
+              <NavLinks to="#" onClick={handleFeedbackClick}>
+                Feedback{" "}
+              </NavLinks>
+            </Navitem>
+            
             <NavBtnMobile>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
