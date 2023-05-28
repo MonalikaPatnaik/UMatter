@@ -6,7 +6,7 @@ import Contact from "../Components/Contactus/Contact";
 const ContactPage = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Contact />
       <Footer />
     </>

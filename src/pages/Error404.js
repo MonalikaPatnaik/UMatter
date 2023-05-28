@@ -11,7 +11,7 @@ function Error404() {
     };
     return (
         <>
-            <Navbar toggle={toggle} />
+            {/* <Navbar toggle={toggle} /> */}
             <img src={errorImg} alt="Error-404" className="error-404-img" />
             <Footer />
         </>
