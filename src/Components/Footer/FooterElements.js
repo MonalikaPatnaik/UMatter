@@ -153,6 +153,11 @@ export const SocialLogo = styled(Link)`
 // Website rights
 export const WebsiteRights = styled.small`
   color: #fff;
+  
+  &:hover {
+    color: #01bf71;
+    transition: 0.3s ease-out
+ }
 `;
 
 // Social icons
