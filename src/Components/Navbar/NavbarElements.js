@@ -25,6 +25,15 @@ export const NavbarContainer = styled.div`
   align-items: center;
   z-index: 1;
   width: 100%;
+  position: fixed;
+  top: 0px;
+  background: rgba(40, 30, 30, 0.4);
+  boxShadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdropFilter: blur(7.1px);
+  webkitBackdropFilter: blur(7.1px);
+  border: "1px solid rgba(40, 30, 30, 0.18);
+
+
   @media screen and (max-width: 768px) {
     justify-content: space-between;
     padding-left: 4%;
@@ -161,7 +170,7 @@ export const NavLinks = styled(LinkS)`
     transition: all 0.3s ease-in;
   }
 
-  &:hover:after {
+  &:hover::after {
     width: 100%;
   }
 
@@ -170,9 +179,10 @@ export const NavLinks = styled(LinkS)`
   }
 
   &.active {
-    border-bottom: 3px solid #01bf71;
+    color: #28b86b;
   }
 `;
+
 export const NavBtn = styled.nav`
   display: flex;
   align-items: center;
