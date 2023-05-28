@@ -9,7 +9,7 @@ import {
   Form,
   FormH1,
   FormInput,
-  FormLabel,
+  
   FormWrap,
   Text,
 } from './SignupElements';
@@ -54,9 +54,9 @@ const SignUp = () => {
           
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
-              <FormH1>Sign up your account</FormH1>
+              <FormH1>Create An Account</FormH1>
 
-              <FormLabel htmlFor="emailInput">Email</FormLabel>
+              
               <FormInput
                 onChange={e => setData({ ...data, email: e.target.value })}
                 id="emailInput"
@@ -64,44 +64,45 @@ const SignUp = () => {
                 type="email"
                 require /><br/>
 
-              <FormLabel htmlFor='usernameInput'>username</FormLabel>
+              
               <FormInput
                 onChange={e => setData({ ...data, username: e.target.value })}
                 id="usernameInput"
                 placeholder="Enter Username"
                 type="text"></FormInput><br/>
 
-              <FormLabel>Full Name</FormLabel>
+              
               <FormInput
                 onChange={e => setData({ ...data, name: e.target.value })}
                 id="FullNameInput"
                 placeholder="Enter your Full Name"
                 type="text"></FormInput><br/>
 
-              <FormLabel htmlFor='ContactNumber'>Contact Number</FormLabel>
+              
               <FormInput
                 onChange={e => setData({ ...data, contactNumber: e.target.value })}
                 id="ContactNumber"
-                placeholder="enter phone number"
+                placeholder="Enter phone number"
                 type="number"></FormInput><br/>
 
 
-<FormLabel htmlFor="PasswordInput">Password</FormLabel>
+
 <div style={{ position: 'relative' }}>
   <FormInput
     onChange={(e) => setData({ ...data, password1: e.target.value })}
     id="PasswordInput"
     placeholder="Enter Password"
     type={passwordType}
-  />
+    />
   {passwordType === 'password' ? (
-    <i
+   <i
       className="fa-solid fa-eye-slash"
       id="eye"
       style={{
         position: 'absolute',
+        color:'white',
         top: '50%',
-        right: '10px',
+        right: '150px',
         transform: 'translateY(-50%)',
         cursor: 'pointer',
       }}
@@ -113,16 +114,18 @@ const SignUp = () => {
       id="eye"
       style={{
         position: 'absolute',
+        color:'white',
         top: '50%',
-        right: '10px',
+        right: '150px',
         transform: 'translateY(-50%)',
         cursor: 'pointer',
       }}
       onClick={handleclick}
     ></i>
   )}
+
 </div><br/>
-<FormLabel htmlFor="PasswordInput">Confirm Password</FormLabel>
+
 <div style={{ position: 'relative' }}>
   <FormInput
     onChange={(e) => setData({ ...data, password1: e.target.value })}
@@ -136,8 +139,9 @@ const SignUp = () => {
       id="eye"
       style={{
         position: 'absolute',
+        color:'white',
         top: '50%',
-        right: '10px',
+        right: '150px',
         transform: 'translateY(-50%)',
         cursor: 'pointer',
       }}
@@ -149,8 +153,9 @@ const SignUp = () => {
       id="eye"
       style={{
         position: 'absolute',
+        color:'white',
         top: '50%',
-        right: '10px',
+        right: '150px',
         transform: 'translateY(-50%)',
         cursor: 'pointer',
       }}
@@ -172,7 +177,6 @@ const SignUp = () => {
 
               </button>
               <FormButton type="submit">Continue</FormButton>
-              <Text>Forgot password?</Text>
             </Form>
           </FormContent>
         </FormWrap>
@@ -182,3 +186,4 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
