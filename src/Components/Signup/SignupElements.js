@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 export const Container = styled.div`
  min-height: 692px;
  position: fixed;
- padding: 30px;
+ margin-top:0px;
+ padding: 20px;
  bottom: 0;
  left: 0;
  right: 0;
@@ -20,6 +21,7 @@ export const Container = styled.div`
 
 export const FormWrap = styled.div`
  min-height: 100vh;
+ margin-top: 7%;
  display: flex;
  flex-direction: column;
  justify-content: center;
@@ -63,7 +65,11 @@ export const Form = styled.form`
  z-index: 1;
  display: grid;
  margin: 0 auto;
+<<<<<<< HEAD
  padding: 40px 40px;
+=======
+ padding: 30px 32px;
+>>>>>>> 2f37ba85956fd0dedaddb05691ba5218e5cdd62f
  border-radius: 4px;
  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
 
@@ -81,9 +87,11 @@ export const FormH1 = styled.label`
 `;
 
 export const FormLabel = styled.label`
-margin-bottom: 8px;
+margin-bottom: 5px;
 color: #fff;
-font-size: 14px;
+font-size: 18px;
+overflow: hidden;
+
 `;
 
 export const FormInput = styled.input`
@@ -97,11 +105,11 @@ outline:none;
 `;
 
 export const FormButton = styled.button`
- margin-top:40px;
+ margin-top:30px;
  background: #01bf71;
  padding: 16px 0;
  border: none;
- border-radius: 4px;
+ border-radius: 12px;
  color: #fff;
  font-size: 20px;
  cursor: pointer;

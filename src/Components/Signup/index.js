@@ -14,6 +14,9 @@ import {
   Text,
 } from './SignupElements';
 import { useState } from 'react';
+import Navbar from '../Navbar';
+
+
 
 const SignUp = () => {
   const [passwordType, setPasswordType] = useState('password');
@@ -44,11 +47,11 @@ const SignUp = () => {
 
   return (
     <>
+    
       <Container>
+      <Navbar />
         <FormWrap>
-          <div>
-            <Icons to="/UMatter">UMatter</Icons>
-          </div>
+          
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
               <FormH1>Sign up your account</FormH1>
@@ -59,42 +62,102 @@ const SignUp = () => {
                 id="emailInput"
                 placeholder="email@example.com"
                 type="email"
-                require />
+                require /><br/>
 
               <FormLabel htmlFor='usernameInput'>username</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, username: e.target.value })}
                 id="usernameInput"
                 placeholder="Enter Username"
-                type="text"></FormInput>
+                type="text"></FormInput><br/>
 
               <FormLabel>Full Name</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, name: e.target.value })}
                 id="FullNameInput"
                 placeholder="Enter your Full Name"
-                type="text"></FormInput>
+                type="text"></FormInput><br/>
 
               <FormLabel htmlFor='ContactNumber'>Contact Number</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, contactNumber: e.target.value })}
                 id="ContactNumber"
                 placeholder="enter phone number"
-                type="number"></FormInput>
+                type="number"></FormInput><br/>
 
-              <FormLabel htmlFor="PasswordInput">Password</FormLabel>
-              <FormInput
-                onChange={e => setData({ ...data, password1: e.target.value })}
-                id="PasswordInput"
-                placeholder='Enter Password'
-                type="password"></FormInput>
 
-              <FormLabel htmlFor='PasswordInput2'>Conferm Password</FormLabel>
-              <FormInput
-                onChange={e => setData({ ...data, password2: e.target.value })}
-                id="PasswordInput2"
-                placeholder='Re Enter Password'
-                type="password"></FormInput>
+<FormLabel htmlFor="PasswordInput">Password</FormLabel>
+<div style={{ position: 'relative' }}>
+  <FormInput
+    onChange={(e) => setData({ ...data, password1: e.target.value })}
+    id="PasswordInput"
+    placeholder="Enter Password"
+    type={passwordType}
+  />
+  {passwordType === 'password' ? (
+    <i
+      className="fa-solid fa-eye-slash"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  ) : (
+    <i
+      className="fa-solid fa-eye"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  )}
+</div><br/>
+<FormLabel htmlFor="PasswordInput">Confirm Password</FormLabel>
+<div style={{ position: 'relative' }}>
+  <FormInput
+    onChange={(e) => setData({ ...data, password1: e.target.value })}
+    id="PasswordInput"
+    placeholder="Re Enter Password"
+    type={passwordType}
+  />
+  {passwordType === 'password' ? (
+    <i
+      className="fa-solid fa-eye-slash"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  ) : (
+    <i
+      className="fa-solid fa-eye"
+      id="eye"
+      style={{
+        position: 'absolute',
+        top: '50%',
+        right: '10px',
+        transform: 'translateY(-50%)',
+        cursor: 'pointer',
+      }}
+      onClick={handleclick}
+    ></i>
+  )}
+</div>
 
               <button
                 onClick={handleclick}
@@ -106,11 +169,7 @@ const SignUp = () => {
                   background: 'transparent',
                   border: 'none',
                 }}>
-                {passwordType === 'password' ? (
-                  <i class="fa-solid fa-eye-slash" id="eye"></i>
-                ) : (
-                  <i class="fa-solid fa-eye" id="eye"></i>
-                )}
+
               </button>
               <FormButton type="submit">Continue</FormButton>
               <Text>Forgot password?</Text>

@@ -85,7 +85,8 @@ export const FooterLinkItems = styled.div`
     align-items: flex-start;
     text-align: left;
   }
-`;
+`
+;
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
@@ -104,14 +105,51 @@ export const FooterLinkTitleHr = styled.hr`
 export const FooterLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-size: 14px;
 
   &:hover {
     color: #01bf71;
     transition: 0.3s ease-out;
   }
-`;
+
+    
+&.icons{
+ text-align:center;
+  border-radius:22px;
+  padding:7px
+
+  
+ }
+  &.icons:hover{
+  transform: translate(0,-10px);
+  background-color:white !important;
+  
+
+ }
+ &.icons{
+  color:white !important;
+ }
+ &.insta:hover{
+  color:#E4405F!important;
+ }
+ &.fb:hover{
+  color:#1877F2!important;
+}
+ &.youtube:hover{
+  color:#FF0000 !important;
+}
+ &.twitter:hover{
+  color:#1DA1F2 !important;
+}
+ &.linkdn:hover{
+  color:#0077B5 !important;
+}
+ `
+ 
+ ;
+
+ 
 
 // Social media
 export const SocialMedia = styled.section``;
@@ -131,6 +169,23 @@ export const SocialLogo = styled(Link)`
   text-decoration: none;
   font-size: 1.5rem;
   font-weight: bold;
+
+  &:hover {
+    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-size: 200%;
+    animation: shine 2s infinite;
+    color: lightcyan;
+  }
+
+  @keyframes shine {
+  from {
+    mask-position: 150%;
+  }
+  
+  to {
+    mask-position: -50%;
+  }
+}
 `;
 
 // Website rights

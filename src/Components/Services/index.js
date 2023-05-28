@@ -4,6 +4,8 @@ import Icon1 from '../../images/image1.png'
 import Icon2 from '../../images/image2.png'
 import Icon3 from '../../images/image3.png'
 import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
+import { motion } from 'framer-motion';
+import { cardOneVariants, cardTwoVariants, cardThreeVariants } from './CardAnimation';
 const Services = () => {
     const el = useRef(null);
 
@@ -28,21 +30,27 @@ const Services = () => {
         <ServicesH1><span ref={el} style={{ display: 'inline-block' }} /></ServicesH1>
        
         <ServicesWrapper>
+        <motion.div variants={cardOneVariants} initial="hidden" whileInView="visible">
             <ServicesCard> 
                 <ServicesIcon src={Icon1}/>
                 <ServicesH2><b>Consult With Doctor</b></ServicesH2>
                 <ServicesP>Consult with professional doctors and therapists regarding your health.</ServicesP>
             </ServicesCard>
+          </motion.div>
+          <motion.div variants={cardTwoVariants} initial="hidden" whileInView="visible">
             <ServicesCard> 
                 <ServicesIcon src={Icon2}/>
                 <ServicesH2><b>Attend workshops</b></ServicesH2>
                 <ServicesP>Book your slot now for amazing therapies and sessions that will make your life better.</ServicesP>
             </ServicesCard>
+          </motion.div>
+          <motion.div variants={cardThreeVariants} initial="hidden" whileInView="visible">
             <ServicesCard> 
                 <ServicesIcon src={Icon3}/>
                 <ServicesH2><b>Connect with friends</b></ServicesH2>
                 <ServicesP>Be the part of the amazing community and connect with them. </ServicesP>
             </ServicesCard>
+          </motion.div>
         </ServicesWrapper>
     </ServicesContainer>
   )

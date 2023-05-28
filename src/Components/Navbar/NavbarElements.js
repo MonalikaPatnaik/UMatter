@@ -32,8 +32,9 @@ export const NavbarContainer = styled.div`
   }
 `;
 
- const breakpoints = {
+const breakpoints = {
   sm: "640px",
+  md: "1080px",
 };
 export const LogoContainer = styled(LinkR)`
   cursor: pointer;
@@ -46,11 +47,17 @@ export const LogoContainer = styled(LinkR)`
   margin-right: 1rem; /* Add margin between logo and name */
   padding-bottom: 0.5rem; /* Add padding below the components inside LogoContainer */
 
-  @media (max-width: ${breakpoints.sm}) {
-    justify-content: center;
+  @media (max-width: ${breakpoints.md}) {
+    justify-content: space-between;
+    width: 100%;
     margin-right: 0; /* Reset margin on small screens */
     padding-bottom: 0; /* Reset padding on small screens */
   }
+`;
+
+export const LogoinnerContainer = styled.div`
+  display: flex;
+  align-items: center;
 `;
 
 export const NavLogo = styled(LinkR)`
@@ -60,10 +67,32 @@ export const NavLogo = styled(LinkR)`
   display: flex;
   align-items: center;
   font-weight: bold;
-  padding:1rem;
+  padding: 1rem;
   z-index: 10;
   text-decoration: none;
   text-align: center; /* Center the NavLogo on small screens */
+
+  &:hover {
+    mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
+    mask-size: 200%;
+    animation: shine 3s infinite;
+    color: #00ffca;
+  }
+
+  @keyframes shine {
+    from {
+      mask-position: 150%;
+    }
+
+    to {
+      mask-position: -50%;
+    }
+  }
 `;
 export const MobileIcon = styled.div`
   display: none;
@@ -110,6 +139,7 @@ export const NavMenu = styled.ul`
 `;
 
 export const Navitem = styled.li`
+  
   margin-top: -15px;
 `;
 export const NavLinks = styled(LinkS)`
@@ -170,6 +200,18 @@ text-decoration: none;
   background: var(--text-clr);
   color: var(--bg-clr);
 } */
+  }
+`;
+export const NavBtnMobile = styled.nav`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    margin:2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 0px;
+    margin-right: 45px;
   }
 `;
 

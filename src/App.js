@@ -8,7 +8,7 @@ import BlogPage from "./pages/blogs";
 import Forgot_password from "./pages/ForgotPassword";
 import SignupPage from "./pages/signup";
 import Profile from "./pages/profile";
-
+import Navbar from "./Components/Navbar";
 import ContactPage from "./pages/contact";
 
 // import Contact from "./Components/Contactus/Contact";
@@ -18,6 +18,7 @@ import ContactPage from "./pages/contact";
 function App() {
   return (
     <HashRouter>
+      <Navbar/>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SigninPage />} />

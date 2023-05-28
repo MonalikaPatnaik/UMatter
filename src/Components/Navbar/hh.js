@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { FaAcquisitionsIncorporated, FaBars, FaBox, FaClosedCaptioning, FaCross, FaCrow, FaExclamationTriangle, FaMicrophoneSlash, FaRegWindowClose } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
 import { useNavigate } from "react-router-dom";
 import {
@@ -13,29 +13,26 @@ import {
   NavBtn,
   NavBtnLink,
   LogoContainer,
-  LogoinnerContainer,
-  NavBtnMobile,
 } from "./NavbarElements";
 import manifest from "../../../src/assests/manifest.json";
 
-
 const faviconSrc = manifest.icons[0].src;
-const glassStyle = {
-  background: "rgba(40, 30, 30, 0.3)",
-  // borderRadius: "16px",
-  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-  backdropFilter: "blur(7.1px)",
-  webkitBackdropFilter: "blur(7.1px)",
-  border: "1px solid rgba(40, 30, 30, 0.18);"
-}
-const Navbar = ({ toggle }) => {
 
-  const [navbarBg, setNavbarBg] = useState(glassStyle);
+const Navbar = ({ toggle }) => {
+  const [navbarBg, setNavbarBg] = useState({
+    background: "rgba(40, 30, 30, 0.3)",
+    // borderRadius: "16px",
+    boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+    backdropFilter: "blur(7.1px)",
+    webkitBackdropFilter: "blur(7.1px)",
+    border: "1px solid rgba(40, 30, 30, 0.18);"
+  });
 
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle);
+      setNavbarBg(prevState=>{
+        return scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : prevState});
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -55,13 +52,6 @@ const Navbar = ({ toggle }) => {
     navigate("/");
   };
 
-  const handleAboutClick = () => {
-    navigate("/");
-  }
-
-  const handleServicesClick = () => {
-    navigate("/");
-  }
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -71,22 +61,19 @@ const Navbar = ({ toggle }) => {
     <>
       <Nav style={navbarBg}>
         <NavbarContainer>
-   
           <LogoContainer>
-            <LogoinnerContainer>
-              <img src={faviconSrc}
-                alt="favicon"
-                width="46"
-                height="46"
-              />
-              <NavLogo to="/">UMatter</NavLogo>
-            </LogoinnerContainer>
-            <MobileIcon onClick={handleToggle}>
-              {
-                isOpen ? <FaRegWindowClose /> : <FaBars />
-              }
-            </MobileIcon>
+            <img
+              src={faviconSrc}
+              alt="favicon"
+              width="46"
+              height="46"
+            />
+
+            <NavLogo to="/">UMatter</NavLogo>
           </LogoContainer>
+          <MobileIcon onClick={handleToggle}>
+            <FaBars />
+          </MobileIcon>
           <NavMenu isOpen={isOpen}>
             <Navitem>
               <NavLinks to="home" onClick={handleHomeClick}>
@@ -94,28 +81,23 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
+              <NavLinks to="about">About</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
+              <NavLinks to="services">Services</NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="#" onClick={handleBlogsClick}>
                 Blogs{" "}
               </NavLinks>
+              
             </Navitem>
-            <NavBtnMobile>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          
-          </NavBtnMobile>
           </NavMenu>
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          
+            <DarkMode />
           </NavBtn>
-          <DarkMode />
         </NavbarContainer>
       </Nav>
     </>
