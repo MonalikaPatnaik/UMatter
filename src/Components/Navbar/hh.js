@@ -56,7 +56,7 @@ const Navbar = ({ toggle }) => {
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-  
+
   return (
     <>
       <Nav style={navbarBg}>
@@ -76,7 +76,7 @@ const Navbar = ({ toggle }) => {
           </MobileIcon>
           <NavMenu isOpen={isOpen}>
             <Navitem>
-              <NavLinks  to="home" onClick={handleHomeClick} >
+              <NavLinks to="home" onClick={handleHomeClick}>
                 Home
               </NavLinks>
             </Navitem>
