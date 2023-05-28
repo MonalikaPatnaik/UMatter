@@ -36,11 +36,11 @@ const Footer = () => {
                 </FooterLinkItems>
 
             <FooterLinkItems className='socials' >
-              <FooterLink className="icons" ><FaInstagram style={{ fontSize: '22px' ,color:"#E4405F"}} /> </FooterLink>
-              <FooterLink className="icons"><FaFacebook style={{ fontSize: '22px',color:"#1877F2" }}  /> </FooterLink>
-              <FooterLink className="icons"><FaYoutube style={{ fontSize: '22px',color:"#FF0000" }}  /> </FooterLink>
-              <FooterLink className="icons"><FaTwitter style={{ fontSize: '22px',color:" #1DA1F2" }}  /> </FooterLink>
-              <FooterLink className="icons"><FaLinkedin style={{ fontSize: '22px' ,color:" #0077B5"}}  /> </FooterLink>
+              <FooterLink className="icons insta" style={{ backgroundColor:"#E4405F"}} ><FaInstagram style={{ fontSize: '22px'}}  /> </FooterLink>
+              <FooterLink className="icons fb" style={{ backgroundColor:"#1877F2"}}><FaFacebook style={{ fontSize: '22px'}}  /> </FooterLink>
+              <FooterLink className="icons youtube" style={{ backgroundColor:"#FF0000"}}><FaYoutube style={{ fontSize: '22px'}}  /> </FooterLink>
+              <FooterLink className="icons twitter" style={{ backgroundColor:"#1DA1F2"}}><FaTwitter style={{ fontSize: '22px'}}  /> </FooterLink>
+              <FooterLink className="icons linkdn" style={{ backgroundColor:"#0077B5"}}><FaLinkedin style={{ fontSize: '22px'}}/> </FooterLink>
 
             </FooterLinkItems>
 
