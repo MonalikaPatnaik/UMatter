@@ -8,12 +8,12 @@ const Contact = () => {
     <form>
     <div class="form-group">
   <label for="name">Name:</label>
-  <input type="text" id="name" name="name" placeholder="Enter your name"/>
+  <input type="text" id="name" name="name" required placeholder="Enter your name"/>
 </div>
 
 <div class="form-group">
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="Enter your email"/>
+  <input type="email" id="email" name="email" required placeholder="Enter your email"/>
 </div>
 
 <div class="form-group">
