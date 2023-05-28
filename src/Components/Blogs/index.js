@@ -232,4 +232,30 @@ const blogsData = [
     title: "Embracing the Power of Menstruation",
     content: "Menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.",
   },
+   {
+    icon: Icon1,
+    title: "Distraction techniques to avoid cravings",
+    content:
+      "If you get a craving or experience minor withdrawal, use distraction until the urge passes. Distract your mind and your body. If you get a craving, chew on gum, talk a walk, open a window, or begin a new activity.",
+  },
+  {
+    icon: Icon2,
+    title: "Support groups can help you quit smoking",
+    content:
+      "Let your friends, family, and coworkers know of your plans to stop smoking and your quit date. It helps for people around you to be aware of what you are going through, especially when you are grumpy.",
+  },
+  {
+    icon: Icon1,
+    title: "The 5D's that would help with smoking cessation",
+    content:
+      "No matter where you are in your journey of quitting, the five Ds are healthy coping mechanisms. The five Ds are: Delay, Distract, Drink water, Deep breathing, Discuss",
+  },
+  {
+    icon: Icon2,
+    title: "Few natural remedies to cope with nicotine withdrawal",
+    content:
+      "As a substitute for smoking, try chewing on carrots, pickles, apples, celery, sugarless gum, or hard candy. Keeping your mouth busy may stop the psychological need to smoke.",
+  },
+];
+
 ];
