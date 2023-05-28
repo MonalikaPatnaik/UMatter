@@ -39,14 +39,16 @@
   height: 80px;
 }
 
-.form-group button {
+button {
   width: 100%;
-  padding: 8px;
-  background-color: #4CAF50;
   color: #fff;
   border: none;
-  border-radius: 4px;
-  cursor: pointer;
+  border-radius: 12px;
+  background-color:#0ed381;
+  font-size: 1.3rem;
+  font-weight: 800;
+  opacity:1;
+  cursor: pointer;  
+  padding: 12px 12px;
 }
-
   
