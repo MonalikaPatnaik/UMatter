@@ -6,6 +6,9 @@ const app = express();
 const cors = require('cors');
 app.use(cors());
 
+//imported nodemailer for using SMTP server
+const nodemailer = require('nodemailer');
+
 //this is the port number
 const port = 8081;
 
@@ -209,4 +212,47 @@ app.get('/profile/:username/', async (req,res) => {
             }
         })
     }
+});
+
+// SMTP server for Contact Form
+app.post('/mail', (req, res) => {
+    // console.log(req.body)
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+            user: 'pjbhatt203@gmail.com', 
+            pass: 'iomxkurgnrdgwvyh' 
+            // https://myaccount.google.com/u/1/apppasswords
+        }
+    });
+
+    var options = {
+        from: 'pjbhatt203@gmail.com',
+        to: 'pjbhatt203@gmail.com', 
+        subject: "Contact Request",
+        html: `
+        <div style="padding:10px; border-style: ridge">
+        <h3>You have a new contact request.</h3>
+        <h4>Contact Details</h4>
+        <ul>
+            <li>Name: ${req.body.name}</li>
+            <li>Email: ${req.body.mail}</li>
+            <li>Subject: Contact Request </li>
+            <li>Message: ${req.body.message}</li>
+        </ul>
+        </div>
+        `
+    };
+
+    transporter.sendMail(options, function (error, info) {
+        if (error) {
+            console.log(error)
+            res.json('Couldnot send Email')
+        }
+        else {
+            console.log("Email Sent Successfully")
+            res.json('Email Sent Successfully')
+        }
+
+    });
 });
