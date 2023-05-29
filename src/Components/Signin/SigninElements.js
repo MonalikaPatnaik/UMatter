@@ -46,32 +46,16 @@ export const FormContent = styled.div`
 `;
 
 export const Form = styled.form`
-
-.eye-button {
-   position: absolute;
-   color:white;
-   top: 0%;
-   right: 10px;
-   transform: translateY(-50%);
-   background: transparent;
-   border: none;
-   padding: 0;
-   cursor: pointer;
- }
-
- background: linear-gradient(0deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
+ background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
  max-width: 550px;
  height: auto;
  width: 100%;
  z-index: 1;
  display: grid;
  margin: 0 auto;
- padding: 20px 32px;
- border-radius: 10px;
+ padding: 40px 32px;
+ border-radius: 4px;
  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
-
-
- 
 
  @media screen and (max-width: 400px) {
     padding: 40px 32px;
@@ -79,20 +63,25 @@ export const Form = styled.form`
 `;
 
 export const FormH1 = styled.label`
- font-family:'League Spartan';
- margin-bottom: 30px;
+ margin-bottom: 40px;
  color: #fff;
- font-size: 60px;
+ font-size: 20px;
  font-weight: 400;
  text-align: center;
  `;
+ 
+ export const FormLabel = styled.label`
+ margin-bottom: 8px;
+ color: #fff;
+ font-size: 14px;
+ cursor:pointer;
+`;
 
 export const FormInput = styled.input`
-margin-bottom: 15px;
+margin-bottom: 40px;
 padding: 10px;
 border: none;
-font-family:'Poppins';
-border-radius: 10px;
+border-radius: 4px;
 font-size:18px;
 border:none;
 outline:none;
@@ -132,7 +121,7 @@ export const FormButton = styled.button`
 
 export const Text = styled.span`
  text-align: center;
- margin-top: 100px;
+ margin-top: 24px;
  color: #fff;
  font-size: 14px;
 `;

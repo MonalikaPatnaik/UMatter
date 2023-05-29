@@ -66,21 +66,20 @@ const SignIn = () => {
         <FormWrap>
           <FormContent>
             <Form onSubmit={sendPostRequest} action="#">
-              <FormH1>Sign In</FormH1>
-              
+              <FormH1>Sign in to your account</FormH1>
+              <FormLabel htmlFor="email">Email</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, email: e.target.value })}
-                placeholder="Email" type="email" id="email"
+                placeholder="email@example.com" type="email" id="email"
                 require />
-             
+              <FormLabel htmlFor="password">Password</FormLabel>
               <FormInput
                 onChange={e => setData({ ...data, password: e.target.value })}
-                placeholder="Password"
+                placeholder="Must have at least 8 characters"
                 type={passwordType} id="password"
                 require
               />
               <button
-              className='eye-button'
                 onClick={handleclick}
                 style={{
                   width: "fit-content",
@@ -117,4 +116,3 @@ const SignIn = () => {
 };
 
 export default SignIn;
-

@@ -52,7 +52,7 @@ justify-content: center;
 `;
 
 export const Form = styled.form`
-  background: linear-gradient(0deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
+  background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
   
   max-height:650px;
   max-width: 500px;
