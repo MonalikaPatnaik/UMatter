@@ -114,3 +114,11 @@ export const Text = styled.span`
  color: #fff;
  font-size: 14px;
 `;
+
+export const FormLabel = styled.label`
+margin-bottom: 8px;
+color: #fff;
+font-size: 1.1rem;
+font-weight: 600;
+cursor:pointer;
+`;

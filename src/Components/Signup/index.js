@@ -13,17 +13,17 @@ import {
 	FormLabel,
 	FormWrap,
 	Text,
-
-  Container,
-  Icons,
-  FormButton,
-  FormContent,
-  Form,
-  FormH1,
-  FormInput,
+                                //    #############
+//   Container,
+//   Icons,
+//   FormButton,
+//   FormContent,
+//   Form,
+//   FormH1,
+//   FormInput,
   
-  FormWrap,
-  Text,
+//   FormWrap,
+//   Text,
 
 } from './SignupElements';
 import { useState } from 'react';
@@ -88,8 +88,8 @@ const SignUp = () => {
 								type="text"
 							></FormInput>
 							<br />
-
-  const [passwordType, setPasswordType] = useState('password');
+                                                                          {/* ################ */}
+  {/* const [passwordType, setPasswordType] = useState('password');
   const [data, setData] = useState({});
   const handleclick = (e) => {
     e.preventDefault();
@@ -98,7 +98,7 @@ const SignUp = () => {
     } else {
       setPasswordType('text');
     }
-  };
+  }
 
   const sendPostRequest = async (e) => {
     console.log("sendPostRequest exicuted!!!");
@@ -178,7 +178,7 @@ const SignUp = () => {
 								placeholder="enter phone number"
 								type="number"
 							></FormInput>
-							<br />
+							<br /> */}
 
 
 <div style={{ position: 'relative' }}>
@@ -361,17 +361,17 @@ const SignUp = () => {
 };
 
 export default SignUp;
+                                                  // #############
+//               </button>
+//               <FormButton type="submit">Continue</FormButton>
+//             </Form>
+//           </FormContent>
+//         </FormWrap>
+//       </Container>
+//     </>
+//   );
+// };
 
-              </button>
-              <FormButton type="submit">Continue</FormButton>
-            </Form>
-          </FormContent>
-        </FormWrap>
-      </Container>
-    </>
-  );
-};
-
-export default SignUp;
+// export default SignUp;
 
 
