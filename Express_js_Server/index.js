@@ -220,15 +220,15 @@ app.post('/mail', (req, res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'pjbhatt203@gmail.com', 
-            pass: 'iomxkurgnrdgwvyh' 
+            user: 'your-email@gmail.com', 
+            pass: 'generated-password' 
             // https://myaccount.google.com/u/1/apppasswords
         }
     });
 
     var options = {
-        from: 'pjbhatt203@gmail.com',
-        to: 'pjbhatt203@gmail.com', 
+        from: 'your-email@gmail.com',
+        to: 'your-email@gmail.com', 
         subject: "Contact Request",
         html: `
         <div style="padding:10px; border-style: ridge">
