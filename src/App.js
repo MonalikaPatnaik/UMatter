@@ -5,6 +5,7 @@ import Home from "./pages";
 import SigninPage from "./pages/signin";
 import Error404 from "./pages/Error404";
 import BlogPage from "./pages/blogs";
+import FeedbackPage from "./pages/feedback";
 import Forgot_password from "./pages/ForgotPassword";
 import SignupPage from "./pages/signup";
 import Profile from "./pages/profile";
@@ -23,6 +24,7 @@ function App() {
         <Route exact path="/" element={<Home />} />
         <Route exact path="/signin" element={<SigninPage />} />
         <Route path="/blogs" element={<BlogPage />} />
+        <Route path="/feedback" element={<FeedbackPage />} />
         <Route path="/contact" element={<ContactPage />} />
 
         <Route
