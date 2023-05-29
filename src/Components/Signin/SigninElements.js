@@ -58,22 +58,24 @@ export const Form = styled.form`
  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
  @media screen and (max-width: 400px) {
-    padding: 40px 32px;
+    padding: 20px 32px;
+    height: 81%;
  } 
 `;
 
 export const FormH1 = styled.label`
  margin-bottom: 40px;
  color: #fff;
- font-size: 20px;
- font-weight: 400;
+ font-size: 1.4rem;
+ font-weight: 800;
  text-align: center;
  `;
  
  export const FormLabel = styled.label`
  margin-bottom: 8px;
  color: #fff;
- font-size: 14px;
+ font-size: 1.1rem;
+ font-weight: 600;
  cursor:pointer;
 `;
 
@@ -81,7 +83,7 @@ export const FormInput = styled.input`
 margin-bottom: 40px;
 padding: 10px;
 border: none;
-border-radius: 4px;
+border-radius: 9px;
 font-size:18px;
 border:none;
 outline:none;
@@ -103,7 +105,7 @@ export const FormButton = styled.button`
  background: #01bf71;
  padding: 16px 10px;
  border: none;
- border-radius: 12px;
+ border-radius: 15px;
  color: #fff;
  font-size: 20px;
  cursor: pointer;
