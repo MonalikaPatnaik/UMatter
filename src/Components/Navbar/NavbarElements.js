@@ -25,6 +25,14 @@ export const NavbarContainer = styled.div`
   align-items: center;
   z-index: 1;
   width: 100%;
+  position: fixed;
+  top: 0px;
+  background: rgba(40, 30, 30, 0.4);
+  boxShadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdropFilter: blur(7.1px);
+  webkitBackdropFilter: blur(7.1px);
+  border: "1px solid rgba(40, 30, 30, 0.18);
+  
   @media screen and (max-width: 768px) {
     justify-content: space-between;
     padding-left: 4%;
