@@ -1,7 +1,8 @@
+
 import React, { useEffect, useState } from "react";
 import { FaAcquisitionsIncorporated, FaBars, FaBox, FaClosedCaptioning, FaCross, FaCrow, FaExclamationTriangle, FaMicrophoneSlash, FaRegWindowClose } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   Nav,
   NavbarContainer,
@@ -21,7 +22,12 @@ import manifest from "../../../src/assests/manifest.json";
 
 const faviconSrc = manifest.icons[0].src;
 const glassStyle = {
-  'background-color': "transparent"
+  background: "rgba(40, 30, 30, 0.3)",
+  // borderRadius: "16px",
+  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+  backdropFilter: "blur(7.1px)",
+  webkitBackdropFilter: "blur(7.1px)",
+  border: "1px solid rgba(40, 30, 30, 0.18);"
 }
 const Navbar = ({ toggle }) => {
 
@@ -40,13 +46,13 @@ const Navbar = ({ toggle }) => {
     };
   }, []);
 
-  const location = useLocation();
   const navigate = useNavigate();
-
 
   const handleBlogsClick = () => {
     navigate("/blogs");
-    window.location.reload();
+  };
+  const handleFeedbackClick = () => {
+    navigate("/feedback");
   };
 
   const handleHomeClick = () => {
@@ -60,11 +66,14 @@ const Navbar = ({ toggle }) => {
   const handleServicesClick = () => {
     navigate("/");
   }
+
+  const handleTestimonialsClick = () => {
+    navigate("/");
+  }
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
-
 
   return (
     <>
@@ -88,21 +97,30 @@ const Navbar = ({ toggle }) => {
           </LogoContainer>
           <NavMenu isOpen={isOpen}>
             <Navitem>
-              <NavLinks spy={true} smooth={true} offset={-80} to="home" onClick={handleHomeClick}>
+              <NavLinks to="home" onClick={handleHomeClick}>
                 Home
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks spy={true} smooth={true} offset={-80} to="about" onClick={handleAboutClick} >About</NavLinks>
+              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks spy={true} smooth={true} offset={-80} to="services" onClick={handleServicesClick}>Services</NavLinks>
+              <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks className={location.pathname==='/blogs'?'active':''} to="#" onClick={handleBlogsClick}>
+              <NavLinks to="testimonials" onClick={handleTestimonialsClick}>Testimonials</NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="#" onClick={handleBlogsClick}>
                 Blogs{" "}
               </NavLinks>
             </Navitem>
+            <Navitem>
+              <NavLinks to="#" onClick={handleFeedbackClick}>
+                Feedback{" "}
+              </NavLinks>
+            </Navitem>
+            
             <NavBtnMobile>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
@@ -122,3 +140,4 @@ const Navbar = ({ toggle }) => {
 };
 
 export default Navbar;
+
