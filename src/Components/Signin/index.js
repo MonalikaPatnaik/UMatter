@@ -102,7 +102,7 @@ const SignIn = () => {
 										width: 'fit-content',
 										position: 'absolute',
 										right: '0%',
-										top: '26%',
+										top: '50%',
 										background: 'transparent',
 										color: '#10b981',
 										border: 'none',
