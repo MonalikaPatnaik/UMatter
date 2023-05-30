@@ -48,11 +48,11 @@
   }
 }
 @media only screen and (max-width: 350px){
-  
+
   #root{
     width: 830px;
     @media only screen and (max-width: 430px){
-    
+
       #root{
         width: 907px;
         overflow-x: hidden;

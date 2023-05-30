@@ -158,4 +158,8 @@ another person in the queue.
 
 ## Thanks to all the Contributors ❤️
 
-<img src="https://contrib.rocks/image?repo=MonalikaPatnaik/UMatter" />
+<a href = "https://github.com/MonalikaPatnaik/UMatter/graphs/contributors">
+
+  <img src = "https://contrib.rocks/image?repo=MonalikaPatnaik/UMatter"/>
+
+</a>

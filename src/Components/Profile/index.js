@@ -50,8 +50,8 @@ const ProfilePage = () => {
     sessionStorage.clear();
     sessionStorage.setItem("authorizationToken", undefined);
     sessionStorage.setItem("username", undefined);
-    setIsSignedIn(false); 
-  } 
+    setIsSignedIn(false);
+  }
 
     return (
         <>
