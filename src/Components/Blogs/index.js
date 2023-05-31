@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import DarkMode from "../DarkMode/DarkMode";
 import Icon1 from "../../images/no-drinking.png";
+import DarkMode from "../DarkMode/DarkMode";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
 import {
@@ -69,8 +69,8 @@ const Blogs = () => {
             borderRadius: "8px",
             padding: "8px",
             marginTop: "8px",
-            width: "100px", // Set width to your desired value
-            marginLeft: "20px", // Add any other desired inline styles
+            width: "101px", // Set width to your desired value
+            marginLeft: "21px", // Add any other desired inline styles
           }}
         >
           Clear
@@ -90,7 +90,8 @@ const Blogs = () => {
           </BlogsCard>
         ))}
       </BlogsWrapper>
-      <DarkMode />
+      <DarkMode >
+      </DarkMode>
     </BlogsContainer>
   );
 };
