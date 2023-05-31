@@ -1,23 +1,25 @@
 /** @format */
 
+
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
+
 import {
-  Container,
-  Icons,
-  FormButton,
-  FormContent,
-  Form,
-  FormH1,
-  FormInput,
-  FormLabel,
-  FormWrap,
-  Text,
-} from "./SigninElements";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import Navbar from "../Navbar";
+	Container,
+	Icons,
+	FormButton,
+	FormContent,
+	Form,
+	FormH1,
+	FormInput,
+	FormLabel,
+	FormWrap,
+	Text,
+} from './SigninElements';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
+import Navbar from '../Navbar';
 
 const SignIn = () => {
   const navigate = useNavigate();
