@@ -27,7 +27,6 @@ const SignUp = () => {
   };
 
   const validateEmail = (email) => {
-    // Basic email format validation using regex
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return emailRegex.test(email);
   };
@@ -37,30 +36,46 @@ const SignUp = () => {
     const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
     return passwordRegex.test(password);
   };
+  const validateusername =  (username) => {
+    // username  should contains only alphabets
+    const usernameRegex = /[A-Za-z]{3}/;
+    return usernameRegex.test(username);
+  };
+
+  const validatename =  (name) => {
+    // name  should contains only alphabets
+    const nameRegex = /[A-Za-z]{3}/;
+    return nameRegex.test(name);
+  };
+  const validatecontactNumber =  (contactNumber) => {
+    // name  should contains only alphabets
+    const contactNumberRegex = /^\d{10}$/;
+    return contactNumberRegex.test(contactNumber);
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validate form inputs
-    const { email, username, name, contactNumber, password } = data;
+    const { email, username, name, contactNumber, password,confirmpassword} = data;
 
     if (!email || !validateEmail(email)) {
       alert('Please enter a valid email address.');
       return;
     }
 
-    if (!username) {
-      alert('Please enter a username.');
+    if (!username || !validateusername(username)) {
+      alert('Please enter a username(contains only alphabets).');
       return;
     }
 
-    if (!name) {
+    if (!name  || !validatename(name)) {
       alert('Please enter your full name.');
       return;
     }
 
-    if (!contactNumber) {
-      alert('Please enter a contact number.');
+    if (!contactNumber || !validatecontactNumber(contactNumber)) {
+      alert('Please enter a contact number/verify once');
       return;
     }
 
@@ -70,8 +85,11 @@ const SignUp = () => {
       );
       return;
     }
-
-    // All form inputs are valid, submit the form
+    if (password !== confirmpassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+    
     sendPostRequest();
   };
 
@@ -96,8 +114,8 @@ const SignUp = () => {
         <Navbar />
         <FormWrap>
           <FormContent>
-            <Form onSubmit={handleSubmit} action="../pages/index.js">
-              <FormH1>Sign up your account</FormH1>
+            <Form onSubmit={handleSubmit} action="#">
+              <FormH1>Create An Account</FormH1> <br/>
 
               <FormInput
                 onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -105,7 +123,7 @@ const SignUp = () => {
                 placeholder="email@example.com"
                 type="email"
                 required
-              />
+              /><br/>
 
               
               <FormInput
@@ -114,7 +132,7 @@ const SignUp = () => {
                 placeholder="Enter Username"
                 type="text"
                 required
-              />
+              /><br/>
 
               
               <FormInput
@@ -123,7 +141,7 @@ const SignUp = () => {
                 placeholder="Enter your Full Name"
                 type="text"
                 required
-              />
+              /><br/>
 
               
               <FormInput
@@ -134,7 +152,7 @@ const SignUp = () => {
                 placeholder="Enter phone number"
                 type="tel"
                 required
-              />
+              /><br/>
 
              
               <div style={{ position: 'relative' }}>
@@ -174,11 +192,14 @@ const SignUp = () => {
                     onClick={handleclick}
                   ></i>
                 )}
-              </div>
+              </div><br/>
 
               
               <div style={{ position: 'relative' }}>
                 <FormInput
+                  onChange={(e) =>
+                    setData({ ...data, confirmpassword: e.target.value })
+                  }
                   id="ConfirmPasswordInput"
                   placeholder="Re Enter Password"
                   type={passwordType}
@@ -213,6 +234,7 @@ const SignUp = () => {
                 )}
               </div>
 
+
               <button
 								onClick={handleclick}
 								style={{
@@ -225,7 +247,6 @@ const SignUp = () => {
 								}}
 							></button>
 							<FormButton type="submit">Continue</FormButton>
-							<Text>Forgot password?</Text>
 						</Form>
 					</FormContent>
 				</FormWrap>
