@@ -166,6 +166,11 @@ const Blogs = () => {
             width: "300px", // Set width to your desired value
             borderRadius: "8px",
             padding: "8px",
+            textAlign: "center",
+            display:"flex",
+            justifyContent:"center"
+            
+            
             // Add any other desired inline styles
           }}
         />
@@ -177,6 +182,7 @@ const Blogs = () => {
             color: "white", // Set text color to white
             borderRadius: "8px",
             padding: "8px",
+            marginTop: "8px"
           }}
         >
           Clear
