@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { FaAcquisitionsIncorporated, FaBars, FaBox, FaClosedCaptioning, FaCross, FaCrow, FaExclamationTriangle, FaMicrophoneSlash, FaRegWindowClose } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
