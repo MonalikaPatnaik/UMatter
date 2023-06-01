@@ -53,7 +53,6 @@ const Blogs = () => {
             borderRadius: "8px",
             padding: "8px",
             textAlign: "center",
-            display:"flex",
             justifyContent:"center"
             
             
@@ -69,8 +68,9 @@ const Blogs = () => {
             borderRadius: "8px",
             padding: "8px",
             marginTop: "8px",
-            width: "101px", // Set width to your desired value
-            marginLeft: "21px", // Add any other desired inline styles
+            fontSize: "19px",
+            width: "100px", // Set width to your desired value
+            marginLeft: "8px", // Add any other desired inline styles
           }}
         >
           Clear
