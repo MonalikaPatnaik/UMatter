@@ -85,6 +85,12 @@ const SignIn = () => {
                 id="password"
                 require
               />
+		{passwordType === "password" ? (
+                  <i class="fa-solid fa-eye-slash" id="eye"></i>
+                ) : (
+                  <i class="fa-solid fa-eye" id="eye"></i>
+                )}
+              </button>
               <button
                 onClick={handleclick}
                 style={{
@@ -96,12 +102,7 @@ const SignIn = () => {
                   border: "none",
                 }}
               >
-                {passwordType === "password" ? (
-                  <i class="fa-solid fa-eye-slash" id="eye"></i>
-                ) : (
-                  <i class="fa-solid fa-eye" id="eye"></i>
-                )}
-              </button>
+           
 
               <form
                 style={{
