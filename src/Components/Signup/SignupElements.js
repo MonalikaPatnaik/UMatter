@@ -50,7 +50,13 @@ justify-content: center;
     padding: 10px;
  } 
 `;
-
+export const FormLabel = styled.label`
+ margin-bottom: 8px;
+ color: #fff;
+ font-size: 1.1rem;
+ font-weight: 600;
+ cursor:pointer;
+`;
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
   
