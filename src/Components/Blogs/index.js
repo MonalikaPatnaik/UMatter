@@ -112,7 +112,6 @@
 // ];
 
 
-
 import React, { useState } from "react";
 import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
@@ -125,7 +124,7 @@ import {
   BlogsCard,
   BlogsIcon,
   BlogsP,
-  ReadMoreButton, // Added ReadMoreButton import
+  ReadMoreButton,
 } from "./BlogsElements";
 
 const Blogs = () => {
@@ -153,33 +152,28 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "150px" }}></div>
 
-
-
-       <div className="search-container">
-         <input
+      <div className="search-container">
+        <input
           type="text"
           placeholder="Search blogs..."
           value={searchTerm}
           onChange={handleSearch}
           onKeyPress={handleKeyPress}
           style={{
-            width: "300px", // Set width to your desired value
+            width: "300px",
             borderRadius: "8px",
             padding: "8px",
             textAlign: "center",
-            display:"flex",
-            justifyContent:"center"
-            
-            
-            // Add any other desired inline styles
+            display: "flex",
+            justifyContent: "center"
           }}
         />
         <button
           className="search-button"
           onClick={handleButtonClick}
           style={{
-            backgroundColor: "green", // Set background color to green
-            color: "white", // Set text color to white
+            backgroundColor: "green",
+            color: "white",
             borderRadius: "8px",
             padding: "8px",
             marginTop: "8px"
@@ -191,16 +185,17 @@ const Blogs = () => {
       <div style={{ height: "50px" }}></div>
       <div style={{ height: "50px" }}></div>
       <BlogsWrapper>
-        {filteredBlogs.map((blog, index) => (
-          <BlogsCard key={index}>
-            <BlogsIcon src={blog.icon} />
-            <BlogsH2>
-              <b>{blog.title}</b>
-            </BlogsH2>
-            <BlogsP>{blog.content}</BlogsP>
-            <ReadMoreButton>Read more</ReadMoreButton>
-          </BlogsCard>
-        ))}
+        <main className="page-content">
+          {filteredBlogs.map((blog, index) => (
+            <div className="card" key={index}>
+              <div className="content">
+                <h2 className="title">{blog.title}</h2>
+                <p className="copy">{blog.content}</p>
+                <ReadMoreButton>Read More</ReadMoreButton>
+              </div>
+            </div>
+          ))}
+        </main>
       </BlogsWrapper>
     </BlogsContainer>
   );
