@@ -90,8 +90,6 @@ const Blogs = () => {
           </BlogsCard>
         ))}
       </BlogsWrapper>
-      <DarkMode >
-      </DarkMode>
     </BlogsContainer>
   );
 };
