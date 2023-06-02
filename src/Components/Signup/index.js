@@ -29,6 +29,72 @@ const SignUp = () => {
       setPasswordType('text');
     }
   };
+  const validateEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    // Password validation: at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit
+    const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    return passwordRegex.test(password);
+  };
+  const validateusername =  (username) => {
+    // username  should contains only alphabets
+    const usernameRegex = /[A-Za-z]{3}/;
+    return usernameRegex.test(username);
+  };
+
+  const validatename =  (name) => {
+    // name  should contains only alphabets
+    const nameRegex = /[A-Za-z]{3}/;
+    return nameRegex.test(name);
+  };
+  const validatecontactNumber =  (contactNumber) => {
+    // name  should contains only alphabets
+    const contactNumberRegex = /^\d{10}$/;
+    return contactNumberRegex.test(contactNumber);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    // Validate form inputs
+    const { email, username, name, contactNumber, password,confirmpassword} = data;
+
+    if (!email || !validateEmail(email)) {
+      alert('Please enter a valid email address.');
+      return;
+    }
+
+    if (!username || !validateusername(username)) {
+      alert('Please enter a username(contains only alphabets).');
+      return;
+    }
+
+    if (!name  || !validatename(name)) {
+      alert('Please enter your full name.');
+      return;
+    }
+
+    if (!contactNumber || !validatecontactNumber(contactNumber)) {
+      alert('Please enter a contact number/verify once');
+      return;
+    }
+
+    if (!password || !validatePassword(password)) {
+      alert(
+        'Please enter a password with at least 8 characters including one uppercase letter, one lowercase letter, and one digit.'
+      );
+      return;
+    }
+    if (password !== confirmpassword) {
+      alert('Passwords do not match.');
+      return;
+    }
+    
+    sendPostRequest();
+  };
 
 	const sendPostRequest = async (e) => {
 		console.log('sendPostRequest exicuted!!!');
@@ -51,7 +117,7 @@ const SignUp = () => {
 				<Navbar />
 				<FormWrap>
 					<FormContent>
-						<Form onSubmit={sendPostRequest} action="#">
+						<Form onSubmit={handleSubmit} action="#">
 							<FormH1>Create an Account</FormH1>
 
 							<FormInput
@@ -102,7 +168,7 @@ const SignUp = () => {
 							<div style={{ position: 'relative' }}>
 								<FormInput
 									onChange={(e) =>
-										setData({ ...data, password1: e.target.value })
+										setData({ ...data, password: e.target.value })
 									}
 									id="PasswordInput"
 									placeholder="Enter Password"
@@ -141,7 +207,7 @@ const SignUp = () => {
 							<div style={{ position: 'relative' }}>
 								<FormInput
 									onChange={(e) =>
-										setData({ ...data, password1: e.target.value })
+										setData({ ...data, confirmpassword: e.target.value })
 									}
 									id="PasswordInput"
 									placeholder="Re Enter Password"
