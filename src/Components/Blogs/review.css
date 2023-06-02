@@ -1,10 +1,9 @@
 .main{
     padding: 2rem;
     margin: 5rem;
-    display: flex;
+    /* display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    /* justify-content: center; */
+    justify-content: space-between; */
     width: 100%;
     
 }
@@ -15,6 +14,14 @@
     padding-right: 5rem;
     font-weight: 500;
     font-family: sans-serif;
+}
+
+.ele{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 11%;
+    flex-wrap: wrap;
 }
 
  
