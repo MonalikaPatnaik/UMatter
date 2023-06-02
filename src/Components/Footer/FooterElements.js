@@ -116,7 +116,7 @@ export const FooterLink = styled(Link)`
   &.icons{
     text-align:center;
     border-radius:22px;
-    padding:7px
+    padding:7px;
     transition: all 0.3s ease-out 0s;
    }
    
