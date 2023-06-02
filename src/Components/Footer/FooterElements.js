@@ -111,44 +111,43 @@ export const FooterLink = styled(Link)`
 
   &:hover {
     color: #01bf71;
-    transition: 0.3s ease-out;
   }
-
-    
-&.icons{
- text-align:center;
-  border-radius:22px;
-  padding:7px
-
   
- }
+  &.icons{
+    text-align:center;
+    border-radius:22px;
+    padding:7px;
+    transition: all 0.3s ease-out 0s;
+   }
+   
   &.icons:hover{
-  transform: translate(0,-10px);
-  background-color:white !important;
-  
-
- }
- &.icons{
-  color:white !important;
- }
- &.insta:hover{
-  color:#E4405F!important;
- }
- &.fb:hover{
-  color:#1877F2!important;
-}
- &.youtube:hover{
-  color:#FF0000 !important;
-}
- &.twitter:hover{
-  color:#1DA1F2 !important;
-}
- &.linkdn:hover{
-  color:#0077B5 !important;
-}
- &.github:hover{
-  color:#000000 !important;
-}
+    transform: translate(0,-10px);
+    background-color:white !important;  
+   }
+   
+  &.icons{
+    color:white !important;
+   }
+   
+  &.insta:hover{
+    color:#E4405F!important;
+   }
+   
+  &.fb:hover{
+    color:#1877F2!important;
+   }
+   
+  &.youtube:hover{
+    color:#FF0000 !important;
+   }
+   
+  &.twitter:hover{
+    color:#1DA1F2 !important;
+   } 
+   
+  &.linkdn:hover{
+    color:#0077B5 !important;
+   }
  `
  
  ;
