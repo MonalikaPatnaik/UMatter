@@ -29,13 +29,11 @@ const Footer = () => {
                        <FooterLink to="/">Destinations</FooterLink>
                        <FooterLink to="/">Sponsorships</FooterLink>
                 </FooterLinkItems>
-            </FooterLinksWrapper>
-            <FooterLinksWrapper>
                 <FooterLinkItems className='videos'>
                     <FooterLinkTitle>Videos</FooterLinkTitle>
                     <FooterLinkTitleHr className='hr' />
                        <FooterLink to="/">Submit Video</FooterLink>
-                       <FooterLink to="/">Ambassdors</FooterLink>
+                       <FooterLink to="/">Ambassadors</FooterLink>
                        <FooterLink to="/">Agency</FooterLink>
                        <FooterLink to="/">Influencer</FooterLink>
                 </FooterLinkItems>
