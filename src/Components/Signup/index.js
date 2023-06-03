@@ -173,6 +173,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Enter Password"
 									type={passwordType}
+									style={{width: "100%"}}
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -184,6 +185,7 @@ const SignUp = () => {
 											right: '10px',
 											transform: 'translateY(-50%)',
 											cursor: 'pointer',
+											color: 'green',
 										}}
 										onClick={handleclick}
 									></i>
@@ -197,6 +199,7 @@ const SignUp = () => {
 											right: '10px',
 											transform: 'translateY(-50%)',
 											cursor: 'pointer',
+											color: 'green',
 										}}
 										onClick={handleclick}
 									></i>
@@ -212,6 +215,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Re Enter Password"
 									type={passwordType}
+									style={{width: "100%"}}
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -223,6 +227,7 @@ const SignUp = () => {
 											right: '10px',
 											transform: 'translateY(-50%)',
 											cursor: 'pointer',
+											color: 'green',
 										}}
 										onClick={handleclick}
 									></i>
@@ -236,6 +241,7 @@ const SignUp = () => {
 											right: '10px',
 											transform: 'translateY(-50%)',
 											cursor: 'pointer',
+											color: 'green',
 										}}
 										onClick={handleclick}
 									></i>
