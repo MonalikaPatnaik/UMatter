@@ -36,7 +36,7 @@ const Contact = () => {
       <h2>Contact Us</h2>
       <form onSubmit={handleSubmit}>
         <div class="form-group">
-          <input type="text" id="name" name="name" required placeholder="Name:" onChange={(e) => setName(e.target.value)} />
+          <input type="text" id="name" name="name" required placeholder="Name" onChange={(e) => setName(e.target.value)} />
         </div>
 
         <div class="form-group">
