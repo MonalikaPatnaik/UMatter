@@ -60,7 +60,7 @@ export const FormLabel = styled.label`
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
   
-  max-height:650px;
+  max-height:680px;
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
@@ -68,7 +68,7 @@ export const Form = styled.form`
   display: grid;
   margin:auto;
   border-radius: 10px;
-  padding:30px;
+  padding:20px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
   @media screen and (max-width: 400px) {
@@ -77,7 +77,7 @@ export const Form = styled.form`
 `;
 
 export const FormH1 = styled.label`
- margin-bottom: 15px;
+ margin-bottom: 10px;
  color: #fff;
  font-family:'League Spartan';
  font-size: 50px;

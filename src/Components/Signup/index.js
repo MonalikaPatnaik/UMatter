@@ -18,7 +18,8 @@ import Navbar from '../Navbar';
 const SignUp = () => {
 
 	
-
+	const [invalid,setInvalid] = useState(false);
+	const [msg,setMsg] = useState("");
   const [passwordType, setPasswordType] = useState('password');
   const [data, setData] = useState({});
   const handleclick = (e) => {
@@ -63,38 +64,54 @@ const SignUp = () => {
     const { email, username, name, contactNumber, password,confirmpassword} = data;
 
     if (!email || !validateEmail(email)) {
-      alert('Please enter a valid email address.');
-      return;
+		setMsg('Please enter a valid email address.');
+		setInvalid(true);
+      	return;
     }
 
     if (!username || !validateusername(username)) {
-      alert('Please enter a username(contains only alphabets).');
+      setMsg('Please enter a username(contains only alphabets).');
+	  setInvalid(true);
       return;
     }
 
     if (!name  || !validatename(name)) {
-      alert('Please enter your full name.');
+      setMsg('Please enter your full name.');
+	  setInvalid(true);
       return;
     }
 
     if (!contactNumber || !validatecontactNumber(contactNumber)) {
-      alert('Please enter a contact number/verify once');
+      setMsg('Please enter a contact number/verify once');
+	  setInvalid(true);
       return;
     }
 
     if (!password || !validatePassword(password)) {
-      alert(
+      setMsg(
         'Please enter a password with at least 8 characters including one uppercase letter, one lowercase letter, and one digit.'
       );
+	  setInvalid(true);
       return;
     }
     if (password !== confirmpassword) {
-      alert('Passwords do not match.');
+      setMsg('Passwords do not match.');
+	  setInvalid(true);
       return;
     }
     
     sendPostRequest();
   };
+
+  const setBack = ()=>{
+	setInvalid(false);
+	return;
+  }
+
+  if(invalid){
+	setTimeout(setBack,5000);
+	;
+  }
 
 	const sendPostRequest = async (e) => {
 		console.log('sendPostRequest exicuted!!!');
@@ -110,6 +127,14 @@ const SignUp = () => {
 		const result = await response.json();
 		console.log(result);
 	};
+
+	const showInvalid = ()=>{
+		return (
+		<div class="alert alert-danger" role="alert">
+			{msg}
+  		</div>
+  		)
+	}
 
 	return (
 		<>
@@ -159,6 +184,7 @@ const SignUp = () => {
 								id="ContactNumber"
 								placeholder="Enter phone number"
 								type="number"
+								maxLength={10}
 							></FormInput>
 							<br />
 
@@ -255,7 +281,8 @@ const SignUp = () => {
 								}}
 							></button>
 							<FormButton type="submit">Continue</FormButton>
-							<Text>Forgot password?</Text>
+							<br />
+							{invalid && showInvalid()}
 						</Form>
 					</FormContent>
 				</FormWrap>
