@@ -5,9 +5,10 @@ body {
 }
 
 .form-container {
-  margin: 10% 5% 0 50%;
-  width: 45%;
+  margin: 0 0 0 50%;
+  width: 50%;
   background: #ffffff;
+  padding: 100%;
 }
 
 .form-container h2 {
@@ -45,7 +46,7 @@ button {
   color: #fff;
   border: none;
   border-radius: 12px;
-  background-color:#0ed381;
+  background-color:#000000;
   font-family: 'Poppins';
   font-weight: 700;
   font-size: 1.3rem;
