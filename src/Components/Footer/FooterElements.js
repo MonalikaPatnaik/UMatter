@@ -148,6 +148,9 @@ export const FooterLink = styled(Link)`
   &.linkdn:hover{
     color:#0077B5 !important;
    }
+   &.github:hover{
+    color:black !important;
+   }
  `
  
  ;
