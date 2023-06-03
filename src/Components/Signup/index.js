@@ -158,7 +158,7 @@ const SignUp = () => {
 								}
 								id="ContactNumber"
 								placeholder="Enter phone number"
-								type="number"
+								// type="number"
 							></FormInput>
 							<br />
 
