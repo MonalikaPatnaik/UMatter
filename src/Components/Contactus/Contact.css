@@ -1,9 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
 body {
   background-color: #455A64;
 }
 
 .form-container {
-  margin: 20% 5% 20% 50%;
+  margin: 10% 5% 0 50%;
   width: 45%;
   background: #ffffff;
 }
@@ -44,6 +46,8 @@ button {
   border: none;
   border-radius: 12px;
   background-color:#0ed381;
+  font-family: 'Poppins';
+  font-weight: 700;
   font-size: 1.3rem;
   font-weight: 800;
   opacity:1;
