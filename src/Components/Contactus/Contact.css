@@ -3,13 +3,8 @@ body {
 }
 
 .form-container {
-  width: 500px;
-  margin: 13% auto;
-  padding: 30px;
-  border: 2px solid #333;
-  border-radius: 10px;
-  background: #4CAF50;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 50%;
+  background: #ffffff;
 }
 
 .form-container h2 {
