@@ -17,7 +17,7 @@ import {
 } from './SigninElements';
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import Navbar from '../Navbar';
+// import Navbar from '../Navbar';
 
 const SignIn = () => {
 	const navigate = useNavigate();
@@ -60,7 +60,7 @@ const SignIn = () => {
 	return (
 		<>
 			<Container>
-				<Navbar />
+				{/* <Navbar /> */}
 				<br />
 
 				<FormWrap>
@@ -144,7 +144,7 @@ const SignIn = () => {
 									textDecoration: 'none',
 								}}
 							>
-								Forgot Password ?
+								Forgot Password?
 							</NavLink>
 						</Form>
 					</FormContent>

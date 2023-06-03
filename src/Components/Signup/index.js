@@ -13,7 +13,7 @@ import {
 	Text,
 } from './SignupElements';
 import { useState } from 'react';
-import Navbar from '../Navbar';
+// import Navbar from '../Navbar';
 
 const SignUp = () => {
 
@@ -114,7 +114,7 @@ const SignUp = () => {
 	return (
 		<>
 			<Container>
-				<Navbar />
+				{/* <Navbar /> */}
 				<FormWrap>
 					<FormContent>
 						<Form onSubmit={handleSubmit} action="#">
@@ -161,10 +161,7 @@ const SignUp = () => {
 								type="tel"
 							></FormInput>
 							<br />
-
-
-
-
+							
 							<div style={{ position: 'relative' }}>
 								<FormInput
 									onChange={(e) =>

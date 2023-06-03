@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
-
+//  position: fixed;
 bottom: 0;
 left: 0;
 right: 0;
@@ -19,8 +19,6 @@ export const FormWrap = styled.div`
   justify-content: center;
   margin-top:50px;
   
-
-
   @media screen and (max-width: 400px) {
     height: 100%; /* Change to a percentage-based height */
   }
@@ -60,7 +58,7 @@ export const FormLabel = styled.label`
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
   
-  max-height:650px;
+  max-height:655px;
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
@@ -116,7 +114,7 @@ export const FormButton = styled.button`
 
 export const Text = styled.span`
  text-align: center;
- margin-top: 24px;
+ margin-top: 15px;
  color: #fff;
  font-size: 14px;
 `;
