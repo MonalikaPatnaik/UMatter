@@ -50,10 +50,7 @@ const Navbar = ({ toggle }) => {
   const handleBlogsClick = () => {
     navigate("/blogs");
   };
-  const handleFeedbackClick = () => {
-    navigate("/feedback");
-  };
-
+   
   const handleHomeClick = () => {
     navigate("/");
   };
@@ -101,22 +98,17 @@ const Navbar = ({ toggle }) => {
               </NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
-            </Navitem>
-            <Navitem>
               <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
             </Navitem>
             <Navitem>
               <NavLinks to="testimonials" onClick={handleTestimonialsClick}>Testimonials</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="#" onClick={handleBlogsClick}>
-                Blogs{" "}
-              </NavLinks>
+              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
             </Navitem>
             <Navitem>
-              <NavLinks to="#" onClick={handleFeedbackClick}>
-                Feedback{" "}
+              <NavLinks to="#" onClick={handleBlogsClick}>
+                Blogs{" "}
               </NavLinks>
             </Navitem>
             

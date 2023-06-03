@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaTwitter, FaGithub} from 'react-icons/fa';
 import { FooterContainer,FooterWrap, FooterLinksContainer,FooterLinksWrapper,FooterLinkItems, FooterLinkTitle,FooterLinkTitleHr, FooterLink, SocialMedia, SocialMediaWrap, SocialLogo, WebsiteRights } from './FooterElements';
+ 
 const Footer = () => {
 
   const handleClick = () => {
@@ -28,6 +29,7 @@ const Footer = () => {
                        <FooterLink to="/">Support</FooterLink>
                        <FooterLink to="/">Destinations</FooterLink>
                        <FooterLink to="/">Sponsorships</FooterLink>
+                       <FooterLink to="/feedback">Feedback</FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper>
             <FooterLinksWrapper>
