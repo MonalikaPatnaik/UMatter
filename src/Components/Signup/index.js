@@ -36,18 +36,18 @@ const SignUp = () => {
 
   const validatePassword = (password) => {
     // Password validation: at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit
-    const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
+    const passwordRegex = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$/;
     return passwordRegex.test(password);
   };
   const validateusername =  (username) => {
     // username  should contains only alphabets
-    const usernameRegex = /[A-Za-z]{3}/;
+    const usernameRegex = /^[A-Za-z\s]+$/;
     return usernameRegex.test(username);
   };
 
   const validatename =  (name) => {
     // name  should contains only alphabets
-    const nameRegex = /[A-Za-z]{3}/;
+    const nameRegex = /^[A-Za-z\s]+$/;
     return nameRegex.test(name);
   };
   const validatecontactNumber =  (contactNumber) => {
@@ -158,7 +158,7 @@ const SignUp = () => {
 								}
 								id="ContactNumber"
 								placeholder="Enter phone number"
-								type="number"
+								type="tel"
 							></FormInput>
 							<br />
 

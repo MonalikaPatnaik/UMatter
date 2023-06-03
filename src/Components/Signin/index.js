@@ -91,6 +91,9 @@ const SignIn = () => {
 									placeholder="Must have at least 8 characters"
 									type={passwordType}
 									id="password"
+									style={{
+										marginBottom:'0',
+									}}
 									require
 								/>
 								<button
@@ -99,7 +102,7 @@ const SignIn = () => {
 										width: 'fit-content',
 										position: 'absolute',
 										right: '0%',
-										top: '20%',
+										top: '33%',
 										background: 'transparent',
 										border: 'none',
 										color: 'green',
@@ -118,14 +121,17 @@ const SignIn = () => {
 									position: 'relative',
 									left: '35%',
 									width: 'fit-content',
-									bottom: '185%',
+									// bottom: '185%',
+									top:'-35%',
+									margin:'20px 0',
+									padding:'6px',
 									fontSize: 'medium',
 									color: 'white',
 								}}
 							>
-								<input type="checkbox" id="rememberMe" />
-								<br></br>
-								<label htmlFor="rememberMe">Remember me</label>
+								<input type="checkbox" id="rememberMe" style={{cursor:'pointer'}}/> &nbsp;
+								<br/>
+								<label htmlFor="rememberMe" style={{cursor:'pointer'}}>Remember me</label>
 							</form>
 
 							<FormButton type="submit">Continue</FormButton>
