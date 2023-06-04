@@ -152,8 +152,10 @@ const SignUp = () => {
 								id="FullNameInput"
 								placeholder="Enter your Full Name"
 								type="text"
+								size="42"
 							></FormInput>
 							<br />
+								<br/>
 
 
 							<FormInput
@@ -163,8 +165,10 @@ const SignUp = () => {
 								id="usernameInput"
 								placeholder="Enter Username"
 								type="text"
+								size="42"
 							></FormInput>
 							<br />
+							<br/>
 
 							<FormInput
 								onChange={(e) =>
@@ -173,24 +177,39 @@ const SignUp = () => {
 								id="emailInput"
 								placeholder="email@example.com"
 								type="email"
+								size="42"
 								require
 							/>
 							<br />
-
+							<br />
+							<div style={{float:'left'}}>
+								<FormInput
+								onChange={(e) =>
+									setData({ ...data, countryCode: e.target.value })
+								}
+								id="CountryCode"
+								placeholder="+XXX"
+								type="text"
+								size="1"
+							></FormInput>
+						</div>
+								<div style={{float:'right'}}>
 							<FormInput
 								onChange={(e) =>
 									setData({ ...data, contactNumber: e.target.value })
 								}
 								id="ContactNumber"
 								placeholder="Enter phone number"
-								type="number"
+								type="text"
+								size="32"
 								maxLength={10}
 							></FormInput>
-							<br />
 
+						</div>
 
-
-
+						<br/>
+						<br/>
+						<br/>
 							<div style={{ position: 'relative' }}>
 								<FormInput
 									onChange={(e) =>
@@ -199,6 +218,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Enter Password"
 									type={passwordType}
+									size="42"
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -229,6 +249,7 @@ const SignUp = () => {
 								)}
 							</div>
 							<br />
+					
 
 							<div style={{ position: 'relative' }}>
 								<FormInput
@@ -238,6 +259,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Re Enter Password"
 									type={passwordType}
+									size="42"
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -281,6 +303,7 @@ const SignUp = () => {
 								}}
 							></button>
 							<FormButton type="submit">Continue</FormButton>
+							<br/>
 							<br />
 							{invalid && showInvalid()}
 						</Form>
