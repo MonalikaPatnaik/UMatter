@@ -304,7 +304,6 @@ const SignUp = () => {
 	return (
 		<>
 			<Container>
-				<Navbar />
 				<FormWrap>
 					<FormContent>
 						<Form onSubmit={handleSubmit} action="#">
