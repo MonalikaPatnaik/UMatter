@@ -1,11 +1,12 @@
 import React from 'react'
 import SignIn from '../Components/Signin';
-import Navbar from "../Components/Navbar/index";
-
+// import DarkMode from '../Components/DarkMode/DarkMode';
+// import Navbar from '../Components/Navbar';
 
 const SigninPage = () => {
   return (
     <div>
+   
         <SignIn />   
     </div>
   );

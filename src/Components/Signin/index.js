@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import DarkMode from '../DarkMode/DarkMode';
 import {
 	Container,
 	Icons,
@@ -24,6 +24,7 @@ const SignIn = () => {
 	let authorizationToken;
 	const [passwordType, setPasswordType] = useState('password');
 	const [data, setData] = useState({});
+	const [invalid,setInvalid] = useState(false);
 	const handleclick = (e) => {
 		e.preventDefault();
 		if (passwordType === 'text') {
@@ -39,6 +40,9 @@ const SignIn = () => {
 	};
 
 	const sendPostRequest = async (e) => {
+		if(data.password && data.password.length<8){
+			setInvalid(true);
+		}
 		console.log('sendPostRequest is called!!!');
 		e.preventDefault();
 		const response = await fetch('http://localhost:8081/SignIn', {
@@ -48,6 +52,9 @@ const SignIn = () => {
 				'Content-Type': 'application/json',
 			},
 		});
+		if(response.status!==200){
+			setInvalid(true);
+		}
 		const result = await response.json();
 		sessionStorage.removeItem('authorizationToken');
 		sessionStorage.removeItem('username');
@@ -57,11 +64,34 @@ const SignIn = () => {
 		sessionStorage.setItem('username', username);
 		navigateToProfile();
 	};
+
+	const setBack = ()=>{
+		setInvalid(false);
+		return;
+	}
+
+	if(invalid){
+		setTimeout(setBack,5000);
+	}
+
+	const showInvalid = ()=>{
+		return (
+		<div class="alert alert-danger" role="alert">
+			Invalid Email or Password!
+  		</div>
+  		)
+	}
+
+
 	return (
 		<>
-			<Container>
-				<Navbar />
 				<br />
+				<br />
+	<DarkMode/>
+			<Container>
+				{/* <Navbar  /> */}
+				<br />
+	{/* <DarkMode/> */}
 				<FormWrap>
 					<FormContent>
 						<Form onSubmit={sendPostRequest} action="#">
@@ -126,8 +156,9 @@ const SignIn = () => {
 								<br></br>
 								<label htmlFor="rememberMe">Remember me</label>
 							</form>
-
 							<FormButton type="submit">Continue</FormButton>
+							<br />
+							{invalid && showInvalid()}
 							<NavLink
 								to="/signin/forgotPassword"
 								style={{
@@ -140,6 +171,7 @@ const SignIn = () => {
 								Forgot Password ?
 							</NavLink>
 						</Form>
+		
 					</FormContent>
 				</FormWrap>
 			</Container>
