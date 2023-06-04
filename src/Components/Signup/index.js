@@ -365,9 +365,13 @@ const SignUp = () => {
 								}
 								id="ContactNumber"
 								placeholder="Enter phone number"
+
+								// type="number"
+
 								type="text"
 								size="32"
 								maxLength={10}
+
 							></FormInput>
 
 						</div>
