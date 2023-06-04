@@ -57,6 +57,7 @@ export const FormLabel = styled.label`
 `;
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
+  
   max-height:655px;
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
@@ -82,6 +83,43 @@ export const FormH1 = styled.label`
 
 
 export const FormInput = styled.input`
+
+  font-family: 'Poppins';
+  margin-bottom: 10px; /* Increase margin-bottom for spacing */
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  width: 100%; /* Add width property to make the input box fill the available width */
+
+  /* Additional styling for password inputs */
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    margin-bottom: 20px; /* Increase margin-bottom for spacing */
+  }
+`;
+
+export const FormButton = styled.button`
+  margin-top: 40px; /* Increase the margin-top value for spacing */
+  background: #01bf71;
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  width: 100%; /* Make the button fill the available width */
+  box-sizing: border-box; /* Include padding within the button's width */
+  &:hover {
+    opacity: 0.8;
+    transition: 0.25s ease;
+  }
+
 font-family:'Poppins';
 margin-bottom: 0px;
 padding: 10px;
@@ -107,7 +145,9 @@ export const FormButton = styled.button`
    opacity : 0.8;
    transition: 0.25s ease;
  }
+
 `;
+
 
 export const Text = styled.span`
  text-align: center;

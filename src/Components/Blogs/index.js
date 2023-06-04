@@ -3,6 +3,14 @@ import Icon1 from "../../images/no-drinking.png";
 import DarkMode from "../DarkMode/DarkMode";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
+import Icon4 from "../../images/5Ds.jpg";
+import Icon5 from "../../images/Distraction tec.jpg";
+import Icon6 from "../../images/group-quiting.jpg";
+import Icon7 from "../../images/non-alco-cocktail.png";
+import Icon8 from "../../images/isolation.jpg";
+import Icon9 from "../../images/natural remedies.jpg";
+import Icon10 from "../../images/No-yes.jpg";
+
 import {
   BlogsContainer,
   BlogsH1,
@@ -98,7 +106,7 @@ export default Blogs;
 
 const blogsData = [
   {
-    icon: Icon1,
+    icon: Icon7,
     title: "5 Sophisticated Non-Alcoholic Cocktails to try on your Date Night",
     content:
       "For those looking for a more sober option, alcohol-free cocktails can be the perfect way to give your evening a touch of sophistication.",
@@ -110,13 +118,13 @@ const blogsData = [
       "Did you know long-term smoking and vaping can lead to many health issues like high blood pressure, strokes, heart conditions, and various forms of cancer? Smoking and vaping can also cause blockages in your body.",
   },
   {
-    icon: Icon1,
+    icon: Icon8,
     title: "Isolation – the secret enemy",
     content:
       "Nature is ideal for lowering stress levels, but it’s also a great way to remind yourself there’s a whole world out there and it can be comforting to see the bigger picture when we step outside our bubbles.",
   },
   {
-    icon: Icon1,
+    icon: Icon10,
     title: "Learning how to say no",
     content:
       "As well as fear, people can sniff out indecision, so you need to make sure that your rebuttal to why you aren’t drinking is both confident and watertight. It doesn’t need to be lengthy.",
@@ -128,25 +136,25 @@ const blogsData = [
       "Menstruation involves destigmatizing it, recognizing its significance, advocating for menstrual health, and challenging societal norms to celebrate the strength and beauty of women's bodies.",
   },
   {
-    icon: Icon1,
+    icon: Icon5,
     title: "Distraction techniques to avoid cravings",
     content:
       "If you get a craving or experience minor withdrawal, use distraction until the urge passes. Distract your mind and your body. If you get a craving, chew on gum, talk a walk, open a window, or begin a new activity.",
   },
   {
-    icon: Icon2,
+    icon: Icon6,
     title: "Support groups can help you quit smoking",
     content:
       "Let your friends, family, and coworkers know of your plans to stop smoking and your quit date. It helps for people around you to be aware of what you are going through, especially when you are grumpy.",
   },
   {
-    icon: Icon1,
+    icon: Icon4,
     title: "The 5D's that would help with smoking cessation",
     content:
       "No matter where you are in your journey of quitting, the five Ds are healthy coping mechanisms. The five Ds are: Delay, Distract, Drink water, Deep breathing, Discuss",
   },
   {
-    icon: Icon2,
+    icon: Icon9,
     title: "Few natural remedies to cope with nicotine withdrawal",
     content:
       "As a substitute for smoking, try chewing on carrots, pickles, apples, celery, sugarless gum, or hard candy. Keeping your mouth busy may stop the psychological need to smoke.",
