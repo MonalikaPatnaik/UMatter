@@ -83,36 +83,48 @@ export const FormH1 = styled.label`
 
 
 export const FormInput = styled.input`
-font-family:'Poppins';
-margin-bottom: 0px;
-padding: 10px;
-border: none;
-border-radius: 10px;
-font-size:18px;
-border:none;
-outline:none;
-
+  font-family: 'Poppins';
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  width: 100%;
+  &:nth-of-type(3),
+  &:nth-of-type(4) {
+    margin-bottom: 20px;
+    width: calc(100% - 20px); /* Subtract the extra margin from the width */
+  }
 `;
 
 export const FormButton = styled.button`
- margin-top:20px;
- margin-bottom:15px;
- background: #01bf71;
- padding: 16px 0;
- border: none;
- border-radius: 12px;
- color: #fff;
- font-size: 20px;
- cursor: pointer;
- &:hover {
-   opacity : 0.8;
-   transition: 0.25s ease;
- }
+  margin-top: 40px;
+  background: #01bf71;
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  &:hover {
+    opacity: 0.8;
+    transition: 0.25s ease;
+  }
+  font-family: 'Poppins';
+  margin-bottom: 0px;
+  padding: 10px;
 `;
 
 export const Text = styled.span`
- text-align: center;
- margin-top: 50px;
- color: #fff;
- font-size: 14px;
+  text-align: center;
+  margin-top: 50px;
+  color: #fff;
+  font-size: 14px;
 `;
