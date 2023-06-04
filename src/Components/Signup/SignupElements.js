@@ -64,18 +64,14 @@ export const FormLabel = styled.label`
 `;
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
-
-  
-  max-height:740px;
-
   text-align:center;
   max-height:680px;
-
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
   z-index: 11;
   margin:auto;
+  margin-top:40px;
   border-radius: 10px;
   padding:20px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);

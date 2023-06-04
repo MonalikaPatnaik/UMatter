@@ -34,6 +34,7 @@ const Contact = () => {
 
     <div class="form-container">
       <h2>Contact Us</h2>
+      <hr></hr>
       <form onSubmit={handleSubmit}>
         <div class="form-group">
           <label for="name">Name:</label>

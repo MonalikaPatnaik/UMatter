@@ -64,28 +64,28 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
  
 **Landing Page**
  
- This page appears when user clicks on the site and lands on the page.
+ The landing page is the initial point of entry for users when they click on our site. It serves as the first glimpse of what we have to offer and provides a seamless transition from the user's click to their arrival on the page.
   <img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
 
 <br>
   
 **About Us**
  
- This Page gives user the brief about the website and what they can expect.
+ Discover a comprehensive solution for quitting smoking and drinking at UMatter. Our platform provides personalized consultations and medications, bringing you closer to a healthier life. With dedicated experts, we offer tailored support, empowering you to overcome challenges and achieve your health goals. Join us on this transformative journey today.
  <img width="1440" alt="Screenshot 2023-05-26 at 4 31 44 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/88f95ad6-575c-401d-9b05-86a08cd9d45c">
 
 <br>
 
 **Services Page**
 
-This page provides the list of services which aare available on our website.
+Welcome to our Services page! Here, you will find a comprehensive list of the wide range of services available on our website. From tailored consultations to specialized treatments, we offer an array of options to cater to your specific needs. Explore our services to discover how we can assist you in achieving your goals and enhancing your experience on our platform.
 <img width="1440" alt="Screenshot 2023-05-26 at 4 32 04 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/efd21624-ab89-4683-af46-f0a91c456240">
 
 <br>
   
 **Blogs Page**
 
-This page contains blogs on useful topics .
+Welcome to our Blog section! Here, you'll find a collection of informative and engaging articles covering a variety of useful topics. Our blog pages are packed with valuable insights, tips, and resources to help you stay informed and inspired. Explore our diverse range of blog posts to expand your knowledge and find practical solutions to enhance your lifestyle.
 
 <img width="1440" alt="Screenshot 2023-05-26 at 4 32 46 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/da82603f-6881-4153-bda7-fc8dd5f40e8a">
 
@@ -102,7 +102,7 @@ This page contains blogs on useful topics .
 - [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
 - [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
  
-### ✨🔨Note:
+### ✨🔨Note:********
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
