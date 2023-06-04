@@ -5,27 +5,34 @@
   padding: 30px;
   border: 2px solid #333;
   border-radius: 10px;
-  background: #4CAF50;
+  background:url("pexels-pixabay-326333\ \(2\).jpg");
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  color:#FFC300;
 }
 
 .form-container h2 {
   text-align: center;
   font-size: 28px;
   margin-bottom: 20px;
+  
 }
 
 .form-group {
   margin-bottom: 20px;
   font-weight: 500;
   font-size: larger;
+  
 }
 
 .form-group label {
   display: block;
   margin-bottom: 10px;
+ 
 }
-
+hr{
+  border:2px solid white;
+  opacity:1;
+}
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -37,18 +44,27 @@
 
 .form-group textarea {
   height: 80px;
+  
 }
 
+
 button {
+  
   width: 100%;
   color: #fff;
   border: none;
   border-radius: 12px;
-  background-color:#0ed381;
+background-color:#8B4513;
   font-size: 1.3rem;
   font-weight: 800;
   opacity:1;
   cursor: pointer;  
   padding: 12px 12px;
+}
+button:hover{
+  background-color:	#D27D2D;
+  color:black;
+  transform:scale(1.1);
+  transition:0.5s;
 }
   
