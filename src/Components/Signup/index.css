@@ -1,0 +1,34 @@
+.CountryCode {
+  @media screen and (max-width: 495px) {
+    font-size: 2px;
+    margin-bottom: 20px;
+  }
+}
+.CodePhoneStyle {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  @media screen and (max-width: 487px) {
+    font-size: 15px;
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 425px) {
+    width: 5px;
+  }
+}
+.BtnForgotStyle{
+  @media  screen and (max-width: 480px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.TextStyle{
+  @media  screen and (max-width: 480px) {
+    
+  }
+}
+.ButtonStyle{
+  
+}

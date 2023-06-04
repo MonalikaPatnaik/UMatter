@@ -10,7 +10,7 @@ app.use(cors());
 const nodemailer = require('nodemailer');
 
 //this is the port number
-const port = 8081;
+const port = 3001;
 
 //imported "sqlite" and "sqlite3"
 const sqlite3 = require('sqlite3');

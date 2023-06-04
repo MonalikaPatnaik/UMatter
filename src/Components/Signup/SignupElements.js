@@ -18,9 +18,16 @@ export const FormWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-top:50px;
-  
-  @media screen and (max-width: 400px) {
-    height: 100%; /* Change to a percentage-based height */
+  @media screen and (max-width: 600px) {
+    margin-top: 40px;
+    margin-bottom: 100px,
+    height: 100%;
+  }
+  @media screen and (max-width: 425px) {
+    margin-top: 250px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
   }
 `;
 
@@ -32,8 +39,8 @@ export const Icons = styled(Link)`
  font-weight: 700;
  font-size: 60px;
 
- @media screen and (max-width: 480px) {
-    margin-left: 16px;
+ @media screen and (max-width: 495px) {
+    margin-right: 25px;
     margin-top: 8px;
  }
 `;
@@ -68,6 +75,12 @@ export const Form = styled.form`
   padding:30px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
+  @media screen and (max-width: 495px) {
+    padding: 20px 32px;
+    height: 100%;
+    margin-bottom: 200px;
+ } 
+
 `;
 
 export const FormH1 = styled.label`
@@ -77,8 +90,12 @@ export const FormH1 = styled.label`
  font-size: 50px;
  font-weight: 400;
  text-align: center;
- 
-
+ @media screen and (max-width: 495px) {
+  font-size: 30px;
+} 
+@media screen and (max-width: 350px) {
+  font-size: 25px;
+} 
 `;
 
 
@@ -91,7 +108,9 @@ border-radius: 10px;
 font-size:18px;
 border:none;
 outline:none;
-
+@media screen and (max-width: 480px) {
+  width: 350px;
+} 
 `;
 
 export const FormButton = styled.button`
@@ -108,11 +127,16 @@ export const FormButton = styled.button`
    opacity : 0.8;
    transition: 0.25s ease;
  }
+ @media screen and (max-width: 487px) {
+    
+    
+  }
+ 
 `;
 
 export const Text = styled.span`
  text-align: center;
- margin-top: 50px;
+//  margin-top: 50px;
  color: #fff;
  font-size: 14px;
 `;
