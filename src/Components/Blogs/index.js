@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import Icon1 from "../../images/no-drinking.png";
-import DarkMode from "../DarkMode/DarkMode";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
 import Icon4 from "../../images/5Ds.jpg";
@@ -13,7 +12,6 @@ import Icon10 from "../../images/No-yes.jpg";
 
 import {
   BlogsContainer,
-  BlogsH1,
   BlogsH2,
   BlogsWrapper,
   BlogsCard,
