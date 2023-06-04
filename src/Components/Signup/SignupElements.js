@@ -64,13 +64,13 @@ export const Form = styled.form`
   z-index: 11;
   margin:auto;
   border-radius: 10px;
-  padding:30px;
+  padding:20px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
 `;
 
 export const FormH1 = styled.label`
- margin-bottom: 15px;
+ margin-bottom: 10px;
  color: #fff;
  font-family:'League Spartan';
  font-size: 50px;
