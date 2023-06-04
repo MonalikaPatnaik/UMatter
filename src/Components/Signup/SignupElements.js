@@ -40,7 +40,7 @@ export const Icons = styled(Link)`
 
 export const FormContent = styled.div`
 height: 100%;
-display: flex;
+display:flex;
 flex-direction: column;
 justify-content: center;
 
@@ -57,21 +57,16 @@ export const FormLabel = styled.label`
 `;
 export const Form = styled.form`
   background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
-  
   max-height:655px;
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
   z-index: 11;
-  display: grid;
   margin:auto;
   border-radius: 10px;
   padding:30px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
-  @media screen and (max-width: 400px) {
-    /* Remove the padding property */
-  }
 `;
 
 export const FormH1 = styled.label`
@@ -95,10 +90,12 @@ border-radius: 10px;
 font-size:18px;
 border:none;
 outline:none;
+
 `;
 
 export const FormButton = styled.button`
  margin-top:20px;
+ margin-bottom:15px;
  background: #01bf71;
  padding: 16px 0;
  border: none;
