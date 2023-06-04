@@ -31,20 +31,21 @@ const Contact = () => {
 
 
   return (
-
     <div class="form-container">
+      <img src="src/images/phone-3d.svg" alt="Phone" />
       <h2>Contact Us</h2>
+      <hr class="top-line"></hr>
       <form onSubmit={handleSubmit}>
         <div class="form-group">
-          <input type="text" id="name" name="name" required placeholder="Name" onChange={(e) => setName(e.target.value)} />
+          <input type="text" id="name" class="form-control" name="name" required placeholder="Name" onChange={(e) => setName(e.target.value)} />
         </div>
 
         <div class="form-group">
-          <input type="email" id="email" name="email" required placeholder="Email" onChange={(e) => setMail(e.target.value)} />
+          <input type="email" id="email" class="form-control" name="email" required placeholder="Email" onChange={(e) => setMail(e.target.value)} />
         </div>
 
         <div class="form-group">
-          <textarea id="message" name="message" placeholder="Message" onChange={(e) => setMessage(e.target.value)}></textarea>
+          <textarea id="message" class="form-control" name="message" placeholder="Message" onChange={(e) => setMessage(e.target.value)}></textarea>
         </div>
 
         <div>
