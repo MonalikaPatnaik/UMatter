@@ -18,7 +18,8 @@ import Navbar from '../Navbar';
 const SignUp = () => {
 
 	
-
+	const [invalid,setInvalid] = useState(false);
+	const [msg,setMsg] = useState("");
   const [passwordType, setPasswordType] = useState('password');
   const [data, setData] = useState({});
   const handleclick = (e) => {
@@ -63,38 +64,54 @@ const SignUp = () => {
     const { email, username, name, contactNumber, password,confirmpassword} = data;
 
     if (!email || !validateEmail(email)) {
-      alert('Please enter a valid email address.');
-      return;
+		setMsg('Please enter a valid email address.');
+		setInvalid(true);
+      	return;
     }
 
     if (!username || !validateusername(username)) {
-      alert('Please enter a username(contains only alphabets).');
+      setMsg('Please enter a username(contains only alphabets).');
+	  setInvalid(true);
       return;
     }
 
     if (!name  || !validatename(name)) {
-      alert('Please enter your full name.');
+      setMsg('Please enter your full name.');
+	  setInvalid(true);
       return;
     }
 
     if (!contactNumber || !validatecontactNumber(contactNumber)) {
-      alert('Please enter a contact number/verify once');
+      setMsg('Please enter a contact number/verify once');
+	  setInvalid(true);
       return;
     }
 
     if (!password || !validatePassword(password)) {
-      alert(
+      setMsg(
         'Please enter a password with at least 8 characters including one uppercase letter, one lowercase letter, and one digit.'
       );
+	  setInvalid(true);
       return;
     }
     if (password !== confirmpassword) {
-      alert('Passwords do not match.');
+      setMsg('Passwords do not match.');
+	  setInvalid(true);
       return;
     }
     
     sendPostRequest();
   };
+
+  const setBack = ()=>{
+	setInvalid(false);
+	return;
+  }
+
+  if(invalid){
+	setTimeout(setBack,5000);
+	;
+  }
 
 	const sendPostRequest = async (e) => {
 		console.log('sendPostRequest exicuted!!!');
@@ -110,6 +127,14 @@ const SignUp = () => {
 		const result = await response.json();
 		console.log(result);
 	};
+
+	const showInvalid = ()=>{
+		return (
+		<div class="alert alert-danger" role="alert">
+			{msg}
+  		</div>
+  		)
+	}
 
 	return (
 		<>
@@ -127,8 +152,10 @@ const SignUp = () => {
 								id="FullNameInput"
 								placeholder="Enter your Full Name"
 								type="text"
+								size="42"
 							></FormInput>
 							<br />
+								<br/>
 
 
 							<FormInput
@@ -138,8 +165,10 @@ const SignUp = () => {
 								id="usernameInput"
 								placeholder="Enter Username"
 								type="text"
+								size="42"
 							></FormInput>
 							<br />
+							<br/>
 
 							<FormInput
 								onChange={(e) =>
@@ -148,23 +177,39 @@ const SignUp = () => {
 								id="emailInput"
 								placeholder="email@example.com"
 								type="email"
+								size="42"
 								require
 							/>
 							<br />
-
+							<br />
+							<div style={{float:'left'}}>
+								<FormInput
+								onChange={(e) =>
+									setData({ ...data, countryCode: e.target.value })
+								}
+								id="CountryCode"
+								placeholder="+XXX"
+								type="text"
+								size="1"
+							></FormInput>
+						</div>
+								<div style={{float:'right'}}>
 							<FormInput
 								onChange={(e) =>
 									setData({ ...data, contactNumber: e.target.value })
 								}
 								id="ContactNumber"
 								placeholder="Enter phone number"
-								type="number"
+								type="text"
+								size="32"
+								maxLength={10}
 							></FormInput>
-							<br />
 
+						</div>
 
-
-
+						<br/>
+						<br/>
+						<br/>
 							<div style={{ position: 'relative' }}>
 								<FormInput
 									onChange={(e) =>
@@ -173,6 +218,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Enter Password"
 									type={passwordType}
+									size="42"
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -203,6 +249,7 @@ const SignUp = () => {
 								)}
 							</div>
 							<br />
+					
 
 							<div style={{ position: 'relative' }}>
 								<FormInput
@@ -212,6 +259,7 @@ const SignUp = () => {
 									id="PasswordInput"
 									placeholder="Re Enter Password"
 									type={passwordType}
+									size="42"
 								/>
 								{passwordType === 'password' ? (
 									<i
@@ -255,7 +303,9 @@ const SignUp = () => {
 								}}
 							></button>
 							<FormButton type="submit">Continue</FormButton>
-							<Text>Forgot password?</Text>
+							<br/>
+							<br />
+							{invalid && showInvalid()}
 						</Form>
 					</FormContent>
 				</FormWrap>
