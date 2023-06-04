@@ -8,7 +8,7 @@ body {
   margin: 0 0 0 50%;
   width: 50%;
   background: #ffffff;
-  padding: 100%;
+  padding-left: 100%;
 }
 
 .form-container h2 {
