@@ -5,26 +5,34 @@ body {
 }
 
 .form-container {
-  margin: 0 0 0 50%;
-  width: 50%;
-  background: #ffffff;
+  margin: 6% 0 0 45%;
+  background: #FAFAFA;
+  padding-top: 8%;
+  padding-bottom: 2%;
+  border-radius: 5% 0 0 5%;
 }
 
 .form-container h2 {
   text-align: center;
-  font-size: 28px;
-  margin-bottom: 20px;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 70px;
+  color: #274D5F;
 }
 
 .form-group {
   margin-bottom: 20px;
   font-weight: 500;
-  font-size: larger;
 }
 
 .form-group label {
   display: block;
+  font-family: "Poppins";
+  line-height: 10%;
   margin-bottom: 10px;
+  font-weight: 400;
+  font-size: 180px;
+  color: #ccc;
 }
 
 .form-group input[type="text"],
@@ -32,26 +40,39 @@ body {
 .form-group textarea {
   width: 100%;
   padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  border: none;
 }
+
+.form-control {
+  outline: none;
+  background-color: transparent;
+}
+
 
 .form-group textarea {
   height: 80px;
 }
 
+.top-line {
+  opacity: 100%;
+  width: 30%;
+  border: 5px solid #7E3329;
+  border-radius: 50px;
+  margin-left: 35%;
+}
+
 button {
-  width: 100%;
-  color: #fff;
+  width: 40%;
+  color: #ccc;
   border: none;
   border-radius: 12px;
   background-color:#000000;
   font-family: 'Poppins';
   font-weight: 700;
   font-size: 1.3rem;
-  font-weight: 800;
   opacity:1;
   cursor: pointer;  
   padding: 12px 12px;
+  margin-left: 30%;
 }
   
