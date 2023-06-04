@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import DarkMode from '../DarkMode/DarkMode';
 import {
 	Container,
 	Icons,
@@ -85,10 +85,13 @@ const SignIn = () => {
 
 	return (
 		<>
-			<Container>
-				<Navbar />
 				<br />
-
+				<br />
+	<DarkMode/>
+			<Container>
+				{/* <Navbar  /> */}
+				<br />
+	{/* <DarkMode/> */}
 				<FormWrap>
 					<FormContent>
 						<Form onSubmit={sendPostRequest} action="#">
@@ -168,6 +171,7 @@ const SignIn = () => {
 								Forgot Password ?
 							</NavLink>
 						</Form>
+		
 					</FormContent>
 				</FormWrap>
 			</Container>
