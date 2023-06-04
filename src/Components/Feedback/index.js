@@ -45,7 +45,7 @@ const Feedback = () => {
             <FormWrap>
                 <FormContent>
                     <Form onSubmit={sendPostRequest} action="#">
-                        <FormH1>Share your Feddback</FormH1>
+                        <FormH1>Share your Feedback</FormH1>
                         <FormLabel htmlFor="username">username</FormLabel>
                         <FormInput
                             onChange={e => setData({ ...data, username: e.target.value })}
