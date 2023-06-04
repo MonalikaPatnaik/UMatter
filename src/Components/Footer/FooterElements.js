@@ -117,12 +117,13 @@ export const FooterLink = styled(Link)`
     text-align:center;
     border-radius:22px;
     padding:7px;
-    transition: all 0.3s ease-out 0s;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease-out;
    }
    
   &.icons:hover{
     transform: translate(0,-10px);
-    background-color:white !important;  
+    background-color:white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
    }
    
   &.icons{
@@ -147,6 +148,9 @@ export const FooterLink = styled(Link)`
    
   &.linkdn:hover{
     color:#0077B5 !important;
+   }
+   &.github:hover{
+    color:black !important;
    }
  `
  
