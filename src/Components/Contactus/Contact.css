@@ -4,12 +4,19 @@ body {
   background-color: #455A64;
 }
 
+.phone-3d {
+  margin-top: 10%;
+  margin-left: -8%;
+  width: 40%;
+}
+
 .form-container {
-  margin: 6% 0 0 45%;
-  background: #FAFAFA;
-  padding-top: 8%;
-  padding-bottom: 2%;
+  background: rgba(250, 250, 250, 0.97);
+  margin: 0% 0 0 45%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   border-radius: 5% 0 0 5%;
+  margin-top: -43.6%;
 }
 
 .form-container h2 {
@@ -25,16 +32,6 @@ body {
   font-weight: 500;
 }
 
-.form-group label {
-  display: block;
-  font-family: "Poppins";
-  line-height: 10%;
-  margin-bottom: 10px;
-  font-weight: 400;
-  font-size: 180px;
-  color: #ccc;
-}
-
 .form-group input[type="text"],
 .form-group input[type="email"],
 .form-group textarea {
@@ -43,22 +40,32 @@ body {
   border: none;
 }
 
-.form-control {
-  outline: none;
-  background-color: transparent;
-}
-
-
-.form-group textarea {
-  height: 80px;
-}
-
 .top-line {
   opacity: 100%;
   width: 30%;
   border: 5px solid #7E3329;
   border-radius: 50px;
   margin-left: 35%;
+}
+
+.form-control {
+  outline: none;
+  background-color: transparent;
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 50px;
+  margin-left: 10%;
+}
+
+::placeholder {
+  color: #CCCCCC;
+}
+
+.underline {
+  border: 1px solid #000000;
+  width: 70%;
+  margin-left: 10%;
 }
 
 button {
@@ -73,6 +80,7 @@ button {
   opacity:1;
   cursor: pointer;  
   padding: 12px 12px;
+  margin-top: 5%;
   margin-left: 30%;
 }
   

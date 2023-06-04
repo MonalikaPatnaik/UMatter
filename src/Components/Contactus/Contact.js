@@ -1,6 +1,6 @@
 import { React, useState } from "react";
-
 import "./Contact.css";
+import phone3d from "../../images/phone-3d.svg"
 
 const Contact = () => {
   const [name, setName] = useState('');
@@ -31,29 +31,30 @@ const Contact = () => {
 
 
   return (
+    <div>
+    <img src={phone3d} alt="Error-404" className="error-404-img" class="phone-3d"/>
     <div class="form-container">
-      <img src="src/images/phone-3d.svg" alt="Phone" />
       <h2>Contact Us</h2>
       <hr class="top-line"></hr>
       <form onSubmit={handleSubmit}>
         <div class="form-group">
           <input type="text" id="name" class="form-control" name="name" required placeholder="Name" onChange={(e) => setName(e.target.value)} />
         </div>
-
+        <hr class="underline"></hr>
         <div class="form-group">
           <input type="email" id="email" class="form-control" name="email" required placeholder="Email" onChange={(e) => setMail(e.target.value)} />
         </div>
-
+        <hr class="underline"></hr>
         <div class="form-group">
           <textarea id="message" class="form-control" name="message" placeholder="Message" onChange={(e) => setMessage(e.target.value)}></textarea>
         </div>
-
+        <hr class="underline"></hr>
         <div>
           <button type="submit">Submit</button>
         </div>
       </form>
     </div>
-
+    </div>
 
   );
 };
