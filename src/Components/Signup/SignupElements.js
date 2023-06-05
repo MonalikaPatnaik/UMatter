@@ -132,23 +132,6 @@ outline:none;
 
 `;
 
-export const FormButton = styled.button`
- margin-top:20px;
- margin-bottom:15px;
- background: #01bf71;
- padding: 16px 0;
- border: none;
- border-radius: 12px;
- color: #fff;
- font-size: 20px;
- cursor: pointer;
- &:hover {
-   opacity : 0.8;
-   transition: 0.25s ease;
- }
-
-`;
-
 
 export const Text = styled.span`
  text-align: center;
