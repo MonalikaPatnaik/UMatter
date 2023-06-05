@@ -121,9 +121,9 @@ const Navbar = ({ toggle }) => {
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          
+            <DarkMode toggle={toggle} />
           </NavBtn>
-          <DarkMode />
+         
         </NavbarContainer>
       </Nav>
     </>
