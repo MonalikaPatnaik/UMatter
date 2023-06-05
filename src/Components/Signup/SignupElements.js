@@ -84,9 +84,8 @@ export const FormH1 = styled.label`
 
 
 export const FormInput = styled.input`
-
   font-family: 'Poppins';
-  margin-bottom: 10px; /* Increase margin-bottom for spacing */
+  margin-bottom: 0px;
   padding: 10px;
   border: none;
   border-radius: 10px;
@@ -101,6 +100,7 @@ export const FormInput = styled.input`
     margin-bottom: 20px; /* Increase margin-bottom for spacing */
   }
 `;
+
 
 export const FormButton = styled.button`
   margin-top: 40px; /* Increase the margin-top value for spacing */
