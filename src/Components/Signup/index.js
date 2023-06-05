@@ -17,17 +17,11 @@ import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
 
 const SignUp = () => {
-
-  const [passwordType, setPasswordType] = useState("password");
-
-
-	
 	const [invalid,setInvalid] = useState(false);
 	const [msg,setMsg] = useState("");
-  const [passwordType, setPasswordType] = useState('password');
-
-  const [data, setData] = useState({});
-  const handleclick = (e) => {
+        const [passwordType, setPasswordType] = useState('password');
+        const [data, setData] = useState({});
+        const handleclick = (e) => {
     e.preventDefault();
     if (passwordType === "text") {
       setPasswordType("password");
