@@ -117,7 +117,7 @@ const blogsData = [
   },
   {
     icon: Icon8,
-    title: "Isolation – the secret enemy",
+    title: "Isolation - the secret enemy",
     content:
       "Nature is ideal for lowering stress levels, but it’s also a great way to remind yourself there’s a whole world out there and it can be comforting to see the bigger picture when we step outside our bubbles.",
   },
