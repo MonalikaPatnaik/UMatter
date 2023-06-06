@@ -133,6 +133,7 @@ outline:none;
 `;
 
 
+
 export const Text = styled.span`
  text-align: center;
 
