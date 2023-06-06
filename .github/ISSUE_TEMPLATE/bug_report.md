@@ -11,6 +11,6 @@ assignees: ''
 
 <!-- A clear and concise description of what the bug is. -->
 
-**Screenshort**
+**Screenshot**
 
 <!--Feel free to attach screenshots as well.--> 

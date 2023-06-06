@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react";
 import { ReactComponent as Sun } from "./Sun.svg";
 import { ReactComponent as Moon } from "./Moon.svg";
 import "./DarkMode.css";
-
+// import { FaSun } from "react-icons/fa";
+// import { FaMoon } from "react-icons/fa";
 const DarkMode = () => {
     const [theme, setTheme] = useState('dark-theme');
 
@@ -26,6 +27,9 @@ const DarkMode = () => {
             <label className='dark_mode_label' htmlFor='darkmode-toggle'>
                 <Sun />
                 <Moon />
+                {/* <FaSun/>
+                <br></br>
+                <FaMoon/> */}
             </label>
         </div>
     );

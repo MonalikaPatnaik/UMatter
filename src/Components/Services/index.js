@@ -24,7 +24,7 @@ const Services = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Our service"],
+      strings: ["Our services"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,

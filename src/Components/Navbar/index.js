@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { FaAcquisitionsIncorporated, FaBars, FaBox, FaClosedCaptioning, FaCross, FaCrow, FaExclamationTriangle, FaMicrophoneSlash, FaRegWindowClose } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
@@ -130,9 +129,9 @@ const Navbar = ({ toggle }) => {
           <NavBtn>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          
+            <DarkMode toggle={toggle} />
           </NavBtn>
-          <DarkMode />
+         
         </NavbarContainer>
       </Nav>
     </>
