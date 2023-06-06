@@ -153,35 +153,50 @@ const Blogs = () => {
       <div style={{ height: "150px" }}></div>
 
       <div className="search-container">
-        <input
-          type="text"
-          placeholder="Search blogs..."
-          value={searchTerm}
-          onChange={handleSearch}
-          onKeyPress={handleKeyPress}
-          style={{
-            width: "300px",
-            borderRadius: "8px",
-            padding: "8px",
-            textAlign: "center",
-            display: "flex",
-            justifyContent: "center"
-          }}
-        />
-        <button
-          className="search-button"
-          onClick={handleButtonClick}
-          style={{
-            backgroundColor: "green",
-            color: "white",
-            borderRadius: "8px",
-            padding: "8px",
-            marginTop: "8px"
-          }}
-        >
-          Clear
-        </button>
-      </div>
+      <form onSubmit={(event) => event.preventDefault()} role="search">
+      <label htmlFor="search">Search Blog....</label>
+      <input
+        id="search"
+        type="search"
+        placeholder="Search..."
+        autoFocus
+        required
+        onChange={handleSearch}
+        onKeyPress={handleKeyPress}
+        style={{
+          width: "30rem",
+          borderRadius: ".7rem",
+          padding: "8px",
+          textAlign: "center",
+          display: "flex",
+          justifyContent: "center",
+          height: "5rem",
+          fontFamily: "'Lato', sans-serif",
+          color: "#2f2f2f",
+          fontSize: "1.8rem",
+          background: "#fff",
+          outline: "none",
+          transition: "all .3s cubic-bezier(0, 0, 0.43, 1.49)",
+          position: "relative",
+        }}
+      />
+      <button
+        type="submit"
+        style={{
+          display: "none",
+          position: "absolute",
+          top: 0,
+          right: 0,
+          width: "6rem",
+          fontWeight: "bold",
+          background: "#57bd84",
+          borderRadius: "0 .7rem .7rem 0",
+        }}
+      >
+        Go
+      </button>
+    </form>
+    </div>
       <div style={{ height: "50px" }}></div>
       <div style={{ height: "50px" }}></div>
       <BlogsWrapper>
