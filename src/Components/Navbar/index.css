@@ -1,0 +1,59 @@
+
+@media(max-width:1200px){
+.cLMvFB {
+    display: flex;
+    gap: 14px!important;
+    font-size: 1.0rem!important;
+    
+}
+}
+
+@media (max-width: 1180px){
+.cLMvFB {
+    position: relative;
+    left: -53px;
+}
+
+.eZGBms {
+    font-size: 10px;
+    position: relative;
+    left: -36px;
+}
+
+.dark_mode {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    left: -38px;
+}
+}
+
+@media(max-width:940px){
+    .dSymth {
+        color: var(--text-clr);
+        cursor: pointer;
+        font-size: 1.6rem;
+}
+}
+
+@media (max-width: 920px){
+.cLMvFB {
+    display: flex;
+    gap: 16px!important;
+    font-size: 0.9rem!important;
+}
+
+.dSymth {
+    color: var(--text-clr);
+    cursor: pointer;
+    font-size: 1.4rem;
+    display: flex;
+}
+}
+
+@media(max-width:860px){
+    .cLMvFB {
+        display: flex;
+        gap: 10px!important;
+}
+}
