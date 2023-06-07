@@ -63,7 +63,7 @@ export const ServicesH1=styled.h1`
 color:black;
 margin-bottom:64px; */
 margin-bottom: 64px;
-    font-size: 50px;
+    font-size: 30px;
     line-height: 1.1;
     font-weight: 600;
     text-transform: uppercase;
