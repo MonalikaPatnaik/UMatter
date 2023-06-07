@@ -87,7 +87,7 @@ const SignIn = () => {
 		<>
 				<br />
 				<br />
-	<DarkMode/>
+// 	<DarkMode/>
 			<Container>
 				{/* <Navbar  /> */}
 				<br />
