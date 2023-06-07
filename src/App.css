@@ -6,9 +6,9 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
-body,html{
+ /* body,html{
   overflow-x: hidden;
-}
+ }  */
 ::-webkit-scrollbar {
     width: 10px;
   }
