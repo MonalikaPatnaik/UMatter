@@ -1,24 +1,20 @@
+
+import React from 'react'
+import Icon1 from '../../images/image1.png'
+import Icon2 from '../../images/image2.png'
+import Icon3 from '../../images/image3.png'
+import Icon4 from '../../images/image.4.png'
+import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
+
 import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import Icon1 from "../../images/image1.png";
-import Icon2 from "../../images/image2.png";
-import Icon3 from "../../images/image3.png";
-
-import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesH2,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesIcon,
-  ServicesP,
-} from "./ServicesElements";
 import { motion } from "framer-motion";
 import {
   cardOneVariants,
   cardTwoVariants,
   cardThreeVariants,
 } from "./CardAnimation";
+
 const Services = () => {
   const el = useRef(null);
 
@@ -36,6 +32,9 @@ const Services = () => {
     };
   }, []);
   return (
+
+   
+
     <ServicesContainer
       id="services"
       whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
@@ -112,6 +111,7 @@ const Services = () => {
           </ServicesCard>
         </motion.div>
       </ServicesWrapper>
+
     </ServicesContainer>
   );
 };
