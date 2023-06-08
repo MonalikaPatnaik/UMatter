@@ -1,6 +1,20 @@
 import React, { useEffect, useState } from "react";
-import styled from "styled-components";
+// import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
 import {TiArrowSortedUp} from "react-icons/ti";
+
+const jump = keyframes`
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+`;
 
 const GoToTop = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -58,6 +72,8 @@ const Wrapper = styled.section`
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    animation: ${jump} 0.5s infinite;
+
   }
 
   @media (max-width:1200px) {
