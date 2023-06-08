@@ -1,0 +1,44 @@
+.main{
+    padding: 2rem;
+    margin: 5rem;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: space-between; */
+    width: 100%;
+    
+}
+
+.main h3{
+    font-size: 2rem;
+    text-align: center;
+    padding-right: 5rem;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+iframe{
+    width: 300px;
+    aspect-ratio: 16 / 9;
+}
+
+.ele{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 11%;
+    flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
+}
+
+ 
+@media only screen and (max-width: 768px) {
+    iframe{
+        width: 550px;
+        height: 300px;
+
+    }
+    .main{
+        padding: 10rem 5rem;
+    }
+}

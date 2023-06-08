@@ -1,85 +1,116 @@
 # UMatter
 
-<img src="https://github.com/gSayak/UMatter/blob/main/src/images/mental-health.png"></img>
+<div align = "center">
+ <img src="./src/images/mental-health.png" />
+ <div>
 
-**Check the Website [here](https://https://monalikapatnaik.github.io/UMatter/)**.
+  
+**Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/)**.
+
+Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
 
+<div align="center">
+<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
+<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
+<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
+   <br>
+   <img src="https://img.shields.io/github/repo-size/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/issues-closed-raw/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/license/MonalikaPatnaik/UMatter?style=for-the-badge" />
+
+   <img src="https://img.shields.io/github/issues-pr/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/contributors/MonalikaPatnaik/UMatter?style=for-the-badge" />
+    <img src="https://img.shields.io/github/stars/MonalikaPatnaik/UMatter?style=for-the-badge" />
+
+   <img src="https://img.shields.io/github/issues-pr-closed-raw/MonalikaPatnaik/UMatter?style=for-the-badge" />
+   <img src="https://img.shields.io/github/forks/MonalikaPatnaik/UMatter?style=for-the-badge" />
+  <img src="https://img.shields.io/github/last-commit/MonalikaPatnaik/UMatter?style=for-the-badge" />
+ <img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FMonalikaPatnaik%2FUMatter&label=visitors&countColor=%2337d67a&style=for-the-badge&labelStyle=upper" />
+     </div>  
+  
+<br>
+<br>
+
 **Tech Stack Used**
 
-| 𝗛𝗧𝗠𝗟5  | 𝗖𝗦𝗦3 | 𝗕𝗢𝗢𝗦𝗧𝗥𝗔𝗣 | 𝗝𝗔𝗩𝗔𝗦𝗖𝗥𝗜𝗣𝗧 | REACTJS
-| ------------- | ------------- | ------------- | ------------- |------------- |
-| <img height="30px" src="https://cdn.svgporn.com/logos/html-5.svg">  | <img height="35px" src="https://cdn.svgporn.com/logos/css-3.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/bootstrap.svg"> | <img height="30px" src="https://cdn.svgporn.com/logos/javascript.svg"> |  <img height="30px" src="https://cdn.svgporn.com/logos/react.svg"> |
- 
+<div align="center">
+ <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
+ <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
+ <img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white">
+ <img src="https://img.shields.io/badge/JavaScript-F7DF1E.svg?style=for-the-badge&logo=JavaScript&logoColor=white">
+ <img src="https://img.shields.io/badge/-ReactJs-61DAFB?logo=react&logoColor=white&style=for-the-badge">
+</div>
+
+# Website Overview
+
+UMatter is committed to supporting individuals on their journey to overcome bad habits. Our website offers a range of services and resources to help users make positive changes in their lives. With a user-friendly interface and a team of dedicated professionals, UMatter is here to guide and empower you every step of the way.
+
+# Key Features ✨
+
+- Landing Page: When you visit our website, you'll be greeted by an engaging landing page that captures the essence of UMatter. Get inspired to take the first step towards a healthier and happier life.
+
+- About Us: Learn more about UMatter and our mission. Discover how our platform can provide you with the necessary tools and support to break free from bad habits.
+
+- Services Page: This page provides you with the list of serives that are provided by UMatter such as consulting a doctor, attending a working and connecting with friends.
+
+- Blogs Page: Provides you with useful blog posts on different matters and areas of concern in our life.
+
  
 **Components of Website**
+---
  
- **Landing Page**
+**Landing Page**
  
- This page appears when user clicks on the site and lands on the page.
- 
- ![image](https://user-images.githubusercontent.com/99353300/211297117-6c088613-ba7b-445a-97e8-3ab0f73fa37a.png)
+ The landing page is the initial point of entry for users when they click on our site. It serves as the first glimpse of what we have to offer and provides a seamless transition from the user's click to their arrival on the page.
+  <img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
 
+<br>
+  
 **About Us**
  
- This Page gives user the brief about the website and what they can expect.
- 
-![image](https://user-images.githubusercontent.com/99353300/211297237-ee408977-5866-463d-b8f2-f06bf959d3c7.png)
+ Discover a comprehensive solution for quitting smoking and drinking at UMatter. Our platform provides personalized consultations and medications, bringing you closer to a healthier life. With dedicated experts, we offer tailored support, empowering you to overcome challenges and achieve your health goals. Join us on this transformative journey today.
+ <img width="1440" alt="Screenshot 2023-05-26 at 4 31 44 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/88f95ad6-575c-401d-9b05-86a08cd9d45c">
+
+<br>
 
 **Services Page**
 
-This page provides the list of services which ae available on our website.
+Welcome to our Services page! Here, you will find a comprehensive list of the wide range of services available on our website. From tailored consultations to specialized treatments, we offer an array of options to cater to your specific needs. Explore our services to discover how we can assist you in achieving your goals and enhancing your experience on our platform.
+<img width="1440" alt="Screenshot 2023-05-26 at 4 32 04 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/efd21624-ab89-4683-af46-f0a91c456240">
 
-![image](https://user-images.githubusercontent.com/99353300/211299453-45e75e23-f936-4209-a116-95a6034433cd.png)
+<br>
+  
+**Blogs Page**
 
-### 🔖Steps to Contribute
+Welcome to our Blog section! Here, you'll find a collection of informative and engaging articles covering a variety of useful topics. Our blog pages are packed with valuable insights, tips, and resources to help you stay informed and inspired. Explore our diverse range of blog posts to expand your knowledge and find practical solutions to enhance your lifestyle.
 
-Following are the steps to guide you:
+<img width="1440" alt="Screenshot 2023-05-26 at 4 32 46 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/da82603f-6881-4153-bda7-fc8dd5f40e8a">
 
-* Step 1: Fork the repo and Go to your Git terminal and clone it on your machine.
-    ```
-    git clone https://github.com/<your_github_username>/UMatter.git
-    ```
-* Step 2: Add an upstream link to the main branch in your cloned repo
-    ```
-    git remote add upstream https://github.com/MonalikaPatnaik/UMatter.git
-    ```
-* Step 3: Keep your cloned repo up to date by pulling from upstream (this will also avoid any merge conflicts while committing new changes)
-    ```
-    git pull upstream main
-    ```
-* Step 4: Create your feature branch (This is a necessary step, so don't skip it)
-    ```
-    git checkout -b <feature-name>
-    ```
-* Step 5: Track and stage your changes.
-    ```
-     # Track the changes
-     git status
+<br>
+  
+## 🔖Steps to Contribute ✅
+ 
+- Contribution is the best way to support and get involved in community!
+ - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
-     # Add changes to Index
-     git add .
-     ```
-* Step 6: Commit all the changes (Write commit message as "Small Message")
-    ```
-    git commit -m "Write a meaningful but small commit message"
-    ```
-* Step 7: Push the changes for review
-    ```
-    git push origin <branch-name>
-    ```
-* Step 8: Create a PR on Github. (Don't just hit the create a pull request button, you must write a PR message to clarify why and what are you contributing)
+## If you have any idea or question 🤷
 
-
-### 🔨Note:
+- [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
+- [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
+ 
+### ✨🔨Note:********
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
-  > - Give a meaningful name to whatever file or folder you are adding. 
+  > - Give a meaningful name to whatever file or folder you are adding, changing etc. 
+ 
 
 
-## 🔑Guidelines
+## 🔑Guidelines✨
 
 1. Welcome to this repository, if you are here as an open-source program participant/contributor.
 2. Participants/contributors have to **comment** on issues they would like to work on, and mentors or the PA will assign you.
@@ -105,23 +136,31 @@ another person in the queue.
 20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right!.
 
 
-
 ## 😎 Project Maintainers
 
 <table>
   <tr>
-<td align="center"><a href="https://github.com/MonalikaPatnaik">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" alt=""/><br /><sub><b>Monalika Patnaik</b></sub></a></td>
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td>
 
-<td align="center"><a href="https://github.com/i-am-SnehaChauhan">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/28ccb9cb-743e-44bf-b5ae-990c7ac76145" width="100px;" alt=""/><br /><sub><b>Sneha Chauhan</b></sub></a></td>
+
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
  
-<td align="center"><a href="https://github.com/muditchoudhary">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" alt=""/><br /><sub><b>Mansi</b></sub></a></td>
+<td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td>
    
  </tr>
 </table>
 
-## 😃 Happy Contributing 😃
-  
- 
+## License 🪪
+
+ [MIT license](https://opensource.org/license/mit/)
+
+## Thanks to all the Contributors ❤️
+
+<a href = "https://github.com/MonalikaPatnaik/UMatter/graphs/contributors">
+
+  <img src = "https://contrib.rocks/image?repo=MonalikaPatnaik/UMatter"/>
+
+</a>
