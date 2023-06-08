@@ -47,7 +47,8 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^5.0.0"
+    "gh-pages": "^5.0.0",
+    "tailwindcss": "^3.3.2"
   },
   "description": "<div align = \"center\">\r  <img src=\"./src/images/mental-health.png\" />\r  <div>",
   "main": "tailwind.config.js",
