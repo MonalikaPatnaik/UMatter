@@ -21,7 +21,7 @@ const HeroSection = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Enhance the Joy in Your Life"],
+      strings: ["Make your life more blissful"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
