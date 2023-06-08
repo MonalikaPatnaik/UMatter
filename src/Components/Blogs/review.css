@@ -16,12 +16,19 @@
     font-family: sans-serif;
 }
 
+iframe{
+    width: 300px;
+    aspect-ratio: 16 / 9;
+}
+
 .ele{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     margin-right: 11%;
     flex-wrap: wrap;
+    column-gap: 40px;
+    row-gap: 40px;
 }
 
  
