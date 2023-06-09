@@ -1,6 +1,6 @@
 .main{
-    padding: 2rem;
-    margin: 5rem;
+    background:var(--bg-clr);
+    padding: 5rem;
     /* display: flex;
     flex-direction: column;
     justify-content: space-between; */
@@ -9,6 +9,7 @@
 }
 
 .main h3{
+    color:var(--text-clr);
     font-size: 2rem;
     text-align: center;
     padding-right: 5rem;
