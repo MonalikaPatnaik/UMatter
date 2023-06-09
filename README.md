@@ -148,7 +148,7 @@ another person in the queue.
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
  
 <td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td>
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/Mansi168">Mansi</a></b></sub></td>
    
  </tr>
 </table>
