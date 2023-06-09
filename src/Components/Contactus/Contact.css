@@ -68,3 +68,8 @@ button:hover{
   transition:0.5s;
 }
   
+@media only screen and (max-width: 512px) {
+  .form-container{
+    width: 90vw;
+  }
+}

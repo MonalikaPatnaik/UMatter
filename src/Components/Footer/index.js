@@ -51,7 +51,7 @@ const Footer = () => {
               <FooterLink className="icons linkdn" aria-label="Visit us on Linkedin" title="Linkedin (External Link)" rel="noopener noreferrer" style={{ backgroundColor:"#0077B5"}}><FaLinkedin style={{ fontSize: '22px'}}/> </FooterLink>
               <FooterLink className="icons insta" aria-label="Visit us on Instagram" title="Instagram (External Link)" rel="noopener noreferrer" style={{ backgroundColor:"#E4405F"}} ><FaInstagram style={{ fontSize: '22px'}}  /> </FooterLink>
               <FooterLink className="icons fb" aria-label="Visit us on Facebook" title="Facebook (External Link)" rel="noopener noreferrer" style={{ backgroundColor:"#1877F2"}}><FaFacebook style={{ fontSize: '22px'}}  /> </FooterLink>
-              <FooterLink className="icons github" aria-label="Visit us on Github" title="Github (External Link)" rel="noopener noreferrer" style={{ backgroundColor:"black"}} ><FaGithub style={{ fontSize: '26px'}}  /> </FooterLink>
+              <FooterLink className="icons github" aria-label="Visit us on Github" title="Github (External Link)" rel="noopener noreferrer" style={{ backgroundColor:"black"}} ><FaGithub style={{ fontSize: '28px'}}  /> </FooterLink>
             </FooterLinkItems>
             <SocialLogo onClick={handleClick}>
               UMatter

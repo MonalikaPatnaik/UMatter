@@ -35,7 +35,7 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle);
+      setNavbarBg(scrolled > 0 ? { backgroundColor: "var(--bg-clr)"} : glassStyle);
     };
 
     window.addEventListener("scroll", handleScroll);

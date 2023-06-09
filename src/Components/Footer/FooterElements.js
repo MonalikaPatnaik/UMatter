@@ -69,9 +69,9 @@ export const FooterLinkItems = styled.div`
   &.socials {
     display: flex;
     flex-direction: row;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
     margin-top: 1rem;
   }
 
