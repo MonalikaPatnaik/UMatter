@@ -1,12 +1,11 @@
 
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Icon1 from '../../images/image1.png'
 import Icon2 from '../../images/image2.png'
 import Icon3 from '../../images/image3.png'
 import Icon4 from '../../images/image.4.png'
 import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
 
-import React, { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
 import {
