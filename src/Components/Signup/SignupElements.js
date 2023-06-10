@@ -13,11 +13,11 @@ background:var(--bg-clr);
 `;
 
 export const FormWrap = styled.div`
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin-top:50px;
+  margin:50px 0;
   
   @media screen and (max-width: 400px) {
     height: 100%; /* Change to a percentage-based height */
@@ -62,13 +62,16 @@ export const Form = styled.form`
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
-  z-index: 11;
+  z-index: 4;
   margin:auto;
   margin-top:40px;
   border-radius: 10px;
   padding:20px;
   box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
+  @media only screen and (max-width:550px){
+    width:85%;
+  }
 `;
 
 export const FormH1 = styled.label`
@@ -79,6 +82,12 @@ export const FormH1 = styled.label`
  font-weight: 400;
  text-align: center;
  
+@media only screen and (max-width:550px){
+  font-size:40px;
+}
+  @media only screen and (max-width:440px){
+  font-size:30px;
+}
 
 `;
 
@@ -95,11 +104,24 @@ export const FormInput = styled.input`
   outline: none;
   width: 100%; /* Add width property to make the input box fill the available width */
 
-  /* Additional styling for password inputs */
-  &:nth-of-type(3),
-  &:nth-of-type(4) {
-    margin-bottom: 20px; /* Increase margin-bottom for spacing */
+  &:nth-of-type(4){
+    width:20%;
+    float:left;
   }
+  &:nth-of-type(5){
+    width:75%;
+    float:right;
+  }
+
+  @media only screen and (max-width:440px){
+    &:nth-of-type(4){
+      font-size:14px;
+    }
+  }
+  @media only screen and (max-width:400px){
+    font-size:15px;
+  }
+
 `;
 
 export const FormButton = styled.button`

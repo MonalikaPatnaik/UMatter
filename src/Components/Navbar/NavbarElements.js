@@ -5,7 +5,7 @@ import { Link as LinkS } from 'react-scroll';
 export const Nav = styled.nav`
 	box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 	height: 80px;
-	margin-top: -80px;
+	margin-top: 0px;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -68,7 +68,7 @@ export const NavLogo = styled(LinkR)`
 	align-items: center;
 	font-weight: bold;
 	padding: 1rem;
-	z-index: 10;
+	z-index: 12;
 	text-decoration: none;
 	text-align: center; /* Center the NavLogo on small screens */
 

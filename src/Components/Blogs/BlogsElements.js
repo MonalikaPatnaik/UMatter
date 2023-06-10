@@ -6,7 +6,7 @@ export const BlogsContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center; 
-  background-color: #f7f7f7;
+  background:var(--bg-clr);
 `;
 
 export const ReadMoreButton = styled.button`

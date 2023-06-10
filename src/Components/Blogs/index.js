@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
 import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
@@ -21,8 +23,10 @@ import {
 } from "./BlogsElements";
 
 const Blogs = () => {
+
   const [searchTerm, setSearchTerm] = useState("");
 
+  const navigate = useNavigate();
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -43,9 +47,7 @@ const Blogs = () => {
 
   return (
     <BlogsContainer id="Blogs" >
-      <div style={{ height: "150px" }}></div>
-
-
+      <div style={{ height: "100px" }}></div>
 
        <div className="search-container">
          <input
@@ -83,7 +85,7 @@ const Blogs = () => {
         </button>
       </div>
       <div style={{ height: "50px" }}></div>
-      <div style={{ height: "50px" }}></div>
+      {/* <div style={{ height: "50px" }}></div> */}
       <BlogsWrapper>
         {filteredBlogs.map((blog, index) => (
           <BlogsCard key={index}>
@@ -92,7 +94,7 @@ const Blogs = () => {
               <b>{blog.title}</b>
             </BlogsH2>
             <BlogsP>{blog.content}</BlogsP>
-            <ReadMoreButton>Read more</ReadMoreButton>
+            <ReadMoreButton onClick={()=>{navigate("./abc")}}>Read more</ReadMoreButton>
           </BlogsCard>
         ))}
       </BlogsWrapper>
