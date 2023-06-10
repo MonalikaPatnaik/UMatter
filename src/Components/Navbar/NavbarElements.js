@@ -68,7 +68,7 @@ export const NavLogo = styled(LinkR)`
 	align-items: center;
 	font-weight: bold;
 	padding: 1rem;
-	z-index: 10;
+	z-index: 12;
 	text-decoration: none;
 	text-align: center; /* Center the NavLogo on small screens */
 
