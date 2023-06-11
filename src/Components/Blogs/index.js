@@ -14,7 +14,7 @@ import Icon10 from "../../images/No-yes.jpg";
 
 import {
   BlogsContainer,
-  BlogsH2,
+  BlogsH1,
   BlogsWrapper,
   BlogsCard,
   BlogsIcon,
@@ -90,9 +90,9 @@ const Blogs = () => {
         {filteredBlogs.map((blog, index) => (
           <BlogsCard key={index}>
             <BlogsIcon src={blog.icon} />
-            <BlogsH2>
+            <BlogsH1>
               <b>{blog.title}</b>
-            </BlogsH2>
+            </BlogsH1>
             <BlogsP>{blog.content}</BlogsP>
             <ReadMoreButton onClick={()=>{navigate("./abc")}}>Read more</ReadMoreButton>
           </BlogsCard>
@@ -119,7 +119,7 @@ const blogsData = [
   },
   {
     icon: Icon8,
-    title: "Isolation – the secret enemy",
+    title: "Isolation - the secret enemy",
     content:
       "Nature is ideal for lowering stress levels, but it’s also a great way to remind yourself there’s a whole world out there and it can be comforting to see the bigger picture when we step outside our bubbles.",
   },
