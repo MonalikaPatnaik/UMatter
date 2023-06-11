@@ -134,8 +134,7 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 
 ## A special section of guidelines and measures to be taken for some specific issues users may encounter while running this project:
 
-1. 
-'react-scripts' is not recognized as an internal or external command, operable program or batch file.
+1.  'react-scripts' is not recognized as an internal or external command, operable program or batch file.
 
 -> The error message suggests that the command 'react-scripts' is not recognized as an internal or external command on your system. This error commonly occurs when the required dependencies are not installed or not available in the system's PATH environment variable.
 
@@ -151,8 +150,7 @@ b] If the dependencies are already installed and you still encounter the error, 
 c] If the above steps don't resolve the issue, you can try **deleting the 'node_modules'** directory and **reinstalling the dependencies**. Run the following commands:
 <**rm -rf node_modules**> & <**npm install**>
 
-2. 
-npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility>
+2.  npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility>
 
 npm WARN deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
 
@@ -166,9 +164,8 @@ npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrad
 
 -> These warnings indicate that certain packages used in your project are no longer **maintained** or have been replaced by newer versions or alternatives. The warnings themselves do not necessarily indicate any critical issues, but they suggest that you might want to consider **updating or replacing the mentioned packages** in order to ensure the long-term stability and compatibility of your project.
 
-3. 
-Proxy error: Could not proxy request /manifest.json from localhost:3000 to http://localhost:8081/.
-See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
+3.  Proxy error: Could not proxy request /manifest.json from localhost:3000 to http://localhost:8081/.
+    See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
 
 -> The error message provided suggests that there is a **proxy error** while attempting to proxy a request from **localhost:3000 to http://localhost:8081/**. The error message also mentions the **ECONNREFUSED error code**, which typically indicates that the connection to the **target server (localhost:8081 in this case)** was refused or not available.
 
@@ -178,19 +175,18 @@ a] **Proxy configuration**: If you are using a proxy server to redirect requests
 
 b] **Port conflict**: It's possible that another application or process is already using port 8081, causing a conflict. Try using a different port for the target server, or check for any other applications using the same port and terminate them if necessary.
 
-4. 
-Failed to fetch
-TypeError: Failed to fetch
-at http://localhost:3000/static/js/bundle.js:7115:5
-at commitHookEffectListMount (http://localhost:3000/static/js/bundle.js:40975:30)
-at commitPassiveMountOnFiber (http://localhost:3000/static/js/bundle.js:42468:17)
-at commitPassiveMountEffects_complete (http://localhost:3000/static/js/bundle.js:42440:13)
-at commitPassiveMountEffects_begin (http://localhost:3000/static/js/bundle.js:42430:11)
-at commitPassiveMountEffects (http://localhost:3000/static/js/bundle.js:42420:7)
-at flushPassiveEffectsImpl (http://localhost:3000/static/js/bundle.js:44305:7)
-at flushPassiveEffects (http://localhost:3000/static/js/bundle.js:44257:18)
-at http://localhost:3000/static/js/bundle.js:44072:13
-at workLoop (http://localhost:3000/static/js/bundle.js:189770:38)
+4.  Failed to fetch
+    TypeError: Failed to fetch
+    at http://localhost:3000/static/js/bundle.js:7115:5
+    at commitHookEffectListMount (http://localhost:3000/static/js/bundle.js:40975:30)
+    at commitPassiveMountOnFiber (http://localhost:3000/static/js/bundle.js:42468:17)
+    at commitPassiveMountEffects_complete (http://localhost:3000/static/js/bundle.js:42440:13)
+    at commitPassiveMountEffects_begin (http://localhost:3000/static/js/bundle.js:42430:11)
+    at commitPassiveMountEffects (http://localhost:3000/static/js/bundle.js:42420:7)
+    at flushPassiveEffectsImpl (http://localhost:3000/static/js/bundle.js:44305:7)
+    at flushPassiveEffects (http://localhost:3000/static/js/bundle.js:44257:18)
+    at http://localhost:3000/static/js/bundle.js:44072:13
+    at workLoop (http://localhost:3000/static/js/bundle.js:189770:38)
 
 -> The error shown above indicates a **"Failed to fetch"** error, along with a **stack trace** pointing to specific lines in **bundle.js** file. This error typically occurs when there is a problem with making a **network request**, such as an **API call**, and fetching the required data.
 
