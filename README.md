@@ -134,12 +134,11 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 
 ## A special section of guidelines and measures to be taken for some specific issues users may encounter while running this project:
 
-1. 'react-scripts' is not recognized as an internal or external command,
-   operable program or batch file.
-
--> The error message suggests that the command 'react-scripts' is not recognized as an internal or external command on your system. This error commonly occurs when the required dependencies are not installed or not available in the system's PATH environment variable.
-
-To resolve this issue, you can follow these steps:
+1.  <img width="1440" alt="err-1" src="![Alt text](<../../../Desktop/readme assets/err-1.jpg>)">
+    <br>
+    The error message suggests that the command 'react-scripts' is not recognized as an internal or external command on your system. This error commonly occurs when the required dependencies are not installed or not available in the system's PATH environment variable.
+    <br>
+    To resolve this issue, you can follow these steps:
 
 a] Make sure you have installed the required **dependencies** by running the following command in the project directory:
 <**npm install**>.
@@ -150,52 +149,34 @@ b] If the dependencies are already installed and you still encounter the error, 
 
 c] If the above steps don't resolve the issue, you can try **deleting the 'node_modules'** directory and **reinstalling the dependencies**. Run the following commands:
 <**rm -rf node_modules**> & <**npm install**>
+<br>
 
-2. npm WARN deprecated stable@0.1.8: Modern JS already guarantees Array#sort() is a stable sort, so this library is deprecated. See the compatibility table on MDN: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort#browser_compatibility>
+2.  <img width="1440" alt="err-2" src="![Alt text](<../../../Desktop/readme assets/err-2.jpg>)">
+    <br>
+    These warnings indicate that certain packages used in your project are no longer **maintained** or have been replaced by newer versions or alternatives. The warnings themselves do not necessarily indicate any critical issues, but they suggest that you might want to consider **updating or replacing the mentioned packages** in order to ensure the long-term stability and compatibility of your project.
+    <br>
 
-npm WARN deprecated rollup-plugin-terser@7.0.2: This package has been deprecated and is no longer maintained. Please use @rollup/plugin-terser
-
-npm WARN deprecated sourcemap-codec@1.4.8: Please use @jridgewell/sourcemap-codec instead
-
-npm WARN deprecated w3c-hr-time@1.0.2: Use your platform's native performance.now() and performance.timeOrigin.
-
-npm WARN deprecated workbox-cacheable-response@6.6.0: workbox-background-sync@6.6.0
-
-npm WARN deprecated svgo@1.3.2: This SVGO version is no longer supported. Upgrade to v2.x.x.
-
--> These warnings indicate that certain packages used in your project are no longer **maintained** or have been replaced by newer versions or alternatives. The warnings themselves do not necessarily indicate any critical issues, but they suggest that you might want to consider **updating or replacing the mentioned packages** in order to ensure the long-term stability and compatibility of your project.
-
-3. Proxy error: Could not proxy request /manifest.json from localhost:3000 to http://localhost:8081/.
-   See https://nodejs.org/api/errors.html#errors_common_system_errors for more information (ECONNREFUSED).
-
--> The error message provided suggests that there is a **proxy error** while attempting to proxy a request from **localhost:3000 to http://localhost:8081/**. The error message also mentions the **ECONNREFUSED error code**, which typically indicates that the connection to the **target server (localhost:8081 in this case)** was refused or not available.
+3.  <img width="1440" alt="err-3" src="![Alt text](<../../../Desktop/readme assets/err-5.jpg>)">
+    <br>
+    The error message provided suggests that there is a **proxy error** while attempting to proxy a request from **localhost:3000 to http://localhost:8081/**. The error message also mentions the **ECONNREFUSED error code**, which typically indicates that the connection to the **target server (localhost:8081 in this case)** was refused or not available.
 
 To overcome this issue, a few measures can be taken:
 
 a] **Proxy configuration**: If you are using a proxy server to redirect requests, ensure that the proxy server is properly configured and able to forward the request to localhost:8081.
 
 b] **Port conflict**: It's possible that another application or process is already using port 8081, causing a conflict. Try using a different port for the target server, or check for any other applications using the same port and terminate them if necessary.
+<br>
 
-4. Failed to fetch
-   TypeError: Failed to fetch
-   at http://localhost:3000/static/js/bundle.js:7115:5
-   at commitHookEffectListMount (http://localhost:3000/static/js/bundle.js:40975:30)
-   at commitPassiveMountOnFiber (http://localhost:3000/static/js/bundle.js:42468:17)
-   at commitPassiveMountEffects_complete (http://localhost:3000/static/js/bundle.js:42440:13)
-   at commitPassiveMountEffects_begin (http://localhost:3000/static/js/bundle.js:42430:11)
-   at commitPassiveMountEffects (http://localhost:3000/static/js/bundle.js:42420:7)
-   at flushPassiveEffectsImpl (http://localhost:3000/static/js/bundle.js:44305:7)
-   at flushPassiveEffects (http://localhost:3000/static/js/bundle.js:44257:18)
-   at http://localhost:3000/static/js/bundle.js:44072:13
-   at workLoop (http://localhost:3000/static/js/bundle.js:189770:38)
-
--> The error shown above indicates a **"Failed to fetch"** error, along with a **stack trace** pointing to specific lines in **bundle.js** file. This error typically occurs when there is a problem with making a **network request**, such as an **API call**, and fetching the required data.
+4.  <img width="1440" alt="err-4" src="![Alt text](<../../../Desktop/readme assets/err-6.jpg>)">
+    <br>
+    The error shown above indicates a **"Failed to fetch"** error, along with a **stack trace** pointing to specific lines in **bundle.js** file. This error typically occurs when there is a problem with making a **network request**, such as an **API call**, and fetching the required data.
 
 Here are a few steps you can take to troubleshoot and resolve the issue:
 
 a] **Check the API endpoint**: If you are making an API call, verify that the API endpoint is correct and accessible. You can test the endpoint using tools like cURL or Postman to see if you receive a response.
 
 b] **CORS (Cross-Origin Resource Sharing)**: If you are making requests to a different domain or port, ensure that the server is configured to allow cross-origin requests from your application. The server should include the appropriate CORS headers in its responses.
+<br>
 
 <!-- ----------------------------------------- -->
 
