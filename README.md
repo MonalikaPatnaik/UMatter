@@ -134,7 +134,7 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 
 ## A special section of guidelines and measures to be taken for some specific issues users may encounter while running this project:
 
-1.  <img width="1440" alt="err-1" src="![Alt text](<../../../Desktop/readme assets/err-1.jpg>)">
+1.  <img width="1440" alt="err-1" src="https://ibb.co/GQcpqcf">
     <br>
     The error message suggests that the command 'react-scripts' is not recognized as an internal or external command on your system. This error commonly occurs when the required dependencies are not installed or not available in the system's PATH environment variable.
     <br>
