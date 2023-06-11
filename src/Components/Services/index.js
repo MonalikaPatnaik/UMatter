@@ -39,10 +39,10 @@ const Services = () => {
       whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
       transition={{ duration: 0.8 }}
     >
+
       <ServicesH1>
         <span ref={el} style={{ display: "inline-block" }} />
       </ServicesH1>
-
       <ServicesWrapper>
         <motion.div
           variants={cardOneVariants}
@@ -108,7 +108,7 @@ const Services = () => {
               Be the part of the amazing community and connect with them.{" "}
             </ServicesP>
           </ServicesCard>
-        </motion.div>
+        </motion.div> 
       </ServicesWrapper>
 
     </ServicesContainer>

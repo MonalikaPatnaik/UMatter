@@ -14,4 +14,4 @@ export const homeObjOne = {
     primary: true,
     darkText: false
 
-};
+}; 
