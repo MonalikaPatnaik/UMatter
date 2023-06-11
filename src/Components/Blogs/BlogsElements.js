@@ -5,28 +5,30 @@ export const BlogsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  background-color: #f7f7f7;
+  align-items: center;
+  background: var(--bg-clr);
 `;
 
 export const ReadMoreButton = styled.button`
   background-color: #28b86b;
-  color: #000;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  width: 50%;
+  outline: none;
+  margin-left: 24%;
+
+  /* Add animation properties */
   opacity: 0;
   transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 
-  &:hover {
-    background-color: #000;
-    color: #fff;
-    // transform: translateY(-5px);
-  }
+  /* Add cursor style */
+  cursor: pointer;
 `;
+
 
 
 export const BlogsWrapper = styled.div`
@@ -49,72 +51,104 @@ export const BlogsWrapper = styled.div`
     margin-bottom: 30px;
   }
 `;
-
-
+export const BlogsP = styled.p`
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  z-index: 2;
+  color: #fff;
+  padding: 0 15px;
+  margin-bottom: 3rem;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+`;
 export const BlogsIcon = styled.img`
-  height: 200px;
+  height: 100%;
   width: 100%;
-  margin-bottom: 10px;
+  position: absolute;
+  z-index: 0;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 `;
 
 export const BlogsH1 = styled.h1`
-  margin: 100px 10px 30px 10px;
-  font-size: 30px;
-  font-weight: 700;
+  margin: 50px 10px 30px 10px;
+  opacity: 0;
   text-align: center;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 2;
+  // color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  color: white;
 
   @media screen and (max-width: 480px) {
-    font-size: 24px;
+    font-size: 15px;
   }
 `;
 
-export const BlogsH2 = styled.h2`
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #333;
-`;
 
-export const BlogsP = styled.p`
-font-size: 16px;
-text-align: center;
-color: #555;
-opacity: 0;
-transform: translateY(10px);
-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-`;
+
 
 export const BlogsCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 10px;
-  height: 280px; 
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  background-color: #e3f4f4;
+  vertical-align: middle;
+  box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s;
+  height: 23rem;
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
+  &:before,
+  &:after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  &:before {
+    height: calc(100% + 30px);
+    background-size: cover;
+    background-image: url(${({ imageUrl }) => imageUrl});
+  }
+
+  &:after {
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    opacity: 0; /* Set initial opacity to 0 */
+    transition: opacity 0.3s ease-in-out;
+    box-shadow: inset 0 -80px 90px -15px rgba(0, 0, 0, 0.75);
+  }
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    height: 490px; 
-
-    > ${BlogsP} {
+    &:after {
+      // opacity: 0.5;
+    }
+    &:before {
+      top: -30px;
+    }
+    ${BlogsIcon} {
+      opacity: 0.5;
+    }
+    ${BlogsH1} {
       opacity: 1;
-      transform: translateY(10px);
-      transition-delay: 0.2s; 
+      color: var(--text-clr);
+      transform: translateY(0);
     }
 
     ${ReadMoreButton} {
+      box-shadow: 0 0 0 2px #8fe9ff;
       opacity: 1;
-      transition-delay: 0.5s; /* Add a delay to the transition */
+      transform: translateY(0);
+    }
+    ${BlogsP} {
+      opacity: 1;
+      color: var(--text-clr);
+      transform: translateY(0);
     }
   }
 `;

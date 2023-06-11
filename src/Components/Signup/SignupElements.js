@@ -62,7 +62,7 @@ export const Form = styled.form`
   max-width: 500px;
   height: 100%; /* Change to 100% to fill the available height */
   width: 100%;
-  z-index: 11;
+  z-index: 4;
   margin:auto;
   margin-top:40px;
   border-radius: 10px;

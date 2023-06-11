@@ -1,6 +1,6 @@
 # UMatter
 
-<div align = "center">
+<div align = "left">
  <img src="./src/images/mental-health.png" />
  <div>
 
@@ -11,7 +11,7 @@ Welcome to UMatter, an inclusive platform designed to help individuals quit bad 
 
 UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
 
-<div align="center">
+<div align="left">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
 <img src="https://forthebadge.com/images/badges/uses-brains.svg" />
 <img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
@@ -36,7 +36,7 @@ UMatter is an one and all platform to help people quitting bad habits by providi
 
 **Tech Stack Used**
 
-<div align="center">
+<div align="left">
  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
  <img src="https://img.shields.io/badge/CSS3-1572B6.svg?style=for-the-badge&logo=CSS3&logoColor=white">
  <img src="https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&logo=Bootstrap&logoColor=white">
@@ -102,7 +102,7 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 - [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
 - [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
  
-### ✨🔨Note:********
+### ✨🔨Note:
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
@@ -148,7 +148,30 @@ another person in the queue.
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
  
 <td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td>
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/Mansi168">Mansi</a></b></sub></td>
+   
+ </tr>
+</table>
+
+## 💯 Mentors
+
+<table>
+  <tr>
+
+```
+Mentors here 🚧
+```
+<!-- Just Insert here the mentors  👇-->
+
+<!-- <td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td> -->
+
+
+<!-- <td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td> -->
+ 
+<!-- <td align="center">
+<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td> -->
    
  </tr>
 </table>
