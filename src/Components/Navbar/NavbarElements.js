@@ -186,8 +186,7 @@ export const NavBtn = styled.nav`
 		margin-top: 0px;
 		margin-right: 45px;
 	}
-	${
-		'' /* border-radius: 50px;
+	${'' /* border-radius: 50px;
 background: #01bf71;
 padding: 10px 10px;
 color: white;
