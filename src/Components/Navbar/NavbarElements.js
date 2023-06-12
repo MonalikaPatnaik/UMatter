@@ -177,6 +177,7 @@ export const NavLinks = styled(LinkS)`
   }
 `;
 export const NavBtn = styled.nav`
+
   display: flex;
   align-items: center;
   gap: 4%;

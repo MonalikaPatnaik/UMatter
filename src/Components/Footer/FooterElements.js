@@ -7,6 +7,7 @@ export const FooterContainer = styled.footer`
   padding-top: 3rem;
   padding-bottom: 3rem;
   z-index: 99;
+ 
 `;
 
 // Footer wrap
@@ -87,7 +88,7 @@ export const FooterLinkItems = styled.div`
     text-align: left;
   }
 `
-;
+  ;
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
@@ -153,10 +154,10 @@ export const FooterLink = styled(Link)`
     color:black !important;
    }
  `
- 
- ;
 
- 
+  ;
+
+
 
 // Social media
 export const SocialMedia = styled.section``;
