@@ -2,8 +2,10 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
+
  min-height: 692px;
- position: fixed;
+ padding-top:80px;
+ padding-bottom:80px;
  bottom: 0;
  left: 0;
  right: 0;
@@ -70,8 +72,8 @@ export const FormH1 = styled.label`
  font-weight: 800;
  text-align: center;
  `;
- 
- export const FormLabel = styled.label`
+
+export const FormLabel = styled.label`
  margin-bottom: 8px;
  color: #fff;
  font-size: 1.1rem;
