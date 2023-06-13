@@ -6,25 +6,26 @@
 }
 
 .dark_mode_label {
-  width: 70px;
-  height: 35px;
+  width: 45px;
+  height: 45px;
   position: relative;
   display: block;
   background: #ebebeb;
   border-radius: 200px;
-  box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
-    inset 0px -5px 15px rgba(255, 255, 255, 0.4);
+  /* box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.4),
+    inset 0px -5px 15px rgba(255, 255, 255, 0.4); */
   cursor: pointer;
   transition: 0.3s;
-  border: 2px solid rgba(156, 152, 152, 0.4);
+  border: 2px solid rgba(0, 0, 0, 0.4);
 }
 .dark_mode_label:after {
   content: "";
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
   background: linear-gradient(180deg, #ffcc89, #d8860b);
   border-radius: 180px;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
@@ -36,12 +37,12 @@
   visibility: hidden;
 }
 .dark_mode_input:checked + .dark_mode_label {
-  background: white;
+  background: #0516cbb0;
 }
 .dark_mode_input:checked + .dark_mode_label:after {
-  left: 62px;
-  transform: translateX(-100%);
-  background: linear-gradient(180deg, #777, #3a3a3a);
+  /* left: 62px; */
+  transform: rotateZ(180deg) translate(50%,50%);
+  background: linear-gradient(360deg,#222137, #3a3a3a36);
 }
 .dark_mode_label:active:after {
   width: 30px;
@@ -49,25 +50,25 @@
 
 .dark_mode_label svg {
   position: absolute;
-  width: 20px;
-  top: 5px;
+  width: 35px;
+  top: 3px;
   z-index: 100;
 }
 .dark_mode_label svg.sun {
-  left: 5px;
+  left: 4px;
   fill: #fff;
-  transition: 0.3s;
+  transition: 0.7s;
 }
 .dark_mode_label svg.moon {
-  left: 40px;
-  fill: #7e7e7e;
-  transition: 0.3s;
+  left: 5px;
+  fill: #4c7bc300;
+  transition: 0.7s;
 }
 .dark_mode_input:checked + .dark_mode_label svg.sun {
-  fill: #7e7e7e;
+  fill: #fff9f900;
 }
 .dark_mode_input:checked + .dark_mode_label svg.moon {
-  fill: #fff;
+  fill: #f0f3ff;
 }
 
 @media screen and (max-width: 490px) {
