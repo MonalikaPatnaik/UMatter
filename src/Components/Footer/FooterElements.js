@@ -60,12 +60,20 @@ export const FooterLinksWrapper = styled.div`
   }
 `;
 
+
 // Footer link items
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   color: #fff;
+  &.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Adjust the alignment as needed */
+    margin-top: -2.6rem;
+   
+  }
 
   &.socials {
     display: flex;
@@ -87,32 +95,78 @@ export const FooterLinkItems = styled.div`
     align-items: flex-start;
     text-align: left;
   }
+  
 `
   ;
 
+
+
 // Footer link title
 export const FooterLinkTitle = styled.h1`
- font-size: 18px;
- font-weight: bold;
- margin-bottom: 16px;
-`
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Adjust the value as per your needs */
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color: #01bf71;
+    transform: translateY(-2px);
+  }
+
+  &:hover:after,
+  &:focus:after {
+    content: "";
+    position: absolute;
+    bottom: -6px; /* Adjust the value to move the underline down */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #01bf71;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -6px; /* Adjust the value to move the underline down */
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+`;
+
 export const FooterLinkTitleHr = styled.hr`
   content: "";
   border: 2px solid;
-  margin-top: 0;
+  margin-top: 5px;
   width: 52%;
-  color: #01bf71;
+  color: #101522;
    
 `
 export const FooterLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   margin-bottom: 0.6rem;
-  font-size: 14px;
+  font-size: 16px;
 
   &:hover {
     color: #01bf71;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: solid;
   }
+
   
   &.icons{
     text-align:center;
