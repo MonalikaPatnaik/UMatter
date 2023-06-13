@@ -36,7 +36,6 @@ export const FooterLinksContainer = styled.div`
     grid-template-columns: 1fr 0.5fr;
   }
 `;
-
 // Footer links wrapper
 export const FooterLinksWrapper = styled.div`
   @media (max-width: 786px) {
@@ -45,17 +44,9 @@ export const FooterLinksWrapper = styled.div`
   }
 
   @media (min-width: 786px) {
-    &:nth-child(1) {
-      display: flex;
-      justify-content: space-around;
-    }
-    &:nth-child(2) {
-      width: 100%;
-      display: grid;
-      align-self: inherit;
-      align-content: center;
-      justify-content: center;
-    }
+    display: flex;
+    justify-content: space-around; /* Align items horizontally */
+    width: 100%;
   }
 `;
 
