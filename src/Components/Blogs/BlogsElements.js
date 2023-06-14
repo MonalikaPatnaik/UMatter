@@ -11,6 +11,7 @@ export const BlogsContainer = styled.div`
 
 export const ReadMoreButton = styled.button`
   background-color: #28b86b;
+  cursor: pointer;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -18,15 +19,16 @@ export const ReadMoreButton = styled.button`
   font-size: 16px;
   width: 50%;
   outline: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+
+  /* Position the button relative to its parent */
+  position: absolute;
+  bottom: 25px;
   margin-left: 24%;
 
-  /* Add animation properties */
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-
-  /* Add cursor style */
-  cursor: pointer;
+  /* Add a higher z-index to ensure it's above other elements */
+  z-index: 2;
 `;
 
 
@@ -55,7 +57,6 @@ export const BlogsP = styled.p`
   font-size: 14px;
   text-align: center;
   opacity: 0;
-  z-index: 2;
   color: #fff;
   padding: 0 15px;
   margin-bottom: 3rem;
@@ -65,9 +66,9 @@ export const BlogsP = styled.p`
 export const BlogsIcon = styled.img`
   height: 100%;
   width: 100%;
-  position: absolute;
-  z-index: 0;
   object-fit: cover;
+  z-index: 0;
+  position: absolute;
 `;
 
 export const BlogsH1 = styled.h1`
@@ -78,7 +79,7 @@ export const BlogsH1 = styled.h1`
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
   font-size: 18px;
   font-weight: 700;
-  z-index: 2;
+  z-index: 10;
   // color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
   color: white;
 
@@ -97,57 +98,27 @@ export const BlogsCard = styled.div`
   position: relative;
   transition: all 0.35s;
   height: 23rem;
+  cursor: pointer;
+
   @media screen and (max-width: 480px) {
     width: 90%;
   }
-  &:before,
-  &:after {
-    content: "";
-    width: 100%;
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-  }
-
-  &:before {
-    height: calc(100% + 30px);
-    background-size: cover;
-    background-image: url(${({ imageUrl }) => imageUrl});
-  }
-
-  &:after {
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    opacity: 0; /* Set initial opacity to 0 */
-    transition: opacity 0.3s ease-in-out;
-    box-shadow: inset 0 -80px 90px -15px rgba(0, 0, 0, 0.75);
-  }
 
   &:hover {
-    &:after {
-      // opacity: 0.5;
-    }
-    &:before {
-      top: -30px;
-    }
-    ${BlogsIcon} {
-      opacity: 0.5;
-    }
-    ${BlogsH1} {
-      opacity: 1;
-      color: var(--text-clr);
-      transform: translateY(0);
-    }
+    transform: scale(1.02);
+    transition: all 0.35s;
+    box-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.6);
 
     ${ReadMoreButton} {
-      box-shadow: 0 0 0 2px #8fe9ff;
       opacity: 1;
-      transform: translateY(0);
+      
     }
-    ${BlogsP} {
+    ${BlogsIcon}{
+      opacity: 0.5;
+    }
+
+    ${BlogsH1}, ${BlogsP} {
       opacity: 1;
-      color: var(--text-clr);
       transform: translateY(0);
     }
   }
