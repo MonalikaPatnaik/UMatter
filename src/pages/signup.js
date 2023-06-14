@@ -1,11 +1,13 @@
 import React from 'react'
 import SignUp from '../Components/Signup';
-import Navbar from '../Components/Navbar'
+import Footer from '../Components/Footer';
+
 const SignupPage = () => {
   return (
     <div>
-      <Navbar />
-        <SignUp />
+      <SignUp />
+      <Footer />
+
     </div>
   );
 };

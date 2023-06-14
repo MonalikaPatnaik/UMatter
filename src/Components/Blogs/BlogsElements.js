@@ -5,28 +5,32 @@ export const BlogsContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; 
-  background-color: #f7f7f7;
+  align-items: center;
+  background: var(--bg-clr);
 `;
 
 export const ReadMoreButton = styled.button`
   background-color: #28b86b;
-  color: #000;
+  cursor: pointer;
+  color: white;
   border: none;
   padding: 10px 20px;
   border-radius: 4px;
   font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  width: 50%;
+  outline: none;
   opacity: 0;
-  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out;
 
-  &:hover {
-    background-color: #000;
-    color: #fff;
-    // transform: translateY(-5px);
-  }
+  /* Position the button relative to its parent */
+  position: absolute;
+  bottom: 25px;
+  margin-left: 24%;
+
+  /* Add a higher z-index to ensure it's above other elements */
+  z-index: 2;
 `;
+
 
 
 export const BlogsWrapper = styled.div`
@@ -49,72 +53,73 @@ export const BlogsWrapper = styled.div`
     margin-bottom: 30px;
   }
 `;
-
-
+export const BlogsP = styled.p`
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  color: #fff;
+  padding: 0 15px;
+  margin-bottom: 3rem;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+`;
 export const BlogsIcon = styled.img`
-  height: 200px;
+  height: 100%;
   width: 100%;
-  margin-bottom: 10px;
   object-fit: cover;
-  border-radius: 10px 10px 0 0;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 0;
+  position: absolute;
 `;
 
 export const BlogsH1 = styled.h1`
-  margin: 100px 10px 30px 10px;
-  font-size: 30px;
-  font-weight: 700;
+  margin: 50px 10px 30px 10px;
+  opacity: 0;
   text-align: center;
-  color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  transform: translateY(10px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  font-size: 18px;
+  font-weight: 700;
+  z-index: 10;
+  // color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  color: white;
 
   @media screen and (max-width: 480px) {
-    font-size: 24px;
+    font-size: 15px;
   }
 `;
 
-export const BlogsH2 = styled.h2`
-  font-size: 18px;
-  margin-bottom: 10px;
-  font-weight: 600;
-  color: #333;
-`;
 
-export const BlogsP = styled.p`
-font-size: 16px;
-text-align: center;
-color: #555;
-opacity: 0;
-transform: translateY(10px);
-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
-`;
+
 
 export const BlogsCard = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  border-radius: 10px;
-  height: 280px; 
-  padding: 20px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-  background-color: #e3f4f4;
+  vertical-align: middle;
+  box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s;
+  height: 23rem;
+  cursor: pointer;
+
+  @media screen and (max-width: 480px) {
+    width: 90%;
+  }
 
   &:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    cursor: pointer;
-    height: 490px; 
-
-    > ${BlogsP} {
-      opacity: 1;
-      transform: translateY(10px);
-      transition-delay: 0.2s; 
-    }
+    transform: scale(1.02);
+    transition: all 0.35s;
+    box-shadow: 0 0 60px -15px rgba(0, 0, 0, 0.6);
 
     ${ReadMoreButton} {
       opacity: 1;
-      transition-delay: 0.5s; /* Add a delay to the transition */
+      
+    }
+    ${BlogsIcon}{
+      opacity: 0.5;
+    }
+
+    ${BlogsH1}, ${BlogsP} {
+      opacity: 1;
+      transform: translateY(0);
     }
   }
 `;

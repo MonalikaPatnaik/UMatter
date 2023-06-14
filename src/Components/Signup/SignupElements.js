@@ -2,38 +2,30 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
 export const Container = styled.div`
- min-height: 692px;
- position: fixed;
- margin-top:0px;
- padding: 20px;
- bottom: 0;
- left: 0;
- right: 0;
- top: 0;
- z-index: 0;
- overflow: scroll;
- background: linear-gradient(
-    108deg,
-    rgba(1, 147, 86, 1) 0%,
-    rgba(10, 201, 122, 1) 100%
- );
+
+bottom: 0;
+left: 0;
+right: 0;
+top: 0;
+z-index: 0;
+overflow: hidden;
+background:var(--bg-clr);
 `;
 
 export const FormWrap = styled.div`
- min-height: 100vh;
- margin-top: 7%;
- display: flex;
- flex-direction: column;
- justify-content: center;
- flex-grow:1;
- align-items: center;
- @media screen and (max-width: 400px) {
-    height: 80%;
- }
- `;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:50px 0;
+  
+  @media screen and (max-width: 400px) {
+    height: 100%; /* Change to a percentage-based height */
+  }
+`;
 
 export const Icons = styled(Link)`
- margin-left: 15px;
+ margin-left: 35px;
  margin-top: 32px;
  text-decoration: none;
  color: #fff;
@@ -47,81 +39,130 @@ export const Icons = styled(Link)`
 `;
 
 export const FormContent = styled.div`
- height: 100%;
- display: flex;
- flex-direction: column;
- justify-content: center;
+height: 100%;
+display:flex;
+flex-direction: column;
+justify-content: center;
 
  @media screen and (max-width: 480px) {
     padding: 10px;
  } 
 `;
-
+export const FormLabel = styled.label`
+ margin-bottom: 8px;
+ color: #fff;
+ font-size: 1.1rem;
+ font-weight: 600;
+ cursor:pointer;
+`;
 export const Form = styled.form`
- background: #010101;
- max-width: 400px;
- height: auto;
- width: 100%;
- z-index: 1;
- display: grid;
- margin: 0 auto;
-<<<<<<< HEAD
- padding: 40px 40px;
-=======
- padding: 30px 32px;
->>>>>>> 2f37ba85956fd0dedaddb05691ba5218e5cdd62f
- border-radius: 4px;
- box-shadow: 0 1px 3px rgba(0, 0, 0, 0.9);
+  background: linear-gradient(45deg, black,  rgb(1, 147, 86) , rgb(10, 201, 122));
+  text-align:center;
+  max-height:680px;
+  max-width: 500px;
+  height: 100%; /* Change to 100% to fill the available height */
+  width: 100%;
+  z-index: 4;
+  margin:auto;
+  margin-top:40px;
+  border-radius: 10px;
+  padding:20px;
+  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
 
- @media screen and (max-width: 400px) {
-    padding: 32px 32px;
- } 
+  @media only screen and (max-width:550px){
+    width:85%;
+  }
 `;
 
 export const FormH1 = styled.label`
- margin-bottom: 40px;
+ margin-bottom: 10px;
  color: #fff;
- font-size: 20px;
+ font-family:'League Spartan';
+ font-size: 50px;
  font-weight: 400;
  text-align: center;
+ 
+@media only screen and (max-width:550px){
+  font-size:40px;
+}
+  @media only screen and (max-width:440px){
+  font-size:30px;
+}
+
 `;
 
-export const FormLabel = styled.label`
-margin-bottom: 5px;
-color: #fff;
-font-size: 18px;
-overflow: hidden;
-
-`;
 
 export const FormInput = styled.input`
-margin-bottom: 0px;
-padding: 10px;
-border: none;
-border-radius: 4px;
-font-size:18px;
-border:none;
-outline:none;
+
+  font-family: 'Poppins';
+  margin-bottom: 10px; /* Increase margin-bottom for spacing */
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  width: 100%; /* Add width property to make the input box fill the available width */
+
+  &:nth-of-type(4){
+    width:20%;
+    float:left;
+  }
+  &:nth-of-type(5){
+    width:75%;
+    float:right;
+  }
+
+  @media only screen and (max-width:440px){
+    &:nth-of-type(4){
+      font-size:14px;
+    }
+  }
+  @media only screen and (max-width:400px){
+    font-size:15px;
+  }
+
 `;
 
 export const FormButton = styled.button`
- margin-top:30px;
- background: #01bf71;
- padding: 16px 0;
- border: none;
- border-radius: 12px;
- color: #fff;
- font-size: 20px;
- cursor: pointer;
- &:hover {
-   opacity : 0.8;
-   transition: 0.25s ease;
- }
+  margin-top: 40px; /* Increase the margin-top value for spacing */
+  background: #01bf71;
+  padding: 16px 0;
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center; /* Center the button horizontally */
+  align-items: center; /* Center the button vertically */
+  width: 100%; /* Make the button fill the available width */
+  box-sizing: border-box; /* Include padding within the button's width */
+  &:hover {
+    opacity: 0.8;
+    transition: 0.25s ease;
+  }
+
+font-family:'Poppins';
+margin-bottom: 0px;
+padding: 10px;
+border: none;
+border-radius: 10px;
+font-size:18px;
+border:none;
+outline:none;
+
 `;
+
+
 
 export const Text = styled.span`
  text-align: center;
- margin-top: 24px;
+
+ margin-top: 15px;
+
+ margin-top: 50px;
+
  color: #fff;
  font-size: 14px;
 `;

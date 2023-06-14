@@ -50,18 +50,18 @@ const HeroSection = () => {
         <HeroH1>
           <span ref={el} style={{ display: "inline-block" }} />
         </HeroH1>
-        <HeroP>Sign up now and give your life a second chance</HeroP>
+        <HeroP>Register today and seize a fresh start for your life!</HeroP>
         <HeroBtnWrapper>
           <Button
             as={Link}
-            to="/signin"
+            to="/signup"
             onMouseEnter={onHover}
             onMouseLeave={onHover}
             primary="true"
             dark="true"
             style={{ textDecoration: "none" }}
           >
-            Get Started {hover ? <ArrowForward /> : <ArrowRight />}
+            Take the first step {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>
