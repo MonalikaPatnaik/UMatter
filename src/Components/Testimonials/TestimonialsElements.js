@@ -79,8 +79,12 @@ export const TestimonialsH1 = styled.h1`
   text-transform: uppercase;
   color: var(--text-clr);
 
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 1398px) {
     font-size: 2rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
   }
 `;
 
