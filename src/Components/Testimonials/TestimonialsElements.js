@@ -10,6 +10,8 @@ export const TestimonialsContainer = motion(styled.div`
   justify-content: center;
   align-items: center;
   background: var(--bg-clr);
+  width: 100%;
+  overflow: hidden;
 
   @media screen and (max-width: 768px) {
     height: 1400px;
@@ -23,13 +25,13 @@ export const TestimonialsContainer = motion(styled.div`
 `);
 
 export const TestimonialsWrapper = styled.div`
-  max-width: 1000px;
+  max-width: 100%;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 16px;
   padding: 0 30px;
+  overflow: hidden;
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -41,13 +43,14 @@ export const TestimonialsWrapper = styled.div`
 `;
 
 export const TestimonialsCard = styled.div`
+  min-width: 33.3%;
   align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10px;
   max-height: 380px;
-  margin-right: 120px;
+  margin-right: 20px;
   padding: 30px;
   box-shadow: 0 1px 3px gray;
   color: var(--text-clr);

@@ -108,10 +108,14 @@ const SignIn = () => {
 									display: 'flex',
 									flexDirection: 'column',
 									position: 'relative',
+									
 								}}
 							>
 								Password
 								<FormInput
+								style={{
+									color:'black',
+								}}
 									onChange={(e) =>
 										setData({ ...data, password: e.target.value })
 									}
