@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast } from "react-toastify"
 
 import {
     FormButton,
@@ -22,6 +23,9 @@ const Feedback = () => {
 
     const sendPostRequest = async (e) => {
         e.preventDefault();
+        if(data.username && data.feedback != ""){
+
+       
         const response = await fetch('http://localhost:8081/feedback', { // Update the endpoint URL here
             method: 'POST',
             body: JSON.stringify(data),
@@ -32,8 +36,22 @@ const Feedback = () => {
 
         // Handle the response from the backend
         const result = await response.json();
+
+       toast.success("Feedback send",{
+          position: toast.POSITION.BOTTOM_CENTER,
+        })
+        // console.log(result); // Example: Log the response
+
+    }
+
+    else{
+        // e.preventDefault()
+       toast.warning("Please fill all the details",{
+        position: toast.POSITION.TOP_CENTER
+       })
+
+    }
         // Perform any necessary actions based on the response
-        console.log(result); // Example: Log the response
     };
 
     return (
