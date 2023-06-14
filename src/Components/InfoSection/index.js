@@ -59,10 +59,11 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
               </TextWrapper>
             </Column1>
             <Column2>
-              <ImgWrap
-                whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-                transition={{ duration: 0.8 }}
-              >
+            <ImgWrap id="hover-effect"
+  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 0.7] }}
+  transition={{ duration: 1.1 }}
+  
+>
                 <Img src={img} alt={alt} />
               </ImgWrap>
             </Column2>

@@ -47,5 +47,17 @@ body,html{
         margin-top: 5rem;
         margin-bottom: 2rem;
     }
-
-}
+  }
+  
+  #hover-effect {
+    transition: transform 0.5s ease;
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+  
+  }
+/*   
+  .hover-effect:hover,
+  .hover-effect:active {
+ 
+  } */
