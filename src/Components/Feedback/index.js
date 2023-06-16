@@ -15,6 +15,10 @@ import {
     Container,
 } from "./FeedbackElements";
 import { useState } from "react";
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 const Feedback = () => {
 
@@ -23,35 +27,53 @@ const Feedback = () => {
 
     const sendPostRequest = async (e) => {
         e.preventDefault();
+
         if(data.username && data.feedback != ""){
 
-       
-        const response = await fetch('http://localhost:8081/feedback', { // Update the endpoint URL here
+            const response = await fetch('http://localhost:8081/feedback', { // Update the endpoint URL here
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
                 'Content-Type': 'application/json'
             }
         });
-
+        
         // Handle the response from the backend
         const result = await response.json();
+        
+        toast.success('Feedback Sent!', {
+            position: "bottom-center",
+            autoClose: 1000,
+            hideProgressBar: false,
+            closeButton: false,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "colored",
+            });
 
-       toast.success("Feedback send",{
-          position: toast.POSITION.BOTTOM_CENTER,
-        })
-        // console.log(result); // Example: Log the response
+       
 
     }
 
     else{
         // e.preventDefault()
-       toast.warning("Please fill all the details",{
-        position: toast.POSITION.TOP_CENTER
-       })
 
+        
+            toast.warn('All Fields are required !', {
+                position: "bottom-center",
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeButton: false,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "colored",
+                });
+    
     }
-        // Perform any necessary actions based on the response
+
+  
     };
 
     return (
@@ -59,7 +81,7 @@ const Feedback = () => {
             <br />
 
             <Container>
-
+                <ToastContainer/>
             <FormWrap>
                 <FormContent>
                     <Form onSubmit={sendPostRequest} action="#">
@@ -81,9 +103,15 @@ const Feedback = () => {
                     </Form>
                 </FormContent>
             </FormWrap>
+            
             </Container>
+
+       
+           
         </>
     );
 };
 
 export default Feedback;
+
+

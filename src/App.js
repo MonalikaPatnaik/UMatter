@@ -13,8 +13,8 @@ import ContactPage from './pages/contact';
 import GetMail from './Components/Forgot_password/ForgotPassword';
 import Verify from './Components/Forgot_password/OTPVerfication';
 import Blog from './Components/BlogPage/Blog';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
+
 
 // import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
@@ -23,8 +23,8 @@ import 'react-toastify/dist/ReactToastify.css';
 function App() {
 	return (
 
+		
 		<HashRouter>
-			<ToastContainer/>
 			<Navbar />
 			<Routes>
 				<Route exact path="/" element={<Home />} />
@@ -52,7 +52,9 @@ function App() {
 				<Route exact path="/signup" element={<SignupPage />} />
 				<Route exact path="/profile" element={<Profile />} />
 			</Routes>
+			
 		</HashRouter>
+
 
 	);
 }
