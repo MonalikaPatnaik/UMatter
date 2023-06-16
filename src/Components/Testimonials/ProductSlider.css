@@ -8,6 +8,16 @@
     max-width: 1200px;
     margin: 0 auto;
   }
+  @media (max-width: 1292px) {
+    .slick-slider {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
   
   .slick-slide {
     padding-right: 10px;

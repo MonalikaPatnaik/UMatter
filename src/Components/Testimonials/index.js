@@ -112,13 +112,13 @@ class Testimonial extends Component {
     };
 
     return (
-        <TestimonialsContainer id="testimonials" 
+      <TestimonialsContainer id="testimonials" 
              whileInView={{ y: [130, 50, 0], opacity: [0, 0, 1] }}
              transition={{ duration: 0.8 }}
              style={{width: "100%"}}
           >
 
-      <div style={{backgroundColor: "black",color: "white",textAlign: "center"}}>
+      <div style={{backgroundColor: "black",color: "white",textAlign: "center", display: "flex",justifyContent: "center",alignItems:" center",flexDirection:" column"}}>
       <TestimonialsH1><span ref={this.el} style={{ display: 'inline-block' }} /></TestimonialsH1>
         <Slider {...settings} style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
             {this.state.slides.map((slide, index) => {
@@ -130,7 +130,7 @@ class Testimonial extends Component {
           })}
         </Slider>
       </div>
-        </TestimonialsContainer>
+      </TestimonialsContainer>
     );
   }
 }
