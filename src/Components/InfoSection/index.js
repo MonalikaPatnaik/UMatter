@@ -4,9 +4,7 @@ import { Button } from '../ButtonElements';
 import { AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, SubTitle, BtnWrap, ImgWrap, Img } from './InfoElements'
 import { Link } from "react-router-dom";
 
-const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2 }) => {
-
-
+const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2, theme }) => {
 
   const el = useRef(null);
 
@@ -24,15 +22,11 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
     };
   }, [headline]);
 
-
   return (
     <>
-
-
-      <AboutContainer lightBg={lightBg} id={id} >
-
+      <AboutContainer lightBg={lightBg} id={id} theme={theme}>
         <AboutWrapper>
-          <AboutRow imgStart={imgStart}>
+          <AboutRow imgStart={imgStart} theme={theme}>
             <Column1>
               <TextWrapper
                 whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
@@ -68,10 +62,9 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
             </Column2>
           </AboutRow>
         </AboutWrapper>
-
       </AboutContainer>
     </>
   )
 }
 
-export default About
+export default About;

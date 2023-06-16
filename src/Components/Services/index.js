@@ -1,32 +1,24 @@
-import React, { useEffect, useRef } from 'react';
-import Icon1 from '../../images/image1.png';
-import Icon2 from '../../images/image2.png';
-import Icon3 from '../../images/image3.png';
-import Icon4 from '../../images/image.4.png';
-import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesH2,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesIcon,
-  ServicesP,
-} from './ServicesElements';
+import React, { useEffect, useRef } from 'react'
+import Icon1 from '../../images/image1.png'
+import Icon2 from '../../images/image2.png'
+import Icon3 from '../../images/image3.png'
+import Icon4 from '../../images/image.4.png'
+import { ServicesContainer, ServicesH1, ServicesH2,ServicesWrapper,ServicesCard,ServicesIcon,ServicesP } from './ServicesElements'
 
-import Typed from 'typed.js';
-import { motion } from 'framer-motion';
+import Typed from "typed.js";
+import { motion } from "framer-motion";
 import {
   cardOneVariants,
   cardTwoVariants,
   cardThreeVariants,
-} from './CardAnimation';
+} from "./CardAnimation";
 
 const Services = () => {
   const el = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ['Our services'],
+    const typed = new Typed(el.current, { 
+      strings: ["Our services"],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -44,9 +36,8 @@ const Services = () => {
       transition={{ duration: 0.8 }}
     >
       <ServicesH1>
-        <span ref={el} style={{ display: 'inline-block' }} />
+        <span ref={el} style={{ display: "inline-block" }} />
       </ServicesH1>
-
       <ServicesWrapper>
         <motion.div
           variants={cardOneVariants}
@@ -54,8 +45,8 @@ const Services = () => {
           whileInView="visible"
           whileHover={{
             scale: 1.1,
-            textShadow: '0px 0px 8px rgb(255,255,255)',
-            boxShadow: '0px 0px 10px rgb(1, 191, 113)',
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 10px rgb(1, 191, 113)",
             transition: { duration: 0.6 },
           }}
         >
@@ -76,8 +67,8 @@ const Services = () => {
           whileInView="visible"
           whileHover={{
             scale: 1.1,
-            textShadow: '0px 0px 8px rgb(255,255,255)',
-            boxShadow: '0px 0px 10px rgb(1, 191, 113)',
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 10px rgb(1, 191, 113)",
             transition: { duration: 0.6 },
           }}
         >
@@ -98,8 +89,8 @@ const Services = () => {
           whileInView="visible"
           whileHover={{
             scale: 1.1,
-            textShadow: '0px 0px 8px rgb(255,255,255)',
-            boxShadow: '0px 0px 10px rgb(1, 191, 113)',
+            textShadow: "0px 0px 8px rgb(255,255,255)",
+            boxShadow: "0px 0px 10px rgb(1, 191, 113)",
             transition: { duration: 0.6 },
           }}
         >
@@ -109,11 +100,12 @@ const Services = () => {
               <b>Connect with friends</b>
             </ServicesH2>
             <ServicesP>
-              Be the part of the amazing community and connect with them.{' '}
+              Be the part of the amazing community and connect with them.{" "}
             </ServicesP>
           </ServicesCard>
-        </motion.div>
+        </motion.div> 
       </ServicesWrapper>
+
     </ServicesContainer>
   );
 };
