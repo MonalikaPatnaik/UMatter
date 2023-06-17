@@ -14,7 +14,7 @@ export const Nav = styled.nav`
 	top: 0;
 	z-index: 10;
 
-	@media screen and (max-width: 960px) {
+	@media screen and (max-width: 1040px) {
 		transition: 0.8s all ease;
 	}
 `;
@@ -25,7 +25,7 @@ export const NavbarContainer = styled.div`
 	align-items: center;
 	z-index: 1;
 	width: 100%;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1200px) {
 		justify-content: space-between;
 		padding-left: 4%;
 		padding-right: 4%;
@@ -33,8 +33,8 @@ export const NavbarContainer = styled.div`
 `;
 
 const breakpoints = {
-	sm: '640px',
-	md: '1080px',
+	sm: '900px',
+	md: '1200px',
 };
 export const LogoContainer = styled(LinkR)`
 	cursor: pointer;
@@ -97,7 +97,7 @@ export const NavLogo = styled(LinkR)`
 export const MobileIcon = styled.div`
 	display: none;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1200px) {
 		display: block;
 		font-size: 1.8rem;
 		cursor: pointer;
@@ -121,7 +121,7 @@ export const NavMenu = styled.ul`
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin-right: 0;
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1200px) {
 		display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
 		position: sticky;
 		flex-direction: column;
@@ -181,7 +181,7 @@ export const NavBtn = styled.nav`
 	align-items: center;
 	gap: 4%;
 
-	@media screen and (max-width: 768px) {
+	@media screen and (max-width: 1200px) {
 		display: none;
 		margin-top: 0px;
 		margin-right: 45px;

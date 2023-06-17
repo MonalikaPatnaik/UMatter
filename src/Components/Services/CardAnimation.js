@@ -1,7 +1,7 @@
 export const cardOneVariants = {
     hidden: {
         opacity: 0,
-        x: -200
+        x: -70
     },
     visible: {
         opacity: 1,
@@ -13,7 +13,7 @@ export const cardOneVariants = {
 export const cardTwoVariants = {
     hidden: {
         opacity: 0,
-        y: 200
+        y: 70
     },
     visible: {
         opacity: 1,
@@ -25,7 +25,7 @@ export const cardTwoVariants = {
 export const cardThreeVariants = {
     hidden: {
         opacity: 0,
-        x: 200
+        x: 70
     },
     visible: {
         opacity: 1,

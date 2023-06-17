@@ -15,6 +15,7 @@ export const ServicesContainer = motion(styled.div`
     height: 1400px;
   }
   @media screen and (max-width: 992px) {
+    padding-bottom:120px;
     height: 1200px;
   }
   @media screen and (max-width: 480px) {
@@ -24,6 +25,7 @@ export const ServicesContainer = motion(styled.div`
 
 export const ServicesWrapper = styled.div`
   max-width: 1000px;
+  width:800px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -31,12 +33,14 @@ export const ServicesWrapper = styled.div`
   grid-gap: 16px;
   padding: 0 30px;
 
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 1200px) {
     grid-template-columns: 1fr 1fr;
+    max-width:200px;
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
+    max-width:20px;
   }
 `;
 
@@ -47,6 +51,7 @@ export const ServicesCard = styled.div`
   justify-content: flex-start;
   border-radius: 10px;
   max-height: 380px;
+  max-width:auto;
   padding: 30px;
   box-shadow: 0 1px 3px gray;
   color: var(--text-clr);
