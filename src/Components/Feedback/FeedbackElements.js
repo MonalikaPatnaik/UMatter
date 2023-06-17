@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import BackgroundImg from "../../images/background.jpg"
 
 export const Container = styled.div`
  height: auto;
@@ -7,7 +8,11 @@ export const Container = styled.div`
  right: 0;
  top: 0;
  z-index: 0;
- background:var(--bg-clr);
+ background-image: url(${BackgroundImg}) ;
+ background-size: cover;
+ background-position: center;
+
+
  `;
 
 
@@ -16,6 +21,7 @@ export const FormWrap = styled.div`
  display: flex;
  flex-direction: column;
  justify-content: center;
+  box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
  `;
 
 export const FormContent = styled.div`
@@ -102,3 +108,10 @@ export const FormButton = styled.button`
    border:2px solid #01bf71;
  }
 `;
+
+
+
+
+// background:var(--bg-clr);
+
+
