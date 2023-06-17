@@ -3,7 +3,9 @@ import Typed from 'typed.js';
 import { Button } from '../ButtonElements';
 import { AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, SubTitle, BtnWrap, ImgWrap, Img } from './InfoElements'
 import { Link } from "react-router-dom";
-
+import "../../App.css";
+import { motion } from 'framer-motion';
+import { cardTwoVariants } from '../Services/CardAnimation';
 const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2 }) => {
 
 
@@ -59,13 +61,26 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
               </TextWrapper>
             </Column1>
             <Column2>
-            <ImgWrap id="hover-effect"
-  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 0.7] }}
-  transition={{ duration: 1.1 }}
+            <motion.div
+          variants={cardTwoVariants}
+          initial="hidden"
+          whileInView="visible"
+          whileHover={{
+            scale: 1.1,
+            textShadow: '0px 0px 8px rgb(255,255,255)',
+            
+            transition: { duration: 0.6 },
+          }}
+        >
+
+            <ImgWrap 
+  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+  transition={{ duration: .9 }}
   
 >
                 <Img src={img} alt={alt} />
               </ImgWrap>
+  </motion.div>
             </Column2>
           </AboutRow>
         </AboutWrapper>
