@@ -216,14 +216,21 @@ b] **CORS (Cross-Origin Resource Sharing)**: If you are making requests to a dif
 
 ## 💯 Mentors
 
-<table>
-  <tr>
-
 ```
 Mentors here 🚧
 ```
 
 <!-- Just Insert here the mentors  👇-->
+
+<table>
+  <tr>
+  <th>The Mentors of Umatter are:</th>
+  </tr>
+  <td>
+  <th>Sidharth Sethi | Github: https://github.com/TechSpiritSS</th>
+  <th>Akanksha Rani | Github: https://github.com/AkankshaAI</th>
+ </tr>
+</table>
 
 <!-- <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td> -->
@@ -233,9 +240,6 @@ Mentors here 🚧
 
 <!-- <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td> -->
-
- </tr>
-</table>
 
 ## License 🪪
 
