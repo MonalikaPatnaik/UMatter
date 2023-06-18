@@ -48,6 +48,7 @@ export const TextWrapper = motion(styled.div`
     padding-bottom: 60px;
 `);
 export const TopLine = styled.p`
+    opacity: 1;
     color: #01bf71;
     font-size: 16px;
     line-height: 16px;

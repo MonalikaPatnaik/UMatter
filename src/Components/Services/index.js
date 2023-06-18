@@ -70,17 +70,17 @@ const Services = () => {
             </ServicesP>
           </ServicesCard>
         </motion.div>
-        <motion.div
-          variants={cardTwoVariants}
-          initial="hidden"
-          whileInView="visible"
-          whileHover={{
-            scale: 1.1,
-            textShadow: '0px 0px 8px rgb(255,255,255)',
-            boxShadow: '0px 0px 10px rgb(1, 191, 113)',
-            transition: { duration: 0.6 },
-          }}
-        >
+          <motion.div
+            variants={cardTwoVariants}
+            initial="hidden"
+            whileInView="visible"
+            whileHover={{
+              scale: 1.1,
+              textShadow: '0px 0px 8px rgb(255,255,255)',
+              boxShadow: '0px 0px 10px rgb(1, 191, 113)',
+              transition: { duration: 0.6 },
+            }}
+          >
           <ServicesCard>
             <ServicesIcon src={Icon2} />
             <ServicesH2>
