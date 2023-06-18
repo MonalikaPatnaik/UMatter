@@ -226,9 +226,8 @@ Mentors here 🚧
   <tr>
   <th>The Mentors of Umatter are:</th>
   </tr>
-  <td>
-  <th>Sidharth Sethi | Github: https://github.com/TechSpiritSS</th>
-  <th>Akanksha Rani | Github: https://github.com/AkankshaAI</th>
+  <th>Sidharth Sethi <br> Github: https://github.com/TechSpiritSS</th>
+  <th>Akanksha Rani <br> Github: https://github.com/AkankshaAI</th>
  </tr>
 </table>
 
