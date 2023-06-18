@@ -61,6 +61,7 @@ const Blogs = () => {
             padding: "8px",
             textAlign: "center",
             justifyContent: "center",
+            border : "3px solid black"
 
             // Add any other desired inline styles
           }}
