@@ -38,8 +38,6 @@ const Feedback = () => {
 
     return (
         <>
-            <br />
-
             <Container>
 
             <FormWrap>
@@ -59,10 +57,28 @@ const Feedback = () => {
                             required
                         />
 
-                        <FormButton type="submit">Send</FormButton>
-                    </Form>
-                </FormContent>
-            </FormWrap>
+                <FormWrap>
+                    <FormContent>
+                        <Form onSubmit={sendPostRequest} action="#">
+                            <FormH1>Share your Feedback</FormH1>
+                            <FormLabel htmlFor="username">username</FormLabel>
+                            <FormInput
+                                onChange={e => setData({ ...data, username: e.target.value })}
+                                placeholder="Enter your username" type="text" id="username"
+                                require />
+                            <FormLabel htmlFor="feedback">Feedback</FormLabel>
+                            <FormInput
+                                onChange={e => setData({ ...data, feedback: e.target.value })}
+                                placeholder="Share your experience/feedback with us :)"
+                                type="text" id="feedback"
+                                require
+                            />
+
+
+                            <FormButton type="submit">Send</FormButton>
+                        </Form>
+                    </FormContent>
+                </FormWrap>
             </Container>
         </>
     );
