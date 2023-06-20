@@ -2,17 +2,22 @@
 import React from "react";
 import {
   Container,
-  Icons,
-  FormButton,
-  FormContent,
-  Form,
-  FormH1,
+  FormContainer,
+  LeftContainer,
+  SignUpContainer,
+  SignUpForm,
+  LeftHeading,
+  LeftPara,
+  SignUph1,
   FormInput,
-  FormWrap,
-  Text,
+  PhoneContainer,
+  SignUpButton,
+  PasswordContainer,
+  Image
 } from "./SignupElements";
 import { useState } from "react";
-import DarkMode from "../DarkMode/DarkMode";
+import SignUpImg from "../../images/SignUp.png";
+// import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
 
 const SignUp = () => {
@@ -135,170 +140,307 @@ const SignUp = () => {
   };
 
   return (
-    <>
-      <Container>
-        <FormWrap>
-          <FormContent>
-            <Form onSubmit={handleSubmit} action="#">
-              <FormH1>Create an Account</FormH1>
+    // <>
+    // 	<Container>
+    // 		<FormWrap>
+    // 			<FormContent>
+    // 				<Form onSubmit={handleSubmit} action="#">
+    // 					<FormH1>Create an Account</FormH1>
 
-              <FormInput
-                onChange={(e) => setData({ ...data, name: e.target.value })}
-                id="FullNameInput"
-                placeholder="Enter your Full Name"
-                type="text"
-                size="42"
-              ></FormInput>
-              <br />
-              <br />
+    // 					<FormInput
+    // 						onChange={(e) =>
+    // 							setData({ ...data, name: e.target.value })
+    // 						}
+    // 						id="FullNameInput"
+    // 						placeholder="Enter your Full Name"
+    // 						type="text"
+    // 						size="42"
+    // 					></FormInput>
+    // 					<br />
+    // 					<br />
 
-              <FormInput
-                onChange={(e) => setData({ ...data, username: e.target.value })}
-                id="usernameInput"
-                placeholder="Enter Username"
-                type="text"
-                size="42"
-              ></FormInput>
-              <br />
-              <br />
+    // 					<FormInput
+    // 						onChange={(e) =>
+    // 							setData({ ...data, username: e.target.value })
+    //						 }
+    // 						id="usernameInput"
+    // 						placeholder="Enter Username"
+    // 						type="text"
+    // 						size="42"
+    // 					></FormInput>
+    // 					<br />
+    // 					<br />
 
-              <FormInput
-                onChange={(e) => setData({ ...data, email: e.target.value })}
-                id="emailInput"
-                placeholder="email@example.com"
-                type="email"
-                size="42"
-                require
-              />
-              <br />
-              <br />
+    // 					<FormInput
+    // 						onChange={(e) =>
+    // 							setData({ ...data, email: e.target.value })
+    // 						}
+    // 						id="emailInput"
+    // 						placeholder="email@example.com"
+    // 						type="email"
+    // 						size="42"
+    // 						require
+    // 					/>
+    // 					<br />
+    // 					<br />
 
+    // 						<FormInput
+    // 							onChange={(e) =>
+    // 								setData({ ...data, countryCode: e.target.value })
+    // 							}
+    // 							id="CountryCode"
+    // 							placeholder="+XXX"
+    // 							type="text"
+    // 							size="1"
+    // 						></FormInput>
+
+    // 						<FormInput
+    // 							onChange={(e) =>
+    // 								setData({ ...data, contactNumber: e.target.value })
+    // 							}
+    // 							id="ContactNumber"
+    // 							placeholder="Enter phone number"
+
+    // 							// type="number"
+
+    // 							type="text"
+    // 							size="32"
+    // 							maxLength={10}
+
+    // 						></FormInput>
+
+    // 					<br />
+    // 					<br />
+    // 					<br />
+    // 					<div style={{ position: 'relative' }}>
+    // 						<FormInput
+    // 							onChange={(e) =>
+    // 								setData({ ...data, password: e.target.value })
+    // 							}
+    // 							id="PasswordInput"
+    // 							placeholder="Enter Password"
+    // 							type={passwordType}
+    // 							size="42"
+    // 						/>
+    // 						{passwordType === 'password' ? (
+    // 							<i
+    // 								className="fa-solid fa-eye-slash"
+    // 								id="eye"
+    // 								style={{
+    // 									position: 'absolute',
+    // 									top: '40%',
+    // 									right: '10px',
+    // 									transform: 'translateY(-50%)',
+    // 									cursor: 'pointer',
+    // 								}}
+    // 								onClick={handleclick}
+    // 							></i>
+    // 						) : (
+    // 							<i
+    // 								className="fa-solid fa-eye"
+    // 								id="eye"
+    // 								style={{
+    // 									position: 'absolute',
+    // 									top: '40%',
+    // 									right: '10px',
+    // 									transform: 'translateY(-50%)',
+    // 									cursor: 'pointer',
+    // 								}}
+    // 								onClick={handleclick}
+    // 							></i>
+    // 						)}
+    // 					</div>
+    // 					<br />
+
+    // 					<div style={{ position: 'relative' }}>
+    // 						<FormInput
+    // 							onChange={(e) =>
+    // 								setData({ ...data, confirmpassword: e.target.value })
+    // 							}
+    // 							id="PasswordInput"
+    // 							placeholder="Re Enter Password"
+    // 							type={passwordType}
+    // 							size="42"
+    // 						/>
+    // 						{passwordType === 'password' ? (
+    // 							<i
+    // 								className="fa-solid fa-eye-slash"
+    // 								id="eye"
+    // 								style={{
+    // 									position: 'absolute',
+    // 									top: '40%',
+    // 									right: '10px',
+    // 									transform: 'translateY(-50%)',
+    // 									cursor: 'pointer',
+    // 								}}
+    // 								onClick={handleclick}
+    // 							></i>
+    // 						) : (
+    // 							<i
+    // 								className="fa-solid fa-eye"
+    // 								id="eye"
+    // 								style={{
+    // 									position: 'absolute',
+    // 									top: '40%',
+    // 									right: '10px',
+    // 									transform: 'translateY(-50%)',
+    // 									cursor: 'pointer',
+    // 								}}
+    // 								onClick={handleclick}
+    // 							></i>
+    // 						)}
+    // 					</div>
+
+    // 					<button
+    // 						onClick={handleclick}
+    // 						style={{
+    // 							width: 'fit-content',
+    // 							position: 'absolute',
+    // 							right: '0%',
+    // 							top: '26%',
+    // 							background: 'transparent',
+    // 							color: '#10b981',
+    // 							border: 'none',
+
+    // 						}}
+    // 					></button>
+    // 					<FormButton type="submit">Continue</FormButton>
+    // 					<br />
+    // 					<br />
+    // 					{invalid && showInvalid()}
+    // 				</Form>
+    // 			</FormContent>
+    // 		</FormWrap>
+    // 	</Container>
+    // </>
+    <Container>
+      <FormContainer>
+        <LeftContainer>
+          <LeftHeading>Welcome!</LeftHeading>
+          <LeftPara>
+            Sign up to be a part of the community, because UMatter.
+          </LeftPara>
+          <Image src={SignUpImg} alt="Sign Up Graphic"/>
+        </LeftContainer>
+        <SignUpContainer>
+          <SignUpForm onSubmit={handleSubmit} action="#">
+            <SignUph1>Create account</SignUph1>
+            <FormInput
+              onChange={(e) => setData({ ...data, name: e.target.value })}
+              id="FullNameInput"
+              type="text"
+              placeholder="Full Name"
+            ></FormInput>
+            <FormInput
+              onChange={(e) => setData({ ...data, username: e.target.value })}
+              id="usernameInput"
+              type="text"
+              placeholder="Username"
+            ></FormInput>
+            <FormInput
+              onChange={(e) => setData({ ...data, email: e.target.value })}
+              id="emailInput"
+              type="email"
+              placeholder="Email"
+              require
+            ></FormInput>
+            <PhoneContainer>
               <FormInput
                 onChange={(e) =>
                   setData({ ...data, countryCode: e.target.value })
                 }
                 id="CountryCode"
-                placeholder="+XXX"
                 type="text"
-                size="1"
+                placeholder="+XXX"
               ></FormInput>
-
               <FormInput
                 onChange={(e) =>
                   setData({ ...data, contactNumber: e.target.value })
                 }
                 id="ContactNumber"
-                placeholder="Enter phone number"
-                // type="number"
-
                 type="text"
-                size="32"
+                placeholder="Phone Number"
                 maxLength={10}
               ></FormInput>
-
-              <br />
-              <br />
-              <br />
-              <div style={{ position: "relative" }}>
-                <FormInput
-                  onChange={(e) =>
-                    setData({ ...data, password: e.target.value })
-                  }
-                  id="PasswordInput"
-                  placeholder="Enter Password"
-                  type={passwordType}
-                  size="42"
-                />
-                {passwordType === "password" ? (
-                  <i
-                    className="fa-solid fa-eye-slash"
-                    id="eye"
-                    style={{
-                      position: "absolute",
-                      top: "40%",
-                      right: "10px",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleclick}
-                  ></i>
-                ) : (
-                  <i
-                    className="fa-solid fa-eye"
-                    id="eye"
-                    style={{
-                      position: "absolute",
-                      top: "40%",
-                      right: "10px",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleclick}
-                  ></i>
-                )}
-              </div>
-              <br />
-
-              <div style={{ position: "relative" }}>
-                <FormInput
-                  onChange={(e) =>
-                    setData({ ...data, confirmpassword: e.target.value })
-                  }
-                  id="PasswordInput"
-                  placeholder="Re Enter Password"
-                  type={passwordType}
-                  size="42"
-                />
-                {passwordType === "password" ? (
-                  <i
-                    className="fa-solid fa-eye-slash"
-                    id="eye"
-                    style={{
-                      position: "absolute",
-                      top: "40%",
-                      right: "10px",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleclick}
-                  ></i>
-                ) : (
-                  <i
-                    className="fa-solid fa-eye"
-                    id="eye"
-                    style={{
-                      position: "absolute",
-                      top: "40%",
-                      right: "10px",
-                      transform: "translateY(-50%)",
-                      cursor: "pointer",
-                    }}
-                    onClick={handleclick}
-                  ></i>
-                )}
-              </div>
-
-              <button
-                onClick={handleclick}
-                style={{
-                  width: "fit-content",
-                  position: "absolute",
-                  right: "0%",
-                  top: "26%",
-                  background: "transparent",
-                  color: "#10b981",
-                  border: "none",
-                }}
-              ></button>
-              <FormButton type="submit">Continue</FormButton>
-              <br />
-              <br />
-              {invalid && showInvalid()}
-            </Form>
-          </FormContent>
-        </FormWrap>
-      </Container>
-    </>
+            </PhoneContainer>
+            <PasswordContainer>
+              <FormInput
+                onChange={(e) => setData({ ...data, password: e.target.value })}
+                id="PasswordInput"
+                type={passwordType}
+                placeholder="Password"
+              />
+              {passwordType === "password" ? (
+                <i
+                  className="fa-solid fa-eye-slash"
+                  id="eye"
+                  style={{
+                    position: "absolute",
+                    top: "35%",
+                    right: "18%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleclick}
+                ></i>
+              ) : (
+                <i
+                  className="fa-solid fa-eye"
+                  id="eye"
+                  style={{
+                    position: "absolute",
+                    top: "35%",
+                    right: "18%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleclick}
+                ></i>
+              )}
+            </PasswordContainer>
+            <PasswordContainer>
+              <FormInput
+                onChange={(e) =>
+                  setData({ ...data, confirmpassword: e.target.value })
+                }
+                id="PasswordInput"
+                type={passwordType}
+                placeholder="Confirm Password"
+              />
+              {passwordType === "password" ? (
+                <i
+                  className="fa-solid fa-eye-slash"
+                  id="eye"
+                  style={{
+                    position: "absolute",
+                    top: "35%",
+                    right: "18%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleclick}
+                ></i>
+              ) : (
+                <i
+                  className="fa-solid fa-eye"
+                  id="eye"
+                  style={{
+                    position: "absolute",
+                    top: "35%",
+                    right: "18%",
+                    transform: "translateY(-50%)",
+                    cursor: "pointer",
+                  }}
+                  onClick={handleclick}
+                ></i>
+              )}
+            </PasswordContainer>
+            <SignUpButton type="submit">Sign Up</SignUpButton>
+			{invalid && showInvalid()}
+          </SignUpForm>
+        </SignUpContainer>
+      </FormContainer>
+    </Container>
   );
 };
 
