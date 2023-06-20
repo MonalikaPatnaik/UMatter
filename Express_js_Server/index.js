@@ -245,9 +245,11 @@ app.post("/feedback", async (req, res) => {
       await db.run(newUserQuery, [userId, username, feedback]);
 
       console.log("New user created:", { user_id: userId, username, feedback });
-      res.status(200).json({
-        message: "New user created and feedback submitted successfully",
-      });
+      res
+        .status(200)
+        .json({
+          message: "New user created and feedback submitted successfully",
+        });
     } else {
       const updateQuery = `
           UPDATE user_details
