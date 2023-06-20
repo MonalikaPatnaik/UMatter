@@ -1,5 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Footer container
 export const FooterContainer = styled.footer`
@@ -7,7 +7,6 @@ export const FooterContainer = styled.footer`
   padding-top: 3rem;
   padding-bottom: 3rem;
   z-index: 99;
- 
 `;
 
 // Footer wrap
@@ -87,23 +86,21 @@ export const FooterLinkItems = styled.div`
     align-items: flex-start;
     text-align: left;
   }
-`
-  ;
+`;
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
- font-size: 18px;
- font-weight: bold;
- margin-bottom: 16px;
-`
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 16px;
+`;
 export const FooterLinkTitleHr = styled.hr`
   content: "";
   border: 2px solid;
   margin-top: 0;
   width: 52%;
   color: #01bf71;
-   
-`
+`;
 export const FooterLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
@@ -113,51 +110,48 @@ export const FooterLink = styled(Link)`
   &:hover {
     color: #01bf71;
   }
-  
-  &.icons{
-    text-align:center;
-    border-radius:22px;
-    padding:7px;
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease-out;
-   }
-   
-  &.icons:hover{
-    transform: translate(0,-10px);
-    background-color:white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-   }
-   
-  &.icons{
-    color:white !important;
-   }
-   
-  &.insta:hover{
-    color:#E4405F!important;
-   }
-   
-  &.fb:hover{
-    color:#1877F2!important;
-   }
-   
-  &.youtube:hover{
-    color:#FF0000 !important;
-   }
-   
-  &.twitter:hover{
-    color:#1DA1F2 !important;
-   } 
-   
-  &.linkdn:hover{
-    color:#0077B5 !important;
-   }
-   &.github:hover{
-    color:black !important;
-   }
- `
 
-  ;
+  &.icons {
+    text-align: center;
+    border-radius: 22px;
+    padding: 7px;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+      background-color 0.3s ease-out;
+  }
 
+  &.icons:hover {
+    transform: translate(0, -10px);
+    background-color: white !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
 
+  &.icons {
+    color: white !important;
+  }
+
+  &.insta:hover {
+    color: #e4405f !important;
+  }
+
+  &.fb:hover {
+    color: #1877f2 !important;
+  }
+
+  &.youtube:hover {
+    color: #ff0000 !important;
+  }
+
+  &.twitter:hover {
+    color: #1da1f2 !important;
+  }
+
+  &.linkdn:hover {
+    color: #0077b5 !important;
+  }
+  &.github:hover {
+    color: black !important;
+  }
+`;
 
 // Social media
 export const SocialMedia = styled.section``;
@@ -179,21 +173,26 @@ export const SocialLogo = styled(Link)`
   font-weight: bold;
 
   &:hover {
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
     mask-size: 200%;
     animation: shine 2s infinite;
     color: lightcyan;
   }
 
   @keyframes shine {
-  from {
-    mask-position: 150%;
+    from {
+      mask-position: 150%;
+    }
+
+    to {
+      mask-position: -50%;
+    }
   }
-  
-  to {
-    mask-position: -50%;
-  }
-}
 `;
 
 // Website rights

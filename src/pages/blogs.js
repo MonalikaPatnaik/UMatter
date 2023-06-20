@@ -8,7 +8,7 @@ const BlogPage = () => {
   return (
     <>
       {/* <Navbar /> */}
-      <GoToTop/>
+      <GoToTop />
       <Blogs />
       <Reviews />
       <Footer />

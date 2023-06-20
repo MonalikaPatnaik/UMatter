@@ -1,10 +1,10 @@
-import React from 'react'
-import Forgot_password from '../Components/Forgot_password/OTPVerfication';
+import React from "react";
+import Forgot_password from "../Components/Forgot_password/OTPVerfication";
 
 const SigninPage = () => {
   return (
     <div>
-        <Forgot_password />
+      <Forgot_password />
     </div>
   );
 };

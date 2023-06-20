@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 // import styled from "styled-components";
 import styled, { keyframes } from "styled-components";
 
-import {TiArrowSortedUp} from "react-icons/ti";
+import { TiArrowSortedUp } from "react-icons/ti";
 
 const jump = keyframes`
   0% {
@@ -61,8 +61,8 @@ const Wrapper = styled.section`
     width: 2rem;
     height: 2rem;
     color: #fff;
-    background-color:rgb(62, 62, 252);
-    box-shadow:rgba(0,0,0,0.2) 0px 0px 10px 0px;
+    background-color: rgb(62, 62, 252);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 0px 10px 0px;
     border-radius: 50%;
     position: fixed;
     bottom: 1rem;
@@ -73,20 +73,17 @@ const Wrapper = styled.section`
     align-items: center;
     cursor: pointer;
     animation: ${jump} 0.5s infinite;
-
   }
 
-  @media (max-width:1200px) {
+  @media (max-width: 1200px) {
     .top-btn {
       font-size: 1.5rem;
       width: 1.6rem;
       height: 1.6rem;
       bottom: 1rem;
       left: 1rem;
-      
     }
   }
 `;
-
 
 export default GoToTop;
