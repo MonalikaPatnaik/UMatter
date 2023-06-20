@@ -50,13 +50,13 @@ const Feedback = () => {
                         <FormInput
                             onChange={e => setData({ ...data, username: e.target.value })}
                             placeholder="Enter your username" type="text" id="username"
-                            require />
+                            required />
                         <FormLabel htmlFor="feedback">Feedback</FormLabel>
                         <FormInput
                             onChange={e => setData({ ...data, feedback: e.target.value })}
                             placeholder="Share your experience/feedback with us :)"
                             type="text" id="feedback"
-                            require
+                            required
                         />
 
                         <FormButton type="submit">Send</FormButton>
