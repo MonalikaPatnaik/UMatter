@@ -189,7 +189,7 @@ export const FormContainer = styled.div`
   box-shadow: 0 0 20px #01bf71;
   position: relative;
   overflow: hidden;
-  width: 768px;
+  width: 900px;
   max-width: 100%;
   min-height: 550px;
   margin: 3rem auto;
@@ -197,7 +197,7 @@ export const FormContainer = styled.div`
 `;
 
 export const SignUpContainer = styled.div`
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -205,7 +205,7 @@ export const SignUpContainer = styled.div`
 `;
 
 export const LeftContainer = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -333,4 +333,9 @@ export const SignUpButton = styled.button`
   &:active {
     transform: scale(0.95);
   }
+`;
+
+export const Image = styled.img`
+  height: auto;
+  width: 90%;
 `;

@@ -154,7 +154,7 @@ export const FormContainer = styled.div`
   box-shadow: 0 0 20px #01bf71;
   position: relative;
   overflow: hidden;
-  width: 768px;
+  width: 900px;
   max-width: 100%;
   min-height: 550px;
   margin: 3rem auto;
@@ -162,7 +162,7 @@ export const FormContainer = styled.div`
 `;
 
 export const SignInContainer = styled.div`
-  width: 50%;
+  width: 55%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -170,7 +170,7 @@ export const SignInContainer = styled.div`
 `;
 
 export const RightContainer = styled.div`
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -319,3 +319,5 @@ export const PasswordContainer = styled.div`
   justify-content: center;
   width: 100%;
 `;
+
+export const Image = styled.img``;

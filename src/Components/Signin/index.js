@@ -18,7 +18,8 @@ import {
   CheckBox,
   RememberMe,
   ForgotPassword,
-  PasswordContainer
+  PasswordContainer,
+  Image
   // Icons,
   // FormButton,
   // FormContent,
@@ -29,6 +30,7 @@ import {
   // FormWrap,
   // Text,
 } from "./SigninElements";
+import SignInImg from "../../images/SignIn.png";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import Navbar from "../Navbar";
@@ -257,6 +259,7 @@ const SignIn = () => {
         <RightContainer>
           <RightHeading>Hello, Friend!</RightHeading>
           <RightPara>Enter your details and let's get started.</RightPara>
+          <Image src={SignInImg} alt="Image Description" />
         </RightContainer>
       </FormContainer>
     </NewContainer>
