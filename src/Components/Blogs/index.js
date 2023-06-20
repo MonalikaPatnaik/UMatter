@@ -165,5 +165,11 @@ const blogsData = [
     title: "How does the Medical ChatBot works?",
     content:
       "So, a chatbot is a software that stimulates or makes a human-like conversational environment. Let me tell you that everyone in their life has interacted with chatbots whether one knows or not. As an example let us say you are doing your work on a computer some research on it, and a window pops up that says if you need help. Or while you are going to a good restaurant and ask your google assistant or Siri about which hotel will suit you. So these are scenarios in which you are having an encounter with a chatbot.",
+  },
+  {
+    icon: Icon11,
+    title: "How meditation improved the Productivity for a Developer",
+    content:
+      "Once I integrated meditation into my daily routine, I started to see a shift in my productivity at work too. Meditation helped me to be more mindful while working, which made me more aware of when my body needed to take breaks. This turned out to be very helpful in my ability to solve coding problems as I no longer was stuck in tunnel vision. A good break helped me to refocus my attention on other things and the answer to the problem came randomly while washing the dishes or while doing other errands. I am sure you experienced this too. Let me know if did! ",
   }
 ];
