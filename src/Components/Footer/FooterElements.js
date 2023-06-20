@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+
 // Footer container
 export const FooterContainer = styled.footer`
   background-color: #101522;
@@ -60,12 +61,19 @@ export const FooterLinksWrapper = styled.div`
   }
 `;
 
+
 // Footer link items
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   color: #fff;
+  &.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    margin-top: -2.8rem;
+  }
 
   &.socials {
     display: flex;
@@ -87,77 +95,119 @@ export const FooterLinkItems = styled.div`
     align-items: flex-start;
     text-align: left;
   }
+  
 `
   ;
+
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
- font-size: 18px;
- font-weight: bold;
- margin-bottom: 16px;
-`
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; 
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  text-decoration: none;
+  position: relative;
+
+  &:hover,
+  &:focus {
+    color:  #01bf71;
+    transform: translateY(-2px);
+  }
+
+  &:hover:after,
+  &:focus:after {
+    content: "";
+    position: absolute;
+    bottom: -6px; 
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #01bf71;
+    visibility: visible;
+    transform: scaleX(1);
+    transition: all 0.3s ease-in-out;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: transparent;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out;
+  }
+`;
+
 export const FooterLinkTitleHr = styled.hr`
   content: "";
   border: 2px solid;
-  margin-top: 0;
+  margin-top: 5px;
   width: 52%;
-  color: #01bf71;
+  color: #101522;
    
 `
+
 export const FooterLink = styled(Link)`
+  /* Your styles for FooterLink */
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   margin-bottom: 0.6rem;
-  font-size: 14px;
+  font-size: 16px;
 
   &:hover {
     color: #01bf71;
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-style: solid;
   }
-  
-  &.icons{
-    text-align:center;
-    border-radius:22px;
-    padding:7px;
+
+  &.icons {
+    text-align: center;
+    border-radius: 22px;
+    padding: 7px;
     transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease-out;
-   }
-   
-  &.icons:hover{
-    transform: translate(0,-10px);
-    background-color:white !important;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  
-   }
-   
-  &.icons{
-    color:white !important;
-   }
-   
-  &.insta:hover{
-    color:#E4405F!important;
-   }
-   
-  &.fb:hover{
-    color:#1877F2!important;
-   }
-   
-  &.youtube:hover{
-    color:#FF0000 !important;
-   }
-   
-  &.twitter:hover{
-    color:#1DA1F2 !important;
-   } 
-   
-  &.linkdn:hover{
-    color:#0077B5 !important;
-   }
-   &.github:hover{
-    color:black !important;
-   }
- `
 
-  ;
+    &:hover {
+      transform: translate(0, -10px);
+      background-color: white !important;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+  }
 
+  &.icons {
+    color: white !important;
+  }
 
+  &.insta:hover {
+    color: #e4405f !important;
+  }
+
+  &.fb:hover {
+    color: #1877f2 !important;
+  }
+
+  &.youtube:hover {
+    color: #ff0000 !important;
+  }
+
+  &.twitter:hover {
+    color: #1da1f2 !important;
+  }
+
+  &.linkdn:hover {
+    color: #0077b5 !important;
+  }
+
+  &.github:hover {
+    color: black !important;
+  }
+`;
 
 // Social media
 export const SocialMedia = styled.section``;
@@ -172,6 +222,7 @@ export const SocialMediaWrap = styled.div`
 
 // Social logo
 export const SocialLogo = styled(Link)`
+  /* Your styles for SocialLogo */
   color: rgb(255, 255, 255);
   cursor: pointer;
   text-decoration: none;
@@ -186,15 +237,16 @@ export const SocialLogo = styled(Link)`
   }
 
   @keyframes shine {
-  from {
-    mask-position: 150%;
-  }
+    from {
+      mask-position: 150%;
+    }
   
-  to {
-    mask-position: -50%;
+    to {
+      mask-position: -50%;
+    }
   }
-}
 `;
+
 
 // Website rights
 export const WebsiteRights = styled.small`
