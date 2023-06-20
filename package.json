@@ -23,6 +23,7 @@
     "react-scroll": "^1.8.9",
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
+    "start": "^5.1.0",
     "styled-components": "^5.3.6",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
