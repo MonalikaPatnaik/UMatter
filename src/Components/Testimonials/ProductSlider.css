@@ -1,112 +1,33 @@
-
-.slick-track {
-    display: flex;
-  }
-  .slick-slider {
-    display: flex;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .slick-slide {
-    padding-right: 10px;
-  }
-  
-  .slick-slide:last-child {
-    padding-right: 0;
-  }
-  .slick-slide img {
-    display: block;
-  }
-  .slick-list {
-    margin: 0 15px;
-  }
-  
-  .slick-prev {
-    width: 50px;
-    left: 0;
-    top: 20%;
-    position: absolute;
-    height: 50px;
-    background: rgba(42, 42, 42, 0.772);
-    z-index: 1;
-    border-radius: 50%;
-  }
-  
-  .slick-next {
-    width: 50px;
-    right: 0;
-    top: 20%;
-    position: absolute;
-    height: 50px;
-    background: rgba(42, 42, 42, 0.772);
-    z-index: 1;
-    border-radius: 50%;
-  }
-  
-  .slick-prev:focus,
-  .slick-prev:hover,
-  .slick-next:hover,
-  .slick-next:focus {
-    color: transparent;
-    outline: none;
-    color: white;
-  }
-  .product-actions {
-    display: flex;
-    justify-content: space-between;
-  }
-  .container {
-    position: relative;
-  }
-  
-  .button {
-    position: absolute;
-    width: 100%;
-    left: 0;
-    right: 0;
-    bottom: 0%;
-    text-align: center;
-    opacity: 0;
-    transition: opacity .35s ease;
-    background-color: rgba(0, 0, 0, 0.703);
-  }
-  
-  .button a {
-    border-radius: 0 0em 0em 0  !important;
-    width: 100%;
-    text-align: center;
-    color: white;
-    z-index: 1;
-  }
-  
-  .container:hover .button {
-    opacity: 1;
-  }
-
-
   /* Card Div */
 
   .CardDiv{
-    background-color: black;
+    background-color: var(--bg-clr);
     color: white;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px 0px 0px 0px;
+    margin: 30px 0px;
   }
 
   /* Card*/
 
   .Card{ 
-    width: 18rem;
+    width: 100%;
     background-color: #333333;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-top: 5px solid #A020F0
+    border-top: 5px solid #A020F0;
+   }
+
+   /* Card Body */
+
+   .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
    }
 
    /* CardImage */

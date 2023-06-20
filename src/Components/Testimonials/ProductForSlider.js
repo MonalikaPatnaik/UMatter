@@ -8,7 +8,7 @@ const ProductCard = ({product}) => {
     <div className="CardDiv">
       <Card className="Card" >
       <Card.Body>
-      <Card.Img className="CardImage" variant="top" src={product.Icon3} />
+      {/* <Card.Img className="CardImage" variant="top" src={product.Icon3} /> */}
         <h1 style={{margin: "2px",fontWeight: "bold"}}>{product.username}</h1>
         <Card.Text>
           {product.feedback}

@@ -24,6 +24,7 @@
     "react-slick": "^0.29.0",
     "slick-carousel": "^1.8.1",
     "styled-components": "^5.3.6",
+    "swiper": "^9.4.1",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
   },
