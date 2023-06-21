@@ -21,13 +21,12 @@ const Feedback = () => {
 
   const sendPostRequest = async (e) => {
     e.preventDefault();
-    const response = await fetch("http://localhost:8081/feedback", {
-      // Update the endpoint URL here
-      method: "POST",
+    const response = await fetch('http://localhost:8081/feedback', { // Update the endpoint URL here
+      method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
 
     // Handle the response from the backend
@@ -37,21 +36,26 @@ const Feedback = () => {
   };
 
   return (
+    <>
       <Container>
         <FormWrap>
-                <FormContent>
-                    <Form onSubmit={sendPostRequest} action="#">
-                        <FormH1>Share your Feedback</FormH1>
-                        <FormLabel htmlFor="username">username</FormLabel>
-                        <FormInput
-                            onChange={e => setData({ ...data, username: e.target.value })}
-                            placeholder="Enter your username" type="text" id="username"
-                            require />
-                        <FormLabel htmlFor="feedback">Feedback</FormLabel>
-                        <FormInput
-                            onChange={e => setData({ ...data, feedback: e.target.value })}
-                            placeholder="Share your experience/feedback with us :)"
-                            type="text" id="feedback"
+          <FormContent>
+            <Form onSubmit={sendPostRequest} action="#">
+              <FormH1>Share your Feedback</FormH1>
+              <FormLabel htmlFor="username">Username</FormLabel>
+              <FormInput
+                onChange={e => setData({ ...data, username: e.target.value })}
+                placeholder="Enter your username"
+                type="text"
+                id="username"
+                required
+              />
+              <FormLabel htmlFor="feedback">Feedback</FormLabel>
+              <FormInput
+                onChange={e => setData({ ...data, feedback: e.target.value })}
+                placeholder="Share your experience/feedback with us :)"
+                type="text"
+                id="feedback"
                 required
               />
               <FormButton type="submit">Send</FormButton>
@@ -59,6 +63,7 @@ const Feedback = () => {
           </FormContent>
         </FormWrap>
       </Container>
+    </>
   );
 };
 
