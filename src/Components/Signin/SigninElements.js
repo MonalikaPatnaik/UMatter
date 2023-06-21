@@ -321,4 +321,3 @@ export const PasswordContainer = styled.div`
 `;
 
 export const Image = styled.img``;
-

@@ -13,7 +13,7 @@ import {
   PhoneContainer,
   SignUpButton,
   PasswordContainer,
-  Image
+  Image,
 } from "./SignupElements";
 import { useState } from "react";
 import SignUpImg from "../../images/SignUp.png";
@@ -320,7 +320,7 @@ const SignUp = () => {
           <LeftPara>
             Sign up to be a part of the community, because UMatter.
           </LeftPara>
-          <Image src={SignUpImg} alt="Sign Up Graphic"/>
+          <Image src={SignUpImg} alt="Sign Up Graphic" />
         </LeftContainer>
         <SignUpContainer>
           <SignUpForm onSubmit={handleSubmit} action="#">
@@ -436,7 +436,7 @@ const SignUp = () => {
               )}
             </PasswordContainer>
             <SignUpButton type="submit">Sign Up</SignUpButton>
-			{invalid && showInvalid()}
+            {invalid && showInvalid()}
           </SignUpForm>
         </SignUpContainer>
       </FormContainer>

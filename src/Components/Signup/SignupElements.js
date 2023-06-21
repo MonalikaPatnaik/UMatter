@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 
-////////////// OLD UI ELEMENTS ///////////////////////// 
+////////////// OLD UI ELEMENTS /////////////////////////
 
 // export const Container = styled.div`
 
@@ -326,7 +326,7 @@ export const SignUpButton = styled.button`
   text-decoration: none;
 
   &:hover {
-    background: #00492B;
+    background: #00492b;
     color: #ffffff;
   }
 

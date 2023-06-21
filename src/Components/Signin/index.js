@@ -19,7 +19,7 @@ import {
   RememberMe,
   ForgotPassword,
   PasswordContainer,
-  Image
+  Image,
   // Icons,
   // FormButton,
   // FormContent,
@@ -216,7 +216,7 @@ const SignIn = () => {
                 placeholder="at least 8 characters"
                 require
               />
-			  {passwordType === "password" ? (
+              {passwordType === "password" ? (
                 <i
                   className="fa-solid fa-eye-slash"
                   id="eye"
