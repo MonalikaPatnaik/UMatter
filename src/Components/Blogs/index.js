@@ -165,5 +165,10 @@ const blogsData = [
     title: "How does the Medical ChatBot works?",
     content:
       "So, a chatbot is a software that stimulates or makes a human-like conversational environment. Let me tell you that everyone in their life has interacted with chatbots whether one knows or not. As an example let us say you are doing your work on a computer some research on it, and a window pops up that says if you need help. Or while you are going to a good restaurant and ask your google assistant or Siri about which hotel will suit you. So these are scenarios in which you are having an encounter with a chatbot.",
-  }
+  }, {
+    icon: Icon9,
+    title: "How to quit smoking according to Ayurveda?",
+    content:
+      "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
+  }, 
 ];
