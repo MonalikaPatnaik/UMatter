@@ -31,6 +31,8 @@ export const ReadMoreButton = styled.button`
   z-index: 2;
 `;
 
+
+
 export const BlogsWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
@@ -86,6 +88,9 @@ export const BlogsH1 = styled.h1`
   }
 `;
 
+
+
+
 export const BlogsCard = styled.div`
   vertical-align: middle;
   box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.4);
@@ -106,8 +111,9 @@ export const BlogsCard = styled.div`
 
     ${ReadMoreButton} {
       opacity: 1;
+      
     }
-    ${BlogsIcon} {
+    ${BlogsIcon}{
       opacity: 0.5;
     }
 

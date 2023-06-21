@@ -4,6 +4,7 @@
  <img src="./src/images/mental-health.png" />
  <div>
 
+  
 **Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/)**.
 
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
@@ -57,12 +58,14 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
 
 - Blogs Page: Provides you with useful blog posts on different matters and areas of concern in our life.
 
-## **Components of Website**
-
+ 
+**Components of Website**
+---
+ 
 **Landing Page**
-
-The landing page is the initial point of entry for users when they click on our site. It serves as the first glimpse of what we have to offer and provides a seamless transition from the user's click to their arrival on the page.
-<img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
+ 
+ The landing page is the initial point of entry for users when they click on our site. It serves as the first glimpse of what we have to offer and provides a seamless transition from the user's click to their arrival on the page.
+  <img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
 
 <br>
   
@@ -98,12 +101,14 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 - [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
 - [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
 - [Code submission](https://github.com/MonalikaPatnaik/UMatter/pulls)
-
+ 
 ### ✨🔨Note:
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
-> - Give a meaningful name to whatever file or folder you are adding, changing etc.
+  > - Give a meaningful name to whatever file or folder you are adding, changing etc. 
+ 
+
 
 ## 🔑Guidelines✨
 
@@ -111,24 +116,25 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 2. Participants/contributors have to **comment** on issues they would like to work on, and mentors or the PA will assign you.
 3. Issues will be assigned on a **first-come, first-serve basis.**
 4. Participants/contributors can also **open their issues** using issue_template,
-   but it needs to be verified and labelled by a mentor or PA. Please discuss with the team once before opening your issues. We respect all your contributions, whether
-   it is an Issue or a Pull Request.
-5. When you raise an issue, make sure you get it assigned to you before you start working on that project.
-6. Each participant/contributor will be **assigned 1 issue (max)** at a time to work.
-7. Participants are expected to follow **project guidelines** and **coding style** . **Structured code** is one of our top priorities.
-8. Try to **explain your approach** to solve any issue in the comments. This will increase the chances of you being assigned.
-9. Don't create issues that are **already listed**.
-10. Please don't pick up an issue already assigned to someone else. Work on the issues after it gets **assigned to you**.
-11. Make sure you **discuss issues** before working on the issue.
-12. Pull requests will be merged after being **reviewed** by a mentor or PA.
-13. It might take **a day or two** to review your pull request. Please have patience and be nice.
-14. Always create a pull request from a **branch** other than `main`.
-15. Participants/contributors have to complete issues before the decided Deadline. If you fail to make a PR within the deadline, then the issue will be assigned to
-    another person in the queue.
-16. While making PRs, don't forget to **add a description** of your work.
-17. Include issue number (Fixes: issue number) in your commit message while creating a pull request.
-18. Make sure your solution to any issue is better in terms of performance and other parameters in comparison to the previous work.
-19. We all are here to learn. You are allowed to make mistakes. That's how you learn, right!.
+but it needs to be verified and labelled by a mentor or PA. Please discuss with the team once before opening your issues. We respect all your contributions, whether 
+it is an Issue or a Pull Request.
+6. When you raise an issue, make sure you get it assigned to you before you start working on that project.
+7. Each participant/contributor will be **assigned 1 issue (max)** at a time to work.
+8. Participants are expected to follow **project guidelines** and **coding style** . **Structured code** is one of our top priorities.
+9. Try to **explain your approach** to solve any issue in the comments. This will increase the chances of you being assigned.
+10. Don't create issues that are **already listed**.
+11. Please don't pick up an issue already assigned to someone else. Work on the issues after it gets **assigned to you**.
+12. Make sure you **discuss issues** before working on the issue.
+13. Pull requests will be merged after being **reviewed** by a mentor or PA.
+14. It might take **a day or two** to review your pull request. Please have patience and be nice.
+15. Always create a pull request from a **branch** other than `main`.
+16. Participants/contributors have to complete issues before the decided Deadline. If you fail to make a PR within the deadline, then the issue will be assigned to 
+another person in the queue.
+17. While making PRs, don't forget to **add a description** of your work.
+18. Include issue number (Fixes: issue number) in your commit message while creating a pull request.
+19. Make sure your solution to any issue is better in terms of performance and other parameters in comparison to the previous work.
+20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right!.
+
 
 ## 😎 Project Maintainers
 
@@ -136,6 +142,7 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
   <tr>
 <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td>
+
 
 <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
@@ -154,24 +161,24 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 ```
 Mentors here 🚧
 ```
-
 <!-- Just Insert here the mentors  👇-->
 
 <!-- <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td> -->
 
+
 <!-- <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td> -->
-
+ 
 <!-- <td align="center">
 <img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td> -->
-
+   
  </tr>
 </table>
 
 ## License 🪪
 
-[MIT license](https://opensource.org/license/mit/)
+ [MIT license](https://opensource.org/license/mit/)
 
 ## Thanks to all the Contributors ❤️
 

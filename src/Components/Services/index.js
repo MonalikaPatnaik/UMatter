@@ -1,27 +1,14 @@
-import React from "react";
-import Icon1 from "../../images/image1.png";
-import Icon2 from "../../images/image2.png";
-import Icon3 from "../../images/image3.png";
-import Icon4 from "../../images/image.4.png";
-import {
-  ServicesContainer,
-  ServicesH1,
-  ServicesH2,
-  ServicesWrapper,
-  ServicesCard,
-  ServicesIcon,
-  ServicesP,
-} from "./ServicesElements";
+import React from 'react';
+import Icon1 from '../../images/image1.png';
+import Icon2 from '../../images/image2.png';
+import Icon3 from '../../images/image3.png';
+import Icon4 from '../../images/image.4.png';
+import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-import {
-  cardOneVariants,
-  cardTwoVariants,
-  cardThreeVariants,
-  cardFourVariants,
-} from "./CardAnimation";
+import { cardOneVariants, cardTwoVariants, cardThreeVariants, cardFourVariants } from "./CardAnimation";
 
 const Services = () => {
   const el = useRef(null);
@@ -58,8 +45,7 @@ const Services = () => {
               <b>Consult With Doctor</b>
             </ServicesH2>
             <ServicesP>
-              Consult with professional doctors and therapists regarding your
-              health.
+              Consult with professional doctors and therapists regarding your health.
             </ServicesP>
           </ServicesCard>
         </motion.div>
@@ -75,8 +61,7 @@ const Services = () => {
               <b>Attend workshops</b>
             </ServicesH2>
             <ServicesP>
-              Book your slot now for amazing therapies and sessions that will
-              make your life better.
+              Book your slot now for amazing therapies and sessions that will make your life better.
             </ServicesP>
           </ServicesCard>
         </motion.div>
@@ -107,7 +92,9 @@ const Services = () => {
             <ServicesH2>
               <b>Habit Tracker</b>
             </ServicesH2>
-            <ServicesP>Boost your potential by tracking your habits</ServicesP>
+            <ServicesP>
+              Boost your potential by tracking your habits
+            </ServicesP>
           </ServicesCard>
         </motion.div>
       </ServicesWrapper>
