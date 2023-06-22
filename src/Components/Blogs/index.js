@@ -48,7 +48,7 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
 
-      <div className="search-container">
+      <div className="search-container flex flex-col md:flex-row items-center">
         <input
           type="text"
           placeholder="Search blogs..."
@@ -67,14 +67,13 @@ const Blogs = () => {
           }}
         />
         <button
-          className="search-button"
+          className="search-button mt-3 md:mb-3"
           onClick={handleButtonClick}
           style={{
             backgroundColor: "green", // Set background color to green
             color: "white", // Set text color to white
             borderRadius: "8px",
             padding: "8px",
-            marginTop: "8px",
             fontSize: "19px",
             width: "100px", // Set width to your desired value
             marginLeft: "8px", // Add any other desired inline styles

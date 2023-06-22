@@ -37,6 +37,7 @@ export const BlogsWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
+  justify-items:center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   padding: 0 20px;
