@@ -7,7 +7,7 @@ import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCar
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { motion } from "framer-motion";
+import { color, motion } from "framer-motion";
 import { cardOneVariants, cardTwoVariants, cardThreeVariants, cardFourVariants } from "./CardAnimation";
 
 const Services = () => {
@@ -48,6 +48,7 @@ const Services = () => {
               Consult with professional doctors and therapists regarding your health.
             </ServicesP>
           </ServicesCard>
+          
         </motion.div>
 
         <motion.div
@@ -55,7 +56,7 @@ const Services = () => {
           initial="hidden"
           animate="visible"
         >
-          <ServicesCard>
+          <ServicesCard >
             <ServicesIcon src={Icon2} />
             <ServicesH2>
               <b>Attend workshops</b>
