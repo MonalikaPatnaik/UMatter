@@ -6,14 +6,14 @@ import { toast } from "react-toastify"
 import "./Toast.css"
 
 import {
-    FormButton,
-    FormContent,
-    Form,
-    FormH1,
-    FormInput,
-    FormLabel,
-    FormWrap,
-    Container,
+  FormButton,
+  FormContent,
+  Form,
+  FormH1,
+  FormInput,
+  FormLabel,
+  FormWrap,
+  Container,
 } from "./FeedbackElements";
 import { useState } from "react";
 import { ToastContainer } from 'react-toastify';
@@ -22,9 +22,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 const Feedback = () => {
+  const navigate = useNavigate();
+  const [data, setData] = useState({});
 
-    const navigate = useNavigate();
-    const [data, setData] = useState({});
 
     const sendPostRequest = async (e) => {
         e.preventDefault();
