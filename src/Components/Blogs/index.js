@@ -11,6 +11,7 @@ import Icon7 from "../../images/non-alco-cocktail.png";
 import Icon8 from "../../images/isolation.jpg";
 import Icon9 from "../../images/natural remedies.jpg";
 import Icon10 from "../../images/No-yes.jpg";
+import Icon11 from "../../images/Meditation.jpg";
 import {
   BlogsContainer,
   BlogsH1,
@@ -170,5 +171,11 @@ const blogsData = [
     title: "How to quit smoking according to Ayurveda?",
     content:
       "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
+  }, 
+  {
+    icon: Icon11,
+    title: "How meditation improved the Productivity for a Developer",
+    content:
+      "Once I integrated meditation into my daily routine, I started to see a shift in my productivity at work too. Meditation helped me to be more mindful while working, which made me more aware of when my body needed to take breaks. This turned out to be very helpful in my ability to solve coding problems as I no longer was stuck in tunnel vision. A good break helped me to refocus my attention on other things and the answer to the problem came randomly while washing the dishes or while doing other errands. I am sure you experienced this too. Let me know if did! ",
   }, 
 ];
