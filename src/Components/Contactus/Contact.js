@@ -1,5 +1,4 @@
 import { React, useState } from "react";
-
 import "./Contact.css";
 
 const Contact = () => {
@@ -26,6 +25,7 @@ const Contact = () => {
     })
     
     alert("Contact Request Sent Successfully")
+ 
   }
 
 
