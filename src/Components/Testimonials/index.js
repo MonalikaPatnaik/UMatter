@@ -83,6 +83,8 @@ class Testimonial extends Component {
       slidesToShow: 3,
       slidesToScroll: 1,
       initialSlide: 0,
+      autoplay: true, 
+      autoplaySpeed: 2500, 
       responsive: [
         {
           breakpoint: 1024,
@@ -112,27 +114,27 @@ class Testimonial extends Component {
     };
 
     return (
-        <TestimonialsContainer id="testimonials" 
-             whileInView={{ y: [130, 50, 0], opacity: [0, 0, 1] }}
-             transition={{ duration: 0.8 }}
-             style={{width: "100%"}}
-          >
-
-      <div style={{backgroundColor: "black",color: "white",textAlign: "center"}}>
-      <TestimonialsH1><span ref={this.el} style={{ display: 'inline-block' }} /></TestimonialsH1>
-        <Slider {...settings} style={{display: "flex",justifyContent: "center",alignItems: "center"}}>
-            {this.state.slides.map((slide, index) => {
-            return (
-                <div key={slide.id}>
-                <ProductCard product={slide}/>
-              </div>
-            );
-          })}
-        </Slider>
-      </div>
-        </TestimonialsContainer>
-    );
-  }
+      <TestimonialsContainer
+          id="testimonials"
+          whileInView={{ y: [130, 50, 0], opacity: [0, 0, 1] }}
+          transition={{ duration: 0.8 }}
+          style={{ width: "100%" }}
+      >
+          <div style={{ backgroundColor: "black", color: "white", textAlign: "center" }}>
+              <TestimonialsH1><span ref={this.el} style={{ display: 'inline-block' }} /></TestimonialsH1>
+              <Slider {...settings} style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
+                  {this.state.slides.map((slide, index) => {
+                      return (
+                          <div key={slide.id}>
+                              <ProductCard product={slide} />
+                          </div>
+                      );
+                  })}
+              </Slider>
+          </div>
+      </TestimonialsContainer>
+  );
+}
 }
 
 export default Testimonial;
