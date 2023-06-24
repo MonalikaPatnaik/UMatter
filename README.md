@@ -95,9 +95,38 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
  
 - Contribution is the best way to support and get involved in community!
  - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
-
+   <br>
 ### Get started on local machine
-    
+### Step 1: 
+Fork the repository.
+### Step 2: 
+Clone the forked repository on your local machine.
+```
+git clone https://github.com/<your_github_username>/UMatter.git
+```
+### Step 3:
+Open CommandPrompt/Terminal.
+### Step 4:
+In the terminal run:
+```
+cd UMatter
+```
+```
+cd Express_Js_Server
+```
+```
+node index.js
+```
+### Step 5:
+Shoot up a new terminal and run:
+```
+cd UMatter
+```
+```
+npm start
+```
+
+This will open up the website on localhost. You can begin working. The changes will be reflected here.
 
 ## If you have any idea or question 🤷
 
