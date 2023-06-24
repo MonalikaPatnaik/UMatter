@@ -1,0 +1,32 @@
+/* Swiper Custom CSS */
+
+.swiper {
+    position: unset !important;
+}
+
+.swiper-button-next, .swiper-button-prev {
+    color: #A020F0;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--text-clr);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #A020F0;
+}
+
+/* media query for small screens */
+
+@media screen and (max-width:767px) {
+    .swiper-button-next, .swiper-button-prev {
+        display: none;
+    }
+}
