@@ -96,6 +96,9 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
 - Contribution is the best way to support and get involved in community!
  - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
 
+### Get started on local machine
+    
+
 ## If you have any idea or question 🤷
 
 - [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
