@@ -11,6 +11,7 @@ import Icon7 from "../../images/non-alco-cocktail.png";
 import Icon8 from "../../images/isolation.jpg";
 import Icon9 from "../../images/natural remedies.jpg";
 import Icon10 from "../../images/No-yes.jpg";
+import Icon11 from "../../images/mental-health.png";
 import {
   BlogsContainer,
   BlogsH1,
@@ -171,4 +172,23 @@ const blogsData = [
     content:
       "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
   }, 
+  {
+    icon: Icon11,
+    title: "5 Terrible Habits That Are Seriously Destroying Your Mental Health & How To Break Them",
+    content:
+      "I’ll be discussing 5 Terrible habits that are seriously damaging your mental health.
+	1. You Waste a Ridiculous Amount Of Time Feeling Sorry For Yourself,
+	2. You Are Expecting Immediate Results,
+	3. You Resent Other People’s Success,
+	4. You Worry Too Much About Pleasing Everyone,
+	5. You are Focusing Too Much On The Things You Can’t Control
+
+	Now, I’ll be discussing the things that improve mental health.
+	1. When There Is Too Much On The Plate, Grab A Bowl,
+	2. Work Is Sacred, Treat It Like That,
+	3. Do One Activity For A Prolonged Duration To Build Focus,
+	4. Wakeup Without Alarm,
+	5. Rituals Over Willpower,
+	6. Exercise Daily",
+  }
 ];
