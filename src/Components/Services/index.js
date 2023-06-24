@@ -1,15 +1,25 @@
+
 import React from 'react';
 import Icon1 from '../../images/image1.png';
 import Icon2 from '../../images/image2.png';
 import Icon3 from '../../images/image3.png';
+
 import Icon4 from '../../images/image.4.png';
 // import DarkMode from "../DarkMode/DarkMode";
+
+
+import { Services_Data } from '../Services/Services_Data';
+
 import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
+
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+
 import { color, motion } from "framer-motion";
 import { cardOneVariants, cardTwoVariants, cardThreeVariants, cardFourVariants } from "./CardAnimation";
+
+
 
 const Services = () => {
   const el = useRef(null);
@@ -31,6 +41,7 @@ const Services = () => {
   return (
     
     <ServicesContainer id="services">
+
       <ServicesH1>
         <span ref={el} style={{ display: "inline-block" }} />
       </ServicesH1>
@@ -104,6 +115,7 @@ const Services = () => {
         </motion.div>
       </ServicesWrapper>
     </ServicesContainer>
+
   );
 };
 
