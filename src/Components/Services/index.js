@@ -3,6 +3,7 @@ import Icon1 from '../../images/image1.png';
 import Icon2 from '../../images/image2.png';
 import Icon3 from '../../images/image3.png';
 import Icon4 from '../../images/image.4.png';
+// import DarkMode from "../DarkMode/DarkMode";
 import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
 
 import { useEffect, useRef } from "react";
@@ -28,6 +29,7 @@ const Services = () => {
   }, []);
 
   return (
+    
     <ServicesContainer id="services">
       <ServicesH1>
         <span ref={el} style={{ display: "inline-block" }} />
@@ -40,6 +42,8 @@ const Services = () => {
           animate="visible"
         >
           <ServicesCard>
+            
+
             <ServicesIcon src={Icon1} />
             <ServicesH2>
               <b>Consult With Doctor</b>

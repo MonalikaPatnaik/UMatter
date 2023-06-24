@@ -48,12 +48,15 @@ export const ServicesCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10px;
+  border-width:3px;
+  // boder-color:black;
+  border-color:rgb(11, 115, 72);
   max-height: 380px;
   padding: 30px;
   //height:0px;
   box-shadow: 0 1px 3px gray;
   color: var(--text-clr);
-  transition: all 20ms ease-in-out;
+  transition: all 0.8s ease-in-out;
   transform-origin: center center;
  
 
@@ -72,13 +75,14 @@ export const ServicesCard = styled.div`
     // margin-top: -100px;
     margin: -120px 0px;
     content: '';
-    background: #fff;
+    // background: #fff;
+    background: var(--bg-clr);
     border-style: solid;
-    border-width: 1px;
+    border-width: 2px;
     border-radius: 500px;
     border-color:rgb(1, 191, 113);
     transform-origin: center center;
-    transition: all 600ms ease-in-out;
+    transition: all 0.9s ease-in-out;
     box-sizing: border-box;
     overflow:hidden;
   
@@ -88,13 +92,16 @@ export const ServicesCard = styled.div`
     //background: black;
     overflow:hidden;
     transform: scale(1.07);
-    transition: all 0.2s ease-in-out;
+    transition: all 0.9s ease-in-out;
     cursor: pointer;
 
     &:before {
       border-width: 500px;
     }
   }
+  // &:after{
+  //   transition: all 0.2s ease-out-in;
+  // }
 `; 
 
 
@@ -102,7 +109,8 @@ export const ServicesIcon = styled.img`
   height: 170px;
   width: 180px;
   margin-bottom: 10px;
-  border: 0.5px solid gray;
+   border: 1.5px solid gray;
+  //border: 0.5px solid rgb(11, 115, 72)
   box-shadow: 3px 3px 3px gray;
   position:relative;
 `;
@@ -118,7 +126,7 @@ export const ServicesH1 = styled.h1`
   font-weight: 600;
   text-transform: uppercase;
   color: var(--text-clr);
-
+  // color:#fff;
 
   @media screen and (max-width: 480px) {
     font-size: 2rem;
@@ -129,10 +137,15 @@ export const ServicesH2 = styled.h2`
   font-size: 1rem;
   margin-bottom: 10px;
   position:relative;
+  // color:#fff;
+  color: var(--text-clr);
+  // background: var(--bg-clr);
 `;
 
 export const ServicesP = styled.p`
   font-size: 1rem;
   text-align: center;
   position:relative;
+  color: var(--text-clr);
+  // background: var(--bg-clr);
 `;
