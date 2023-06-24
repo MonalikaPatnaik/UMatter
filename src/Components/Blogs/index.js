@@ -48,7 +48,7 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
 
-      <div className="search-container">
+      <div className="search-container flex flex-col md:flex-row items-center">
         <input
           type="text"
           placeholder="Search blogs..."
@@ -61,19 +61,19 @@ const Blogs = () => {
             padding: "8px",
             textAlign: "center",
             justifyContent: "center",
+            border : "3px solid black"
 
             // Add any other desired inline styles
           }}
         />
         <button
-          className="search-button"
+          className="search-button mt-3 md:mb-3"
           onClick={handleButtonClick}
           style={{
             backgroundColor: "green", // Set background color to green
             color: "white", // Set text color to white
             borderRadius: "8px",
             padding: "8px",
-            marginTop: "8px",
             fontSize: "19px",
             width: "100px", // Set width to your desired value
             marginLeft: "8px", // Add any other desired inline styles
@@ -107,7 +107,7 @@ export default Blogs;
 const blogsData = [
   {
     icon: Icon7,
-    title: "5 Sophisticated Non-Alcoholic Cocktails to try on your Date Night",
+    title: "5 Sophisticated Non-Alcoholic Cocktails to Try on your Date Night",
     content:
       "For those looking for a more sober option, alcohol-free cocktails can be the perfect way to give your evening a touch of sophistication.",
   },
@@ -159,4 +159,15 @@ const blogsData = [
     content:
       "As a substitute for smoking, try chewing on carrots, pickles, apples, celery, sugarless gum, or hard candy. Keeping your mouth busy may stop the psychological need to smoke.",
   },
+  {
+    icon: Icon10,
+    title: "How does the Medical ChatBot works?",
+    content:
+      "So, a chatbot is a software that stimulates or makes a human-like conversational environment. Let me tell you that everyone in their life has interacted with chatbots whether one knows or not. As an example let us say you are doing your work on a computer some research on it, and a window pops up that says if you need help. Or while you are going to a good restaurant and ask your google assistant or Siri about which hotel will suit you. So these are scenarios in which you are having an encounter with a chatbot.",
+  }, {
+    icon: Icon9,
+    title: "How to quit smoking according to Ayurveda?",
+    content:
+      "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
+  }, 
 ];
