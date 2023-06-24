@@ -14,6 +14,7 @@ import GetMail from './Components/Forgot_password/ForgotPassword';
 import Verify from './Components/Forgot_password/OTPVerfication';
 import Blog from './Components/BlogPage/Blog';
 
+
 // import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
 // window.CRISP_WEBSITE_ID="e79efdd2-abee-4a1e-b868-c7929585ebd9";
@@ -28,6 +29,7 @@ function App() {
 				<Route path="/blogs" element={<BlogPage />} />
 				<Route path="/feedback" element={<FeedbackPage />} />
 				<Route path="/contact" element={<ContactPage />} />
+				
 				<Route 
 					path="/blogs/:id"
 					element={<Blog/>}

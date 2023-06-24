@@ -104,43 +104,28 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px; 
+  margin-bottom: 10px;
   display: inline-block;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
   text-decoration: none;
   position: relative;
+  color: inherit;
 
   &:hover,
   &:focus {
-    color:  #01bf71;
+    color: #01bf71 !important;
     transform: translateY(-2px);
   }
 
-  &:hover:after,
-  &:focus:after {
-    content: "";
-    position: absolute;
-    bottom: -6px; 
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background-color: #01bf71;
-    visibility: visible;
-    transform: scaleX(1);
-    transition: all 0.3s ease-in-out;
-  }
   &:after {
     content: "";
     position: absolute;
-    bottom: -6px;
+    bottom: -8px;
     left: 0;
     width: 100%;
-    height: 2px;
-    background-color: transparent;
-    visibility: hidden;
-    transform: scaleX(0);
-    transition: all 0.3s ease-in-out;
+    height: 4px;
+    background-color: #01bf71;
   }
 `;
 

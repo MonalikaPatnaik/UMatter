@@ -1,18 +1,7 @@
 import React from 'react';
 import { FaFacebook, FaLinkedin, FaYoutube, FaInstagram, FaTwitter, FaGithub } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import {
-  FooterContainer,
-  FooterWrap,
-  FooterLinksContainer,
-  FooterLinksWrapper,
-  FooterLinkItems,
-  FooterLinkTitle,
-  FooterLinkTitleHr,
-  FooterLink,
-  SocialMedia,
-  SocialMediaWrap,
-  SocialLogo,
+import {FooterContainer,FooterWrap,FooterLinksContainer,FooterLinksWrapper,FooterLinkItems,FooterLinkTitle,FooterLinkTitleHr,FooterLink,SocialMedia,SocialMediaWrap,SocialLogo,
   WebsiteRights
 } from './FooterElements';
 
@@ -27,7 +16,7 @@ const Footer = () => {
         <FooterLinksContainer>
           <FooterLinksWrapper>
             <FooterLinkItems className='about'>
-              <Link to="/signin">
+              <Link to="/">
                 <FooterLinkTitle>About us</FooterLinkTitle>
               </Link>
               <FooterLinkTitleHr className='hr' />
