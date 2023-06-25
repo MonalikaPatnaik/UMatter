@@ -10,7 +10,7 @@ const ProductCard = ({product}) => {
       <Card.Body>
       <Card.Img className="CardImage" variant="top" src={product.Icon3} />
         <h1 style={{margin: "2px",fontWeight: "bold"}}>{product.username}</h1>
-        <Card.Text>
+        <Card.Text className="text-center">
           {product.feedback}
         </Card.Text>
       </Card.Body>
