@@ -13,13 +13,14 @@ import ContactPage from './pages/contact';
 import GetMail from './Components/Forgot_password/ForgotPassword';
 import Verify from './Components/Forgot_password/OTPVerfication';
 import Blog from './Components/BlogPage/Blog';
-
-// import Contact from "./Components/Contactus/Contact";
+// importct from "./Components/Contactus/Contact";
 // window.$crisp=[];
 // window.CRISP_WEBSITE_ID="e79efdd2-abee-4a1e-b868-c7929585ebd9";
 
 function App() {
 	return (
+
+		
 		<HashRouter>
 			<Navbar />
 			<Routes>
@@ -28,6 +29,7 @@ function App() {
 				<Route path="/blogs" element={<BlogPage />} />
 				<Route path="/feedback" element={<FeedbackPage />} />
 				<Route path="/contact" element={<ContactPage />} />
+				
 				<Route 
 					path="/blogs/:id"
 					element={<Blog/>}
@@ -48,7 +50,10 @@ function App() {
 				<Route exact path="/signup" element={<SignupPage />} />
 				<Route exact path="/profile" element={<Profile />} />
 			</Routes>
+			
 		</HashRouter>
+
+
 	);
 }
 
