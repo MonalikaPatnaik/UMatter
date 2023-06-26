@@ -17,6 +17,7 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-multi-carousel": "^2.8.4",
+    "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.8.2",
     "react-router-hash-link": "^2.4.3",
     "react-scripts": "^5.0.1",
@@ -26,6 +27,7 @@
     "slick-carousel": "^1.8.1",
     "start": "^5.1.0",
     "styled-components": "^5.3.6",
+    "swiper": "^9.4.1",
     "typed.js": "^2.0.16",
     "web-vitals": "^2.1.4"
   },

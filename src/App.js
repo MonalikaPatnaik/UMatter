@@ -1,19 +1,20 @@
-import React from 'react';
+import {lazy, Suspense} from 'react';
 import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
-import Home from './pages';
-import SigninPage from './pages/signin';
-import Error404 from './pages/Error404';
-import BlogPage from './pages/blogs';
-import FeedbackPage from './pages/feedback';
-import SignupPage from './pages/signup';
-import Profile from './pages/profile';
-import Navbar from './Components/Navbar';
-import ContactPage from './pages/contact';
-import GetMail from './Components/Forgot_password/ForgotPassword';
-import Verify from './Components/Forgot_password/OTPVerfication';
-import Blog from './Components/BlogPage/Blog';
+import { Loader } from './Components/Loader/Loader';
 
+const Home = lazy(()=>import("./pages"))
+const  SigninPage = lazy(()=>import("./pages/signin"))
+const Error404 = lazy(()=>import("./pages/Error404"))
+const BlogPage = lazy(()=>import("./pages/blogs"))
+const FeedbackPage = lazy(()=>import("./pages/feedback"))
+const SignupPage = lazy(()=>import("./pages/signup"))
+const Profile = lazy(()=>import("./pages/profile"))
+const Navbar = lazy(()=>import("./Components/Navbar"))
+const ContactPage = lazy(()=>import("./pages/contact"))
+const GetMail = lazy(()=>import("./Components/Forgot_password/ForgotPassword"))
+const Verify = lazy(()=>import("./Components/Forgot_password/OTPVerfication"))
+const Blog = lazy(()=>import("./Components/BlogPage/Blog"))
 
 
 // import Contact from "./Components/Contactus/Contact";
@@ -25,34 +26,34 @@ function App() {
 
 		
 		<HashRouter>
+			<Suspense fallback={<Loader />}>
 			<Navbar />
-			<Routes>
-				<Route exact path="/" element={<Home />} />
-				<Route exact path="/signin" element={<SigninPage />} />
-				<Route path="/blogs" element={<BlogPage />} />
-				<Route path="/feedback" element={<FeedbackPage />} />
-				<Route path="/contact" element={<ContactPage />} />
-				<Route 
-					path="/blogs/:id"
-					element={<Blog/>}
-					exact
-				/>
-
-				<Route
-					exact
-					path="/signin/forgotPassword"
-					element={<GetMail/>}
-				/>
-				<Route
-					exact
-					path="/signin/otpverification"
-					element={<Verify/>}
-				/>
-				<Route path="/*" element={<Error404 />} />
-				<Route exact path="/signup" element={<SignupPage />} />
-				<Route exact path="/profile" element={<Profile />} />
-			</Routes>
-			
+				<Routes>
+					<Route exact path="/" element={<Home />} />
+					<Route exact path="/signin" element={<SigninPage />} />
+					<Route path="/blogs" element={<BlogPage />} />
+					<Route path="/feedback" element={<FeedbackPage />} />
+					<Route path="/contact" element={<ContactPage />} />
+					<Route 
+						path="/blogs/:id"
+						element={<Blog/>}
+						exact
+					/>
+					<Route
+						exact
+						path="/signin/forgotPassword"
+						element={<GetMail/>}
+					/>
+					<Route
+						exact
+						path="/signin/otpverification"
+						element={<Verify/>}
+					/>
+					<Route path="/*" element={<Error404 />} />
+					<Route exact path="/signup" element={<SignupPage />} />
+					<Route exact path="/profile" element={<Profile />} />
+				</Routes>
+			</Suspense>
 		</HashRouter>
 
 
