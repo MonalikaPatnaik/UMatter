@@ -1,5 +1,6 @@
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import { motion } from "framer-motion";
+// $bgcolor=var(--bg-clr);
 
 export const TestimonialsContainer = motion(styled.div`
   padding: 30px;
@@ -30,7 +31,17 @@ export const TestimonialsWrapper = styled.div`
   grid-gap: 16px;
   padding: 0 50px;
   overflow: hidden;
+  border-radius:50px;
+  background-color: ${({ theme }) => theme.defaultColor}; /* Set a default background color */
 
+  /* Set the background color based on the body class */
+  body.light-theme & {
+    background-color: #ffd60a; /* Set background color to yellow if body has 'light-theme' class */
+  }
+
+  body.dark-theme & {
+    background-color: #030640cc; /* Set background color to green if body has 'dark-theme' class */
+  }
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
   }
