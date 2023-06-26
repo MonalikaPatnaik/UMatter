@@ -81,10 +81,7 @@
 //     display: flex;
 //     justify-content: flex-start;
 // `
-// export const ImgWrap = motion(styled.div`
-//     max-width: 555px;
-//     height: 100%
-// `);
+
 // export  const Img = styled.img`
 //     width: 100%;
 //     margin: 0 0 10px 0;
@@ -121,20 +118,34 @@ export const AboutRow = styled.div`
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
     grid-template-areas: ${({imgStart})=> (imgStart ? `'col2 col1'` : `'col1 col2'`)};
-    background-color:#ffd60a;
-    margin-top:3rem;
-    margin-bottom:6rem;
+    background-color: ${({ theme }) => theme.defaultColor}; /* Set a default background color */
+
+  /* Set the background color based on the body class */
+  body.light-theme & {
+    background-color: #ffd60a; /* Set background color to yellow if body has 'light-theme' class */
+  }
+
+  body.dark-theme & {
+    background-color:#030640cc; /* Set background color to green if body has 'dark-theme' class */
+  }
+    margin-top:2rem;
+    /* margin-bottom:6rem; */
     position:absolute;
     left:0;
-    width:104rem;
-    border-radius: 0 1.2cm 1.2cm 0;
+    right:0;
+    /* width:104rem; */
+    border-radius: 50px;
     @media screen and (max-width: 768px){
         grid-template-areas: ${({imgStart})=> (imgStart ? `'col1' 'col2'` : `'col1 col1' 'col2 col2'`)};
-        width:44rem;
-        height:54rem;
+        /* width:44rem;
+        height:54rem; */
 
     }
 `;
+export const ImgWrap = motion(styled.div`
+    max-width: 555px;
+    height: 100%
+`);
 export const Column1 = styled.div`
     margin-bottom: 15px;
     padding: 0 15px;
@@ -188,14 +199,7 @@ export const BtnWrap = styled.div`
     justify-content: flex-start;
     font-size:1.6rem;
 `
-export const ImgWrap = motion(styled.div`
-    max-width: 655px; 
-    height: 100%; 
-    @media screen and (max-width: 768px){
-        position:relative;
-        top:-14rem;
-    }
-`);
+
 export  const Img = styled.img`  
     width: 100%;
     margin: 0 0 10px 0;
