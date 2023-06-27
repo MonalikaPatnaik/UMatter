@@ -48,6 +48,19 @@ const Blogs = () => {
       <div style={{ height: "100px" }}></div>
 
       <div className="search-container flex flex-col md:flex-row items-center">
+      <div style={{
+           width: "100%",
+           backgroundColor: "rgba(40, 30, 30, 0.3)",
+           opacity: "1",
+           display: "flex",
+           alignItems: "center",
+           borderRadius: "60px",
+           padding: "10px 10px",
+           height: "50px",
+           backdropFilter: "blur(5px) saturate(180%)",
+           border: "1.5px solid black",
+           
+        }}>
         <input
           type="text"
           placeholder="Search blogs..."
@@ -55,20 +68,35 @@ const Blogs = () => {
           onChange={handleSearch}
           onKeyPress={handleKeyPress}
           style={{
-            width: "300px", // Set width to your desired value
-            borderRadius: "8px",
-            padding: "8px",
-            textAlign: "center",
-            justifyContent: "center",
-            border: "3px solid black",
+            background:"transparent",
+            flex: 1,
+            
+            outline: "none",
+            padding: "24px 20px",
+            color:"black",
+            fontSize: "18px",
+            textSizeAdjust: "40px",
+            
 
             // Add any other desired inline styles
           }}
         />
+          <span style={{
+             border: "0",
+             borderRadius: "50%",
+             background:"transparent",
+             fontSize: "large",
+             color: "rgb(1, 191, 113)",
+             cursor: "pointer",
+             marginLeft: "10px",
+            
+          }}><i class="fas fa-search"></i></span>
+        </div>
+       
         <button
           className="search-button mt-3 md:mb-3"
           onClick={handleButtonClick}
-          style={{
+              /* style={{
             backgroundColor: "green", // Set background color to green
             color: "white", // Set text color to white
             borderRadius: "8px",
@@ -76,6 +104,21 @@ const Blogs = () => {
             fontSize: "19px",
             width: "100px", // Set width to your desired value
             marginLeft: "8px", // Add any other desired inline styles
+          }}*/
+          style={{
+            borderRadius: "50px",
+            background: "rgb(1, 191, 113)",
+            whiteSpace: "nowrap",
+            padding: "10px 22px",
+            color: "rgb(255, 255, 255)",
+            fontSize: "16px",
+            outline: "none",
+            border: "1.5px solid black",
+            marginLeft: "10px",
+            cursor: "pointer",
+           
+            textDecoration: "none",
+            hover:"blue",
           }}
         >
           Clear
