@@ -32,9 +32,9 @@ const Footer = () => {
               </Link>
               <FooterLinkTitleHr className='hr' />
               <FooterLink to="/contact">Contact</FooterLink>
-              <FooterLink to="/">Support</FooterLink>
-              <FooterLink to="/">Destinations</FooterLink>
-              <FooterLink to="/">Sponsorships</FooterLink>
+              <FooterLink to="/develop">Support</FooterLink>
+              <FooterLink to="/develop">Destinations</FooterLink>
+              <FooterLink to="/develop">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
@@ -43,10 +43,10 @@ const Footer = () => {
                 <FooterLinkTitle style={{ marginBottom: '0' }}>Videos</FooterLinkTitle>
               </Link>
               <FooterLinkTitleHr className='hr' />
-              <FooterLink to="/">Submit Video</FooterLink>
-              <FooterLink to="/">Ambassadors</FooterLink>
-              <FooterLink to="/">Agency</FooterLink>
-              <FooterLink to="/">Influencer</FooterLink>
+              <FooterLink to="/develop">Submit Video</FooterLink>
+              <FooterLink to="/develop">Ambassadors</FooterLink>
+              <FooterLink to="/develop">Agency</FooterLink>
+              <FooterLink to="/develop">Influencer</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
