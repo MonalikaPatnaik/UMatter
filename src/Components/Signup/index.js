@@ -17,6 +17,7 @@ import {
 } from "./SignupElements";
 import { useState } from "react";
 import SignUpImg from "../../images/SignUp.png";
+import Captcha from "./Captcha";
 // import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
 
@@ -25,6 +26,7 @@ const SignUp = () => {
   const [msg, setMsg] = useState("");
   const [passwordType, setPasswordType] = useState("password");
   const [data, setData] = useState({});
+  const [trackState, setTrackState] = useState(false);
   const handleclick = (e) => {
     e.preventDefault();
     if (passwordType === "text") {
@@ -435,7 +437,12 @@ const SignUp = () => {
                 ></i>
               )}
             </PasswordContainer>
-            <SignUpButton type="submit">Sign Up</SignUpButton>
+            <Captcha message={setTrackState} trackState={trackState}/>
+            <SignUpButton 
+              type="submit"
+              disabled={!trackState}
+              style={{cursor:`${trackState ? "pointer": "not-allowed"}`}}
+            >Sign Up</SignUpButton>
 			{invalid && showInvalid()}
           </SignUpForm>
         </SignUpContainer>
