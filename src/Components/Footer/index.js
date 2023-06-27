@@ -25,19 +25,19 @@ const Footer = () => {
                     <FooterLinkTitle>Contact Us</FooterLinkTitle>
                     <FooterLinkTitleHr className='hr' />
                        <FooterLink to="/contact">Contact</FooterLink>
-                       <FooterLink to="/">Support</FooterLink>
-                       <FooterLink to="/">Destinations</FooterLink>
-                       <FooterLink to="/">Sponsorships</FooterLink>
+                       <FooterLink to="/develop">Support</FooterLink>
+                       <FooterLink to="/develop">Destinations</FooterLink>
+                       <FooterLink to="/develop">Sponsorships</FooterLink>
                 </FooterLinkItems>
             </FooterLinksWrapper>
             <FooterLinksWrapper>
                 <FooterLinkItems className='videos'>
                     <FooterLinkTitle>Videos</FooterLinkTitle>
                     <FooterLinkTitleHr className='hr' />
-                       <FooterLink to="/">Submit Video</FooterLink>
-                       <FooterLink to="/">Ambassdors</FooterLink>
-                       <FooterLink to="/">Agency</FooterLink>
-                       <FooterLink to="/">Influencer</FooterLink>
+                       <FooterLink to="/develop">Submit Video</FooterLink>
+                       <FooterLink to="/develop">Ambassdors</FooterLink>
+                       <FooterLink to="/develop">Agency</FooterLink>
+                       <FooterLink to="/develop">Influencer</FooterLink>
                 </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>

@@ -13,6 +13,7 @@ import ContactPage from './pages/contact';
 import GetMail from './Components/Forgot_password/ForgotPassword';
 import Verify from './Components/Forgot_password/OTPVerfication';
 import Blog from './Components/BlogPage/Blog';
+import Develop from './pages/develop';
 
 // import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
@@ -28,6 +29,7 @@ function App() {
 				<Route path="/blogs" element={<BlogPage />} />
 				<Route path="/feedback" element={<FeedbackPage />} />
 				<Route path="/contact" element={<ContactPage />} />
+				<Route path="/develop" element={<Develop />} />
 				<Route 
 					path="/blogs/:id"
 					element={<Blog/>}
