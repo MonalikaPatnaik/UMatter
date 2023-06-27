@@ -5,6 +5,7 @@ import { Loader } from './Components/Loader/Loader';
 
 const Home = lazy(()=>import("./pages"))
 const  SigninPage = lazy(()=>import("./pages/signin"))
+const  DevelopPage = lazy(()=>import("./pages/develop"))
 const Error404 = lazy(()=>import("./pages/Error404"))
 const BlogPage = lazy(()=>import("./pages/blogs"))
 const FeedbackPage = lazy(()=>import("./pages/feedback"))
@@ -31,6 +32,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<Home />} />
 					<Route exact path="/signin" element={<SigninPage />} />
+					<Route exact path="/develop" element={<DevelopPage />} />
 					<Route path="/blogs" element={<BlogPage />} />
 					<Route path="/feedback" element={<FeedbackPage />} />
 					<Route path="/contact" element={<ContactPage />} />
