@@ -312,7 +312,7 @@ export const PasswordContainer = styled.div`
 `;
 
 export const SignUpButton = styled.button`
-  width: 7rem;
+  width: 9rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
