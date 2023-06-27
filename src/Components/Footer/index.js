@@ -22,9 +22,9 @@ const Footer = () => {
               <FooterLinkTitleHr className='hr' />
               <FooterLink to="/signin">How it Works</FooterLink>
               <FooterLink to="/signin">Testimonials</FooterLink>
-              <FooterLink to="/signin">Careers</FooterLink>
-              <FooterLink to="/signin">Investors</FooterLink>
-              <FooterLink to="/signin">Terms of Services</FooterLink>
+              <FooterLink to="/develop">Careers</FooterLink>
+              <FooterLink to="/develop">Investors</FooterLink>
+              <FooterLink to="/develop">Terms of Services</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems className='contact'>
               <Link to="/contact">
