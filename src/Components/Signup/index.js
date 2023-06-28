@@ -2,7 +2,7 @@
 import React from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdPassword } from "react-icons/md";
-
+import { BiSolidShow, BiSolidHide } from "react-icons/bi";
 import {
   Container,
   FormContainer,
@@ -336,7 +336,7 @@ const SignUp = () => {
               type="text"
               placeholder="Full Name"
             />
-            < FaUser className="absolute top-[17%] left-[50%] cursor-pointer" />
+            < FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer" />
 
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
@@ -344,7 +344,7 @@ const SignUp = () => {
               type="text"
               placeholder="Username"
             />
-            <FaUser className="absolute cursor-pointer top-[27%] left-[50%]" />
+            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%]" />
 
             <FormInput
               onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -353,7 +353,7 @@ const SignUp = () => {
               placeholder="Email"
               require
             />
-            <MdEmail className="cursor-pointer absolute top-[37%] left-[50%]" />
+            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%]" />
 
             <PhoneContainer>
               <FormInput
@@ -374,7 +374,7 @@ const SignUp = () => {
                 maxLength={10}
               ></FormInput>
             </PhoneContainer>
-            <FaPhoneAlt className="absolute cursor-pointer top-[48%] left-[50%]" />
+            <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%]" />
 
             <PasswordContainer>
               <FormInput
@@ -384,34 +384,12 @@ const SignUp = () => {
                 placeholder="Password"
               />
               {passwordType === "password" ? (
-                <i
-                  className="fa-solid fa-eye-slash"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
-                <i
-                  className="fa-solid fa-eye"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
-            <MdPassword className="absolute top-[59%] left-[50%]" />
+            <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
 
             <PasswordContainer>
               <FormInput
@@ -423,34 +401,12 @@ const SignUp = () => {
                 placeholder="Confirm Password"
               />
               {passwordType === "password" ? (
-                <i
-                  className="fa-solid fa-eye-slash"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
-                <i
-                  className="fa-solid fa-eye"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
-            <MdPassword className="absolute top-[69%] left-[50%]" />
+            <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
 
             <Captcha message={setTrackState} trackState={trackState} />
             <SignUpButton
