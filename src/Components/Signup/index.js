@@ -1,5 +1,8 @@
 /** @format */
 import React from "react";
+import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail, MdPassword } from "react-icons/md";
+
 import {
   Container,
   FormContainer,
@@ -316,13 +319,13 @@ const SignUp = () => {
     // 	</Container>
     // </>
     <Container>
-      <FormContainer>
+      <FormContainer className="flex">
         <LeftContainer>
           <LeftHeading>Welcome!</LeftHeading>
           <LeftPara>
             Sign up to be a part of the community, because UMatter.
           </LeftPara>
-          <Image src={SignUpImg} alt="Sign Up Graphic"/>
+          <Image src={SignUpImg} alt="Sign Up Graphic" />
         </LeftContainer>
         <SignUpContainer>
           <SignUpForm onSubmit={handleSubmit} action="#">
@@ -332,20 +335,26 @@ const SignUp = () => {
               id="FullNameInput"
               type="text"
               placeholder="Full Name"
-            ></FormInput>
+            />
+            < FaUser className="absolute top-[17%] left-[50%] cursor-pointer" />
+
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
               id="usernameInput"
               type="text"
               placeholder="Username"
-            ></FormInput>
+            />
+            <FaUser className="absolute cursor-pointer top-[27%] left-[50%]" />
+
             <FormInput
               onChange={(e) => setData({ ...data, email: e.target.value })}
               id="emailInput"
               type="email"
               placeholder="Email"
               require
-            ></FormInput>
+            />
+            <MdEmail className="cursor-pointer absolute top-[37%] left-[50%]" />
+
             <PhoneContainer>
               <FormInput
                 onChange={(e) =>
@@ -365,6 +374,8 @@ const SignUp = () => {
                 maxLength={10}
               ></FormInput>
             </PhoneContainer>
+            <FaPhoneAlt className="absolute cursor-pointer top-[48%] left-[50%]" />
+
             <PasswordContainer>
               <FormInput
                 onChange={(e) => setData({ ...data, password: e.target.value })}
@@ -400,6 +411,8 @@ const SignUp = () => {
                 ></i>
               )}
             </PasswordContainer>
+            <MdPassword className="absolute top-[59%] left-[50%]" />
+
             <PasswordContainer>
               <FormInput
                 onChange={(e) =>
@@ -437,13 +450,16 @@ const SignUp = () => {
                 ></i>
               )}
             </PasswordContainer>
-            <Captcha message={setTrackState} trackState={trackState}/>
-            <SignUpButton 
+            <MdPassword className="absolute top-[69%] left-[50%]" />
+
+            <Captcha message={setTrackState} trackState={trackState} />
+            <SignUpButton
               type="submit"
               disabled={!trackState}
-              style={{cursor:`${trackState ? "pointer": "not-allowed"}`}}
+              style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
+              className="mb-2 transition-all duration-300 ease-in-out"
             >Sign Up</SignUpButton>
-			{invalid && showInvalid()}
+            {invalid && showInvalid()}
           </SignUpForm>
         </SignUpContainer>
       </FormContainer>

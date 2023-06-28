@@ -7,7 +7,6 @@ const SignupPage = () => {
     <div>
       <SignUp />
       <Footer />
-
     </div>
   );
 };
