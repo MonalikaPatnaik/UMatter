@@ -310,6 +310,7 @@ export const ForgotPassword = styled.p`
   font-size: 0.8rem;
   line-height: 1rem;
   color: #1e1e1e;
+  cursor: pointer;
 `;
 
 export const PasswordContainer = styled.div`
