@@ -256,8 +256,8 @@ export const SignUph1 = styled.h1`
 
 export const FormInput = styled.input`
   width: 70%;
-  padding: 0.5rem;
-  border-radius: 0;
+  padding: 0.7rem;
+  border-radius: 5px;
   border: None;
   background: rgba(1, 191, 113, 0.3);
   font-family: "Poppins";
@@ -312,7 +312,7 @@ export const PasswordContainer = styled.div`
 `;
 
 export const SignUpButton = styled.button`
-  width: 7rem;
+  width: 9rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;

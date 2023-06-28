@@ -1,5 +1,8 @@
 /** @format */
 import React from "react";
+import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { MdEmail, MdPassword } from "react-icons/md";
+import { BiSolidShow, BiSolidHide } from "react-icons/bi";
 import {
   Container,
   FormContainer,
@@ -17,6 +20,7 @@ import {
 } from "./SignupElements";
 import { useState } from "react";
 import SignUpImg from "../../images/SignUp.png";
+import Captcha from "./Captcha";
 // import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
 
@@ -26,6 +30,7 @@ const SignUp = () => {
   const [passwordType, setPasswordType] = useState("password");
   const [confirmPasswordType, setconfirmPasswordType] = useState("confirmpassword");
   const [data, setData] = useState({});
+  const [trackState, setTrackState] = useState(false);
   const handleclick = (e) => {
     e.preventDefault();
     if (passwordType === "text") {
@@ -151,13 +156,13 @@ const SignUp = () => {
   return (
    
     <Container>
-      <FormContainer>
+      <FormContainer className="flex">
         <LeftContainer>
           <LeftHeading>Welcome!</LeftHeading>
           <LeftPara>
             Sign up to be a part of the community, because UMatter.
           </LeftPara>
-          <Image src={SignUpImg} alt="Sign Up Graphic"/>
+          <Image src={SignUpImg} alt="Sign Up Graphic" />
         </LeftContainer>
         <SignUpContainer>
           <SignUpForm onSubmit={handleSubmit} action="#">
@@ -167,20 +172,26 @@ const SignUp = () => {
               id="FullNameInput"
               type="text"
               placeholder="Full Name"
-            ></FormInput>
+            />
+            < FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer" />
+
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
               id="usernameInput"
               type="text"
               placeholder="Username"
-            ></FormInput>
+            />
+            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%]" />
+
             <FormInput
               onChange={(e) => setData({ ...data, email: e.target.value })}
               id="emailInput"
               type="email"
               placeholder="Email"
               require
-            ></FormInput>
+            />
+            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%]" />
+
             <PhoneContainer>
               <FormInput
                 onChange={(e) =>
@@ -200,6 +211,8 @@ const SignUp = () => {
                 maxLength={10}
               ></FormInput>
             </PhoneContainer>
+            <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%]" />
+
             <PasswordContainer>
               <FormInput
                 onChange={(e) => setData({ ...data, password: e.target.value })}
@@ -208,33 +221,13 @@ const SignUp = () => {
                 placeholder="Password"
               />
               {passwordType === "password" ? (
-                <i
-                  className="fa-solid fa-eye-slash"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
-                <i
-                  className="fa-solid fa-eye"
-                  id="eye"
-                  style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
-                  }}
-                  onClick={handleclick}
-                ></i>
+                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
+            <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
+
             <PasswordContainer>
               <FormInput
                 onChange={(e) =>
@@ -244,6 +237,7 @@ const SignUp = () => {
                 type={confirmPasswordType}
                 placeholder="Confirm Password"
               />
+
               {confirmPasswordType === "password" ? (
                 <i
                   className="fa-solid fa-eye-slash"
@@ -270,10 +264,24 @@ const SignUp = () => {
                   }}
                   onClick={Confirmhandleclick}
                 ></i>
+
+              {passwordType === "password" ? (
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              ) : (
+                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+
               )}
             </PasswordContainer>
-            <SignUpButton type="submit">Sign Up</SignUpButton>
-			{invalid && showInvalid()}
+            <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
+
+            <Captcha message={setTrackState} trackState={trackState} />
+            <SignUpButton
+              type="submit"
+              disabled={!trackState}
+              style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
+              className="mb-2 transition-all duration-300 ease-in-out"
+            >Sign Up</SignUpButton>
+            {invalid && showInvalid()}
           </SignUpForm>
         </SignUpContainer>
       </FormContainer>

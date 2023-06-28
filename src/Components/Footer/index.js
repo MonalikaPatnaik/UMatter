@@ -22,9 +22,9 @@ const Footer = () => {
               <FooterLinkTitleHr className='hr' />
               <FooterLink to="/signin">How it Works</FooterLink>
               <FooterLink to="/signin">Testimonials</FooterLink>
-              <FooterLink to="/signin">Careers</FooterLink>
-              <FooterLink to="/signin">Investors</FooterLink>
-              <FooterLink to="/signin">Terms of Services</FooterLink>
+              <FooterLink to="/develop">Careers</FooterLink>
+              <FooterLink to="/develop">Investors</FooterLink>
+              <FooterLink to="/develop">Terms of Services</FooterLink>
             </FooterLinkItems>
             <FooterLinkItems className='contact'>
               <Link to="/contact">
@@ -32,9 +32,9 @@ const Footer = () => {
               </Link>
               <FooterLinkTitleHr className='hr' />
               <FooterLink to="/contact">Contact</FooterLink>
-              <FooterLink to="/">Support</FooterLink>
-              <FooterLink to="/">Destinations</FooterLink>
-              <FooterLink to="/">Sponsorships</FooterLink>
+              <FooterLink to="/develop">Support</FooterLink>
+              <FooterLink to="/develop">Destinations</FooterLink>
+              <FooterLink to="/develop">Sponsorships</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
           <FooterLinksWrapper>
@@ -43,10 +43,10 @@ const Footer = () => {
                 <FooterLinkTitle style={{ marginBottom: '0' }}>Videos</FooterLinkTitle>
               </Link>
               <FooterLinkTitleHr className='hr' />
-              <FooterLink to="/">Submit Video</FooterLink>
-              <FooterLink to="/">Ambassadors</FooterLink>
-              <FooterLink to="/">Agency</FooterLink>
-              <FooterLink to="/">Influencer</FooterLink>
+              <FooterLink to="/develop">Submit Video</FooterLink>
+              <FooterLink to="/develop">Ambassadors</FooterLink>
+              <FooterLink to="/develop">Agency</FooterLink>
+              <FooterLink to="/develop">Influencer</FooterLink>
             </FooterLinkItems>
           </FooterLinksWrapper>
         </FooterLinksContainer>
