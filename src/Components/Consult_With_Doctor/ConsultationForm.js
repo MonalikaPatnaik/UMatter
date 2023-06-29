@@ -7,6 +7,7 @@ import Footer from '../Footer';
 const ConsultationForm = () =>{
     return(
         <>
+        
             <section class="appointment-section">
         <div class="container">
           <h2 class="section-heading">Make an Appointment</h2>
