@@ -4,7 +4,7 @@
 /node_modules
 /.pnp
 .pnp.js
-Express_js_Server/node_modules/
+server/node_modules/
 # testing
 /coverage
 
@@ -17,6 +17,7 @@ Express_js_Server/node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+server/.env
 
 npm-debug.log*
 yarn-debug.log*
