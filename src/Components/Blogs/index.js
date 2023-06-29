@@ -77,7 +77,7 @@ const Blogs = () => {
                       borderRadius:"25px",
                       background:"#fff",
                       outline:"none",
-                      border:"none",
+                      border:"1px solid rgb(1, 191, 113)",
                       fontSize:"18px",
                       paddingLeft:"20px"
                     }}                   
