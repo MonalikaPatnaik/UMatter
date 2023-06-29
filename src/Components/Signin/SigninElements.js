@@ -159,6 +159,10 @@ export const FormContainer = styled.div`
   min-height: 550px;
   margin: 3rem auto;
   display: flex;
+  @media only screen and (max-width:550px){
+    flex-direction: column;
+    margin: 0;
+}
 `;
 
 export const SignInContainer = styled.div`
@@ -167,6 +171,10 @@ export const SignInContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  @media only screen and (max-width:550px){
+    width: 100%;
+    margin : 3rem auto;
+}
 `;
 
 export const RightContainer = styled.div`
@@ -177,6 +185,10 @@ export const RightContainer = styled.div`
   align-items: center;
   background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
   min-height: 100%;
+
+  @media only screen and (max-width:550px){
+    width: 100%;
+}
 `;
 
 export const SignInForm = styled.form`
