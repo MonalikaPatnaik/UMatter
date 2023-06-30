@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled,{css} from "styled-components";
 import { motion } from "framer-motion";
+// $bgcolor=var(--bg-clr);
 
 export const TestimonialsContainer = motion(styled.div`
-  height: 800px;
   padding: 30px;
   padding-bottom: 150px;
   display: flex;
@@ -25,18 +25,30 @@ export const TestimonialsContainer = motion(styled.div`
 `);
 
 export const TestimonialsWrapper = styled.div`
-  max-width: 100%;
+  position: relative;
+  max-width: 90%;
   margin: 0 auto;
-  display: grid;
-  align-items: center;
   grid-gap: 16px;
-  padding: 0 30px;
+  padding: 0 50px;
   overflow: hidden;
+  border-radius:50px;
+  background-color: ${({ theme }) => theme.defaultColor}; /* Set a default background color */
 
+  /* Set the background color based on the body class */
+  body.light-theme & {
+    background-color: #ffd60a; /* Set background color to yellow if body has 'light-theme' class */
+  }
+
+  body.dark-theme & {
+    background-color: #030640cc; /* Set background color to green if body has 'dark-theme' class */
+  }
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
   }
   @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+  @media screen and (max-width: 767px) {
     grid-template-columns: 1fr;
     padding: 0 20px;
   }
@@ -49,7 +61,6 @@ export const TestimonialsCard = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   border-radius: 10px;
-  max-height: 380px;
   margin-right: 20px;
   padding: 30px;
   box-shadow: 0 1px 3px gray;

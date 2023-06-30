@@ -194,6 +194,10 @@ export const FormContainer = styled.div`
   min-height: 550px;
   margin: 3rem auto;
   display: flex;
+   @media only screen and (max-width:550px){
+          flex-direction: column;
+          margin: 0;
+      }
 `;
 
 export const SignUpContainer = styled.div`
@@ -202,6 +206,11 @@ export const SignUpContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100%;
+
+   @media only screen and (max-width:550px){
+          padding: 15px 5px;
+          width: 100%;
+      }
 `;
 
 export const LeftContainer = styled.div`
@@ -212,6 +221,10 @@ export const LeftContainer = styled.div`
   align-items: center;
   background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
   min-height: 100%;
+
+  @media only screen and (max-width:550px){
+    width: 100%;
+}
 `;
 
 export const LeftHeading = styled.h1`
@@ -256,8 +269,8 @@ export const SignUph1 = styled.h1`
 
 export const FormInput = styled.input`
   width: 70%;
-  padding: 0.5rem;
-  border-radius: 0;
+  padding: 0.7rem;
+  border-radius: 5px;
   border: None;
   background: rgba(1, 191, 113, 0.3);
   font-family: "Poppins";
@@ -312,7 +325,7 @@ export const PasswordContainer = styled.div`
 `;
 
 export const SignUpButton = styled.button`
-  width: 7rem;
+  width: 9rem;
   font-family: "Poppins";
   font-style: normal;
   font-weight: 400;
