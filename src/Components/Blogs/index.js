@@ -23,6 +23,14 @@ import {
 
 const Blogs = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [isHover, setIsHover] = useState(false);
+
+  const handleMouseEnter = () => {
+     setIsHover(true);
+  };
+  const handleMouseLeave = () => {
+     setIsHover(false);
+  };
 
   const navigate = useNavigate();
   const handleSearch = (e) => {
@@ -69,6 +77,8 @@ const Blogs = () => {
                      value={searchTerm}
                      onChange={handleSearch}
                      onKeyPress={handleKeyPress}
+                     onClick={handleMouseEnter}
+                     onMouseOut={handleMouseLeave}
                      
                     style={{
                       position:"absolute",
@@ -76,8 +86,8 @@ const Blogs = () => {
                       width:"100%",
                       borderRadius:"25px",
                       background:"#fff",
-                      outline:"none",
-                      border:"1px solid rgb(1, 191, 113)",
+                      outline: isHover ? '1.5px solid rgb(1, 191, 113)' : 'none',
+                      border:"none",
                       fontSize:"18px",
                       paddingLeft:"20px"
                     }}                   
