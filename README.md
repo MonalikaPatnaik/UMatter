@@ -9,7 +9,7 @@
 
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
-UMatter is an one and all platform to help people quitting bad habits by providing them personalized sessions and one to one consultations with professionals.
+UMatter is a one and all platform to help people quit bad habits by providing them with personalized sessions and one-to-one consultations with professionals.
 
 <div align="left">
 <img src="https://forthebadge.com/images/badges/built-with-love.svg" />
@@ -54,9 +54,9 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
 
 - About Us: Learn more about UMatter and our mission. Discover how our platform can provide you with the necessary tools and support to break free from bad habits.
 
-- Services Page: This page provides you with the list of serives that are provided by UMatter such as consulting a doctor, attending a working and connecting with friends.
+- Services Page: This page provides you with the list of services that are provided by UMatter such as consulting a doctor, attending a working, and connecting with friends.
 
-- Blogs Page: Provides you with useful blog posts on different matters and areas of concern in our life.
+- Blogs Page: Provides you with useful blog posts on different matters and areas of concern in your life.
 
  
 **Components of Website**
@@ -93,10 +93,10 @@ Welcome to our Blog section! Here, you'll find a collection of informative and e
   
 ## 🔖Steps to Contribute ✅
  
-- Contribution is the best way to support and get involved in community!
+- Contribution is the best way to support and get involved in the community!
  - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
    <br>
-### Get started on local machine
+### Get started on the local machine
 ### Step 1: 
 Fork the repository.
 ### Step 2: 
@@ -105,7 +105,7 @@ Clone the forked repository on your local machine.
 git clone https://github.com/<your_github_username>/UMatter.git
 ```
 ### Step 3:
-Open CommandPrompt/Terminal.
+Open command prompt/Terminal.
 ### Step 4:
 In the terminal run:
 ```
@@ -128,7 +128,7 @@ npm start
 
 This will open up the website on localhost. You can begin working. The changes will be reflected here.
 
-## If you have any idea or question 🤷
+## If you have any ideas or questions 🤷
 
 - [Raise an issue](https://github.com/MonalikaPatnaik/UMatter/issues)
 - [Feature request](https://github.com/MonalikaPatnaik/UMatter/issues)
@@ -138,7 +138,7 @@ This will open up the website on localhost. You can begin working. The changes w
 
 > - Do not edit/delete someone else's script in this repository. You can only insert new files/folders into this repository.
 
-  > - Give a meaningful name to whatever file or folder you are adding, changing etc. 
+  > - Give a meaningful name to whatever file or folder you are adding, changing, etc. 
  
 
 
@@ -148,24 +148,24 @@ This will open up the website on localhost. You can begin working. The changes w
 2. Participants/contributors have to **comment** on issues they would like to work on, and mentors or the PA will assign you.
 3. Issues will be assigned on a **first-come, first-serve basis.**
 4. Participants/contributors can also **open their issues** using issue_template,
-but it needs to be verified and labelled by a mentor or PA. Please discuss with the team once before opening your issues. We respect all your contributions, whether 
+but it needs to be verified and labeled by a mentor or PA. Please discuss this with the team once before opening your issues. We respect all your contributions, whether 
 it is an Issue or a Pull Request.
 6. When you raise an issue, make sure you get it assigned to you before you start working on that project.
 7. Each participant/contributor will be **assigned 1 issue (max)** at a time to work.
 8. Participants are expected to follow **project guidelines** and **coding style** . **Structured code** is one of our top priorities.
-9. Try to **explain your approach** to solve any issue in the comments. This will increase the chances of you being assigned.
+9. Try to **explain your approach** to solving any issue in the comments. This will increase the chances of you being assigned.
 10. Don't create issues that are **already listed**.
 11. Please don't pick up an issue already assigned to someone else. Work on the issues after it gets **assigned to you**.
 12. Make sure you **discuss issues** before working on the issue.
 13. Pull requests will be merged after being **reviewed** by a mentor or PA.
 14. It might take **a day or two** to review your pull request. Please have patience and be nice.
 15. Always create a pull request from a **branch** other than `main`.
-16. Participants/contributors have to complete issues before the decided Deadline. If you fail to make a PR within the deadline, then the issue will be assigned to 
+16. Participants/contributors have to complete issues before they decided Deadline. If you fail to make a PR within the deadline, then the issue will be assigned to 
 another person in the queue.
 17. While making PRs, don't forget to **add a description** of your work.
-18. Include issue number (Fixes: issue number) in your commit message while creating a pull request.
+18. Include the issue number (Fixes: issue number) in your commit message while creating a pull request.
 19. Make sure your solution to any issue is better in terms of performance and other parameters in comparison to the previous work.
-20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right!.
+20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right?
 
 
 ## 😎 Project Maintainers
