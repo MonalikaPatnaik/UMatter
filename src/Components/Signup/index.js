@@ -28,7 +28,7 @@ const SignUp = () => {
   const [invalid, setInvalid] = useState(false);
   const [msg, setMsg] = useState("");
   const [passwordType, setPasswordType] = useState("password");
-  const [passwordConfirmType, setConfirmPasswordType] = useState("confirmpassword");
+  const [passwordConfirmType, setConfirmPasswordType] = useState("password");
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
   const handleclick = (e) => {
