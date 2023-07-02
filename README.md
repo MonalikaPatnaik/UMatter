@@ -1,7 +1,9 @@
 # UMatter
 
-<div align = "center">
+<div align = "left">
+ <div align ="center">
  <img src="./src/images/mental-health.png" />
+ </div>
  <div>
 
   
