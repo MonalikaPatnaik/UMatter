@@ -28,6 +28,7 @@ const SignUp = () => {
   const [invalid, setInvalid] = useState(false);
   const [msg, setMsg] = useState("");
   const [passwordType, setPasswordType] = useState("password");
+  const [passwordConfirmType, setConfirmPasswordType] = useState("confirmpassword");
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
   const handleclick = (e) => {
@@ -36,6 +37,14 @@ const SignUp = () => {
       setPasswordType("password");
     } else {
       setPasswordType("text");
+    }
+  };
+  const Confirmhandleclick = (e) => {
+    e.preventDefault();
+    if (passwordConfirmType === "text") {
+      setConfirmPasswordType("password");
+    } else {
+      setConfirmPasswordType("text");
     }
   };
   const validateEmail = (email) => {
@@ -397,13 +406,13 @@ const SignUp = () => {
                   setData({ ...data, confirmpassword: e.target.value })
                 }
                 id="PasswordInput"
-                type={passwordType}
+                type={passwordConfirmType}
                 placeholder="Confirm Password"
               />
-              {passwordType === "password" ? (
-                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              {passwordConfirmType === "password" ? (
+                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
-                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+                <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
