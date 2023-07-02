@@ -1,0 +1,86 @@
+/* ConsultationForm */
+.appointment-section {
+  padding: 50px 0;
+  /* background-color: #f9f9f9; */
+ 
+}
+
+.appointment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: linear-gradient(-2deg, black, rgb(1, 147, 86), rgb(10, 201, 122));
+  padding: 30px;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-heading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2.3rem;
+  line-height: 4rem;
+  margin-bottom: 1rem;
+  color: #01bf71;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+input[type="time"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  transition: border-color 0.3s ease;
+  
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
+textarea:focus {
+  border-color: #e1f562;
+}
+
+textarea {
+  resize: vertical;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  background-color: #ff9f00;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e64a19;
+}
+
