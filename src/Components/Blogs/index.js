@@ -47,28 +47,65 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
 
-      <div className="search-container flex flex-col md:flex-row items-center">
-        <input
-          type="text"
-          placeholder="Search blogs..."
-          value={searchTerm}
-          onChange={handleSearch}
-          onKeyPress={handleKeyPress}
-          style={{
-            width: "300px", // Set width to your desired value
-            borderRadius: "8px",
-            padding: "8px",
-            textAlign: "center",
-            justifyContent: "center",
-            border: "3px solid black",
+        <div className="w-full flex flex-col md:flex-row items-center justify-content-center">
 
-            // Add any other desired inline styles
-          }}
-        />
-        <button
+            <div style={{
+              maxWidth:"400px",
+              width:"100%",
+             
+            }}>
+                  <div style={{
+                    position:"relative",
+                    height:"50px",
+                    maxWidth:"380px",
+                    background:"red",
+                    margin:"auto",
+                    boxShadow:"0 5px 10px rgba(0,0,0,0.25)",
+                    borderRadius:"25px"
+                  }}>
+                    <input 
+                     type="text"
+                     placeholder="Search blogs..."
+                     value={searchTerm}
+                     onChange={handleSearch}
+                     onKeyPress={handleKeyPress}
+                     
+                    style={{
+                      position:"absolute",
+                      height:"100%",
+                      width:"100%",
+                      borderRadius:"25px",
+                      background:"#fff",
+                      outline:"none",
+                      border:"none",
+                      fontSize:"18px",
+                      paddingLeft:"20px"
+                    }}                   
+                    />
+                    <label style={{
+                      position:"absolute",
+                      right:"0",
+                      top:"0",
+                      width:"50px",
+                      background:"rgb(1, 191, 113)",
+                      height:"100%",
+                      textAlign:"center",
+                      lineHeight:"50px",
+                      color:"#fff",
+                      fontSize:"20px",
+                      borderRadius:"0 25px 25px 0",
+
+                    }}>
+                    <i className="fas fa-search"></i>
+                    </label>
+                  </div>
+
+              </div>
+
+              <button
           className="search-button mt-3 md:mb-3"
           onClick={handleButtonClick}
-          style={{
+              /* style={{
             backgroundColor: "green", // Set background color to green
             color: "white", // Set text color to white
             borderRadius: "8px",
@@ -76,11 +113,33 @@ const Blogs = () => {
             fontSize: "19px",
             width: "100px", // Set width to your desired value
             marginLeft: "8px", // Add any other desired inline styles
+          }}*/
+          style={{
+            borderRadius: "50px",
+            background: "rgb(1, 191, 113)",
+            whiteSpace: "nowrap",
+            padding: "10px 22px",
+            color: "rgb(255, 255, 255)",
+            fontSize: "16px",
+            outline: "none",
+            border: "1.5px solid black",
+            marginLeft: "10px",
+            cursor: "pointer",
+           
+            textDecoration: "none",
+            hover:"blue",
           }}
         >
           Clear
-        </button>
-      </div>
+             </button>
+
+        </div>
+      
+    
+       
+    
+
+
       <div style={{ height: "50px" }}></div>
       {/* <div style={{ height: "50px" }}></div> */}
       <BlogsWrapper>
