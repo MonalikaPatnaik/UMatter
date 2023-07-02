@@ -393,9 +393,9 @@ const SignUp = () => {
                 placeholder="Password"
               />
               {passwordType === "password" ? (
-                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              ) : (
                 <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              ) : (
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
@@ -410,9 +410,9 @@ const SignUp = () => {
                 placeholder="Confirm Password"
               />
               {passwordConfirmType === "password" ? (
-                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              ) : (
                 <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              ) : (
+                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
