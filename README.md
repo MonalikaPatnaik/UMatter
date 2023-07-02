@@ -1,6 +1,6 @@
 # UMatter
 
-<div align = "left">
+<div align = "center">
  <img src="./src/images/mental-health.png" />
  <div>
 
@@ -166,47 +166,6 @@ another person in the queue.
 18. Include the issue number (Fixes: issue number) in your commit message while creating a pull request.
 19. Make sure your solution to any issue is better in terms of performance and other parameters in comparison to the previous work.
 20. We all are here to learn. You are allowed to make mistakes. That's how you learn, right?
-
-
-## 😎 Project Maintainers
-
-<table>
-  <tr>
-<td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td>
-
-
-<td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td>
- 
-<td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/Mansi168">Mansi</a></b></sub></td>
-   
- </tr>
-</table>
-
-## 💯 Mentors
-
-<table>
-  <tr>
-
-```
-Mentors here 🚧
-```
-<!-- Just Insert here the mentors  👇-->
-
-<!-- <td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/c642c19f-532e-4d1a-8419-774627f46e8b" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/MonalikaPatnaik">Monalika Patnaik</a></b></sub></td> -->
-
-
-<!-- <td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/585aa3d1-e7e2-4508-a04b-76b36838d97f" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/i-am-SnehaChauhan">Sneha Chauhan</a></b></sub></td> -->
- 
-<!-- <td align="center">
-<img src="https://github.com/MonalikaPatnaik/UMatter/assets/94298791/1b9915c2-bc67-4918-83e5-498186ed719a" width="100px;" height="140px;" alt=""/><br /><sub><b><a href="https://github.com/muditchoudhary">Mansi</a></b></sub></td> -->
-   
- </tr>
-</table>
 
 ## License 🪪
 
