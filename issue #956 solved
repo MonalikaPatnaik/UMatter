@@ -1,0 +1,95 @@
+//Added FAQ section in the navbar
+//html code
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <nav>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">FAQ</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+
+  <div class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <ul id="faq-list"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+//CSS code
+
+nav {
+  background-color: #333;
+  padding: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 10px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.faq-section {
+  margin-top: 20px;
+}
+
+.faq-section h2 {
+  color: #333;
+}
+
+.faq-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faq-section li {
+  margin-bottom: 10px;
+}
+
+//JavaScript code
+document.addEventListener("DOMContentLoaded", function() {
+  const faqList = document.getElementById("faq-list");
+
+  // Array of FAQ questions and answers
+  const faqData = [
+    {
+      question: "Question 1",
+      answer: "Answer 1"
+    },
+    {
+      question: "Question 2",
+      answer: "Answer 2"
+    },
+    {
+      question: "Question 3",
+      answer: "Answer 3"
+    }
+    // Add more FAQ items as needed
+  ];
+
+  // Populate the FAQ list
+  faqData.forEach(function(item) {
+    const faqItem = document.createElement("li");
+    faqItem.innerHTML = `<strong>${item.question}</strong><br>${item.answer}`;
+    faqList.appendChild(faqItem);
+  });
+});
