@@ -75,13 +75,13 @@ export const NavLogo = styled(LinkR)`
 	&:hover {
 		mask-image: linear-gradient(
 			-75deg,
-			rgba(0, 0, 0, 0.6) 30%,
+			rgba(0, 128, 0, 0.6) 30%,
 			#000 50%,
-			rgba(0, 0, 0, 0.6) 70%
+			rgba(0, 128, 0, 0.6) 70%
 		);
 		mask-size: 200%;
 		animation: shine 3s infinite;
-		color: #00ffca;
+		color: blue;
 	}
 
 	@keyframes shine {
