@@ -81,7 +81,7 @@ export const NavLogo = styled(LinkR)`
 		);
 		mask-size: 200%;
 		animation: shine 3s infinite;
-		color: blue;
+		color: darkgreen;
 	}
 
 	@keyframes shine {
