@@ -29,6 +29,7 @@
   margin-bottom: 10px;
  
 }
+
 hr{
   border:2px solid white;
   opacity:1;
@@ -47,7 +48,22 @@ hr{
   
 }
 
-
+.form-group input.inputError
+{
+  border: 2px solid #ee334b;
+}
+.form-group input.successError
+{
+  border: 2px solid rgb(37, 218, 37);
+}
+.form-group textarea.inputError
+{
+  border: 2px solid #ee334b;
+}
+.form-group textarea.successError
+{
+  border: 2px solid rgb(37, 218, 37);
+}
 button {
   
   width: 100%;
