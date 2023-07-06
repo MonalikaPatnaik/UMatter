@@ -149,7 +149,8 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
                 </BtnWrap>
               </TextWrapper>
             </Column1>
-            <Column2>
+            <Column2 style={{overflow:'hidden'}}>
+            
             <motion.div
           variants={cardTwoVariants}
           initial="hidden"
@@ -157,6 +158,7 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
           whileHover={{
             scale: 1.1,
             textShadow: '0px 0px 8px rgb(255,255,255)',
+            
             
             transition: { duration: 0.6 },
           }}
