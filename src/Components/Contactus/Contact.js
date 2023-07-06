@@ -40,6 +40,13 @@ const Contact = () => {
             mail,
             message,
           };
+
+      
+          setsuccess("Contact Request Sent Successfully!!");
+          seterror('');
+          setName('');
+          setMail('');
+          setMessage('');
       
           await fetch('http://localhost:3000/mail', {
             method: "POST",
@@ -49,11 +56,6 @@ const Contact = () => {
             body: JSON.stringify(mailData)
           })
           
-          setsuccess("Contact Request Sent Successfully!!");
-          seterror('');
-          setName('');
-          setMail('');
-          setMessage('');
          // alert("Contact Request Sent Successfully")
    
     }
