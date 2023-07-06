@@ -26,10 +26,10 @@ const Blogs = () => {
   const [isHover, setIsHover] = useState(false);
 
   const handleMouseEnter = () => {
-     setIsHover(true);
+    setIsHover(true);
   };
   const handleMouseLeave = () => {
-     setIsHover(false);
+    setIsHover(false);
   };
 
   const navigate = useNavigate();
@@ -55,67 +55,68 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
 
-        <div className="w-full flex flex-col md:flex-row items-center justify-content-center">
+      <div className="w-full flex flex-col md:flex-row items-center justify-content-center">
+        <div
+          style={{
+            maxWidth: "400px",
+            width: "100%",
+          }}
+        >
+          <div
+            style={{
+              position: "relative",
+              height: "50px",
+              maxWidth: "380px",
+              background: "red",
+              margin: "auto",
+              boxShadow: "0 5px 10px rgba(0,0,0,0.25)",
+              borderRadius: "25px",
+            }}
+          >
+            <input
+              type="text"
+              placeholder="Search blogs..."
+              value={searchTerm}
+              onChange={handleSearch}
+              onKeyPress={handleKeyPress}
+              onClick={handleMouseEnter}
+              onMouseOut={handleMouseLeave}
+              style={{
+                position: "absolute",
+                height: "100%",
+                width: "100%",
+                borderRadius: "25px",
+                background: "#fff",
+                outline: isHover ? "2px solid rgb(1, 191, 113)" : "none",
+                border: "none",
+                fontSize: "18px",
+                paddingLeft: "20px",
+              }}
+            />
+            <label
+              style={{
+                position: "absolute",
+                right: "0",
+                top: "0",
+                width: "50px",
+                background: "rgb(1, 191, 113)",
+                height: "100%",
+                textAlign: "center",
+                lineHeight: "50px",
+                color: "#fff",
+                fontSize: "20px",
+                borderRadius: "0 25px 25px 0",
+              }}
+            >
+              <i className="fas fa-search"></i>
+            </label>
+          </div>
+        </div>
 
-            <div style={{
-              maxWidth:"400px",
-              width:"100%",
-             
-            }}>
-                  <div style={{
-                    position:"relative",
-                    height:"50px",
-                    maxWidth:"380px",
-                    background:"red",
-                    margin:"auto",
-                    boxShadow:"0 5px 10px rgba(0,0,0,0.25)",
-                    borderRadius:"25px"
-                  }}>
-                    <input 
-                     type="text"
-                     placeholder="Search blogs..."
-                     value={searchTerm}
-                     onChange={handleSearch}
-                     onKeyPress={handleKeyPress}
-                     onClick={handleMouseEnter}
-                     onMouseOut={handleMouseLeave}
-                     
-                    style={{
-                      position:"absolute",
-                      height:"100%",
-                      width:"100%",
-                      borderRadius:"25px",
-                      background:"#fff",
-                      outline: isHover ? '2px solid rgb(1, 191, 113)' : 'none',
-                      border:"none",
-                      fontSize:"18px",
-                      paddingLeft:"20px"
-                    }}                   
-                    />
-                    <label style={{
-                      position:"absolute",
-                      right:"0",
-                      top:"0",
-                      width:"50px",
-                      background:"rgb(1, 191, 113)",
-                      height:"100%",
-                      textAlign:"center",
-                      lineHeight:"50px",
-                      color:"#fff",
-                      fontSize:"20px",
-                      borderRadius:"0 25px 25px 0",
-
-                    }}>
-                    <i className="fas fa-search"></i>
-                    </label>
-                  </div>
-
-              </div>
-
-              <button
+        <button
           className="search-button mt-3 md:mb-3"
           onClick={handleButtonClick}
-              /* style={{
+          /* style={{
             backgroundColor: "green", // Set background color to green
             color: "white", // Set text color to white
             borderRadius: "8px",
@@ -125,30 +126,25 @@ const Blogs = () => {
             marginLeft: "8px", // Add any other desired inline styles
           }}*/
           style={{
-            borderRadius: "50px",
+            borderRadius: "30px",
             background: "rgb(1, 191, 113)",
             whiteSpace: "nowrap",
-            padding: "10px 22px",
+            padding: "15px 23px",
             color: "rgb(255, 255, 255)",
             fontSize: "16px",
             outline: "none",
             border: "1.5px solid black",
-            marginLeft: "10px",
+            marginLeft: "7px",
+            marginTop: "7px",
             cursor: "pointer",
-           
+ 
             textDecoration: "none",
-            hover:"blue",
+            hover: "blue",
           }}
         >
           Clear
-             </button>
-
-        </div>
-      
-    
-       
-    
-
+        </button>
+      </div>
 
       <div style={{ height: "50px" }}></div>
       {/* <div style={{ height: "50px" }}></div> */}
@@ -253,13 +249,14 @@ const blogsData = [
     title: "How does the Medical ChatBot works?",
     content:
       "So, a chatbot is a software that stimulates or makes a human-like conversational environment. Let me tell you that everyone in their life has interacted with chatbots whether one knows or not. As an example let us say you are doing your work on a computer some research on it, and a window pops up that says if you need help. Or while you are going to a good restaurant and ask your google assistant or Siri about which hotel will suit you. So these are scenarios in which you are having an encounter with a chatbot.",
-    hyperlink:"https://www.senseforth.ai/conversational-ai/medical-chatbots/",
+    hyperlink: "https://www.senseforth.ai/conversational-ai/medical-chatbots/",
   },
   {
     icon: Icon9,
     title: "How to quit smoking according to Ayurveda?",
     content:
       "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
-    hyperlink:"https://www.hindustantimes.com/lifestyle/health/jal-neti-to-ajwain-ayurveda-tips-to-help-you-quit-smoking-naturally-101649309468261.html",
+    hyperlink:
+      "https://www.hindustantimes.com/lifestyle/health/jal-neti-to-ajwain-ayurveda-tips-to-help-you-quit-smoking-naturally-101649309468261.html",
   },
 ];
