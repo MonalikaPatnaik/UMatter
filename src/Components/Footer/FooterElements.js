@@ -1,6 +1,5 @@
-import styled from 'styled-components';
-import { Link } from 'react-router-dom';
-
+import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 // Footer container
 export const FooterContainer = styled.footer`
@@ -8,7 +7,6 @@ export const FooterContainer = styled.footer`
   padding-top: 3rem;
   padding-bottom: 3rem;
   z-index: 99;
- 
 `;
 
 // Footer wrap
@@ -24,19 +22,10 @@ export const FooterWrap = styled.div`
 // Footer links container
 export const FooterLinksContainer = styled.div`
   width: 100%;
-  display: grid;
-
-  @media (min-width: 320px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 786px) {
-    gap: 2rem;
-  }
-
-  @media (min-width: 786px) {
-    grid-template-columns: 1fr 0.5fr;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 `;
 
 // Footer links wrapper
@@ -44,11 +33,15 @@ export const FooterLinksWrapper = styled.div`
   @media (max-width: 786px) {
     display: grid;
     gap: 2rem;
+    grid-template-columns: 1fr;
   }
+  width: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
 
   @media (min-width: 786px) {
-    &:nth-child(1) {
-      display: flex;
+    &:nth-child(n) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       justify-content: space-around;
     }
     &:nth-child(2) {
@@ -61,19 +54,12 @@ export const FooterLinksWrapper = styled.div`
   }
 `;
 
-
 // Footer link items
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   color: #fff;
-  &.videos {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start; 
-    margin-top: -2.8rem;
-  }
 
   &.socials {
     display: flex;
@@ -95,10 +81,7 @@ export const FooterLinkItems = styled.div`
     align-items: flex-start;
     text-align: left;
   }
-  
-`
-  ;
-
+`;
 
 // Footer link title
 export const FooterLinkTitle = styled.h1`
@@ -135,8 +118,7 @@ export const FooterLinkTitleHr = styled.hr`
   margin-top: 5px;
   width: 52%;
   color: #101522;
-   
-`
+`;
 
 export const FooterLink = styled(Link)`
   /* Your styles for FooterLink */
@@ -156,7 +138,8 @@ export const FooterLink = styled(Link)`
     text-align: center;
     border-radius: 22px;
     padding: 7px;
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1), background-color 0.3s ease-out;
+    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+      background-color 0.3s ease-out;
 
     &:hover {
       transform: translate(0, -10px);
@@ -215,7 +198,12 @@ export const SocialLogo = styled(Link)`
   font-weight: bold;
 
   &:hover {
-    mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
+    mask-image: linear-gradient(
+      -75deg,
+      rgba(0, 0, 0, 0.6) 30%,
+      #000 50%,
+      rgba(0, 0, 0, 0.6) 70%
+    );
     mask-size: 200%;
     animation: shine 2s infinite;
     color: lightcyan;
@@ -225,13 +213,12 @@ export const SocialLogo = styled(Link)`
     from {
       mask-position: 150%;
     }
-  
+
     to {
       mask-position: -50%;
     }
   }
 `;
-
 
 // Website rights
 export const WebsiteRights = styled.small`
