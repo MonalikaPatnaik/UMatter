@@ -18,9 +18,14 @@ import { Link } from 'react-router-dom';
 
 const Services = () => {
   const [showConsultWithDoctor, setShowConsultWithDoctor] = useState(false);
+  const [showworkshops, setShowworkshops] = useState(false);
 
   const handleConsultWithDoctorClick = () => {
     setShowConsultWithDoctor(true);
+  };
+
+  const handleworkshops = () => {
+    setShowworkshops(true);
   };
 
   return (
@@ -44,6 +49,7 @@ const Services = () => {
         </motion.div>
 
         <motion.div variants={cardTwoVariants} initial="hidden" animate="visible">
+        <Link to="/workshops" target="_blank"><div onClick={handleworkshops}></div>
           <ServicesCard>
             <ServicesIcon src={Services_Data[1].icon} />
             <ServicesH2>
@@ -51,6 +57,7 @@ const Services = () => {
             </ServicesH2>
             <ServicesP>{Services_Data[1].description}</ServicesP>
           </ServicesCard>
+          </Link>
         </motion.div>
 
         <motion.div variants={cardThreeVariants} initial="hidden" animate="visible">
