@@ -8,8 +8,6 @@
 // import { cardTwoVariants } from '../Services/CardAnimation';
 // const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2 }) => {
 
-
-
 //   const el = useRef(null);
 
 //   useEffect(() => {
@@ -26,10 +24,8 @@
 //     };
 //   }, [headline]);
 
-
 //   return (
 //     <>
-
 
 //       <AboutContainer lightBg={lightBg} id={id} >
 
@@ -68,15 +64,15 @@
 //           whileHover={{
 //             scale: 1.1,
 //             textShadow: '0px 0px 8px rgb(255,255,255)',
-            
+
 //             transition: { duration: 0.6 },
 //           }}
 //         >
 
-//             <ImgWrap 
+//             <ImgWrap
 //   whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
 //   transition={{ duration: .9 }}
-  
+
 // >
 //                 <Img src={img} alt={alt} />
 //               </ImgWrap>
@@ -92,22 +88,48 @@
 
 // export default About
 
-
-import React, { useEffect, useRef } from 'react';
-import Typed from 'typed.js';
-import { Button } from '../ButtonElements';
-import { AboutContainer, AboutWrapper, AboutRow, Column1, Column2, TextWrapper, TopLine, Heading, SubTitle, BtnWrap, ImgWrap, Img } from './InfoElements'
+import React, { useEffect, useRef } from "react";
+import Typed from "typed.js";
+import { Button } from "../ButtonElements";
+import {
+  AboutContainer,
+  AboutWrapper,
+  AboutRow,
+  Column1,
+  Column2,
+  TextWrapper,
+  TopLine,
+  Heading,
+  SubTitle,
+  BtnWrap,
+  ImgWrap,
+  Img,
+} from "./InfoElements";
 import { Link } from "react-router-dom";
 import "../../App.css";
-import { motion } from 'framer-motion';
-import { cardTwoVariants } from '../Services/CardAnimation';
-const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLabel, lightText, darkText, img, alt, primary, dark, dark2 }) => {
-
+import { motion } from "framer-motion";
+import { cardTwoVariants } from "../Services/CardAnimation";
+const About = ({
+  lightBg,
+  id,
+  imgStart,
+  topLine,
+  headline,
+  description,
+  buttonLabel,
+  lightText,
+  darkText,
+  img,
+  alt,
+  primary,
+  dark,
+  dark2,
+}) => {
   const el = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, { 
-      strings: [headline], 
+    const typed = new Typed(el.current, {
+      strings: [headline],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
@@ -121,7 +143,7 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
 
   return (
     <>
-      <AboutContainer lightBg={lightBg} id={id} >
+      <AboutContainer lightBg={lightBg} id={id}>
         <AboutWrapper>
           <AboutRow imgStart={imgStart}>
             <Column1>
@@ -130,12 +152,17 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
                 transition={{ duration: 0.8 }}
               >
                 <TopLine>{topLine}</TopLine>
-                <Heading>   <span ref={el} style={{ display: 'inline-block' }} /></Heading>
-                <SubTitle>{description}</SubTitle>
+                <Heading>
+                  {" "}
+                  <span ref={el} style={{ display: "inline-block" }} />
+                </Heading>
+                <div className="flex flex-col items-center justify-center">
+                  <SubTitle>{description}</SubTitle>
+                </div>
                 <BtnWrap>
                   <Button
                     as={Link}
-                    to="/signin" 
+                    to="/signin"
                     smooth={true}
                     duration={500}
                     spy={true}
@@ -144,38 +171,38 @@ const About = ({ lightBg, id, imgStart, topLine, headline, description, buttonLa
                     primary={primary ? 1 : 0}
                     dark={dark ? 1 : 0}
                     dark2={dark2 ? 1 : 0}
-                    style={{ textDecoration: 'none' }}
-                  >{buttonLabel} </Button>
+                    style={{ textDecoration: "none" }}
+                  >
+                    {buttonLabel}{" "}
+                  </Button>
                 </BtnWrap>
               </TextWrapper>
             </Column1>
             <Column2>
-            <motion.div
-          variants={cardTwoVariants}
-          initial="hidden"
-          whileInView="visible"
-          whileHover={{
-            scale: 1.1,
-            textShadow: '0px 0px 8px rgb(255,255,255)',
-            
-            transition: { duration: 0.6 },
-          }}
-        >
-            <ImgWrap 
-  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-  transition={{ duration: .9 }} 
->
-                <Img src={img} alt={alt} />
-              </ImgWrap>
-  </motion.div>
+              <motion.div
+                variants={cardTwoVariants}
+                initial="hidden"
+                whileInView="visible"
+                whileHover={{
+                  scale: 1.1,
+                  textShadow: "0px 0px 8px rgb(255,255,255)",
+
+                  transition: { duration: 0.6 },
+                }}
+              >
+                <ImgWrap
+                  whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
+                  transition={{ duration: 0.9 }}
+                >
+                  <Img src={img} alt={alt} />
+                </ImgWrap>
+              </motion.div>
             </Column2>
           </AboutRow>
         </AboutWrapper>
-
       </AboutContainer>
     </>
-  )
-}
+  );
+};
 
-export default About
-
+export default About;
