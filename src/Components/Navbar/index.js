@@ -83,8 +83,7 @@ const Navbar = ({ toggle }) => {
             <LogoinnerContainer>
               <img src={faviconSrc}
                 alt="favicon"
-                width="46"
-                height="46"
+                className="object-cover h-14 aspect-auto"
               />
               <NavLogo to="/">UMatter</NavLogo>
             </LogoinnerContainer>
