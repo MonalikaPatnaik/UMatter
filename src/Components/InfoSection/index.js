@@ -163,9 +163,9 @@ const About = ({
                   <Button
                     as={Link}
                     to="/signin"
-                    smooth={true}
+                    smooth={1}
                     duration={500}
-                    spy={true}
+                    spy={1}
                     exact="true"
                     offset={-80}
                     primary={primary ? 1 : 0}

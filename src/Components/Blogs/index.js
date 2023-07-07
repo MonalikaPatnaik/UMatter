@@ -137,7 +137,7 @@ const Blogs = () => {
             marginLeft: "7px",
             marginTop: "7px",
             cursor: "pointer",
- 
+
             textDecoration: "none",
             hover: "blue",
           }}
@@ -161,9 +161,10 @@ const Blogs = () => {
                 <ReadMoreButton>Read more</ReadMoreButton>
               </Link>
             ) : (
-              <a target="_blank" href={blog.hyperlink}>
+              <a href={blog.hyperlink} target="_blank">
                 <ReadMoreButton>Read more</ReadMoreButton>
               </a>
+
             )}
           </BlogsCard>
         ))}
