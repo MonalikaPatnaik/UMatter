@@ -67,7 +67,7 @@ export const LogoinnerContainer = styled.div`
   align-items: center;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled.div`
   color: var(--text-clr);
   cursor: pointer;
   font-size: 2rem;
@@ -193,8 +193,7 @@ export const NavBtn = styled.nav`
     margin-top: 0px;
     margin-right: 45px;
   }
-  ${
-    "" /* border-radius: 50px;
+  ${"" /* border-radius: 50px;
 background: #01bf71;
 padding: 10px 10px;
 color: white;

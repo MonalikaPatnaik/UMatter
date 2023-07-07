@@ -50,6 +50,13 @@ async function databaseSetup() {
 
 databaseSetup();
 
+app.use((req, res, next) => {
+    res.setHeader(
+        'Content-Security-Policy',
+        "script-src 'self' 'wasm-unsafe-eval' 'inline-speculation-rules' https://apis.google.com;"
+    );
+    next();
+});
 app.listen(port, () => {
     console.log(`server started on port ${port}`);
 })
@@ -219,53 +226,53 @@ app.get('/profile/:username/', async (req, res) => {
 
 app.post('/feedback', async (req, res) => {
     try {
-      const { username, feedback } = req.body;
-  
-      const existingUserQuery = `
+        const { username, feedback } = req.body;
+
+        const existingUserQuery = `
         SELECT * FROM user_details
         WHERE username = ?`;
-      const existingUser = await db.get(existingUserQuery, username);
-  
-      if (!existingUser) {
-        const maxUserIdQuery = `
+        const existingUser = await db.get(existingUserQuery, username);
+
+        if (!existingUser) {
+            const maxUserIdQuery = `
           SELECT MAX(user_id) as max_user_id FROM user_details`;
-        const { max_user_id } = await db.get(maxUserIdQuery);
-  
-        const newUserQuery = `
+            const { max_user_id } = await db.get(maxUserIdQuery);
+
+            const newUserQuery = `
           INSERT INTO user_details (user_id, username, feedback)
           VALUES (?, ?, ?)`;
-        const userId = max_user_id ? max_user_id + 1 : 1;
-  
-        await db.run(newUserQuery, [userId, username, feedback]);
-  
-        console.log('New user created:', { user_id: userId, username, feedback });
-        res.status(200).json({ message: 'New user created and feedback submitted successfully' });
-      } else {
-        const updateQuery = `
+            const userId = max_user_id ? max_user_id + 1 : 1;
+
+            await db.run(newUserQuery, [userId, username, feedback]);
+
+            console.log('New user created:', { user_id: userId, username, feedback });
+            res.status(200).json({ message: 'New user created and feedback submitted successfully' });
+        } else {
+            const updateQuery = `
           UPDATE user_details
           SET feedback = ?
           WHERE username = ?`;
-  
-        await db.run(updateQuery, [feedback, username]);
-  
-        console.log('Feedback updated for user:', { username, feedback });
-        res.status(200).json({ message: 'Feedback submitted successfully' });
-      }
+
+            await db.run(updateQuery, [feedback, username]);
+
+            console.log('Feedback updated for user:', { username, feedback });
+            res.status(200).json({ message: 'Feedback submitted successfully' });
+        }
     } catch (error) {
-      console.error('Error submitting feedback:', error);
-      res.status(500).json({ message: 'Failed to submit feedback' });
+        console.error('Error submitting feedback:', error);
+        res.status(500).json({ message: 'Failed to submit feedback' });
     }
-  });
-  
-  
+});
+
+
 
 
 app.get('/feedback', async (req, res) => {
     const getAllDataQuery = `SELECT * FROM user_details`;
     const updatedData = await db.all(getAllDataQuery);
     res.json(updatedData);
-  });
-  
+});
+
 
 
 app.get("/", async (req, res) => {
@@ -281,15 +288,15 @@ app.post('/mail', (req, res) => {
     var transporter = nodemailer.createTransport({
         service: 'gmail',
         auth: {
-            user: 'your-email@gmail.com', 
-            pass: 'generated-password' 
+            user: 'your-email@gmail.com',
+            pass: 'generated-password'
             // https://myaccount.google.com/u/1/apppasswords
         }
     });
 
     var options = {
         from: 'your-email@gmail.com',
-        to: 'your-email@gmail.com', 
+        to: 'your-email@gmail.com',
         subject: "Contact Request",
         html: `
         <div style="padding:10px; border-style: ridge">
