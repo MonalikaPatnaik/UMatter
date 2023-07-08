@@ -42,7 +42,7 @@ const SignUp = () => {
   // Use for internation country code selector
   const [value, setValue] = useState();
 
-  const handleOnChange = (inputValue) => {
+  const handleOnChangePhoneNumber = (inputValue) => {
     setValue(inputValue);
     const countrySelect = document.querySelector(".PhoneInputCountrySelect");
     const selectedCountryCode = countrySelect.value;
@@ -391,7 +391,7 @@ const SignUp = () => {
                 countryCallingCodeEditable={true}
                 placeholder="Phone number"
                 value={value}
-                onChange={handleOnChange}
+                onChange={handleOnChangePhoneNumber}
               />
             </PhoneContainer>
 
