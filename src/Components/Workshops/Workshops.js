@@ -1,10 +1,13 @@
 import './styles.css';
 import React from 'react';
 import Footer from '../Footer';
+import WorkshopImg from "../../images/WorkshopImg.png";
+
 
 const Workshops = () => {
   return (
     <>
+    <div className='full_page'>
       <section className="hero">
         <div className="hero-content">
           <h1>Welcome to UMatter Workshops</h1>
@@ -12,7 +15,8 @@ const Workshops = () => {
         </div>
       </section>
 
-      <h2>All Workshops</h2>
+<div className='workshops_seection'>
+      <h2 className='h-workshops'>All Workshops</h2>
       <section className="workshop-descriptions">
         <div className="workshop">
           <h3 className="workshop-title">Breaking the Habit: A Journey to Sobriety</h3>
@@ -35,7 +39,7 @@ const Workshops = () => {
           </p>
         </div>
       </section>
-
+</div>
       <section className="workshop-schedule">
         <h2 className="heading-workshop-schedule">Workshop Schedule</h2>
         <div className="schedule-table">
@@ -61,10 +65,22 @@ const Workshops = () => {
         </div>
       </section>
 
+
       <section className="appointment-section">
+      
         <div className="container">
           <h2 className="section-heading">Join Workshop</h2>
+          
+          <div className='form_section'>
+          <div className='workshopImg'>
+         
+      </div>
+      <div>
           <form className="appointment-form" action="appointment-submit.php" method="POST">
+          <div>
+          <img  src={WorkshopImg} />
+          </div>
+          <div className='orignal_form'>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
               <input type="text" id="name" name="name" required />
@@ -78,10 +94,6 @@ const Workshops = () => {
               <input type="tel" id="phone" name="phone" required />
             </div>
             <div className="form-group">
-              <label htmlFor="message">Message (Optional)</label>
-              <textarea id="message" name="message" rows="5" />
-            </div>
-            <div className="form-group">
               <label htmlFor="select-workshop">Select Workshop</label>
               <select id="payment-method" name="payment-method" required>
                 <option value="credit-card">Workshop 1</option>
@@ -89,11 +101,15 @@ const Workshops = () => {
                 <option value="bank-transfer">Workshop 3</option>
               </select>
             </div>
-  
             <button type="submit" className="btn btn-primary">Join Workshop</button>
+            </div>
           </form>
+          </div>
+        </div>
         </div>
       </section>
+      </div>
+      
       <Footer />
     </>
   );

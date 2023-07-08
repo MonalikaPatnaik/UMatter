@@ -25,7 +25,7 @@
   }
   
   .workshop:hover {
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   }
   
   .workshop-title {
@@ -82,24 +82,34 @@
     background-color: #f9f9f9;
   }
   
+
+  .workshopImg{
+    max-width: 40%;
+    height: 40%;
+  }
   /* Section 3 */
   
-  .appointment-section {
-    padding: 50px 0;
-    background-color: #fff;
-    
-    
-  }
+  
   
   .appointment-form {
-    max-width: 630px;
-    padding: 50px;
+    width: 100%;
+    padding: 50px 25px;
+    
     background: linear-gradient(-2deg, black, rgb(1, 147, 86), rgb(10, 201, 122));
-    margin: 0 auto;
+    
+    /* margin: 0 auto; */
     text-align: center;
     border-radius: 2%;
+    display: flex;
+    align-items: center;
+    
   }
+  .form_section{
+    margin: 10px 20%;
+    
+    margin-bottom: 80px;
   
+  }
   .section-heading {
     font-size: 32px;
     text-align: center;
@@ -111,8 +121,11 @@
   .form-group {
     margin-bottom: 20px;
     text-align: left;
+    width: 100%;;
   }
-  
+  .orignal_form{
+    width: 35%;
+  }
   label {
     font-size: 16px;
     font-weight: bold;
@@ -128,9 +141,9 @@ input[type="tel"],
 input[type="date"],
 input[type="time"],
 textarea {
-  width: 100%;
+  width: 120%;
   padding: 10px;
-  font-size: 14px;
+  font-size: 12px;
   border-radius: 4px;
   border: 1px solid #ccc;
   box-sizing: border-box;
@@ -193,13 +206,15 @@ textarea {
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+   background-color: whitesmoke;
+    
    
   }
   
   .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 100%;
+    /* margin: 0 auto; */
+    /* padding: 0 20px; */
   }
   
   /* Header styles */
@@ -225,7 +240,7 @@ textarea {
   
   /* Hero section styles */
   .hero {
-    background-color: #d4eef6;
+    background-image: url('https://images.freeimages.com/images/large-previews/a3b/website-rays-background-pattern-1637863.png');
     height: 100vh;
     padding: 220px 0;
     text-align: center;
