@@ -17,8 +17,8 @@ const ContactPage = lazy(()=>import("./pages/contact"))
 const GetMail = lazy(()=>import("./Components/Forgot_password/ForgotPassword"))
 const Verify = lazy(()=>import("./Components/Forgot_password/OTPVerfication"))
 const Blog = lazy(()=>import("./Components/BlogPage/Blog"))
-const Consult_With_Doctor = lazy(()=>import('./pages/consult_with_doctor'))
-const Consultationform = lazy(()=>import('./Components/Consult_With_Doctor/ConsultationForm'))
+const ConsultWithDoctorPage = lazy(()=>import('./pages/ConsultWithDoctorPage'))
+const Consultationform = lazy(()=>import('./Components/ConsultWithDoctor/ConsultationForm'))
 
 // import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
@@ -38,7 +38,7 @@ function App() {
 					<Route path="/blogs" element={<BlogPage />} />
 					<Route path="/feedback" element={<FeedbackPage />} />
 					<Route path="/contact" element={<ContactPage />} />
-					<Route path="/consultwithdoctor" element={<Consult_With_Doctor />} />
+					<Route path="/consultwithdoctor" element={<ConsultWithDoctorPage />} />
 					<Route path="/consultwithdoctor/consultationform" element={<Consultationform />} />
 					<Route 
 						path="/blogs/:id"

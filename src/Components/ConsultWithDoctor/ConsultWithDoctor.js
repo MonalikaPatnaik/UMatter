@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import './styles.css';
 import { Link } from 'react-router-dom';
 
-const Consult_With_Doctor = () =>{
+const ConsultWithDoctor = () =>{
     
     return(
         <>
@@ -130,4 +130,4 @@ const Consult_With_Doctor = () =>{
 }
 
 
-export default Consult_With_Doctor;
+export default ConsultWithDoctor;

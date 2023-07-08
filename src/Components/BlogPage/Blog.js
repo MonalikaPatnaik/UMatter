@@ -51,7 +51,7 @@ function Blog() {
         </div>
 
         {/* Cover image */}
-        <img src={blogcontent.image} className='object-cover rounded-lg sm:max-h-96 btn- w-9/12 m-6 ms-1 h-full'/>
+        <img src={blogcontent.image} alt="blog images" className='object-cover rounded-lg sm:max-h-96 btn- w-9/12 m-6 ms-1 h-full'/>
 
         {/* Content --> combination of text , images(optional), title */}
         {
@@ -62,7 +62,7 @@ function Blog() {
                         </div>
                         { 
                             block.image && 
-                              <img src={block.image}
+                              <img src={block.image} alt="blog images"
                                  className='py-3'
                                />
                           }

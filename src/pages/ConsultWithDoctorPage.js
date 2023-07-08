@@ -1,9 +1,9 @@
 import React from "react";
 import Footer from "../Components/Footer";
 import GoToTop from "../Components/GoToTop";
-import Consult_With_Doctor from "../Components/Consult_With_Doctor/Consult_With_Doctor";
+import Consult_With_Doctor from "../Components/ConsultWithDoctor/ConsultWithDoctor";
 
-const consult_with_doctor = () => {
+const ConsultWithDoctorPage = () => {
     return (
       <>
         <GoToTop/>
@@ -13,4 +13,4 @@ const consult_with_doctor = () => {
     );
   };
   
-  export default consult_with_doctor;
+  export default ConsultWithDoctorPage;
