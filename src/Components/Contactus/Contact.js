@@ -1,6 +1,8 @@
+/** @format */
+
 import { React, useState } from "react";
 import "./Contact.css";
-
+import Contact_Image from "../../images/contact_image.png"
 const Contact = () => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
@@ -28,11 +30,19 @@ const Contact = () => {
  
   }
 
-
-
   return (
 
-    <div class="form-container">
+
+    <div className="container">
+
+      <div className="contact-container">
+
+      <div className="left-container">
+        <h2 className="left-heading">Feel Free to Contact Us</h2>
+        <img src={Contact_Image}  />
+      </div>
+
+    <div className="form-container">
       <h2>Contact Us</h2>
       <hr></hr>
       <form onSubmit={handleSubmit}>
@@ -51,10 +61,13 @@ const Contact = () => {
           <textarea id="message" name="message" placeholder="Enter your message" onChange={(e) => setMessage(e.target.value)}></textarea>
         </div>
 
-        <div>
-          <button type="submit">Submit</button>
+        <div className="btn-container">
+          <button className="form-button" type="submit">Submit</button>
         </div>
       </form>
+    </div>
+
+    </div>
     </div>
 
 
