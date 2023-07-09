@@ -2,7 +2,7 @@
 import React from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdPassword } from "react-icons/md";
-import { BiSolidShow, BiSolidHide } from "react-icons/bi";
+// import { BiSolidShow, BiSolidHide } from "react-icons/bi";
 import {
   Container,
   FormContainer,
@@ -392,11 +392,11 @@ const SignUp = () => {
                 type={passwordType}
                 placeholder="Password"
               />
-              {passwordType === "password" ? (
+              {/* {passwordType === "password" ? (
                 <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
                 <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              )}
+              )} */}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
 
@@ -409,11 +409,11 @@ const SignUp = () => {
                 type={passwordConfirmType}
                 placeholder="Confirm Password"
               />
-              {passwordConfirmType === "password" ? (
+              {/* {passwordConfirmType === "password" ? (
                 <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               ) : (
                 <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              )}
+              )} */}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
 

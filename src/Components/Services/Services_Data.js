@@ -25,6 +25,7 @@ export const Services_Data=[
       id: 'habit',
       icon: Icon4,
       title: 'Habit Tracker',
-      description: 'Boost your potential by tracking your habits.'
+      description: 'Boost your potential by tracking your habits.',
+      href:"/services/HabitTracker"
     }
   ];
