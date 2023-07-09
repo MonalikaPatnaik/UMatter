@@ -25,7 +25,7 @@
   min-height: 550px;
   margin: 3rem auto;
   display: flex;
-   @media only screen and (max-width:550px){
+   @media only screen and (max-width:650px){
           flex-direction: column;
           margin: 0;
       }
@@ -41,7 +41,7 @@
   min-height: 100%;
 
 
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width:650px){
     width: 100%;
 }
 }
@@ -147,7 +147,7 @@ hr{
 }
 
   
-@media only screen and (max-width: 512px) {
+@media only screen and (max-width: 650px) {
   .left-heading{
     margin-top: 1rem;
   }
