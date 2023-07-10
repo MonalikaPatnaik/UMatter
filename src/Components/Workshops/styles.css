@@ -304,6 +304,66 @@ textarea {
   .btn:hover {
     background-color: #0056b3;
   }
+
+
+  @media only screen and (max-width: 768px) {
+    /* Adjust workshop descriptions layout for smaller screens */
+    .workshop-descriptions {
+      flex-wrap: wrap;
+    }
+  
+    .workshop {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  
+    /* Adjust workshop schedule table for smaller screens */
+    .schedule-table {
+      font-size: 14px;
+      margin-left: -40px;
+    }
+  
+    /* Adjust appointment form layout for smaller screens */
+    .appointment-form {
+      flex-direction: column;
+      padding: 30px;
+    }
+  
+    .orignal_form {
+      width: 100%;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"],
+    input[type="time"],
+    textarea {
+      width: 100%;
+    }
+  }
+  
+  @media only screen and (max-width: 480px) {
+    /* Adjust hero section padding for smaller screens */
+    .hero {
+      padding: 120px 0;
+    }
+  
+    /* Adjust workshop grid layout for smaller screens */
+    .workshop-grid {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Adjust workshop title font size for smaller screens */
+    .workshop h3 {
+      font-size: 20px;
+    }
+  
+    /* Adjust appointment form layout for smaller screens */
+    .form_section {
+      margin: 10px 0;
+    }
+  }
   
   
   
