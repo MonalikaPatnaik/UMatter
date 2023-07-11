@@ -1,7 +1,7 @@
 import styled from "styled-components";
 // import { Link } from "react-router-dom";
 
-////////////// OLD UI ELEMENTS ///////////////////////// 
+////////////// OLD UI ELEMENTS /////////////////////////
 
 // export const Container = styled.div`
 
@@ -194,10 +194,10 @@ export const FormContainer = styled.div`
   min-height: 550px;
   margin: 3rem auto;
   display: flex;
-   @media only screen and (max-width:550px){
-          flex-direction: column;
-          margin: 0;
-      }
+  @media only screen and (max-width: 550px) {
+    flex-direction: column;
+    margin: 0;
+  }
 `;
 
 export const SignUpContainer = styled.div`
@@ -207,10 +207,10 @@ export const SignUpContainer = styled.div`
   align-items: center;
   min-height: 100%;
 
-   @media only screen and (max-width:550px){
-          padding: 15px 5px;
-          width: 100%;
-      }
+  @media only screen and (max-width: 550px) {
+    padding: 15px 5px;
+    width: 100%;
+  }
 `;
 
 export const LeftContainer = styled.div`
@@ -222,9 +222,9 @@ export const LeftContainer = styled.div`
   background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
   min-height: 100%;
 
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width: 550px) {
     width: 100%;
-}
+  }
 `;
 
 export const LeftHeading = styled.h1`
@@ -265,6 +265,7 @@ export const SignUph1 = styled.h1`
   line-height: 4rem;
   margin-bottom: 1rem;
   color: #01bf71;
+  text-align: center;
 `;
 
 export const FormInput = styled.input`
@@ -339,7 +340,7 @@ export const SignUpButton = styled.button`
   text-decoration: none;
 
   &:hover {
-    background: #00492B;
+    background: #00492b;
     color: #ffffff;
   }
 
