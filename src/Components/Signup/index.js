@@ -3,6 +3,12 @@ import React from "react";
 import { FaUser, FaPhoneAlt } from "react-icons/fa";
 import { MdEmail, MdPassword } from "react-icons/md";
 import { BiSolidShow, BiSolidHide } from "react-icons/bi";
+import PhoneInput, {
+  formatPhoneNumberIntl,
+  isPossiblePhoneNumber,
+} from "react-phone-number-input";
+// import "react-phone-number-input/style.css";
+import "./PhoneInput.css";
 import {
   Container,
   FormContainer,
@@ -16,8 +22,9 @@ import {
   PhoneContainer,
   SignUpButton,
   PasswordContainer,
-  Image
+  Image,
 } from "./SignupElements";
+
 import { useState } from "react";
 import SignUpImg from "../../images/SignUp.png";
 import Captcha from "./Captcha";
@@ -31,6 +38,21 @@ const SignUp = () => {
   const [passwordConfirmType, setConfirmPasswordType] = useState("password");
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
+
+  // Use for internation country code selector
+  const [value, setValue] = useState();
+
+  const handleOnChangePhoneNumber = (inputValue) => {
+    setValue(inputValue);
+    const countrySelect = document.querySelector(".PhoneInputCountrySelect");
+    const selectedCountryCode = countrySelect.value;
+    setData({
+      ...data,
+      countryCode: selectedCountryCode,
+      contactNumber: formatPhoneNumberIntl(inputValue),
+    });
+  };
+
   const handleclick = (e) => {
     e.preventDefault();
     if (passwordType === "text") {
@@ -70,8 +92,7 @@ const SignUp = () => {
   };
   const validatecontactNumber = (contactNumber) => {
     // name  should contains only alphabets
-    const contactNumberRegex = /^\d{10}$/;
-    return contactNumberRegex.test(contactNumber);
+    return isPossiblePhoneNumber(contactNumber);
   };
 
   const handleSubmit = (e) => {
@@ -345,7 +366,7 @@ const SignUp = () => {
               type="text"
               placeholder="Full Name"
             />
-            < FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer" />
+            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer" />
 
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
@@ -363,8 +384,18 @@ const SignUp = () => {
               require
             />
             <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%]" />
-
             <PhoneContainer>
+              <PhoneInput
+                international
+                defaultCountry="IN"
+                countryCallingCodeEditable={true}
+                placeholder="Phone number"
+                value={value}
+                onChange={handleOnChangePhoneNumber}
+              />
+            </PhoneContainer>
+
+            {/* <PhoneContainer>
               <FormInput
                 onChange={(e) =>
                   setData({ ...data, countryCode: e.target.value })
@@ -382,7 +413,7 @@ const SignUp = () => {
                 placeholder="Phone Number"
                 maxLength={10}
               ></FormInput>
-            </PhoneContainer>
+            </PhoneContainer> */}
             <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%]" />
 
             <PasswordContainer>
@@ -393,9 +424,15 @@ const SignUp = () => {
                 placeholder="Password"
               />
               {passwordType === "password" ? (
-                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+                <BiSolidHide
+                  onClick={handleclick}
+                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                />
               ) : (
-                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+                <BiSolidShow
+                  onClick={handleclick}
+                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                />
               )}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
@@ -410,9 +447,15 @@ const SignUp = () => {
                 placeholder="Confirm Password"
               />
               {passwordConfirmType === "password" ? (
-                <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+                <BiSolidHide
+                  onClick={Confirmhandleclick}
+                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                />
               ) : (
-                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+                <BiSolidShow
+                  onClick={Confirmhandleclick}
+                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                />
               )}
             </PasswordContainer>
             <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
@@ -423,7 +466,9 @@ const SignUp = () => {
               disabled={!trackState}
               style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
               className="mb-2 transition-all duration-300 ease-in-out"
-            >Sign Up</SignUpButton>
+            >
+              Sign Up
+            </SignUpButton>
             {invalid && showInvalid()}
           </SignUpForm>
         </SignUpContainer>
