@@ -366,7 +366,7 @@ const SignUp = () => {
               type="text"
               placeholder="Full Name"
             />
-            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer" />
+            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden" />
 
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
@@ -374,7 +374,7 @@ const SignUp = () => {
               type="text"
               placeholder="Username"
             />
-            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%]" />
+            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden" />
 
             <FormInput
               onChange={(e) => setData({ ...data, email: e.target.value })}
@@ -383,7 +383,7 @@ const SignUp = () => {
               placeholder="Email"
               require
             />
-            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%]" />
+            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden" />
             <PhoneContainer>
               <PhoneInput
                 international
@@ -414,7 +414,7 @@ const SignUp = () => {
                 maxLength={10}
               ></FormInput>
             </PhoneContainer> */}
-            <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%]" />
+            <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%] signupTable:hidden" />
 
             <PasswordContainer>
               <FormInput
@@ -435,7 +435,7 @@ const SignUp = () => {
                 />
               )}
             </PasswordContainer>
-            <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%]" />
+            <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%] signupTable:hidden" />
 
             <PasswordContainer>
               <FormInput
@@ -458,7 +458,7 @@ const SignUp = () => {
                 />
               )}
             </PasswordContainer>
-            <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%]" />
+            <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%] signupTable:hidden" />
 
             <Captcha message={setTrackState} trackState={trackState} />
             <SignUpButton
