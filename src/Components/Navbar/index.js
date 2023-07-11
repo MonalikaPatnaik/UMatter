@@ -25,8 +25,8 @@ const glassStyle = {
   // borderRadius: "16px",
   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
   backdropFilter: "blur(7.1px)",
-  webkitBackdropFilter: "blur(7.1px)",
-  border: "1px solid rgba(40, 30, 30, 0.18);"
+  WebkitBackdropFilter: "blur(7.1px)",
+  border: "1px solid rgba(40, 30, 30, 0.18)"
 }
 const Navbar = ({ toggle }) => {
 
@@ -35,7 +35,7 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(scrolled > 0 ? { backgroundColor: "var(--bg-clr)"} : glassStyle);
+      setNavbarBg(scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -69,13 +69,13 @@ const Navbar = ({ toggle }) => {
   const handleTestimonialsClick = () => {
     navigate("/");
   }
+
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <>
       <Nav style={navbarBg}>
         <NavbarContainer>
    
@@ -83,7 +83,8 @@ const Navbar = ({ toggle }) => {
             <LogoinnerContainer>
               <img src={faviconSrc}
                 alt="favicon"
-                className="object-cover h-14 aspect-auto"
+                width="46"
+                height="46"
               />
               <NavLogo to="/">UMatter</NavLogo>
             </LogoinnerContainer>
@@ -118,22 +119,21 @@ const Navbar = ({ toggle }) => {
                 Feedback{" "}
               </NavLinks>
             </Navitem>
-            
+          
             <NavBtnMobile>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          
+
           </NavBtnMobile>
-          </NavMenu>
-          <NavBtn>
-            <NavBtnLink to="/signin">Sign In</NavBtnLink>
-            <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-            <DarkMode toggle={toggle} />
-          </NavBtn>
-         
-        </NavbarContainer>
-      </Nav>
-    </>
+        </NavMenu>
+        <NavBtn>
+          <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          <NavBtnLink to="/signup">Sign Up</NavBtnLink>
+          <DarkMode toggle={toggle} />
+        </NavBtn>
+
+      </NavbarContainer>
+    </Nav>
   );
 };
 
