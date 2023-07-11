@@ -19,6 +19,7 @@ const Verify = lazy(()=>import("./Components/Forgot_password/OTPVerfication"))
 const Blog = lazy(()=>import("./Components/BlogPage/Blog"))
 const Consult_With_Doctor = lazy(()=>import('./pages/consult_with_doctor'))
 const Consultationform = lazy(()=>import('./Components/Consult_With_Doctor/ConsultationForm'))
+const Workshops = lazy(()=>import('./Components/Workshops/Workshops'))
 
 // import Contact from "./Components/Contactus/Contact";
 // window.$crisp=[];
@@ -40,6 +41,7 @@ function App() {
 					<Route path="/contact" element={<ContactPage />} />
 					<Route path="/consultwithdoctor" element={<Consult_With_Doctor />} />
 					<Route path="/consultwithdoctor/consultationform" element={<Consultationform />} />
+					<Route path="/workshops" element={<Workshops />} />
 					<Route 
 						path="/blogs/:id"
 						element={<Blog/>}
