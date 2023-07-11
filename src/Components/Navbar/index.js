@@ -69,56 +69,58 @@ const Navbar = ({ toggle }) => {
   const handleTestimonialsClick = () => {
     navigate("/");
   }
+
   const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
     setIsOpen(!isOpen);
   };
 
   return (
-    <Nav style={navbarBg}>
-      <NavbarContainer>
-
-        <LogoContainer>
-          <LogoinnerContainer>
-            <img src={faviconSrc}
-              alt="favicon"
-              className="object-cover h-14 aspect-auto"
-            />
-            <NavLogo to="/">UMatter</NavLogo>
-          </LogoinnerContainer>
-          <MobileIcon onClick={handleToggle}>
-            {
-              isOpen ? <FaRegWindowClose /> : <FaBars />
-            }
-          </MobileIcon>
-        </LogoContainer>
-        <NavMenu isOpen={isOpen}>
-          <Navitem>
-            <NavLinks to="home" onClick={handleHomeClick}>
-              Home
-            </NavLinks>
-          </Navitem>
-          <Navitem>
-            <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
-          </Navitem>
-          <Navitem>
-            <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
-          </Navitem>
-          <Navitem>
-            <NavLinks to="testimonials" onClick={handleTestimonialsClick}>Testimonials</NavLinks>
-          </Navitem>
-          <Navitem>
-            <NavLinks to="#" onClick={handleBlogsClick}>
-              Blogs{" "}
-            </NavLinks>
-          </Navitem>
-          <Navitem>
-            <NavLinks to="#" onClick={handleFeedbackClick}>
-              Feedback{" "}
-            </NavLinks>
-          </Navitem>
-
-          <NavBtnMobile>
+      <Nav style={navbarBg}>
+        <NavbarContainer>
+   
+          <LogoContainer>
+            <LogoinnerContainer>
+              <img src={faviconSrc}
+                alt="favicon"
+                width="46"
+                height="46"
+              />
+              <NavLogo to="/">UMatter</NavLogo>
+            </LogoinnerContainer>
+            <MobileIcon onClick={handleToggle}>
+              {
+                isOpen ? <FaRegWindowClose /> : <FaBars />
+              }
+            </MobileIcon>
+          </LogoContainer>
+          <NavMenu isOpen={isOpen}>
+            <Navitem>
+              <NavLinks to="home" onClick={handleHomeClick}>
+                Home
+              </NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="about" onClick={handleAboutClick} >About</NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="services" onClick={handleServicesClick}>Services</NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="testimonials" onClick={handleTestimonialsClick}>Testimonials</NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="#" onClick={handleBlogsClick}>
+                Blogs{" "}
+              </NavLinks>
+            </Navitem>
+            <Navitem>
+              <NavLinks to="#" onClick={handleFeedbackClick}>
+                Feedback{" "}
+              </NavLinks>
+            </Navitem>
+          
+            <NavBtnMobile>
             <NavBtnLink to="/signin">Sign In</NavBtnLink>
             <NavBtnLink to="/signup">Sign Up</NavBtnLink>
 
