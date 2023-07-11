@@ -42,7 +42,7 @@ class Testimonial extends Component {
             "I highly recommend this website to anyone looking for reliable healthcare services.",
         },
         {
-          user_index: 1,
+          user_index: 4,
           username: "Emily Smith",
           Icon3:
             "https://img.freepik.com/free-vector/man-working-laptop-cartoon-icon-illustration_138676-1953.jpg?w=740&t=st=1686378983~exp=1686379583~hmac=4d9e6abe79a2a7f5ac2691d4c9655e75e95393dd1f891ca5d3acbab8445f5e10",
@@ -50,7 +50,7 @@ class Testimonial extends Component {
             "I had a great experience using the website to find a doctor for my specific health concern.",
         },
         {
-          user_index: 2,
+          user_index: 5,
           username: "David Johnson",
           Icon3:
             "https://img.freepik.com/free-vector/animation-character-portrait-woman-presenting-pose-flat-design_40876-2330.jpg?w=740&t=st=1686378696~exp=1686379296~hmac=540a1eb1c2d15dd32471d13832e1fea4b8b845c198c67e37c68614c6f908bf5d",
@@ -58,7 +58,7 @@ class Testimonial extends Component {
             "As a doctor, I found the website to be a valuable platform for reaching out to patients.",
         },
         {
-          user_index: 3,
+          user_index: 6,
           username: "Sophia Anderson",
           Icon3:
             "https://img.freepik.com/free-vector/curly-hair-concept-illustration_114360-7633.jpg?w=740&t=st=1686378727~exp=1686379327~hmac=1eb65a559e497e52ff9a009e71ddddb5e57cef4d35b2eea92236dd6f072fc998",
@@ -127,13 +127,13 @@ class Testimonial extends Component {
             }}
             navigation
             pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
+          // onSwiper={(swiper) => console.log(swiper)}
+          // onSlideChange={() => { }}
           >
             {this.state.slides.map((slide, index) => {
               return (
-                <SwiperSlide>
-                  <div key={slide.user_id}>
+                <SwiperSlide key={index}>
+                  <div >
                     <ProductCard product={slide} />
                   </div>
                 </SwiperSlide>

@@ -1,8 +1,12 @@
 version: 2
 updates:
-  # Update GitHub Actions and dependencies
-  - package-ecosystem: "github-actions"
+  # Update node dependencies
   - package-ecosystem: "npm"
     directory: "/"
     schedule:
       interval: "daily"
+      allow:
+      # Allow updates for Lodash
+      - dependency-name: "lodash"
+      # Allow updates for React and any packages starting "react"
+      - dependency-name: "react*"

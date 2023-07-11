@@ -27,16 +27,16 @@ export const Nav = styled.nav`
 `;
 
 export const NavbarContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  z-index: 1;
-  width: 100%;
-  @media screen and (max-width: 768px) {
-    justify-content: space-between;
-    padding-left: 4%;
-    padding-right: 4%;
-  }
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	z-index: 10;
+	width: 100%;
+	@media screen and (max-width: 768px) {
+		justify-content: space-between;
+		padding-left: 4%;
+		padding-right: 4%;
+	}
 `;
 
 const breakpoints = {
@@ -67,7 +67,7 @@ export const LogoinnerContainer = styled.div`
   align-items: center;
 `;
 
-export const NavLogo = styled(LinkR)`
+export const NavLogo = styled.div`
   color: var(--text-clr);
   cursor: pointer;
   font-size: 2rem;
@@ -193,8 +193,7 @@ export const NavBtn = styled.nav`
     margin-top: 0px;
     margin-right: 45px;
   }
-  ${
-    "" /* border-radius: 50px;
+  ${"" /* border-radius: 50px;
 background: #01bf71;
 padding: 10px 10px;
 color: white;
