@@ -123,6 +123,22 @@ hr{
   height: 80px;
   
 }
+.form-group input.inputError
+{
+  border: 2px solid #ee334b;
+}
+.form-group input.successError
+{
+  border: 2px solid rgb(37, 218, 37);
+}
+.form-group textarea.inputError
+{
+  border: 2px solid #ee334b;
+}
+.form-group textarea.successError
+{
+  border: 2px solid rgb(37, 218, 37);
+}
 .btn-container{
   text-align: center;
 }
