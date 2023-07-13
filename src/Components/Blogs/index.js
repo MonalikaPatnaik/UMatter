@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+//import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-import Icon1 from "../../images/no-drinking.png";
+//import Icon1 from "../../images/no-drinking.png";
 import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
 import Icon4 from "../../images/5Ds.jpg";
@@ -32,7 +32,7 @@ const Blogs = () => {
     setIsHover(false);
   };
 
-  const navigate = useNavigate();
+  //const navigate = useNavigate();
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -156,7 +156,7 @@ const Blogs = () => {
               <b>{blog.title}</b>
             </BlogsH1>
             <BlogsP>{blog.content}</BlogsP>
-            {blog.hyperlink == "" ? (
+            {blog.hyperlink === "" ? (
               <Link to="./abc">
                 <ReadMoreButton>Read more</ReadMoreButton>
               </Link>
