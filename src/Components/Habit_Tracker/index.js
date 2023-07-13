@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { habits } from './HabitsData';
 import {BiEditAlt} from 'react-icons/bi'
+import styles from "./style.module.css";
 
 function convertStringToArray(inputString) {
   inputString = inputString.trim().toLowerCase();
@@ -45,49 +46,46 @@ function Index(){
 
   }
   return (
-    <div className='flex px-16 pt-6 flex-col'>
+    <div className={`flex px-16 pt-6 flex-col ${styles.container}`}>
       <h1 className='sm:text-xl text-5xl uppercase text-center font-bold w-100 '>
         Your Today's Score - {countOccurrences(activityStatus,true)}/5
       </h1>
       {/* Table */}
       
-<div className="relative overflow-x-auto shadow-md sm:rounded-lg mt-4  w-9/12 xs:w-full mx-auto">
+<div className={`relative overflow-x-auto shadow-md sm:rounded-lg mt-4  w-9/12 xs:w-full mx-auto ${styles.table}`}>
     <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
               {
                 Object.keys(habits[0]).map((elem,index)=>{
-                  return <th scope="col" key={index} className="px-6 py-3 text-center">
+                  return <th scope="col" key={index} className={`px-6 py-3 bg-slate-200 text-center ${index === 3 && styles.respo}`}>
                     {elem}
                   </th>
                 })
               }
-            <th scope="col" className="px-6 py-3 text-center">
-              
-            </th>
-
             </tr>
         </thead>
         <tbody>
           {
             habits.map((habi,ind)=>{
               return <>              
-              <tr key={ind} className="bg-white border-b dark:bg-gray-900 dark:border-gray-700 text-center">
+              <tr key={ind} className={`${ind&1 ? "bg-slate-200" :"bg-white" } border-b dark:bg-gray-900 dark:border-gray-700 text-center `}>
                 <th scope="row" className="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                     {habi.name}
                 </th>
-                <td className="px-6 py-4">
+                <td className={`px-6 py-4 ${styles.detail}`}>
                   {habi.detail}
                 </td>
-                <td className=" h-8">
+
+                <td className={`h-8  ${styles.icon}`}>
                     {habi.icon}
                 </td>
-                <td className=" flex  item- w-full items-center justify-center	h-16 ">
-                  <span className={`aspect-square	 h-1/3  ${ activityStatus[ind] === true ? "bg-green-300" : "bg-red-500"} rounded-full`}></span>
-                 {/* <span className={` m-auto  absolute  w-3.5 h-3.5 bg-${true? "green": "red"}-400 border-2 border-white dark:border-gray-800 rounded-full`}></span> */}
-                </td>
-                <td className="h-12" onClick={()=>handleActivityClick(ind)}>
-                    <BiEditAlt className='h-8 w-6' />
+                <td className=" flex item- w-full items-center justify-center	h-16 ">
+                  <buttom
+                    data-tooltip-target="tooltip-bottom" data-tooltip-placement="bottom"
+                    onClick={()=>handleActivityClick(ind)} 
+                    className={`aspect-square	 h-1/3  ${ activityStatus[ind] === true ? "bg-green-300" : "bg-red-500"} rounded-full`}>  
+                  </buttom>
                 </td>
               </tr>
           </> 
