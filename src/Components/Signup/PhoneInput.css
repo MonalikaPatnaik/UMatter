@@ -33,7 +33,6 @@
   flex: 1;
   /* The phone number input should shrink
 	   to make room for the extension input */
-  min-width: 0;
   padding: 0.7rem;
   border-radius: 5px;
   background: rgba(1, 191, 113, 0.3);
