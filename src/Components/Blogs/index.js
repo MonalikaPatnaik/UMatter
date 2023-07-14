@@ -51,6 +51,31 @@ const Blogs = () => {
     blog.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+  let content;
+  if (filteredBlogs.length === 0) {
+    content = <div>No results found</div>;
+  } else {
+    content = filteredBlogs.map((blog, index) => (
+      <BlogsCard key={index}>
+        <BlogsIcon src={blog.icon} />
+        <BlogsH1>
+          <b>{blog.title}</b>
+        </BlogsH1>
+        <BlogsP>{blog.content}</BlogsP>
+        {blog.hyperlink == "" ? (
+          <Link to="./abc">
+            <ReadMoreButton>Read more</ReadMoreButton>
+          </Link>
+        ) : (
+          <a href={blog.hyperlink} target="_blank">
+            <ReadMoreButton>Read more</ReadMoreButton>
+          </a>
+
+        )}
+      </BlogsCard>
+    ));
+  }
+
   return (
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
@@ -149,25 +174,7 @@ const Blogs = () => {
       <div style={{ height: "50px" }}></div>
       {/* <div style={{ height: "50px" }}></div> */}
       <BlogsWrapper>
-        {filteredBlogs.map((blog, index) => (
-          <BlogsCard key={index}>
-            <BlogsIcon src={blog.icon} />
-            <BlogsH1>
-              <b>{blog.title}</b>
-            </BlogsH1>
-            <BlogsP>{blog.content}</BlogsP>
-            {blog.hyperlink == "" ? (
-              <Link to="./abc">
-                <ReadMoreButton>Read more</ReadMoreButton>
-              </Link>
-            ) : (
-              <a href={blog.hyperlink} target="_blank">
-                <ReadMoreButton>Read more</ReadMoreButton>
-              </a>
-
-            )}
-          </BlogsCard>
-        ))}
+        {content}
       </BlogsWrapper>
     </BlogsContainer>
   );
