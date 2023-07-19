@@ -15,6 +15,7 @@ import { Link, useNavigate } from 'react-router-dom';
 const Services = () => {
   const navigate = useNavigate();
   const [showConsultWithDoctor, setShowConsultWithDoctor] = useState(false);
+  const [showworkshops, setShowworkshops] = useState(false);
 
   const handleConsultWithDoctorClick = () => {
     setShowConsultWithDoctor(true);
@@ -23,6 +24,9 @@ const Services = () => {
   function handleNavigation(n){
     navigate(Services_Data[n].href);
   }
+  const handleworkshops = () => {
+    setShowworkshops(true);
+  };
 
   return (
     <ServicesContainer id="services">
@@ -45,6 +49,7 @@ const Services = () => {
         </motion.div>
 
         <motion.div variants={cardTwoVariants} initial="hidden" animate="visible">
+        <Link to="/workshops" target="_blank"><div onClick={handleworkshops}></div>
           <ServicesCard>
             <ServicesIcon src={Services_Data[1].icon} />
             <ServicesH2>
@@ -52,6 +57,7 @@ const Services = () => {
             </ServicesH2>
             <ServicesP>{Services_Data[1].description}</ServicesP>
           </ServicesCard>
+          </Link>
         </motion.div>
 
         <motion.div variants={cardThreeVariants} initial="hidden" animate="visible"  >
