@@ -1,8 +1,4 @@
 import React, { useState } from 'react';
-import Icon1 from '../../images/image1.png';
-import Icon2 from '../../images/image2.png';
-import Icon3 from '../../images/image3.png';
-import Icon4 from '../../images/image4.png';
 import { Services_Data } from '../Services/Services_Data';
 import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
 import Typed from "typed.js";
@@ -13,10 +9,11 @@ import {
   cardThreeVariants,
   cardFourVariants,
 } from "./CardAnimation";
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const Services = () => {
+  const navigate = useNavigate();
   const [showConsultWithDoctor, setShowConsultWithDoctor] = useState(false);
   const [showworkshops, setShowworkshops] = useState(false);
 
@@ -24,6 +21,9 @@ const Services = () => {
     setShowConsultWithDoctor(true);
   };
 
+  function handleNavigation(n){
+    navigate(Services_Data[n].href);
+  }
   const handleworkshops = () => {
     setShowworkshops(true);
   };
@@ -60,8 +60,8 @@ const Services = () => {
           </Link>
         </motion.div>
 
-        <motion.div variants={cardThreeVariants} initial="hidden" animate="visible">
-          <ServicesCard>
+        <motion.div variants={cardThreeVariants} initial="hidden" animate="visible"  >
+          <ServicesCard >
             <ServicesIcon src={Services_Data[2].icon} />
             <ServicesH2>
               <b>{Services_Data[2].title}</b>
@@ -71,6 +71,7 @@ const Services = () => {
         </motion.div>
 
         <motion.div variants={cardFourVariants} initial="hidden" animate="visible">
+        <Link to={Services_Data[3].href}>
           <ServicesCard>
             <ServicesIcon src={Services_Data[3].icon} />
             <ServicesH2>
@@ -78,6 +79,7 @@ const Services = () => {
             </ServicesH2>
             <ServicesP>{Services_Data[3].description}</ServicesP>
           </ServicesCard>
+        </Link>
         </motion.div>
       </ServicesWrapper>
 
