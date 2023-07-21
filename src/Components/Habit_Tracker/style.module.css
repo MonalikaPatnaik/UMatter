@@ -1,0 +1,27 @@
+
+@media screen and (max-width:400px){
+    .icon{
+        display: none;
+    } 
+    .respo{
+        display: none;
+    }
+    .container{
+        padding-inline:0rem;
+    }
+}    
+@media screen and (max-width:768px){    
+    .container{
+        padding-inline:0.5rem;
+    }
+    .table{
+        width: 100%;
+    }
+    .table th, .table td{
+        padding: 2%;
+    }
+    .detail{
+        font-size: smaller;
+    }
+
+}

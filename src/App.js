@@ -2,6 +2,7 @@ import {lazy, Suspense} from 'react';
 import './App.css';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { Loader } from './Components/Loader/Loader'; 
+import HabitTracker from './pages/HabitTracker';
 
 
 const Home = lazy(()=>import("./pages"))
@@ -59,6 +60,7 @@ function App() {
 					/>
 					<Route path="/*" element={<Error404 />} />
 					<Route exact path="/signup" element={<SignupPage />} />
+					<Route exact path="/services/HabitTracker" element={<HabitTracker />} />
 					<Route exact path="/profile" element={<Profile />} />
 				</Routes>
 			</Suspense>

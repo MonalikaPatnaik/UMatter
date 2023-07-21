@@ -7,7 +7,6 @@ import PhoneInput, {
   formatPhoneNumberIntl,
   isPossiblePhoneNumber,
 } from "react-phone-number-input";
-// import "react-phone-number-input/style.css";
 import "./PhoneInput.css";
 import {
   Container,
@@ -423,6 +422,11 @@ const SignUp = () => {
                 type={passwordType}
                 placeholder="Password"
               />
+              {/* {passwordType === "password" ? (
+                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              ) : (
+                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              )} */}
               {passwordType === "password" ? (
                 <BiSolidHide
                   onClick={handleclick}
@@ -446,6 +450,11 @@ const SignUp = () => {
                 type={passwordConfirmType}
                 placeholder="Confirm Password"
               />
+              {/* {passwordConfirmType === "password" ? (
+                <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              ) : (
+                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
+              )} */}
               {passwordConfirmType === "password" ? (
                 <BiSolidHide
                   onClick={Confirmhandleclick}
