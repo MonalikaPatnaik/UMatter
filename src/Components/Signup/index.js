@@ -29,6 +29,7 @@ import SignUpImg from "../../images/SignUp.png";
 import Captcha from "./Captcha";
 // import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
+import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
   const [invalid, setInvalid] = useState(false);
@@ -478,7 +479,13 @@ const SignUp = () => {
             >
               Sign Up
             </SignUpButton>
+
             {invalid && showInvalid()}
+            <label style={{ fontSize: '14px', marginRight: 210, display: 'block' }}>Already have an account ! </label>
+            <NavLink to="/signin" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '20px' }}>
+              Signin
+            </NavLink> 
+
           </SignUpForm>
         </SignUpContainer>
       </FormContainer>
