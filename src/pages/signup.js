@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import SignUp from '../Components/Signup';
 import Footer from '../Components/Footer';
 

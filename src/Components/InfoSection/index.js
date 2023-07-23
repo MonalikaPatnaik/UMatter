@@ -88,9 +88,9 @@
 
 // export default About
 
-import React, { useEffect, useRef } from "react";
-import Typed from "typed.js";
-import { Button } from "../ButtonElements";
+import React, { useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+import { Button } from '../ButtonElements';
 import {
   AboutContainer,
   AboutWrapper,
@@ -103,12 +103,12 @@ import {
   SubTitle,
   BtnWrap,
   ImgWrap,
-  Img,
-} from "./InfoElements";
-import { Link } from "react-router-dom";
-import "../../App.css";
-import { motion } from "framer-motion";
-import { cardTwoVariants } from "../Services/CardAnimation";
+  Img
+} from './InfoElements';
+import { Link } from 'react-router-dom';
+import '../../App.css';
+import { motion } from 'framer-motion';
+import { cardTwoVariants } from '../Services/CardAnimation';
 const About = ({
   lightBg,
   id,
@@ -123,7 +123,7 @@ const About = ({
   alt,
   primary,
   dark,
-  dark2,
+  dark2
 }) => {
   const el = useRef(null);
 
@@ -133,7 +133,7 @@ const About = ({
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
-      showCursor: false,
+      showCursor: false
     });
 
     return () => {
@@ -153,8 +153,8 @@ const About = ({
               >
                 <TopLine>{topLine}</TopLine>
                 <Heading>
-                  {" "}
-                  <span ref={el} style={{ display: "inline-block" }} />
+                  {' '}
+                  <span ref={el} style={{ display: 'inline-block' }} />
                 </Heading>
                 <div className="flex flex-col items-center justify-center">
                   <SubTitle>{description}</SubTitle>
@@ -171,9 +171,9 @@ const About = ({
                     primary={primary ? 1 : 0}
                     dark={dark ? 1 : 0}
                     dark2={dark2 ? 1 : 0}
-                    style={{ textDecoration: "none" }}
+                    style={{ textDecoration: 'none' }}
                   >
-                    {buttonLabel}{" "}
+                    {buttonLabel}{' '}
                   </Button>
                 </BtnWrap>
               </TextWrapper>
@@ -185,9 +185,9 @@ const About = ({
                 whileInView="visible"
                 whileHover={{
                   scale: 1.1,
-                  textShadow: "0px 0px 8px rgb(255,255,255)",
+                  textShadow: '0px 0px 8px rgb(255,255,255)',
 
-                  transition: { duration: 0.6 },
+                  transition: { duration: 0.6 }
                 }}
               >
                 <ImgWrap

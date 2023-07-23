@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 /////////////////////// OLD UI ELEMENTS /////////////////////
 
@@ -159,10 +159,10 @@ export const FormContainer = styled.div`
   min-height: 550px;
   margin: 3rem auto;
   display: flex;
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width: 550px) {
     flex-direction: column;
     margin: 0;
-}
+  }
 `;
 
 export const SignInContainer = styled.div`
@@ -171,10 +171,10 @@ export const SignInContainer = styled.div`
   justify-content: center;
   align-items: center;
   min-height: 100%;
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width: 550px) {
     width: 100%;
-    margin : 3rem auto;
-}
+    margin: 3rem auto;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -186,9 +186,9 @@ export const RightContainer = styled.div`
   background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
   min-height: 100%;
 
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width: 550px) {
     width: 100%;
-}
+  }
 `;
 
 export const SignInForm = styled.form`
@@ -202,7 +202,7 @@ export const SignInForm = styled.form`
 
 export const SignInButton = styled.button`
   width: 7rem;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -226,7 +226,7 @@ export const SignInButton = styled.button`
 `;
 
 export const RightHeading = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -235,7 +235,7 @@ export const RightHeading = styled.h1`
 `;
 
 export const RightPara = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -247,7 +247,7 @@ export const RightPara = styled.p`
 `;
 
 export const SignInh1 = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2.3rem;
@@ -259,7 +259,7 @@ export const SignInh1 = styled.h1`
 export const SignInLabel = styled.label`
   text-align: left;
   width: 70%;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 1rem;
@@ -273,7 +273,7 @@ export const SignInInput = styled.input`
   border-radius: 0;
   border: None;
   background: rgba(1, 191, 113, 0.3);
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -306,7 +306,7 @@ export const RememberMe = styled.div`
   display: flex;
   margin-bottom: 1rem;
   label {
-    font-family: "Poppins";
+    font-family: 'Poppins';
     font-style: normal;
     font-weight: 400;
     font-size: 0.8rem;
@@ -316,7 +316,7 @@ export const RememberMe = styled.div`
 `;
 
 export const ForgotPassword = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;

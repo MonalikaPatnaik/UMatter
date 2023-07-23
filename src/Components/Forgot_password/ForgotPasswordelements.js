@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 export const NewContainer = styled.div`
   width: 100%;
@@ -46,7 +46,7 @@ export const FPimg = styled.img`
 `;
 
 export const FPheading = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2.3rem;
@@ -55,7 +55,7 @@ export const FPheading = styled.h1`
 `;
 
 export const FPpara = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -73,7 +73,7 @@ export const FPinput = styled.input`
   border-radius: 0;
   border: None;
   background: #fff;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -106,7 +106,7 @@ export const ButtonContainer = styled.div`
 
 export const CancelButton = styled.button`
   width: 7rem;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -132,7 +132,7 @@ export const CancelButton = styled.button`
 export const FPButton = styled.button`
   width: 8rem;
   height: 3rem;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;
@@ -162,7 +162,7 @@ export const OtpInput = styled.input`
   border-radius: 0;
   border: None;
   background: #fff;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: bold;
   font-size: 1rem;
@@ -206,11 +206,11 @@ export const TimerContainer = styled.div`
   width: 45%;
   justift-content: center;
   align-items: center;
-  text-align: center; 
+  text-align: center;
 `;
 
 export const ResendLink = styled.a`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -227,7 +227,7 @@ export const ResendLink = styled.a`
 `;
 
 export const ResendPara = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;

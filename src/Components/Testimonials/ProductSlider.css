@@ -1,40 +1,40 @@
-  /* Card Div */
+/* Card Div */
 
-  .CardDiv{
-    background-color: var(--bg-clr);
-    color: white;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0px 0px 50px 0px;
-  }
+.CardDiv {
+  background-color: var(--bg-clr);
+  color: white;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 50px 0px;
+}
 
-  /* Card*/
+/* Card*/
 
-  .Card{ 
-    width: 100%;
-    background-color: #333333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-top: 5px solid #A020F0;
-   }
+.Card {
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 5px solid #a020f0;
+}
 
-   /* Card Body */
+/* Card Body */
 
-   .card-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-   }
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
 
-   /* CardImage */
+/* CardImage */
 
-   .CardImage{
-    width: 60%;
-    margin: 0 auto;
-    border-radius: 50%;
-    margin: 5px auto;
-  }
+.CardImage {
+  width: 60%;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin: 5px auto;
+}

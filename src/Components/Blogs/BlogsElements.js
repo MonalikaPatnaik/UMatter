@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const BlogsContainer = styled.div`
   height: 100%;
@@ -31,13 +31,11 @@ export const ReadMoreButton = styled.button`
   z-index: 2;
 `;
 
-
-
 export const BlogsWrapper = styled.div`
   max-width: 1300px;
   margin: 0 auto;
   display: grid;
-  justify-items:center;
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
   padding: 0 20px;
@@ -62,7 +60,9 @@ export const BlogsP = styled.p`
   padding: 0 15px;
   margin-bottom: 3rem;
   transform: translateY(10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
 `;
 export const BlogsIcon = styled.img`
   height: 100%;
@@ -77,20 +77,19 @@ export const BlogsH1 = styled.h1`
   opacity: 0;
   text-align: center;
   transform: translateY(10px);
-  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition:
+    opacity 0.3s ease-in-out,
+    transform 0.3s ease-in-out;
   font-size: 18px;
   font-weight: 700;
   z-index: 10;
-  // color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  // color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
   color: white;
 
   @media screen and (max-width: 480px) {
     font-size: 15px;
   }
 `;
-
-
-
 
 export const BlogsCard = styled.div`
   vertical-align: middle;
@@ -112,9 +111,8 @@ export const BlogsCard = styled.div`
 
     ${ReadMoreButton} {
       opacity: 1;
-      
     }
-    ${BlogsIcon}{
+    ${BlogsIcon} {
       opacity: 0.5;
     }
 

@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { Link as LinkR } from "react-router-dom";
-import { Link as LinkS } from "react-scroll";
+import styled from 'styled-components';
+import { Link as LinkR } from 'react-router-dom';
+import { Link as LinkS } from 'react-scroll';
 
 export const Nav = styled.nav`
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -27,21 +27,21 @@ export const Nav = styled.nav`
 `;
 
 export const NavbarContainer = styled.div`
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	z-index: 10;
-	width: 100%;
-	@media screen and (max-width: 768px) {
-		justify-content: space-between;
-		padding-left: 4%;
-		padding-right: 4%;
-	}
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 10;
+  width: 100%;
+  @media screen and (max-width: 768px) {
+    justify-content: space-between;
+    padding-left: 4%;
+    padding-right: 4%;
+  }
 `;
 
 const breakpoints = {
-  sm: "640px",
-  md: "1080px",
+  sm: '640px',
+  md: '1080px'
 };
 export const LogoContainer = styled(LinkR)`
   cursor: pointer;
@@ -80,12 +80,7 @@ export const NavLogo = styled.div`
   text-align: center; /* Center the NavLogo on small screens */
 
   &:hover {
-    mask-image: linear-gradient(
-      -75deg,
-      rgba(0, 0, 0, 0.6) 30%,
-      #000 50%,
-      rgba(0, 0, 0, 0.6) 70%
-    );
+    mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
     mask-size: 200%;
     animation: shine 3s infinite;
     color: #00ffca;
@@ -129,7 +124,7 @@ export const NavMenu = styled.ul`
   font-weight: 600;
   margin-right: 0;
   @media screen and (max-width: 768px) {
-    display: ${({ isOpen }) => (isOpen ? "flex" : "none")};
+    display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
     position: sticky;
     flex-direction: column;
     align-items: center;
@@ -141,7 +136,7 @@ export const NavMenu = styled.ul`
     margin-left: 0;
     top: 0px;
     padding-left: 0px;
-    left: ${({ isOpen }) => (isOpen ? "0" : "-100%")};
+    left: ${({ isOpen }) => (isOpen ? '0' : '-100%')};
     opacity: 1;
     z-index: 5;
     transition: all 0.5s ease;
@@ -161,7 +156,7 @@ export const NavLinks = styled(LinkS)`
   position: relative;
 
   &::after {
-    content: "";
+    content: '';
     width: 0%;
     height: 5%;
     position: absolute;
@@ -193,7 +188,8 @@ export const NavBtn = styled.nav`
     margin-top: 0px;
     margin-right: 45px;
   }
-  ${"" /* border-radius: 50px;
+  ${
+    '' /* border-radius: 50px;
 background: #01bf71;
 padding: 10px 10px;
 color: white;

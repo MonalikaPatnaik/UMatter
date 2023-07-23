@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import { Link } from "react-router-dom";
+import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 // Footer container
 export const FooterContainer = styled.footer`
@@ -90,7 +90,9 @@ export const FooterLinkTitle = styled.h1`
   margin-bottom: 10px;
   display: inline-block;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  transition:
+    background-color 0.3s ease-in-out,
+    color 0.3s ease-in-out;
   text-decoration: none;
   position: relative;
   color: inherit;
@@ -102,7 +104,7 @@ export const FooterLinkTitle = styled.h1`
   }
 
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -8px;
     left: 0;
@@ -113,7 +115,7 @@ export const FooterLinkTitle = styled.h1`
 `;
 
 export const FooterLinkTitleHr = styled.hr`
-  content: "";
+  content: '';
   border: 2px solid;
   margin-top: 5px;
   width: 52%;
@@ -138,7 +140,8 @@ export const FooterLink = styled(Link)`
     text-align: center;
     border-radius: 22px;
     padding: 7px;
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
+    transition:
+      transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
       background-color 0.3s ease-out;
 
     &:hover {
@@ -198,12 +201,7 @@ export const SocialLogo = styled(Link)`
   font-weight: bold;
 
   &:hover {
-    mask-image: linear-gradient(
-      -75deg,
-      rgba(0, 0, 0, 0.6) 30%,
-      #000 50%,
-      rgba(0, 0, 0, 0.6) 70%
-    );
+    mask-image: linear-gradient(-75deg, rgba(0, 0, 0, 0.6) 30%, #000 50%, rgba(0, 0, 0, 0.6) 70%);
     mask-size: 200%;
     animation: shine 2s infinite;
     color: lightcyan;

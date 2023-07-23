@@ -1,9 +1,8 @@
-.title{
-    font-family:'Trebuchet MS', sans-serif;
+.title {
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
-.contentTitle{
-    font-family:'Trebuchet MS', sans-serif;
-    border-left: 6px rgba(0, 9, 130, 0.777) solid;
-
+.contentTitle {
+  font-family: 'Trebuchet MS', sans-serif;
+  border-left: 6px rgba(0, 9, 130, 0.777) solid;
 }

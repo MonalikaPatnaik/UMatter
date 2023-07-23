@@ -90,8 +90,8 @@
 //   text-align: center;
 // `;
 
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const ServicesContainer = motion(styled.div`
   /* height: 1000px; */
@@ -156,7 +156,7 @@ export const ServicesCard = styled.div`
     // margin-left: -100px 0px;
     // margin-top: -100px;
     margin: -120px 0px;
-    content: "";
+    content: '';
     // background: #fff;
     background: var(--bg-clr);
 

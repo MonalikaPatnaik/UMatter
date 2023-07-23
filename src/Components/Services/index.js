@@ -1,16 +1,23 @@
 import React, { useState } from 'react';
 import { Services_Data } from '../Services/Services_Data';
-import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
-import Typed from "typed.js";
-import { motion } from "framer-motion";
+import {
+  ServicesContainer,
+  ServicesH1,
+  ServicesH2,
+  ServicesWrapper,
+  ServicesCard,
+  ServicesIcon,
+  ServicesP
+} from './ServicesElements';
+import Typed from 'typed.js';
+import { motion } from 'framer-motion';
 import {
   cardOneVariants,
   cardTwoVariants,
   cardThreeVariants,
-  cardFourVariants,
-} from "./CardAnimation";
+  cardFourVariants
+} from './CardAnimation';
 import { Link, useNavigate } from 'react-router-dom';
-
 
 const Services = () => {
   const navigate = useNavigate();
@@ -21,7 +28,7 @@ const Services = () => {
     setShowConsultWithDoctor(true);
   };
 
-  function handleNavigation(n){
+  function handleNavigation(n) {
     navigate(Services_Data[n].href);
   }
   const handleworkshops = () => {
@@ -31,37 +38,39 @@ const Services = () => {
   return (
     <ServicesContainer id="services">
       <ServicesH1>
-        <span style={{ display: "inline-block" }}>Our services</span>
+        <span style={{ display: 'inline-block' }}>Our services</span>
       </ServicesH1>
 
       <ServicesWrapper>
         <motion.div variants={cardOneVariants} initial="hidden" animate="visible">
-        <Link to="/consultwithdoctor" target="_blank"><div onClick={handleConsultWithDoctorClick}>
-            <ServicesCard>
-              <ServicesIcon src={Services_Data[0].icon} />
-              <ServicesH2>
-                <b>{Services_Data[0].title}</b>
-              </ServicesH2>
-              <ServicesP>{Services_Data[0].description}</ServicesP>
-            </ServicesCard>
-          </div>
+          <Link to="/consultwithdoctor" target="_blank">
+            <div onClick={handleConsultWithDoctorClick}>
+              <ServicesCard>
+                <ServicesIcon src={Services_Data[0].icon} />
+                <ServicesH2>
+                  <b>{Services_Data[0].title}</b>
+                </ServicesH2>
+                <ServicesP>{Services_Data[0].description}</ServicesP>
+              </ServicesCard>
+            </div>
           </Link>
         </motion.div>
 
         <motion.div variants={cardTwoVariants} initial="hidden" animate="visible">
-        <Link to="/workshops" target="_blank"><div onClick={handleworkshops}></div>
-          <ServicesCard>
-            <ServicesIcon src={Services_Data[1].icon} />
-            <ServicesH2>
-              <b>{Services_Data[1].title}</b>
-            </ServicesH2>
-            <ServicesP>{Services_Data[1].description}</ServicesP>
-          </ServicesCard>
+          <Link to="/workshops" target="_blank">
+            <div onClick={handleworkshops}></div>
+            <ServicesCard>
+              <ServicesIcon src={Services_Data[1].icon} />
+              <ServicesH2>
+                <b>{Services_Data[1].title}</b>
+              </ServicesH2>
+              <ServicesP>{Services_Data[1].description}</ServicesP>
+            </ServicesCard>
           </Link>
         </motion.div>
 
-        <motion.div variants={cardThreeVariants} initial="hidden" animate="visible"  >
-          <ServicesCard >
+        <motion.div variants={cardThreeVariants} initial="hidden" animate="visible">
+          <ServicesCard>
             <ServicesIcon src={Services_Data[2].icon} />
             <ServicesH2>
               <b>{Services_Data[2].title}</b>
@@ -71,24 +80,22 @@ const Services = () => {
         </motion.div>
 
         <motion.div variants={cardFourVariants} initial="hidden" animate="visible">
-        <Link to={Services_Data[3].href}>
-          <ServicesCard>
-            <ServicesIcon src={Services_Data[3].icon} />
-            <ServicesH2>
-              <b>{Services_Data[3].title}</b>
-            </ServicesH2>
-            <ServicesP>{Services_Data[3].description}</ServicesP>
-          </ServicesCard>
-        </Link>
+          <Link to={Services_Data[3].href}>
+            <ServicesCard>
+              <ServicesIcon src={Services_Data[3].icon} />
+              <ServicesH2>
+                <b>{Services_Data[3].title}</b>
+              </ServicesH2>
+              <ServicesP>{Services_Data[3].description}</ServicesP>
+            </ServicesCard>
+          </Link>
         </motion.div>
       </ServicesWrapper>
-
     </ServicesContainer>
   );
 };
 
 export default Services;
-
 
 // import React from 'react';
 // import Icon1 from '../../images/image1.png';
@@ -121,7 +128,7 @@ export default Services;
 //   }, []);
 
 //   return (
-    
+
 //     <ServicesContainer id="services">
 //       <ServicesH1>
 //         <span ref={el} style={{ display: "inline-block" }} />
@@ -134,7 +141,6 @@ export default Services;
 //           animate="visible"
 //         >
 //           <ServicesCard>
-            
 
 //             <ServicesIcon src={Icon1} />
 //             <ServicesH2>
@@ -144,7 +150,7 @@ export default Services;
 //               Consult with professional doctors and therapists regarding your health.
 //             </ServicesP>
 //           </ServicesCard>
-          
+
 //         </motion.div>
 
 //         <motion.div

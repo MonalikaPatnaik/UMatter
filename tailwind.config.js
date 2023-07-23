@@ -1,12 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+  darkMode: 'class',
+  content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
     screens: {
-      signupTable: { max: "550px" },
+      signupTable: { max: '550px' }
     },
-    extend: {},
+    extend: {}
   },
-  plugins: [],
+  plugins: []
 };

@@ -1,41 +1,42 @@
 /* Swiper Custom CSS */
 
 .swiper {
-    position: unset !important;
-    margin-top:50px;
+  position: unset !important;
+  margin-top: 50px;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color: #A020F0;
-    z-index: 1;
+.swiper-button-next,
+.swiper-button-prev {
+  color: #a020f0;
+  z-index: 1;
 }
 
 .swiper-button-prev {
-    left: 0;
+  left: 0;
 }
 .swiper-button-next {
-    right: 0;
+  right: 0;
 }
 
 .swiper-pagination {
-    position: relative;
-    z-index: 1; /* Ensure bullets are above content */
+  position: relative;
+  z-index: 1; /* Ensure bullets are above content */
 }
 
 .swiper-pagination-bullet {
-    background-color: var(--text-clr);
-    z-index: 1;
-
+  background-color: var(--text-clr);
+  z-index: 1;
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #A020F0;
+  background-color: #a020f0;
 }
 
 /* media query for small screens */
 
-@media screen and (max-width:767px) {
-    .swiper-button-next, .swiper-button-prev {
-        display: none;
-    }
+@media screen and (max-width: 767px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
 }

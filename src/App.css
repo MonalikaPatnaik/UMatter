@@ -2,54 +2,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@500&family=Orbitron:wght@500&display=swap');
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
 }
- /* body,html{
+/* body,html{
   overflow-x: hidden;
  }  */
 ::-webkit-scrollbar {
-    width: 10px;
-  }
-  
-  /* Track */
-  ::-webkit-scrollbar-track {
-    background: black;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    background: white; 
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
-    background: orange; 
-  }
-.dark-theme{
-    --bg-clr : black;
-    --text-clr : white;
-    transition: all 0.3s ease-in-out;
+  width: 10px;
 }
 
-.light-theme{
-    --bg-clr : white;
-    --text-clr : black;
-    transition: all 0.3s ease-in-out;
+/* Track */
+::-webkit-scrollbar-track {
+  background: black;
 }
 
-.error-404-img{
-    width: 100%;
-    margin-top:2rem ;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: white;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: orange;
+}
+.dark-theme {
+  --bg-clr: black;
+  --text-clr: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.light-theme {
+  --bg-clr: white;
+  --text-clr: black;
+  transition: all 0.3s ease-in-out;
+}
+
+.error-404-img {
+  width: 100%;
+  margin-top: 2rem;
 }
 @media only screen and (max-width: 560px) {
-    .error-404-img{
-        margin-top: 5rem;
-        margin-bottom: 2rem;
-    }
-
+  .error-404-img {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .Effect :hover {
@@ -57,5 +56,3 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
-
-

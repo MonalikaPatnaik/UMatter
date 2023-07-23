@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import {
   NewContainer,
   FormContainer,
@@ -14,19 +14,17 @@ import {
   FPButton,
   TimerContainer,
   ResendLink,
-  ResendPara,
-} from "./ForgotPasswordelements";
-import OTPImg from "../../images/EnterOTP.png";
-import Footer from "../Footer";
+  ResendPara
+} from './ForgotPasswordelements';
+import OTPImg from '../../images/EnterOTP.png';
+import Footer from '../Footer';
 
 function Verify() {
-  const [Otp, setotp] = useState(new Array(4).fill(""));
+  const [Otp, setotp] = useState(new Array(4).fill(''));
 
   const handleChange = (element, index) => {
     if (isNaN(element.value)) return false;
-    setotp((prevOtp) =>
-      prevOtp.map((d, idx) => (idx === index ? element.value : d))
-    );
+    setotp((prevOtp) => prevOtp.map((d, idx) => (idx === index ? element.value : d)));
 
     if (element.nextSibling) {
       element.nextSibling.focus();
@@ -38,7 +36,7 @@ function Verify() {
     // ...
 
     // Show success toast
-    toast.success("OTP verified successfully");
+    toast.success('OTP verified successfully');
   };
 
   const handleRetry = () => {
@@ -46,7 +44,7 @@ function Verify() {
     // ...
 
     // Show success toast
-    toast.success("OTP sent successfully");
+    toast.success('OTP sent successfully');
   };
 
   const [counter, setCounter] = React.useState(59);

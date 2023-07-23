@@ -1,6 +1,6 @@
-import React from "react";
-import Feedback from "../Components/Feedback";
-import Footer from "../Components/Footer";
+import React from 'react';
+import Feedback from '../Components/Feedback';
+import Footer from '../Components/Footer';
 const FeedbackPage = () => {
   return (
     <>
