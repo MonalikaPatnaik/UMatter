@@ -1,5 +1,5 @@
-import styled,{css} from "styled-components";
-import { motion } from "framer-motion";
+import styled, { css } from 'styled-components';
+import { motion } from 'framer-motion';
 // $bgcolor=var(--bg-clr);
 
 export const TestimonialsContainer = motion(styled.div`
@@ -31,7 +31,7 @@ export const TestimonialsWrapper = styled.div`
   grid-gap: 16px;
   padding: 0 50px;
   overflow: hidden;
-  border-radius:50px;
+  border-radius: 50px;
   background-color: ${({ theme }) => theme.defaultColor}; /* Set a default background color */
 
   /* Set the background color based on the body class */

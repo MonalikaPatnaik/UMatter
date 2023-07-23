@@ -1,11 +1,11 @@
-import React from 'react'
-import HabitTrack from "../Components/Habit_Tracker";
+import React from 'react';
+import HabitTrack from '../Components/Habit_Tracker';
 function HabitTracker() {
   return (
     <>
-      <HabitTrack/>
+      <HabitTrack />
     </>
-  )
+  );
 }
 
-export default HabitTracker
+export default HabitTracker;

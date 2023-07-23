@@ -1,13 +1,10 @@
 /** @format */
-import React from "react";
-import { FaUser, FaPhoneAlt } from "react-icons/fa";
-import { MdEmail, MdPassword } from "react-icons/md";
-import { BiSolidShow, BiSolidHide } from "react-icons/bi";
-import PhoneInput, {
-  formatPhoneNumberIntl,
-  isPossiblePhoneNumber,
-} from "react-phone-number-input";
-import "./PhoneInput.css";
+import React from 'react';
+import { FaUser, FaPhoneAlt } from 'react-icons/fa';
+import { MdEmail, MdPassword } from 'react-icons/md';
+import { BiSolidShow, BiSolidHide } from 'react-icons/bi';
+import PhoneInput, { formatPhoneNumberIntl, isPossiblePhoneNumber } from 'react-phone-number-input';
+import './PhoneInput.css';
 import {
   Container,
   FormContainer,
@@ -21,20 +18,20 @@ import {
   PhoneContainer,
   SignUpButton,
   PasswordContainer,
-  Image,
-} from "./SignupElements";
+  Image
+} from './SignupElements';
 
-import { useState } from "react";
-import SignUpImg from "../../images/SignUp.png";
-import Captcha from "./Captcha";
+import { useState } from 'react';
+import SignUpImg from '../../images/SignUp.png';
+import Captcha from './Captcha';
 // import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";
 
 const SignUp = () => {
   const [invalid, setInvalid] = useState(false);
-  const [msg, setMsg] = useState("");
-  const [passwordType, setPasswordType] = useState("password");
-  const [passwordConfirmType, setConfirmPasswordType] = useState("password");
+  const [msg, setMsg] = useState('');
+  const [passwordType, setPasswordType] = useState('password');
+  const [passwordConfirmType, setConfirmPasswordType] = useState('password');
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
 
@@ -43,29 +40,29 @@ const SignUp = () => {
 
   const handleOnChangePhoneNumber = (inputValue) => {
     setValue(inputValue);
-    const countrySelect = document.querySelector(".PhoneInputCountrySelect");
+    const countrySelect = document.querySelector('.PhoneInputCountrySelect');
     const selectedCountryCode = countrySelect.value;
     setData({
       ...data,
       countryCode: selectedCountryCode,
-      contactNumber: formatPhoneNumberIntl(inputValue),
+      contactNumber: formatPhoneNumberIntl(inputValue)
     });
   };
 
   const handleclick = (e) => {
     e.preventDefault();
-    if (passwordType === "text") {
-      setPasswordType("password");
+    if (passwordType === 'text') {
+      setPasswordType('password');
     } else {
-      setPasswordType("text");
+      setPasswordType('text');
     }
   };
   const Confirmhandleclick = (e) => {
     e.preventDefault();
-    if (passwordConfirmType === "text") {
-      setConfirmPasswordType("password");
+    if (passwordConfirmType === 'text') {
+      setConfirmPasswordType('password');
     } else {
-      setConfirmPasswordType("text");
+      setConfirmPasswordType('text');
     }
   };
   const validateEmail = (email) => {
@@ -98,42 +95,41 @@ const SignUp = () => {
     e.preventDefault();
 
     // Validate form inputs
-    const { email, username, name, contactNumber, password, confirmpassword } =
-      data;
+    const { email, username, name, contactNumber, password, confirmpassword } = data;
 
     if (!email || !validateEmail(email)) {
-      setMsg("Please enter a valid email address.");
+      setMsg('Please enter a valid email address.');
       setInvalid(true);
       return;
     }
 
     if (!username || !validateusername(username)) {
-      setMsg("Please enter a username(contains only alphabets).");
+      setMsg('Please enter a username(contains only alphabets).');
       setInvalid(true);
       return;
     }
 
     if (!name || !validatename(name)) {
-      setMsg("Please enter your full name.");
+      setMsg('Please enter your full name.');
       setInvalid(true);
       return;
     }
 
     if (!contactNumber || !validatecontactNumber(contactNumber)) {
-      setMsg("Please enter a contact number/verify once");
+      setMsg('Please enter a contact number/verify once');
       setInvalid(true);
       return;
     }
 
     if (!password || !validatePassword(password)) {
       setMsg(
-        "Please enter a password with at least 8 characters including one uppercase letter, one lowercase letter, and one digit."
+        'Please enter a password with at least 8 characters including one uppercase letter, one lowercase letter, and one digit.'
       );
       setInvalid(true);
       return;
     }
     if (password !== confirmpassword) {
-      setMsg("Passwords do not match.");
+      setMsg('Passwords do not match.');
       setInvalid(true);
       return;
     }
@@ -151,14 +147,14 @@ const SignUp = () => {
   }
 
   const sendPostRequest = async (e) => {
-    console.log("sendPostRequest exicuted!!!");
-    const response = await fetch("http://localhost:8081/SignUp", {
-      mode: "cors",
-      method: "POST",
+    console.log('sendPostRequest exicuted!!!');
+    const response = await fetch('http://localhost:8081/SignUp', {
+      mode: 'cors',
+      method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
     console.log(response);
     const result = await response.json();
@@ -351,9 +347,7 @@ const SignUp = () => {
       <FormContainer className="flex">
         <LeftContainer>
           <LeftHeading>Welcome!</LeftHeading>
-          <LeftPara>
-            Sign up to be a part of the community, because UMatter.
-          </LeftPara>
+          <LeftPara>Sign up to be a part of the community, because UMatter.</LeftPara>
           <Image src={SignUpImg} alt="Sign Up Graphic" />
         </LeftContainer>
         <SignUpContainer>
@@ -427,7 +421,7 @@ const SignUp = () => {
               ) : (
                 <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )} */}
-              {passwordType === "password" ? (
+              {passwordType === 'password' ? (
                 <BiSolidHide
                   onClick={handleclick}
                   className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
@@ -443,9 +437,7 @@ const SignUp = () => {
 
             <PasswordContainer>
               <FormInput
-                onChange={(e) =>
-                  setData({ ...data, confirmpassword: e.target.value })
-                }
+                onChange={(e) => setData({ ...data, confirmpassword: e.target.value })}
                 id="PasswordInput"
                 type={passwordConfirmType}
                 placeholder="Confirm Password"
@@ -455,7 +447,7 @@ const SignUp = () => {
               ) : (
                 <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
               )} */}
-              {passwordConfirmType === "password" ? (
+              {passwordConfirmType === 'password' ? (
                 <BiSolidHide
                   onClick={Confirmhandleclick}
                   className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
@@ -473,7 +465,7 @@ const SignUp = () => {
             <SignUpButton
               type="submit"
               disabled={!trackState}
-              style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
+              style={{ cursor: `${trackState ? 'pointer' : 'not-allowed'}` }}
               className="mb-2 transition-all duration-300 ease-in-out"
             >
               Sign Up

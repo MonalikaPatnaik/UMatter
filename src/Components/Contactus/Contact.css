@@ -1,5 +1,5 @@
-.container{
-  max-width: 100% ;
+.container {
+  max-width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -15,8 +15,7 @@
   padding: 0;
 }
 
-
-.contact-container{
+.contact-container {
   background-color: #fff;
   box-shadow: 0 0 20px #01bf71;
   position: relative;
@@ -26,13 +25,13 @@
   height: 100%;
   margin: 3rem auto;
   display: flex;
-   @media only screen and (max-width:650px){
-          flex-direction: column;
-          margin: 0;
-      }
+  @media only screen and (max-width: 650px) {
+    flex-direction: column;
+    margin: 0;
+  }
 }
 
-.left-container{
+.left-container {
   width: 45%;
   display: flex;
   flex-direction: column;
@@ -41,18 +40,17 @@
   background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
   min-height: 100%;
 
-
-  @media only screen and (max-width:650px){
+  @media only screen and (max-width: 650px) {
     width: 100%;
-}
+  }
 }
 
-.left-container img{
+.left-container img {
   max-width: 90%;
 }
 
-.left-heading{
-  font-family: "Poppins";
+.left-heading {
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -68,16 +66,14 @@
   border-radius: 10px;
 }
 
-
-.form-container form{
+.form-container form {
   min-width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-
-.text-content{
+.text-content {
   margin-bottom: 3rem;
 }
 
@@ -87,30 +83,26 @@
   font-weight: 600;
   margin-bottom: 3rem;
   color: rgb(1, 191, 113);
-  
 }
 
 .form-group {
   margin-bottom: 20px;
   font-weight: 500;
   font-size: larger;
-  
 }
 
 .form-group label {
   display: block;
   margin-bottom: 10px;
   color: rgb(1, 191, 113);
- 
 }
-hr{
-  border:2px solid white;
-  opacity:1;
+hr {
+  border: 2px solid white;
+  opacity: 1;
 }
 
-
-.form-group input[type="text"],
-.form-group input[type="email"],
+.form-group input[type='text'],
+.form-group input[type='email'],
 .form-group textarea {
   width: 100%;
   padding: 8px;
@@ -121,25 +113,20 @@ hr{
 
 .form-group textarea {
   height: 80px;
-  
 }
-.form-group input.inputError
-{
+.form-group input.inputError {
   border: 2px solid #ee334b;
 }
-.form-group input.successError
-{
+.form-group input.successError {
   border: 2px solid rgb(37, 218, 37);
 }
-.form-group textarea.inputError
-{
+.form-group textarea.inputError {
   border: 2px solid #ee334b;
 }
-.form-group textarea.successError
-{
+.form-group textarea.successError {
   border: 2px solid rgb(37, 218, 37);
 }
-.btn-container{
+.btn-container {
   text-align: center;
 }
 .form-button {
@@ -150,7 +137,8 @@ hr{
   color: #fff;
   font-size: 20px;
   font-weight: 300;
-  cursor: pointer;&:hover {
+  cursor: pointer;
+  &:hover {
     opacity: 0.8;
     transition: opacity 0.25s ease;
   }
@@ -162,13 +150,11 @@ hr{
   }
 }
 
-  
 @media only screen and (max-width: 650px) {
-  .left-heading{
+  .left-heading {
     margin-top: 1rem;
   }
-  .form-container{
+  .form-container {
     width: 90vw;
   }
 }
-

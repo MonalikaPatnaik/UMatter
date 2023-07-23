@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 import {
   FaAcquisitionsIncorporated,
   FaBars,
@@ -8,10 +8,10 @@ import {
   FaCrow,
   FaExclamationTriangle,
   FaMicrophoneSlash,
-  FaRegWindowClose,
-} from "react-icons/fa";
-import DarkMode from "../DarkMode/DarkMode";
-import { useNavigate } from "react-router-dom";
+  FaRegWindowClose
+} from 'react-icons/fa';
+import DarkMode from '../DarkMode/DarkMode';
+import { useNavigate } from 'react-router-dom';
 import {
   Nav,
   NavbarContainer,
@@ -24,18 +24,18 @@ import {
   NavBtnLink,
   LogoContainer,
   LogoinnerContainer,
-  NavBtnMobile,
-} from "./NavbarElements";
-import manifest from "../../../src/assests/manifest.json";
+  NavBtnMobile
+} from './NavbarElements';
+import manifest from '../../../src/assests/manifest.json';
 
 const faviconSrc = manifest.icons[0].src;
 const glassStyle = {
-  background: "rgba(40, 30, 30, 0.3)",
+  background: 'rgba(40, 30, 30, 0.3)',
   // borderRadius: "16px",
-  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-  backdropFilter: "blur(7.1px)",
-  WebkitBackdropFilter: "blur(7.1px)",
-  border: "1px solid rgba(40, 30, 30, 0.18)",
+  boxShadow: '0 4px 30px rgba(0, 0, 0, 0.1)',
+  backdropFilter: 'blur(7.1px)',
+  WebkitBackdropFilter: 'blur(7.1px)',
+  border: '1px solid rgba(40, 30, 30, 0.18)'
 };
 const Navbar = ({ toggle }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -44,15 +44,13 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(
-        scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle
-      );
+      setNavbarBg(scrolled > 0 ? { backgroundColor: 'var(--bg-clr)' } : glassStyle);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -60,31 +58,31 @@ const Navbar = ({ toggle }) => {
 
   const handleBlogsClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/blogs");
+    navigate('/blogs');
   };
   const handleFeedbackClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/feedback");
+    navigate('/feedback');
   };
 
   const handleHomeClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/");
+    navigate('/');
   };
 
   const handleAboutClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/");
+    navigate('/');
   };
 
   const handleServicesClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/");
+    navigate('/');
   };
 
   const handleTestimonialsClick = () => {
     setIsOpen(false); // Close the navbar
-    navigate("/");
+    navigate('/');
   };
 
   // Function to handle navbar toggle
@@ -127,12 +125,12 @@ const Navbar = ({ toggle }) => {
           </Navitem>
           <Navitem>
             <NavLinks to="#" onClick={handleBlogsClick}>
-              Blogs{" "}
+              Blogs{' '}
             </NavLinks>
           </Navitem>
           <Navitem>
             <NavLinks to="#" onClick={handleFeedbackClick}>
-              Feedback{" "}
+              Feedback{' '}
             </NavLinks>
           </Navitem>
 

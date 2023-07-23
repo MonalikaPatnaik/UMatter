@@ -1,7 +1,7 @@
 /** @format */
 
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 // import DarkMode from '../DarkMode/DarkMode';
 import {
   NewContainer,
@@ -29,55 +29,55 @@ import {
   // FormLabel,
   // FormWrap,
   // Text,
-} from "./SigninElements";
-import SignInImg from "../../images/SignIn.png";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
+} from './SigninElements';
+import SignInImg from '../../images/SignIn.png';
+import { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 // import Navbar from "../Navbar";
 
 const SignIn = () => {
   const navigate = useNavigate();
   let authorizationToken;
-  const [passwordType, setPasswordType] = useState("password");
+  const [passwordType, setPasswordType] = useState('password');
   const [data, setData] = useState({});
   const [invalid, setInvalid] = useState(false);
   const handleclick = (e) => {
     e.preventDefault();
-    if (passwordType === "text") {
-      setPasswordType("password");
+    if (passwordType === 'text') {
+      setPasswordType('password');
     } else {
-      setPasswordType("text");
+      setPasswordType('text');
     }
   };
 
   const navigateToProfile = () => {
     // 👇️ navigate to /contacts
-    navigate("/profile");
+    navigate('/profile');
   };
 
   const sendPostRequest = async (e) => {
     if (data.password && data.password.length < 8) {
       setInvalid(true);
     }
-    console.log("sendPostRequest is called!!!");
+    console.log('sendPostRequest is called!!!');
     e.preventDefault();
-    const response = await fetch("http://localhost:8081/SignIn", {
-      method: "POST",
+    const response = await fetch('http://localhost:8081/SignIn', {
+      method: 'POST',
       body: JSON.stringify(data),
       headers: {
-        "Content-Type": "application/json",
-      },
+        'Content-Type': 'application/json'
+      }
     });
     if (response.status !== 200) {
       setInvalid(true);
     }
     const result = await response.json();
-    sessionStorage.removeItem("authorizationToken");
-    sessionStorage.removeItem("username");
+    sessionStorage.removeItem('authorizationToken');
+    sessionStorage.removeItem('username');
     const { jwtToken, username } = result;
-    authorizationToken = "Bearer ".concat(jwtToken.toString());
-    sessionStorage.setItem("authorizationToken", authorizationToken);
-    sessionStorage.setItem("username", username);
+    authorizationToken = 'Bearer '.concat(jwtToken.toString());
+    sessionStorage.setItem('authorizationToken', authorizationToken);
+    sessionStorage.setItem('username', username);
     navigateToProfile();
   };
 
@@ -216,16 +216,16 @@ const SignIn = () => {
                 placeholder="at least 8 characters"
                 require
               />
-			  {passwordType === "password" ? (
+              {passwordType === 'password' ? (
                 <i
                   className="fa-solid fa-eye-slash"
                   id="eye"
                   style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
+                    position: 'absolute',
+                    top: '35%',
+                    right: '18%',
+                    transform: 'translateY(-50%)',
+                    cursor: 'pointer'
                   }}
                   onClick={handleclick}
                 ></i>
@@ -234,11 +234,11 @@ const SignIn = () => {
                   className="fa-solid fa-eye"
                   id="eye"
                   style={{
-                    position: "absolute",
-                    top: "35%",
-                    right: "18%",
-                    transform: "translateY(-50%)",
-                    cursor: "pointer",
+                    position: 'absolute',
+                    top: '35%',
+                    right: '18%',
+                    transform: 'translateY(-50%)',
+                    cursor: 'pointer'
                   }}
                   onClick={handleclick}
                 ></i>

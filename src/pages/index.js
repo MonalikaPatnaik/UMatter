@@ -7,9 +7,7 @@ import Services from '../Components/Services';
 import Testimonials from '../Components/Testimonials';
 import GoToTop from '../Components/GoToTop';
 
-
 const Home = () => {
-
   return (
     <>
       <GoToTop />
@@ -19,7 +17,7 @@ const Home = () => {
       <Testimonials />
       <Footer />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

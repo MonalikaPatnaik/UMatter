@@ -88,12 +88,12 @@
 //     padding-right: 0;
 // `
 
-import styled from "styled-components";
-import { motion } from "framer-motion";
+import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const AboutContainer = styled.div`
   color: var(--text-clr);
-  // background: ${({ lightBg }) => (lightBg ? "#f9f9f9" : "#010606")};
+  // background: ${({ lightBg }) => (lightBg ? '#f9f9f9' : '#010606')};
   background: var(--bg-clr);
   @media screen and (max-width: 768px) {
     padding: 100px 0;
@@ -112,10 +112,8 @@ export const AboutRow = styled.div`
   display: grid;
   grid-auto-columns: minmax(auto, 1fr);
   align-items: center;
-  grid-template-areas: ${({ imgStart }) =>
-    imgStart ? `'col2 col1'` : `'col1 col2'`};
-  background-color: ${({ theme }) =>
-    theme.defaultColor}; /* Set a default background color */
+  grid-template-areas: ${({ imgStart }) => (imgStart ? `'col2 col1'` : `'col1 col2'`)};
+  background-color: ${({ theme }) => theme.defaultColor}; /* Set a default background color */
 
   /* Set the background color based on the body class */
   body.light-theme & {
@@ -175,18 +173,18 @@ export const Heading = styled.h1`
   font-size: 28px;
   line-height: 1.1;
   font-weight: 600;
-  // color: ${({ lightText }) => (lightText ? "#f7f8fa" : "#010606")};
+  // color: ${({ lightText }) => (lightText ? '#f7f8fa' : '#010606')};
   color: var(--text-clr);
   @media screen and (max-width: 480px) {
     font-size: 32px;
   }
 `;
 export const SubTitle = styled.p`
-  ${"" /* max-width: 440px; */}
+  ${'' /* max-width: 440px; */}
   margin-bottom: 35px;
   font-size: 1.6rem;
   line-height: 24px;
-  // color: ${({ darkText }) => (darkText ? "#010606" : "#fff")};
+  // color: ${({ darkText }) => (darkText ? '#010606' : '#fff')};
   color: var(--text-clr);
 `;
 export const BtnWrap = styled.div`

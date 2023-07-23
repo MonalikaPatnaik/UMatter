@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import {
   NewContainer,
   FormContainer,
@@ -10,17 +10,17 @@ import {
   FPinput,
   ButtonContainer,
   CancelButton,
-  FPButton,
-} from "./ForgotPasswordelements";
-import ForgotImg from "../../images/Forgotpassword.png";
-import Footer from "../Footer";
+  FPButton
+} from './ForgotPasswordelements';
+import ForgotImg from '../../images/Forgotpassword.png';
+import Footer from '../Footer';
 
 const GetMail = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState();
   const handleContinue = () => {
-    if (!email) alert("enter email");
-    else navigate("/signin/otpverification");
+    if (!email) alert('enter email');
+    else navigate('/signin/otpverification');
   };
   return (
     // <>
@@ -50,8 +50,8 @@ const GetMail = () => {
             <FPimg src={ForgotImg} alt="Forgot Password graphic" />
             <FPheading>Forgot Password?</FPheading>
             <FPpara>
-              Don't worry, Enter your email to receive the OTP for verification
-              and regain access to your account.
+              Don't worry, Enter your email to receive the OTP for verification and regain access to
+              your account.
             </FPpara>
             <FPinput
               onChange={(e) => setEmail(e.target.value)}
@@ -61,7 +61,7 @@ const GetMail = () => {
               require
             />
             <ButtonContainer>
-              <CancelButton onClick={() => navigate("/signin")}>Cancel</CancelButton>
+              <CancelButton onClick={() => navigate('/signin')}>Cancel</CancelButton>
               <FPButton onClick={handleContinue}>Continue</FPButton>
             </ButtonContainer>
           </FPForm>

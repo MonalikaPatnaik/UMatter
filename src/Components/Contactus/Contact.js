@@ -1,8 +1,8 @@
 /** @format */
 
-import { React, useState } from "react";
-import "./Contact.css";
-import Contact_Image from "../../images/contact_image.png"
+import { React, useState } from 'react';
+import './Contact.css';
+import Contact_Image from '../../images/contact_image.png';
 const Contact = () => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
@@ -18,117 +18,130 @@ const Contact = () => {
   }
 
   const handleSubmit = async (e) => {
-
     e.preventDefault();
 
-    console.log("called");
+    console.log('called');
 
     setsuccess('');
 
-    if(name === '')
-    { seterror("nameerr");}
-  
-    else if(mail === '')
-    { seterror("emailerr");}
+    if (name === '') {
+      seterror('nameerr');
+    } else if (mail === '') {
+      seterror('emailerr');
+    } else if (!validEmail(mail)) {
+      seterror('validerr');
+    } else if (message === '') {
+      seterror('messageerr');
+    } else {
+      const mailData = {
+        name,
+        mail,
+        message
+      };
 
-    else if(!validEmail(mail))
-    { seterror("validerr");}
-   
-    else if(message === '')
-    {seterror("messageerr");}
+      await fetch('http://localhost:3000/mail', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(mailData)
+      });
 
-    else
-    {
-          const mailData = {
-            name,
-            mail,
-            message,
-          };
-      
-          await fetch('http://localhost:3000/mail', {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json"
-            },
-            body: JSON.stringify(mailData)
-          })
-          
-          setsuccess("Contact Request Sent Successfully!!");
-          seterror('');
-          setName('');
-          setMail('');
-          setMessage('');
-         // alert("Contact Request Sent Successfully")
-   
+      setsuccess('Contact Request Sent Successfully!!');
+      seterror('');
+      setName('');
+      setMail('');
+      setMessage('');
+      // alert("Contact Request Sent Successfully")
     }
-  
-  }
+  };
 
   return (
-
-
     <div className="container">
-
       <div className="contact-container">
+        <div className="left-container">
+          <h2 className="left-heading">Feel Free to Contact Us</h2>
+          <img src={Contact_Image} />
+        </div>
 
-      <div className="left-container">
-        <h2 className="left-heading">Feel Free to Contact Us</h2>
-        <img src={Contact_Image}  />
+        <div className="form-container">
+          <h2>Contact Us</h2>
+          <hr></hr>
+          <div>
+            <p className="text-lg font-normal text-green-600 my-2">{success}</p>
+          </div>
+          <form onSubmit={handleSubmit}>
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Enter your name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className={`${
+                  error === 'nameerr' ? 'inputError' : name !== '' ? 'successError' : ''
+                }`}
+              />
+              {error === 'nameerr' && (
+                <small className="text-red-600 text-lg">*Name is Required!</small>
+              )}
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="Enter your email"
+                value={mail}
+                onChange={(e) => setMail(e.target.value)}
+                className={`${
+                  error === 'emailerr' || error === 'validerr'
+                    ? 'inputError'
+                    : mail !== ''
+                    ? 'successError'
+                    : ''
+                }`}
+              />
+              {error === 'emailerr' && (
+                <small className="text-red-600 text-lg">*E-mail is Required!</small>
+              )}
+              {error === 'validerr' && (
+                <small className="text-red-600 text-lg">*Valid E-mail is Required!</small>
+              )}
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea
+                id="message"
+                name="message"
+                placeholder="Enter your message"
+                value={message}
+                onChange={(e) => setMessage(e.target.value)}
+                className={`${
+                  error === 'messageerr' ? 'inputError' : message !== '' ? 'successError' : ''
+                }`}
+              ></textarea>
+              {error === 'messageerr' && (
+                <small className="text-red-600 text-lg">*Message is Required!</small>
+              )}
+            </div>
+
+            <div className="btn-container">
+              <button onClick={handleSubmit} className="form-button" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
       </div>
-
-    <div className="form-container">
-      <h2>Contact Us</h2>
-      <hr></hr>
-      <div><p className="text-lg font-normal text-green-600 my-2">{success}</p></div>
-      <form onSubmit={handleSubmit}>
-        <div class="form-group">
-          <label for="name">Name:</label>
-          <input type="text" id="name" name="name" required placeholder="Enter your name" value={name}
-          onChange={(e) => setName(e.target.value)} className={`${error==='nameerr'?"inputError": name!==''?"successError":""}`} />
-           {
-                error === 'nameerr' && (
-                  <small className='text-red-600 text-lg'>*Name is Required!</small>
-                ) 
-              }
-        </div>
-
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" id="email" name="email" required placeholder="Enter your email" value={mail}
-          onChange={(e) => setMail(e.target.value)}  className={`${error==='emailerr' || error==='validerr'?"inputError": mail!==''?"successError":""}`}/>
-           {
-                error === 'emailerr' && (
-                  <small className='text-red-600 text-lg'>*E-mail is Required!</small>
-                ) 
-              }
-              {
-                error === 'validerr' && (
-                  <small className='text-red-600 text-lg'>*Valid E-mail is Required!</small>
-                ) 
-              }
-        </div>
-
-        <div class="form-group">
-          <label for="message">Message:</label>
-          <textarea id="message" name="message" placeholder="Enter your message" value={message}
-          onChange={(e) => setMessage(e.target.value)}  className={`${error==='messageerr'?"inputError": message!==''?"successError":""}`}></textarea>
-          {
-                error === 'messageerr' && (
-                  <small className='text-red-600 text-lg'>*Message is Required!</small>
-                ) 
-              }
-        </div>
-
-        <div className="btn-container">
-          <button onClick={handleSubmit} className="form-button" type="submit">Submit</button>
-        </div>
-      </form>
     </div>
-
-    </div>
-    </div>
-
-
   );
 };
 

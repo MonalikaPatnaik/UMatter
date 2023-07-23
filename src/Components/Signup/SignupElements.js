@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 // import { Link } from "react-router-dom";
 
 ////////////// OLD UI ELEMENTS /////////////////////////
@@ -228,7 +228,7 @@ export const LeftContainer = styled.div`
 `;
 
 export const LeftHeading = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2rem;
@@ -237,7 +237,7 @@ export const LeftHeading = styled.h1`
 `;
 
 export const LeftPara = styled.p`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -258,7 +258,7 @@ export const SignUpForm = styled.form`
 `;
 
 export const SignUph1 = styled.h1`
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 700;
   font-size: 2.3rem;
@@ -274,7 +274,7 @@ export const FormInput = styled.input`
   border-radius: 5px;
   border: None;
   background: rgba(1, 191, 113, 0.3);
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 0.8rem;
@@ -327,7 +327,7 @@ export const PasswordContainer = styled.div`
 
 export const SignUpButton = styled.button`
   width: 9rem;
-  font-family: "Poppins";
+  font-family: 'Poppins';
   font-style: normal;
   font-weight: 400;
   font-size: 1rem;

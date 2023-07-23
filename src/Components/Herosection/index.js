@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from "react";
-import Typed from "typed.js";
-import Video from "../../videos/video1.mp4";
+import React, { useState, useEffect, useRef } from 'react';
+import Typed from 'typed.js';
+import Video from '../../videos/video1.mp4';
 import {
   HeroContainer,
   HeroBg,
@@ -10,10 +10,10 @@ import {
   HeroH1,
   HeroP,
   ArrowForward,
-  ArrowRight,
-} from "./HeroElements";
-import { Button } from "../ButtonElements";
-import { Link } from "react-router-dom";
+  ArrowRight
+} from './HeroElements';
+import { Button } from '../ButtonElements';
+import { Link } from 'react-router-dom';
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
@@ -21,11 +21,11 @@ const HeroSection = () => {
 
   useEffect(() => {
     const typed = new Typed(el.current, {
-      strings: ["Make your life more blissful"],
+      strings: ['Make your life more blissful'],
       typeSpeed: 50,
       backSpeed: 50,
       loop: true,
-      showCursor: false,
+      showCursor: false
     });
 
     return () => {
@@ -35,9 +35,8 @@ const HeroSection = () => {
 
   const onHover = () => {
     setHover(!hover);
-  };  
-  
-  
+  };
+
   return (
     <HeroContainer id="home">
       <HeroBg>
@@ -48,7 +47,7 @@ const HeroSection = () => {
         transition={{ duration: 0.8 }}
       >
         <HeroH1>
-          <span ref={el} style={{ display: "inline-block" }} />
+          <span ref={el} style={{ display: 'inline-block' }} />
         </HeroH1>
         <HeroP>Register today and seize a fresh start for your life!</HeroP>
         <HeroBtnWrapper>
@@ -59,7 +58,7 @@ const HeroSection = () => {
             onMouseLeave={onHover}
             primary="true"
             dark="true"
-            style={{ textDecoration: "none" }}
+            style={{ textDecoration: 'none' }}
           >
             Take the first step {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>

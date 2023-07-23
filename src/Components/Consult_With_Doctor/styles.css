@@ -1,218 +1,210 @@
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.5;
-    margin: 0;
-  }
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  margin: 0;
+}
 
-  .hero {
-    position: relative;
-    background-image: url('https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q29uc3VsdCUyMERvY3RvcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60');
-    background-size: cover;
-    background-position: center;
-    height: 90vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-    margin-top: -80px;
-  }
+.hero {
+  position: relative;
+  background-image: url('https://images.unsplash.com/photo-1585842378054-ee2e52f94ba2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8Q29uc3VsdCUyMERvY3RvcnN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=1000&q=60');
+  background-size: cover;
+  background-position: center;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  margin-top: -80px;
+}
 
-  .hero-content {
-    text-align: center;
-  }
+.hero-content {
+  text-align: center;
+}
 
-  .hero-heading {
-    font-family: 'Poppins', sans-serif;
-    font-size: 50px;
-    font-weight: 1000;
-    margin-bottom: 10px;
-    letter-spacing: 2px;
-    color: #fff;
-    
-  }
+.hero-heading {
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  font-weight: 1000;
+  margin-bottom: 10px;
+  letter-spacing: 2px;
+  color: #fff;
+}
 
-  .hero-text {
-    font-family: 'Poppins', sans-serif;
-    font-size: 24px;
-    
-    margin-bottom: 30px;
-    letter-spacing: 1px;
-    color: #fff;
-  }
+.hero-text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
 
-  .btn-schedule {
-    display: inline-block;
-    background-color: #ff9800;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
-    font-size: 20px;
-    padding: 14px 28px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+  color: #fff;
+}
 
-  .btn-schedule:hover {
-    background-color: #ff5722;
-  }
+.btn-schedule {
+  display: inline-block;
+  background-color: #ff9800;
+  color: #fff;
+  font-family: 'Poppins', sans-serif;
+  font-size: 20px;
+  padding: 14px 28px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
 
-  section {
-    padding: 40px 20px;
-  }
+.btn-schedule:hover {
+  background-color: #ff5722;
+}
 
-  section h2 {
-    font-size: 20px;
-    margin-bottom: 10px;
-  }
+section {
+  padding: 40px 20px;
+}
 
-  .btn-schedule-primary {
-    background-color: #ff5722;
-  }
+section h2 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
 
-  .btn-schedule-primary:hover {
-    background-color: #e64a19;
-  }
+.btn-schedule-primary {
+  background-color: #ff5722;
+}
 
-  .btn-schedule-secondary {
-    background-color: #ddd;
-    color: #333;
-  }
+.btn-schedule-primary:hover {
+  background-color: #e64a19;
+}
 
-  .btn-schedule-secondary:hover {
-    background-color: #ccc;
-    cursor: pointer;
-  }
+.btn-schedule-secondary {
+  background-color: #ddd;
+  color: #333;
+}
 
-  
+.btn-schedule-secondary:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+
 /* section 2 */
 
 .doctor-profiles {
-padding: 50px 0;
-background-color: #f2f2f2;
+  padding: 50px 0;
+  background-color: #f2f2f2;
 }
 
-.heading_drProfile{
-text-align:center;
-font-size: 40px;
-margin-bottom:50px;
+.heading_drProfile {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 50px;
 }
 
 .slider {
-display: flex;
-overflow-x: auto;
-scroll-behavior: smooth;
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
 }
 
 .slide {
-flex: 0 0 300px;
-margin-right: 20px;
-background-color: #fff;
-padding: 20px;
-border-radius: 8px;
-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s ease;
+  flex: 0 0 300px;
+  margin-right: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-
 .profile img {
-width: 100%;
-height: auto;
-border-radius: 4px;
-margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 10px;
 }
 
 .profile h3 {
-font-size: 20px;
-margin-bottom: 5px;
+  font-size: 20px;
+  margin-bottom: 5px;
 }
 
 .profile p {
-font-size: 14px;
-color: #555;
-margin-bottom: 10px;
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
 }
 
 .btn {
-  display: inline-block; 
-background-color: #ff5722;
-color: #fff;
-font-size: 11px;
-padding: 6px 14px;
-text-decoration: none;
-border-radius: 4px;
-transition: background-color 0.3s ease;
-
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 11px;
+  padding: 6px 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
 .slide:hover .btn {
-background-color: #e64a19;
+  background-color: #e64a19;
 }
 
 .btn-secondary {
-background-color: #ddd;
-color: #333;
-margin-left:10px;
+  background-color: #ddd;
+  color: #333;
+  margin-left: 10px;
 }
 
 .btn-secondary:hover {
-background-color: #ccc;
-cursor:pointer;
+  background-color: #ccc;
+  cursor: pointer;
 }
 
-  
 /* section 3 */
 
 .consultation-process {
-padding: 50px 0;
-background-color: #fff;
+  padding: 50px 0;
+  background-color: #fff;
 }
 
 .container {
-max-width: 800px;
-margin: 0 auto;
-text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .section-heading {
-font-size: 32px;
-margin-bottom: 30px;
+  font-size: 32px;
+  margin-bottom: 30px;
 }
 
 .process-steps {
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .step {
-flex: 0 0 calc(50% - 40px);
-max-width: 400px;
-margin: 20px;
-text-align: center;
+  flex: 0 0 calc(50% - 40px);
+  max-width: 400px;
+  margin: 20px;
+  text-align: center;
 }
 
 .step-number {
-display: inline-block;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-background-color: #ff5722;
-color: #fff;
-font-size: 24px;
-line-height: 50px;
-margin-bottom: 10px;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 24px;
+  line-height: 50px;
+  margin-bottom: 10px;
 }
 
 .step-heading {
-font-size: 24px;
-margin-bottom: 10px;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
 .step-description {
-font-size: 14px;
-color: #555;
+  font-size: 14px;
+  color: #555;
 }
-
-
-
