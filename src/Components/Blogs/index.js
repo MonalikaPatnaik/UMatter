@@ -11,6 +11,7 @@ import Icon7 from "../../images/non-alco-cocktail.png";
 import Icon8 from "../../images/isolation.jpg";
 import Icon9 from "../../images/natural remedies.jpg";
 import Icon10 from "../../images/No-yes.jpg";
+import Icon11 from "../../images/mental-health-advice.jpg";
 import {
   BlogsContainer,
   BlogsH1,
@@ -285,5 +286,13 @@ const blogsData = [
       "Consumption of a measured mixture of ashwagandha, Bala, shatavari and ginseng every day, or a chyawanprash containing these help in detoxification. Consume a teaspoon of Ajwain,it reduces cravings of smoke and results in reducing the effect so intake nicotine.",
     hyperlink:
       "https://www.hindustantimes.com/lifestyle/health/jal-neti-to-ajwain-ayurveda-tips-to-help-you-quit-smoking-naturally-101649309468261.html",
+  },
+  {
+    icon: Icon11,
+    title: "Mental health advice to my younger self",
+    content:
+      "One of the best questions we can ask ourselves is 'What advice would you give your younger self?' Often. we are experts in our own mental health without realising. So, with taking time to reflect on this question, we can reveal our own pearls of mental health wisdom.",
+    hyperlink:
+      "https://www.mentalhealth.org.uk/explore-mental-health/blogs/mental-health-advice-my-younger-self",
   },
 ];
