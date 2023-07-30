@@ -481,8 +481,10 @@ const SignUp = () => {
             </SignUpButton>
 
             {invalid && showInvalid()}
-            <label style={{ fontSize: '14px', marginRight: 210, display: 'block' }}>Already have an account ! </label>
-            <NavLink to="/signin" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '20px' }}>
+            <label style={{ fontSize: '14px', color: 'green', textAlign: 'center' }}>
+              Already have an account!
+            </label>           
+             <NavLink to="/signin" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '240px' }}>
               Signin
             </NavLink> 
 
