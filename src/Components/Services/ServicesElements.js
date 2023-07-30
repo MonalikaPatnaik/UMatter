@@ -111,9 +111,11 @@ export const ServicesWrapper = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
-  grid-gap: 16px;
+  grid-gap: 50px ;
 
-  padding: 0 30px;
+  // padding: 0 1px;
+  margin : 0 140px 0 0;
+
 
   @media screen and (max-width: 1000px) {
     grid-template-columns: 1fr 1fr;
@@ -135,14 +137,15 @@ export const ServicesCard = styled.div`
   // boder-color:black;
   border-color: rgb(11, 115, 72);
   // max-height: 380px;
-  padding: 40px;
+  padding: 30px;
   //height:0px;
+  width:255px;
   box-shadow: 0 1px 3px gray;
   color: var(--text-clr);
   transition: all 0.8s ease-in-out;
   transform-origin: center center;
   position: relative;
-  height: 450px;
+  height: 440px;
 
   overflow: hidden;
 
