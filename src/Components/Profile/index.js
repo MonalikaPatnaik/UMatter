@@ -30,7 +30,7 @@ const ProfilePage = () => {
             Authorization:authorizationToken,
             },
             };
-      const response = await fetch(`http://localhost:8081/profile/${username}/`, options);
+      const response = await fetch(`https://umatter.onrender.com/${username}/`, options);
       const data = response.json();
       if(data.message === undefined){
         // setIsSignedIn(true); 

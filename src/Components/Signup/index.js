@@ -152,7 +152,7 @@ const SignUp = () => {
 
   const sendPostRequest = async (e) => {
     console.log("sendPostRequest exicuted!!!");
-    const response = await fetch("http://localhost:8081/SignUp", {
+    const response = await fetch("https://umatter.onrender.com/SignUp", {
       mode: "cors",
       method: "POST",
       body: JSON.stringify(data),
