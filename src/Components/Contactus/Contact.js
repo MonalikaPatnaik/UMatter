@@ -45,7 +45,7 @@ const Contact = () => {
             message,
           };
       
-          await fetch('http://localhost:3000/mail', {
+          await fetch('https://umatter.onrender.com/mail', {
             method: "POST",
             headers: {
               "Content-Type": "application/json"
