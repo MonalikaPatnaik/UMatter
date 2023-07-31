@@ -2,7 +2,10 @@
   "homepage": ".",
   "name": "website",
   "version": "0.1.0",
+
+
   "proxy": "https://umatter.onrender.com",
+
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",

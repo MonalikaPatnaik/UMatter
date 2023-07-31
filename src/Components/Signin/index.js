@@ -254,7 +254,11 @@ const SignIn = () => {
             <NavLink to="/signin/forgotPassword">
               <ForgotPassword>Forgot password?</ForgotPassword>
             </NavLink>
-          </SignInForm>
+            <label style={{ fontSize: '14px', marginLeft: '-25px',marginTop: '10px', display: 'block' ,  color: 'green'}}>Don't have an account ? </label>
+            <NavLink to="/signup" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '200px' }}>
+              SignUp
+            </NavLink>         
+           </SignInForm>
         </SignInContainer>
         <RightContainer>
           <RightHeading>Hello, Friend!</RightHeading>
