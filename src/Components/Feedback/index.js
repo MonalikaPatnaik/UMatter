@@ -31,7 +31,7 @@ const Feedback = () => {
 
         if (data.username && data.feedback != "") {
 
-            const response = await fetch('http://localhost:8081/feedback', { // Update the endpoint URL here
+            const response = await fetch('https://umatter.onrender.com/feedback', { // Update the endpoint URL here
                 method: 'POST',
                 body: JSON.stringify(data),
                 headers: {
