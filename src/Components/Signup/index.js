@@ -25,7 +25,7 @@ import {
 } from "./SignupElements";
 
 import { useState } from "react";
-import SignUpImg from "../../images/SignUp.png";
+import SignUpImg from "../../images/SignUp.webp";
 import Captcha from "./Captcha";
 // import DarkMode from "../DarkMode/DarkMode";
 // import Navbar from "../Navbar";

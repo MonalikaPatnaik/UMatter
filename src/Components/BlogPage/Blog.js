@@ -6,7 +6,7 @@ const blogcontent ={
   tags:["Health"],
   title:"The Truth About Smoking: It's Not Just Bad for Your Lungs",
   metatitle:"There is no safe level of smoking. Even secondhand smoke can be harmful.",
-  image:"https://cdn.pixabay.com/photo/2019/06/14/13/16/cigarette-4273574_1280.jpg",
+  image:"https://cdn.pixabay.com/photo/2019/06/14/13/16/cigarette-4273574_1280.webp",
   content:[{
     title:"Introduction",
     description:"Smoking is one of the leading causes of preventable deaths worldwide. It is a habit that affects not only the smoker but also those around them. Smoking can cause a wide range of health problems, from respiratory issues to heart disease and cancer. In this blog post, we will explore what smoking does to your body.",
@@ -19,7 +19,7 @@ const blogcontent ={
   },{
     title:"Cancer",
     description:"Smoking is one of the leading causes of cancer worldwide. It can increase the risk of lung cancer, throat cancer, mouth cancer, bladder cancer, and many other types of cancer. Smoking causes mutations in the DNA, which can lead to the growth of abnormal cells and the development of cancer. ",
-    image:"https://cdn.pixabay.com/photo/2012/04/24/13/11/asbestos-39996_640.png"
+    image:"https://cdn.pixabay.com/photo/2012/04/24/13/11/asbestos-39996_640.webp"
   },{
     title:"Conclusion",
     description:"In conclusion, smoking can cause significant damage to your body. It can lead to respiratory issues, heart disease, reproductive problems, and cancer. Quitting smoking is one of the best things you can do for your health. It can reduce your risk of developing these health problems and improve your overall quality of life. If you are struggling to quit smoking, talk to your doctor or a smoking cessation specialist for help. "

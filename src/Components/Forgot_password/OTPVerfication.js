@@ -16,7 +16,7 @@ import {
   ResendLink,
   ResendPara,
 } from "./ForgotPasswordelements";
-import OTPImg from "../../images/EnterOTP.png";
+import OTPImg from "../../images/EnterOTP.webp";
 import Footer from "../Footer";
 
 function Verify() {

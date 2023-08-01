@@ -1,5 +1,5 @@
 import React from 'react';
-import construct from '../images/construct.png';
+import construct from '../images/construct.webp';
 
 const Develop = (props) => {
   return (

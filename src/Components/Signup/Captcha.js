@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import captchaBg from "../../images/captcha_Bg.jpg"
+import captchaBg from "../../images/captcha_Bg.webp"
 import { FiRefreshCcw } from "react-icons/fi"
 
 const Captcha = ({ message, trackState }) => {

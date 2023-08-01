@@ -2,7 +2,7 @@
 
 import { React, useState } from "react";
 import "./Contact.css";
-import Contact_Image from "../../images/contact_image.png"
+import Contact_Image from "../../images/contact_image.webp"
 const Contact = () => {
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');

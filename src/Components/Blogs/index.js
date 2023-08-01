@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 //import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-//import Icon1 from "../../images/no-drinking.png";
-import Icon2 from "../../images/smoking-is-Injurious-to-Health.jpeg";
-import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.png";
-import Icon4 from "../../images/5Ds.jpg";
-import Icon5 from "../../images/Distraction tec.jpg";
-import Icon6 from "../../images/group-quiting.jpg";
-import Icon7 from "../../images/non-alco-cocktail.png";
-import Icon8 from "../../images/isolation.jpg";
-import Icon9 from "../../images/natural remedies.jpg";
-import Icon10 from "../../images/No-yes.jpg";
-import Icon11 from "../../images/mental-health-advice.jpg";
+//import Icon1 from "../../images/no-drinking.webp";
+import Icon2 from "../../images/smoking-is-Injurious-to-Health.webp";
+import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.webp";
+import Icon4 from "../../images/5Ds.webp";
+import Icon5 from "../../images/Distraction tec.webp";
+import Icon6 from "../../images/group-quiting.webp";
+import Icon7 from "../../images/non-alco-cocktail.webp";
+import Icon8 from "../../images/isolation.webp";
+import Icon9 from "../../images/natural remedies.webp";
+import Icon10 from "../../images/No-yes.webp";
+import Icon11 from "../../images/mental-health-advice.webp";
 import {
   BlogsContainer,
   BlogsH1,

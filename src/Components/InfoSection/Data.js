@@ -8,7 +8,7 @@ export const homeObjOne = {
     description: 'UMatter is a one and all platform for you to help you out in quitting smoking and drinking by providing personalized consultations and medications making you a step closer to leading a healthy life.',
     buttonLabel: 'Get Started',
     imgStart: false ,
-    img: require('../../images/about.png'),
+    img: require('../../images/about.webp'),
     alt: 'Doctor',
     dark: true,
     primary: true,
