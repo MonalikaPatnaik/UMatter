@@ -30,7 +30,7 @@ import {
   // FormWrap,
   // Text,
 } from "./SigninElements";
-import SignInImg from "../../images/SignIn.png";
+import SignInImg from "../../images/SignIn.webp";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 // import Navbar from "../Navbar";

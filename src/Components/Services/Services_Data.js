@@ -1,7 +1,7 @@
-import Icon1 from '../../images/image1.png';
-import Icon2 from '../../images/image2.png';
-import Icon3 from '../../images/image3.png';
-import Icon4 from '../../images/image4.png';
+import Icon1 from '../../images/image1.webp';
+import Icon2 from '../../images/image2.webp';
+import Icon3 from '../../images/image3.webp';
+import Icon4 from '../../images/image4.webp';
 export const Services_Data=[
     {
       id: 'consult',

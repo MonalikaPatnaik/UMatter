@@ -1,7 +1,7 @@
 import './styles.css';
 import React from 'react';
 import Footer from '../Footer';
-import WorkshopImg from "../../images/WorkshopImg.png";
+import WorkshopImg from "../../images/WorkshopImg.webp";
 
 
 const Workshops = () => {

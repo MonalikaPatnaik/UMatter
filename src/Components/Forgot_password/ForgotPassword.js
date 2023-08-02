@@ -12,7 +12,7 @@ import {
   CancelButton,
   FPButton,
 } from "./ForgotPasswordelements";
-import ForgotImg from "../../images/Forgotpassword.png";
+import ForgotImg from "../../images/Forgotpassword.webp";
 import Footer from "../Footer";
 
 const GetMail = () => {
