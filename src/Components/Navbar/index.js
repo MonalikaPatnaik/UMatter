@@ -87,6 +87,11 @@ const Navbar = ({ toggle }) => {
     navigate("/");
   };
 
+  const handleTeamClick = () => {
+    setIsOpen(false); // Close the navbar
+    navigate("/team");
+  };
+
   // Function to handle navbar toggle
   const handleToggle = () => {
     setIsOpen(!isOpen);
@@ -133,6 +138,11 @@ const Navbar = ({ toggle }) => {
           <Navitem>
             <NavLinks to="#" onClick={handleFeedbackClick}>
               Feedback{" "}
+            </NavLinks>
+          </Navitem>
+          <Navitem>
+            <NavLinks to="#" onClick={handleTeamClick}>
+              Meet Our Team{" "}
             </NavLinks>
           </Navitem>
 
