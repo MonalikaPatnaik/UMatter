@@ -142,7 +142,7 @@ const Navbar = ({ toggle }) => {
           </Navitem>
           <Navitem>
             <NavLinks to="#" onClick={handleTeamClick}>
-              Meet Our Team{" "}
+              Team{" "}
             </NavLinks>
           </Navitem>
 
