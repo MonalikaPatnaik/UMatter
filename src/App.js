@@ -11,6 +11,7 @@ const  DevelopPage = lazy(()=>import("./pages/develop"))
 const Error404 = lazy(()=>import("./pages/Error404"))
 const BlogPage = lazy(()=>import("./pages/blogs"))
 const FeedbackPage = lazy(()=>import("./pages/feedback"))
+const Team = lazy(()=>import("./pages/team"))
 const SignupPage = lazy(()=>import("./pages/signup"))
 const Profile = lazy(()=>import("./pages/profile"))
 const Navbar = lazy(()=>import("./Components/Navbar"))
@@ -39,6 +40,7 @@ function App() {
 					<Route exact path="/develop" element={<DevelopPage />} />
 					<Route path="/blogs" element={<BlogPage />} />
 					<Route path="/feedback" element={<FeedbackPage />} />
+					<Route path="/team" element={<Team />} />
 					<Route path="/contact" element={<ContactPage />} />
 					<Route path="/consultwithdoctor" element={<ConsultWithDoctor />} />
 					<Route path="/consultwithdoctor/consultationform" element={<Consultationform />} />
