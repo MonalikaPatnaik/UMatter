@@ -128,6 +128,21 @@ cd UMatter
 npm start
 ```
 
+### Step 6:
+To Run the Full Application(Frontend + Backend with Database) using lightweight Docker Containers, Shoot up a terminal and run:
+
+```
+docker build -t frontend:1 -f Dockerfile.frontend .
+docker run -it -p 3000:3000 frontend:1 
+```
+Shoot up a new terminal for backend and run:
+
+```
+cd Express_js_server
+docker build -t backend:1 -f Dockerfile.backend .
+docker run -it -p 8081:8081 backend:1
+```
+
 This will open up the website on localhost. You can begin working. The changes will be reflected here.
 
 ## If you have any ideas or questions 🤷
