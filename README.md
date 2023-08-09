@@ -27,9 +27,6 @@ Welcome to UMatter, an inclusive platform designed to help individuals quit bad 
 UMatter is a one and all platform to help people quit bad habits by providing them with personalized sessions and one-to-one consultations with professionals.
 
 <div align="left">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
    <br>
    <img src="https://img.shields.io/github/repo-size/MonalikaPatnaik/UMatter?style=for-the-badge" />
    <img src="https://img.shields.io/github/issues/MonalikaPatnaik/UMatter?style=for-the-badge" />
