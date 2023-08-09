@@ -365,25 +365,28 @@ const SignUp = () => {
               id="FullNameInput"
               type="text"
               placeholder="Full Name"
+              aria-label="Full Name"
             />
-            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden" />
+            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden" aria-hidden="true"/>
 
             <FormInput
               onChange={(e) => setData({ ...data, username: e.target.value })}
               id="usernameInput"
               type="text"
               placeholder="Username"
+              aria-label="Username"
             />
-            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden" />
+            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden" aria-hidden="true"/>
 
             <FormInput
               onChange={(e) => setData({ ...data, email: e.target.value })}
               id="emailInput"
               type="email"
               placeholder="Email"
-              require
+              required
+              aria-label="Email"
             />
-            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden" />
+            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden" aria-hidden="true"/>
             <PhoneContainer>
               <PhoneInput
                 international
@@ -392,6 +395,7 @@ const SignUp = () => {
                 placeholder="Phone number"
                 value={value}
                 onChange={handleOnChangePhoneNumber}
+                aria-label="Phone number"
               />
             </PhoneContainer>
 
@@ -422,6 +426,7 @@ const SignUp = () => {
                 id="PasswordInput"
                 type={passwordType}
                 placeholder="Password"
+                aria-label="Password"
               />
               {/* {passwordType === "password" ? (
                 <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
@@ -450,6 +455,7 @@ const SignUp = () => {
                 id="PasswordInput"
                 type={passwordConfirmType}
                 placeholder="Confirm Password"
+                aria-label="Confirm Password"
               />
               {/* {passwordConfirmType === "password" ? (
                 <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
@@ -476,6 +482,7 @@ const SignUp = () => {
               disabled={!trackState}
               style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
               className="mb-2 transition-all duration-300 ease-in-out"
+              aria-label="Sign Up"
             >
               Sign Up
             </SignUpButton>

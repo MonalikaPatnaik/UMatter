@@ -82,15 +82,17 @@ const Feedback = () => {
                             <FormH1>Share your Feedback</FormH1>
                             <FormLabel htmlFor="username">username</FormLabel>
                             <FormInput
+                                aria-label="Enter your username"
                                 onChange={e => setData({ ...data, username: e.target.value })}
                                 placeholder="Enter your username" type="text" id="username"
-                                require />
+                                required />
                             <FormLabel htmlFor="feedback">Feedback</FormLabel>
                             <FormInput
+                                aria-label="Share your experience or feedback with us"
                                 onChange={e => setData({ ...data, feedback: e.target.value })}
                                 placeholder="Share your experience/feedback with us :)"
                                 type="text" id="feedback"
-                                require
+                                required
                             />
                             <FormButton type="submit">Send</FormButton>
                         </Form>

@@ -58,7 +58,8 @@ const GetMail = () => {
               type="email"
               placeholder="you@example.com"
               id="email"
-              require
+              aria-label="Email"
+              required
             />
             <ButtonContainer>
               <CancelButton onClick={() => navigate("/signin")}>Cancel</CancelButton>

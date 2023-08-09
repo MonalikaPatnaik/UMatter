@@ -205,7 +205,9 @@ const SignIn = () => {
               type="email"
               placeholder="you@example.com"
               id="email"
-              require
+              required
+              aria-required="true"
+              aria-label="Email"
             />
             <SignInLabel htmlFor="password">Password</SignInLabel>
             <PasswordContainer>
@@ -214,7 +216,9 @@ const SignIn = () => {
                 id="password"
                 type={passwordType}
                 placeholder="at least 8 characters"
-                require
+                required
+                aria-required="true"
+                aria-label="Password"
               />
 			  {passwordType === "password" ? (
                 <i
@@ -228,6 +232,7 @@ const SignIn = () => {
                     cursor: "pointer",
                   }}
                   onClick={handleclick}
+                  aria-label="Hide password"
                 ></i>
               ) : (
                 <i
@@ -241,6 +246,7 @@ const SignIn = () => {
                     cursor: "pointer",
                   }}
                   onClick={handleclick}
+                  aria-label="Show Password"
                 ></i>
               )}
             </PasswordContainer>
