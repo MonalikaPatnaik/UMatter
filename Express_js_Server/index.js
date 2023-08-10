@@ -87,7 +87,6 @@ app.get("/allData", async (req, res) => {
     ("priyanshmishra@gmail.com", "priyansh!", "priyansh mishra", "5347658679", "2567","some feedback");`;
 
 
-
     let output = await db.all(bringAllData);
     console.log("table created");
 
