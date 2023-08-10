@@ -83,25 +83,25 @@ const Workshops = () => {
           <div className='orignal_form'>
             <div className="form-group">
               <label htmlFor="name">Your Name</label>
-              <input type="text" id="name" name="name" required />
+              <input type="text" id="name" name="name" required aria-label="Your Name"/>
             </div>
             <div className="form-group">
               <label htmlFor="email">Email Address</label>
-              <input type="email" id="email" name="email" required />
+              <input type="email" id="email" name="email" required aria-label="Email Address"/>
             </div>
             <div className="form-group">
               <label htmlFor="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" required />
+              <input type="tel" id="phone" name="phone" required aria-label="Phone Number"/>
             </div>
             <div className="form-group">
               <label htmlFor="select-workshop">Select Workshop</label>
-              <select id="payment-method" name="payment-method" required>
+              <select id="payment-method" name="payment-method" required aria-label="Select Workshop">
                 <option value="credit-card">Workshop 1</option>
                 <option value="paypal">Workshop 2</option>
                 <option value="bank-transfer">Workshop 3</option>
               </select>
             </div>
-            <button type="submit" className="btn btn-primary">Join Workshop</button>
+            <button type="submit" className="btn btn-primary" aria-label="Join Workshop">Join Workshop</button>
             </div>
           </form>
           </div>

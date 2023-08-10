@@ -80,14 +80,17 @@ const Contact = () => {
       <h2>Contact Us</h2>
       <hr></hr>
       <div><p className="text-lg font-normal text-green-600 my-2">{success}</p></div>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} aria-label="Contact Form">
         <div class="form-group">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" required placeholder="Enter your name" value={name}
-          onChange={(e) => setName(e.target.value)} className={`${error==='nameerr'?"inputError": name!==''?"successError":""}`} />
+          onChange={(e) => setName(e.target.value)} className={`${error==='nameerr'?"inputError": name!==''?"successError":""}`} 
+          aria-invalid={error === 'nameerr'}
+          aria-describedby={error === 'nameerr' ? "name-error" : ""}
+          />
            {
                 error === 'nameerr' && (
-                  <small className='text-red-600 text-lg'>*Name is Required!</small>
+                  <small className='text-red-600 text-lg' role="alert">*Name is Required!</small>
                 ) 
               }
         </div>
@@ -95,15 +98,18 @@ const Contact = () => {
         <div class="form-group">
           <label for="email">Email:</label>
           <input type="email" id="email" name="email" required placeholder="Enter your email" value={mail}
-          onChange={(e) => setMail(e.target.value)}  className={`${error==='emailerr' || error==='validerr'?"inputError": mail!==''?"successError":""}`}/>
+          onChange={(e) => setMail(e.target.value)}  className={`${error==='emailerr' || error==='validerr'?"inputError": mail!==''?"successError":""}`} 
+          aria-invalid={error === 'emailerr' || error === 'validerr'}
+          aria-describedby={error === 'emailerr' ? "email-error" : error === 'validerr' ? "valid-error" : ""}
+          />
            {
                 error === 'emailerr' && (
-                  <small className='text-red-600 text-lg'>*E-mail is Required!</small>
+                  <small className='text-red-600 text-lg' role="alert">*E-mail is Required!</small>
                 ) 
               }
               {
                 error === 'validerr' && (
-                  <small className='text-red-600 text-lg'>*Valid E-mail is Required!</small>
+                  <small className='text-red-600 text-lg' role="alert">*Valid E-mail is Required!</small>
                 ) 
               }
         </div>
@@ -111,10 +117,13 @@ const Contact = () => {
         <div class="form-group">
           <label for="message">Message:</label>
           <textarea id="message" name="message" placeholder="Enter your message" value={message}
-          onChange={(e) => setMessage(e.target.value)}  className={`${error==='messageerr'?"inputError": message!==''?"successError":""}`}></textarea>
+          onChange={(e) => setMessage(e.target.value)}  className={`${error==='messageerr'?"inputError": message!==''?"successError":""}`}
+          aria-invalid={error === 'messageerr'}
+          aria-describedby={error === 'messageerr' ? "message-error" : ""}
+          ></textarea>
           {
                 error === 'messageerr' && (
-                  <small className='text-red-600 text-lg'>*Message is Required!</small>
+                  <small className='text-red-600 text-lg' role="alert">*Message is Required!</small>
                 ) 
               }
         </div>
