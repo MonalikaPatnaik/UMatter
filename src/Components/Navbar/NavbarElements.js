@@ -215,12 +215,11 @@ export const NavBtnMobile = styled.nav`
   display: none;
 
   @media screen and (max-width: 768px) {
-    margin: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 0px;
-    margin-right: 45px;
+    gap: 4%;
+    margin-bottom: 2rem;
   }
 `;
 
