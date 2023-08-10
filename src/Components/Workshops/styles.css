@@ -1,141 +1,131 @@
 .workshop-descriptions {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    margin: 20px 100px;
-  }
-  
-  h2{
-    margin-top: 100px;
-    text-align: center;
-    font-size: 33px;
-    margin-bottom: 50px;
-  }
-  
-  .workshop {
-    width: 30%;
-    padding: 20px;
-    background-color: #85FFBD;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s;
-    border-radius: 5%;
-    border: rgb(135, 247, 135) solid 3px;
-    cursor: pointer;
-    
-  }
-  
-  .workshop:hover {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
-  }
-  
-  .workshop-title {
-    font-size: 24px;
-    font-weight: bold;
-    color: #333;
-    transition: color 0.3s;
-  }
-  
-  
-  .workshop-info {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-top: 10px;
-    color: #666;
-  }
-  
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  /* margin: 20px 100px; */
+}
 
-  
-  
-  /* section 2 */
-  
-  .workshop-schedule {
-    margin: 20px 100px;
-    
-  }
-  
-  .schedule-table {
-    display: table;
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-  }
-  
-  .schedule-header,
-  .schedule-row {
-    display: table-row;
-  }
-  
-  .schedule-header div,
-  .schedule-row div {
-    display: table-cell;
-    padding: 10px;
-    text-align: center;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .schedule-header div {
-    font-weight: bold;
-    background-color: #f5f5f5;
-  }
-  
-  .schedule-row div:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
-  
+h2 {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 33px;
+  margin-bottom: 50px;
+}
 
-  .workshopImg{
-    max-width: 40%;
-    height: 40%;
-  }
-  /* Section 3 */
-  
-  
-  
-  .appointment-form {
-    width: 100%;
-    padding: 50px 25px;
-    
-    background: linear-gradient(-2deg, black, rgb(1, 147, 86), rgb(10, 201, 122));
-    
-    /* margin: 0 auto; */
-    text-align: center;
-    border-radius: 2%;
-    display: flex;
-    align-items: center;
-    
-  }
-  .form_section{
-    margin: 10px 20%;
-    
-    margin-bottom: 80px;
-  
-  }
-  .section-heading {
-    font-size: 32px;
-    text-align: center;
-    margin-bottom: 50px;
-    margin-left: 0px;
-    
-  }
-  
-  .form-group {
-    margin-bottom: 20px;
-    text-align: left;
-    width: 100%;;
-  }
-  .orignal_form{
-    width: 35%;
-  }
-  label {
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-    text-align: left;
-    color: #fff;
-  }
-  
-  input[type="text"],
+.workshop {
+  width: 30%;
+  padding: 20px;
+  background-color: #85ffbd;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s;
+  border-radius: 20px;
+  border: rgb(135, 247, 135) solid 3px;
+  cursor: pointer;
+}
+
+.workshop:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+.workshop-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  transition: color 0.3s;
+}
+
+.workshop-info {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-top: 10px;
+  color: #666;
+}
+
+/* section 2 */
+
+.workshop-schedule {
+  margin: 20px 100px;
+}
+
+.schedule-table {
+  display: table;
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.schedule-header,
+.schedule-row {
+  display: table-row;
+}
+
+.schedule-header div,
+.schedule-row div {
+  display: table-cell;
+  padding: 10px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+}
+
+.schedule-header div {
+  font-weight: bold;
+  background-color: #f5f5f5;
+}
+
+.schedule-row div:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+.workshopImg {
+  max-width: 40%;
+  height: 40%;
+}
+/* Section 3 */
+
+.appointment-form {
+  width: 100%;
+  padding: 50px 25px;
+
+  background: linear-gradient(-2deg, black, rgb(1, 147, 86), rgb(10, 201, 122));
+
+  /* margin: 0 auto; */
+  text-align: center;
+  border-radius: 2%;
+  display: flex;
+  align-items: center;
+}
+.form_section {
+  margin: 10px 20%;
+
+  margin-bottom: 80px;
+}
+.section-heading {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 50px;
+  margin-left: 0px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  text-align: left;
+  width: 100%;
+}
+.orignal_form {
+  width: 35%;
+}
+label {
+  font-size: 16px;
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+  text-align: left;
+  color: #fff;
+}
+
+input[type="text"],
 input[type="email"],
 input[type="tel"],
 input[type="date"],
@@ -150,222 +140,207 @@ textarea {
   display: block;
   margin: 0 auto;
 }
-  
-  textarea {
-    resize: vertical;
+
+textarea {
+  resize: vertical;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 16px;
+  appearance: none;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  cursor: pointer;
+}
+
+select:focus {
+  outline: none;
+  border-color: #3367d6;
+}
+
+button[type="submit"] {
+  display: inline-block;
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 14px;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #e64a19;
+}
+
+/* Section 1 */
+
+/* Reset styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: whitesmoke;
+}
+
+.container {
+  max-width: 100%;
+  /* margin: 0 auto; */
+  /* padding: 0 20px; */
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("https://images.freeimages.com/images/large-previews/a3b/website-rays-background-pattern-1637863.webp");
+  height: 100vh;
+  padding: 220px 0;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 70px;
+  font-weight: bolder;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: black;
+}
+
+/* Workshop section styles */
+.workshop-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.workshop {
+  background-color: #fff;
+  padding: 30px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+h2 {
+  font-weight: bolder;
+  margin-bottom: 50px;
+}
+.workshop h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.workshop p {
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 20px;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+@media only screen and (max-width: 768px) {
+  /* Adjust workshop descriptions layout for smaller screens */
+  .workshop-descriptions {
+    flex-wrap: wrap;
   }
 
-  select {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 16px;
-    font-size: 16px;
-    appearance: none;
-    background-color: #fff;
-    background-repeat: no-repeat;
-    background-position: right 8px center;
-    cursor: pointer;
-  }
-  
-  select:focus {
-    outline: none;
-    border-color: #3367D6;
-  }
-  
-  button[type="submit"] {
-    display: inline-block;
-    background-color: #ff5722;
-    color: #fff;
-    font-size: 14px;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-  }
-  
-  button[type="submit"]:hover {
-    background-color: #e64a19;
-  }
-  
-  
-  
-  /* Section 1 */
-  
-  /* Reset styles */
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  /* Global styles */
-  body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-   background-color: whitesmoke;
-    
-   
-  }
-  
-  .container {
-    max-width: 100%;
-    /* margin: 0 auto; */
-    /* padding: 0 20px; */
-  }
-  
-  /* Header styles */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-  
-  nav ul li {
-    margin-right: 20px;
-  }
-  
-  nav ul li a {
-    color: #fff;
-    text-decoration: none;
-  }
-  
-  /* Hero section styles */
-  .hero {
-    background-image: url('https://images.freeimages.com/images/large-previews/a3b/website-rays-background-pattern-1637863.webp');
-    height: 100vh;
-    padding: 220px 0;
-    text-align: center;
-
-  }
-  
-  .hero h1 {
-    font-size: 70px;
-    font-weight: bolder;
-    margin-bottom: 20px;
-    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	
-  }
-  
-  .hero p {
-    font-size: 28px;
-    margin-bottom: 30px;
-    color: black;
-  }
-  
-
-  /* Workshop section styles */
-  .workshop-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-  }
-  
   .workshop {
-    background-color: #fff;
-    padding: 30px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    
-  }
-  h2{
-    font-weight: bolder;
-    margin-bottom: 50px;
-  }
-  .workshop h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-    
-  }
-  
-  .workshop p {
+    width: 100%;
     margin-bottom: 20px;
   }
-  
-  .btn {
-    display: inline-block;
-    padding: 8px 20px;
-    background-color: #007bff;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #0056b3;
+
+  /* Adjust workshop schedule table for smaller screens */
+  .schedule-table {
+    font-size: 14px;
+    margin-left: -40px;
   }
 
+  /* Adjust appointment form layout for smaller screens */
+  .appointment-form {
+    flex-direction: column;
+    padding: 30px;
+  }
 
-  @media only screen and (max-width: 768px) {
-    /* Adjust workshop descriptions layout for smaller screens */
-    .workshop-descriptions {
-      flex-wrap: wrap;
-    }
-  
-    .workshop {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  
-    /* Adjust workshop schedule table for smaller screens */
-    .schedule-table {
-      font-size: 14px;
-      margin-left: -40px;
-    }
-  
-    /* Adjust appointment form layout for smaller screens */
-    .appointment-form {
-      flex-direction: column;
-      padding: 30px;
-    }
-  
-    .orignal_form {
-      width: 100%;
-    }
-  
-    input[type="text"],
-    input[type="email"],
-    input[type="tel"],
-    input[type="date"],
-    input[type="time"],
-    textarea {
-      width: 100%;
-    }
+  .orignal_form {
+    width: 100%;
   }
-  
-  @media only screen and (max-width: 480px) {
-    /* Adjust hero section padding for smaller screens */
-    .hero {
-      padding: 120px 0;
-    }
-  
-    /* Adjust workshop grid layout for smaller screens */
-    .workshop-grid {
-      grid-template-columns: 1fr;
-    }
-  
-    /* Adjust workshop title font size for smaller screens */
-    .workshop h3 {
-      font-size: 20px;
-    }
-  
-    /* Adjust appointment form layout for smaller screens */
-    .form_section {
-      margin: 10px 0;
-    }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="time"],
+  textarea {
+    width: 100%;
   }
-  
-  
-  
-  
-  
+}
+
+@media only screen and (max-width: 480px) {
+  /* Adjust hero section padding for smaller screens */
+  .hero {
+    padding: 120px 0;
+  }
+
+  /* Adjust workshop grid layout for smaller screens */
+  .workshop-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust workshop title font size for smaller screens */
+  .workshop h3 {
+    font-size: 20px;
+  }
+
+  /* Adjust appointment form layout for smaller screens */
+  .form_section {
+    margin: 10px 0;
+  }
+}
