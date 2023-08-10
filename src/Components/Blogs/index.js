@@ -2,23 +2,23 @@ import React, { useState } from "react";
 //import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 //import Icon1 from "../../images/no-drinking.webp";
-import Icon2 from "../../images/smoking-is-Injurious-to-Health.webp";
-import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.webp";
 import Icon4 from "../../images/5Ds.webp";
 import Icon5 from "../../images/Distraction tec.webp";
-import Icon6 from "../../images/group-quiting.webp";
-import Icon7 from "../../images/non-alco-cocktail.webp";
-import Icon8 from "../../images/isolation.webp";
-import Icon9 from "../../images/natural remedies.webp";
+import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.webp";
 import Icon10 from "../../images/No-yes.webp";
+import Icon6 from "../../images/group-quiting.webp";
+import Icon8 from "../../images/isolation.webp";
 import Icon11 from "../../images/mental-health-advice.webp";
+import Icon9 from "../../images/natural remedies.webp";
+import Icon7 from "../../images/non-alco-cocktail.webp";
+import Icon2 from "../../images/smoking-is-Injurious-to-Health.webp";
 import {
+  BlogsCard,
   BlogsContainer,
   BlogsH1,
-  BlogsWrapper,
-  BlogsCard,
   BlogsIcon,
   BlogsP,
+  BlogsWrapper,
   ReadMoreButton, // Added ReadMoreButton import
 } from "./BlogsElements";
 
@@ -81,7 +81,7 @@ const Blogs = () => {
     <BlogsContainer id="Blogs">
       <div style={{ height: "100px" }}></div>
 
-      <div className="w-full flex flex-col md:flex-row items-center justify-content-center">
+      <div className="w-full flex flex-col md:flex-row items-center justify-center">
         <div
           style={{
             maxWidth: "400px",
