@@ -2,10 +2,7 @@
   "homepage": ".",
   "name": "website",
   "version": "0.1.0",
-
-
   "proxy": "https://umatter.onrender.com",
-
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
@@ -13,6 +10,8 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
+    "dotenv": "^16.3.1",
+    "firebase": "^10.1.0",
     "framer-motion": "^10.12.16",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.4",

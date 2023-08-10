@@ -3,22 +3,15 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // import DarkMode from '../DarkMode/DarkMode';
+import { signInWithPopup } from "firebase/auth";
+import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { auth, provider } from "../../firebase-config";
+import SignInImg from "../../images/SignIn.webp";
 import {
-  NewContainer,
-  FormContainer,
-  SignInContainer,
-  RightContainer,
-  SignInForm,
-  SignInButton,
-  RightHeading,
-  RightPara,
-  SignInInput,
-  SignInLabel,
-  SignInh1,
   CheckBox,
-  RememberMe,
   ForgotPassword,
-  PasswordContainer,
+  FormContainer,
   Image
   // Icons,
   // FormButton,
@@ -29,10 +22,120 @@ import {
   // FormLabel,
   // FormWrap,
   // Text,
+  ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  NewContainer,
+  PasswordContainer,
+  RememberMe,
+  RightContainer,
+  RightHeading,
+  RightPara,
+  SignInButton,
+  SignInContainer,
+  SignInForm,
+  SignInInput,
+  SignInLabel,
+  SignInh1
 } from "./SigninElements";
-import SignInImg from "../../images/SignIn.webp";
-import { useState } from "react";
-import { NavLink } from "react-router-dom";
 // import Navbar from "../Navbar";
 
 const SignIn = () => {
@@ -97,6 +200,17 @@ const SignIn = () => {
       </div>
     );
   };
+
+  // Firebase google authentication
+  const handleGoogleLogin = async () => {
+    try {
+      const user = await signInWithPopup(auth, provider);
+      localStorage.setItem("authorizationToken", user.user.accessToken);
+      localStorage.setItem("username", user.user.email);
+    } catch (err) {
+      console.log(err.message);
+    }
+  }
 
   return (
     // <>
@@ -197,7 +311,7 @@ const SignIn = () => {
     <NewContainer>
       <FormContainer>
         <SignInContainer>
-          <SignInForm onSubmit={sendPostRequest} action="#">
+          <SignInForm onSubmit={sendPostRequest}>
             <SignInh1>Sign in</SignInh1>
             <SignInLabel htmlFor="email">Email</SignInLabel>
             <SignInInput
@@ -216,7 +330,7 @@ const SignIn = () => {
                 placeholder="at least 8 characters"
                 require
               />
-			  {passwordType === "password" ? (
+              {passwordType === "password" ? (
                 <i
                   className="fa-solid fa-eye-slash"
                   id="eye"
@@ -254,12 +368,17 @@ const SignIn = () => {
             <NavLink to="/signin/forgotPassword">
               <ForgotPassword>Forgot password?</ForgotPassword>
             </NavLink>
-            <label style={{ fontSize: '14px', marginLeft: '-25px',marginTop: '10px', display: 'block' ,  color: 'green'}}>Don't have an account ? </label>
-            <NavLink to="/signup" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '200px' }}>
+            <label style={{ fontSize: '14px', marginLeft: '-25px', marginTop: '10px', display: 'block', color: 'green' }}>Don't have an account ? </label>
+            <NavLink to="/signup" style={{ fontSize: '14px', marginTop: '-20px', marginLeft: '200px' }}>
               SignUp
-            </NavLink>         
-           </SignInForm>
+            </NavLink>
+          </SignInForm>
+          <div className='flex relative mt-10 w-[80%] md:w-[60%]' onClick={handleGoogleLogin}>
+            <button className='py-3 rounded-xl text-black font-semibold w-[100%] border-2 border-black'>Sign in with Google</button>
+            <img src={require('../../assests/googleLogo.png')} className='w-10 absolute top-1.5 left-4' alt='google' />
+          </div>
         </SignInContainer>
+
         <RightContainer>
           <RightHeading>Hello, Friend!</RightHeading>
           <RightPara>Enter your details and let's get started.</RightPara>
