@@ -2,21 +2,31 @@
 
 <div align = "left">
  <div align ="center">
- <img src="./src/images/mental-health.png" />
+ <img src="./src/images/mental-health.webp" />
  </div>
  <div>
 
   
 **Check the Website [here](https://umatter-git-main-monalikapatnaik.vercel.app/)**.
 
+## TABLE OF CONTENTS
+
+- [About our project](#About-our-project)
+- [Tech Stack Used](#Tech-Stack-Used)
+- [Website Overview](#Website-Overview)
+- [Key Features ✨](#Key-Features-✨)
+- [Components of Website](#Components-of-Website)
+- [🔖Steps to Contribute ✅](#🔖Steps-to-Contribute-✅)
+- [🔑Guidelines✨](#🔑Guidelines✨)
+- [Thanks to all the Contributors ❤️](#Thanks-to-all-the-Contributors-❤️)
+
+# About our project
+
 Welcome to UMatter, an inclusive platform designed to help individuals quit bad habits by providing personalized sessions and one-on-one consultations with professionals.
 
 UMatter is a one and all platform to help people quit bad habits by providing them with personalized sessions and one-to-one consultations with professionals.
 
 <div align="left">
-<img src="https://forthebadge.com/images/badges/built-with-love.svg" />
-<img src="https://forthebadge.com/images/badges/uses-brains.svg" />
-<img src="https://forthebadge.com/images/badges/powered-by-responsibility.svg" />
    <br>
    <img src="https://img.shields.io/github/repo-size/MonalikaPatnaik/UMatter?style=for-the-badge" />
    <img src="https://img.shields.io/github/issues/MonalikaPatnaik/UMatter?style=for-the-badge" />
@@ -36,7 +46,7 @@ UMatter is a one and all platform to help people quit bad habits by providing th
 <br>
 <br>
 
-**Tech Stack Used**
+# Tech Stack Used
 
 <div align="left">
  <img src="https://img.shields.io/badge/HTML5-E34F26.svg?style=for-the-badge&logo=HTML5&logoColor=white">
@@ -61,39 +71,43 @@ UMatter is committed to supporting individuals on their journey to overcome bad 
 - Blogs Page: Provides you with useful blog posts on different matters and areas of concern in your life.
 
  
-**Components of Website**
+# Components of Website
 ---
  
-**Landing Page**
+## Landing Page
  
  The landing page is the initial point of entry for users when they click on our site. It serves as the first glimpse of what we have to offer and provides a seamless transition from the user's click to their arrival on the page.
-  <img width="1440" alt="Screenshot 2023-05-26 at 4 31 13 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/31e34844-d861-430f-a16d-deb6e70bac50">
+  ![image](https://github.com/Enhancer18/UMatter/assets/102911149/f3429c54-4940-416b-8cf4-3cf7279e2371)
+
 
 <br>
   
-**About Us**
+## About Us
  
  Discover a comprehensive solution for quitting smoking and drinking at UMatter. Our platform provides personalized consultations and medications, bringing you closer to a healthier life. With dedicated experts, we offer tailored support, empowering you to overcome challenges and achieve your health goals. Join us on this transformative journey today.
- <img width="1440" alt="Screenshot 2023-05-26 at 4 31 44 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/88f95ad6-575c-401d-9b05-86a08cd9d45c">
+ ![image](https://github.com/Enhancer18/UMatter/assets/102911149/8a77b3ea-5424-4bad-8950-32bab3ee1461)
+
 
 <br>
 
-**Services Page**
+## Services Page
 
 Welcome to our Services page! Here, you will find a comprehensive list of the wide range of services available on our website. From tailored consultations to specialized treatments, we offer an array of options to cater to your specific needs. Explore our services to discover how we can assist you in achieving your goals and enhancing your experience on our platform.
-<img width="1440" alt="Screenshot 2023-05-26 at 4 32 04 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/efd21624-ab89-4683-af46-f0a91c456240">
+![image](https://github.com/Enhancer18/UMatter/assets/102911149/1015a64e-d072-4890-90db-e025a9d7c3fd)
+
 
 <br>
   
-**Blogs Page**
+## Blogs Page
 
 Welcome to our Blog section! Here, you'll find a collection of informative and engaging articles covering a variety of useful topics. Our blog pages are packed with valuable insights, tips, and resources to help you stay informed and inspired. Explore our diverse range of blog posts to expand your knowledge and find practical solutions to enhance your lifestyle.
 
-<img width="1440" alt="Screenshot 2023-05-26 at 4 32 46 PM" src="https://github.com/singh-anushka/UMatter/assets/93376863/da82603f-6881-4153-bda7-fc8dd5f40e8a">
+![image](https://github.com/Enhancer18/UMatter/assets/102911149/ade6811b-99bc-47cd-87da-9a57a7b5bb7e)
+
 
 <br>
   
-## 🔖Steps to Contribute ✅
+# 🔖Steps to Contribute ✅
  
 - Contribution is the best way to support and get involved in the community!
  - Contributions to `UMatter` Please check our [CONTRIBUTING.md](./CONTRIBUTING.md)
