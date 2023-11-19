@@ -106,15 +106,15 @@ export const ServicesContainer = motion(styled.div`
 `);
 
 export const ServicesWrapper = styled.div`
-  max-width: 1000px;
+ // max-width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   align-items: center;
   grid-gap: 50px ;
-
+  justify-content:center;
   // padding: 0 1px;
-  margin : 0 140px 0 0;
+ // margin : 0 140px 0 0;
 
 
   @media screen and (max-width: 1000px) {
@@ -122,7 +122,7 @@ export const ServicesWrapper = styled.div`
   }
   @media screen and (max-width: 768px) {
     grid-template-columns: 1fr;
-    padding: 0 20px;
+    padding: 10px 20px;
   }
 `;
 
