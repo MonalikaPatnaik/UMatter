@@ -134,7 +134,7 @@ export const Text = styled.span`
 //////////////////////// NEW UI ELEMENTS ///////////////////////
 
 export const NewContainer = styled.div`
-  width: 100%;
+  /* width: 100%;
   height: fit-content;
   display: flex;
   flex-direction: column;
@@ -146,22 +146,21 @@ export const NewContainer = styled.div`
   top: 0;
   z-index: 0;
   overflow: hidden;
-  background: var(--bg-clr);
+  background: var(--bg-clr); */
 `;
 
 export const FormContainer = styled.div`
-  background-color: #fff;
-  box-shadow: 0 0 20px #01bf71;
+    background-color: #fff;
   position: relative;
   overflow: hidden;
-  width: 900px;
+  width: 100%;
   max-width: 100%;
-  min-height: 550px;
-  margin: 3rem auto;
+  height:88vh;
   display: flex;
-  @media only screen and (max-width:550px){
+  @media only screen and (max-width: 550px) {
     flex-direction: column;
     margin: 0;
+  
 }
 `;
 

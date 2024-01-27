@@ -1,15 +1,14 @@
 /** @format */
 import React from "react";
-import { FaUser, FaPhoneAlt } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
 import { MdEmail, MdPassword } from "react-icons/md";
 import { BiSolidShow, BiSolidHide } from "react-icons/bi";
-import PhoneInput, {
-  formatPhoneNumberIntl,
-  isPossiblePhoneNumber,
-} from "react-phone-number-input";
+import { auth } from "../../firebase-config";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+import { toast } from "react-toastify";
 import "./PhoneInput.css";
+import { useNavigate } from "react-router-dom";
 import {
-  Container,
   FormContainer,
   LeftContainer,
   SignUpContainer,
@@ -27,8 +26,6 @@ import {
 import { useState } from "react";
 import SignUpImg from "../../images/SignUp.webp";
 import Captcha from "./Captcha";
-// import DarkMode from "../DarkMode/DarkMode";
-// import Navbar from "../Navbar";
 import { NavLink } from "react-router-dom";
 
 const SignUp = () => {
@@ -38,22 +35,7 @@ const SignUp = () => {
   const [passwordConfirmType, setConfirmPasswordType] = useState("password");
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
-
-  
-
-  // Use for internation country code selector
-  const [value, setValue] = useState();
-
-  const handleOnChangePhoneNumber = (inputValue) => {
-    setValue(inputValue);
-    const countrySelect = document.querySelector(".PhoneInputCountrySelect");
-    const selectedCountryCode = countrySelect.value;
-    setData({
-      ...data,
-      countryCode: selectedCountryCode,
-      contactNumber: formatPhoneNumberIntl(inputValue),
-    });
-  };
+  const navigate = useNavigate();
 
   const handleclick = (e) => {
     e.preventDefault();
@@ -72,7 +54,7 @@ const SignUp = () => {
     }
   };
   const validateEmail = (email) => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
@@ -92,17 +74,16 @@ const SignUp = () => {
     const nameRegex = /[A-Za-z]{3}/;
     return nameRegex.test(name);
   };
-  const validatecontactNumber = (contactNumber) => {
-    // name  should contains only alphabets
-    return isPossiblePhoneNumber(contactNumber);
-  };
 
+  const navigateToProfile = () => {
+    // 👇️ navigate to /contacts
+    navigate("/");
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
 
     // Validate form inputs
-    const { email, username, name, contactNumber, password, confirmpassword } =
-      data;
+    const { email, username, name, password, confirmpassword } = data;
 
     if (!email || !validateEmail(email)) {
       setMsg("Please enter a valid email address.");
@@ -118,12 +99,6 @@ const SignUp = () => {
 
     if (!name || !validatename(name)) {
       setMsg("Please enter your full name.");
-      setInvalid(true);
-      return;
-    }
-
-    if (!contactNumber || !validatecontactNumber(contactNumber)) {
-      setMsg("Please enter a contact number/verify once");
       setInvalid(true);
       return;
     }
@@ -153,354 +128,169 @@ const SignUp = () => {
     setTimeout(setBack, 5000);
   }
 
-  const sendPostRequest = async (e) => {
-    console.log("sendPostRequest exicuted!!!");
-    const response = await fetch("https://umatter.onrender.com/SignUp", {
-      mode: "cors",
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    console.log(response);
-    const result = await response.json();
-    console.log(result);
+  const sendPostRequest = async () => {
+    console.log("sendPostRequest executed!!!");
+    try {
+      // Create user with Firebase Authentication
+      await createUserWithEmailAndPassword(auth, data.email, data.password);
+
+      navigateToProfile();
+      console.log("User created successfully!");
+    } catch (error) {
+      // Handle errors, e.g., email already in use, weak password, etc.
+      let errorMessage = "An error occurred during sign-up.";
+
+      if (error.code === "auth/email-already-in-use") {
+        errorMessage = "Email is already in use. Please use a different email.";
+      } else if (error.code === "auth/weak-password") {
+        errorMessage = "Weak password. Please use a stronger password.";
+      }
+
+      toast.error(errorMessage, {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+      });
+    }
   };
 
   const showInvalid = () => {
     return (
-      <div class="alert alert-danger" role="alert">
+      <div className="alert alert-danger" role="alert">
         {msg}
       </div>
     );
   };
 
   return (
-    // <>
-    // 	<Container>
-    // 		<FormWrap>
-    // 			<FormContent>
-    // 				<Form onSubmit={handleSubmit} action="#">
-    // 					<FormH1>Create an Account</FormH1>
+    <FormContainer className="flex">
+      <LeftContainer>
+        <LeftHeading>Welcome!</LeftHeading>
+        <LeftPara>
+          Sign up to be a part of the community, because UMatter.
+        </LeftPara>
+        <Image src={SignUpImg} alt="Sign Up Graphic" />
+      </LeftContainer>
+      <SignUpContainer>
+        <SignUpForm onSubmit={handleSubmit} action="#">
+          <SignUph1>Create account</SignUph1>
+          <FormInput
+            onChange={(e) => setData({ ...data, name: e.target.value })}
+            id="FullNameInput"
+            type="text"
+            placeholder="Full Name"
+            aria-label="Full Name"
+          />
+          <FaUser
+            className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden"
+            aria-hidden="true"
+          />
 
-    // 					<FormInput
-    // 						onChange={(e) =>
-    // 							setData({ ...data, name: e.target.value })
-    // 						}
-    // 						id="FullNameInput"
-    // 						placeholder="Enter your Full Name"
-    // 						type="text"
-    // 						size="42"
-    // 					></FormInput>
-    // 					<br />
-    // 					<br />
+          <FormInput
+            onChange={(e) => setData({ ...data, username: e.target.value })}
+            id="usernameInput"
+            type="text"
+            placeholder="Username"
+            aria-label="Username"
+          />
+          <FaUser
+            className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden"
+            aria-hidden="true"
+          />
 
-    // 					<FormInput
-    // 						onChange={(e) =>
-    // 							setData({ ...data, username: e.target.value })
-    //						 }
-    // 						id="usernameInput"
-    // 						placeholder="Enter Username"
-    // 						type="text"
-    // 						size="42"
-    // 					></FormInput>
-    // 					<br />
-    // 					<br />
+          <FormInput
+            onChange={(e) => setData({ ...data, email: e.target.value })}
+            id="emailInput"
+            type="email"
+            placeholder="Email"
+            required
+            aria-label="Email"
+          />
+          <MdEmail
+            className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden"
+            aria-hidden="true"
+          />
 
-    // 					<FormInput
-    // 						onChange={(e) =>
-    // 							setData({ ...data, email: e.target.value })
-    // 						}
-    // 						id="emailInput"
-    // 						placeholder="email@example.com"
-    // 						type="email"
-    // 						size="42"
-    // 						require
-    // 					/>
-    // 					<br />
-    // 					<br />
-
-    // 						<FormInput
-    // 							onChange={(e) =>
-    // 								setData({ ...data, countryCode: e.target.value })
-    // 							}
-    // 							id="CountryCode"
-    // 							placeholder="+XXX"
-    // 							type="text"
-    // 							size="1"
-    // 						></FormInput>
-
-    // 						<FormInput
-    // 							onChange={(e) =>
-    // 								setData({ ...data, contactNumber: e.target.value })
-    // 							}
-    // 							id="ContactNumber"
-    // 							placeholder="Enter phone number"
-
-    // 							// type="number"
-
-    // 							type="text"
-    // 							size="32"
-    // 							maxLength={10}
-
-    // 						></FormInput>
-
-    // 					<br />
-    // 					<br />
-    // 					<br />
-    // 					<div style={{ position: 'relative' }}>
-    // 						<FormInput
-    // 							onChange={(e) =>
-    // 								setData({ ...data, password: e.target.value })
-    // 							}
-    // 							id="PasswordInput"
-    // 							placeholder="Enter Password"
-    // 							type={passwordType}
-    // 							size="42"
-    // 						/>
-    // 						{passwordType === 'password' ? (
-    // 							<i
-    // 								className="fa-solid fa-eye-slash"
-    // 								id="eye"
-    // 								style={{
-    // 									position: 'absolute',
-    // 									top: '40%',
-    // 									right: '10px',
-    // 									transform: 'translateY(-50%)',
-    // 									cursor: 'pointer',
-    // 								}}
-    // 								onClick={handleclick}
-    // 							></i>
-    // 						) : (
-    // 							<i
-    // 								className="fa-solid fa-eye"
-    // 								id="eye"
-    // 								style={{
-    // 									position: 'absolute',
-    // 									top: '40%',
-    // 									right: '10px',
-    // 									transform: 'translateY(-50%)',
-    // 									cursor: 'pointer',
-    // 								}}
-    // 								onClick={handleclick}
-    // 							></i>
-    // 						)}
-    // 					</div>
-    // 					<br />
-
-    // 					<div style={{ position: 'relative' }}>
-    // 						<FormInput
-    // 							onChange={(e) =>
-    // 								setData({ ...data, confirmpassword: e.target.value })
-    // 							}
-    // 							id="PasswordInput"
-    // 							placeholder="Re Enter Password"
-    // 							type={passwordType}
-    // 							size="42"
-    // 						/>
-    // 						{passwordType === 'password' ? (
-    // 							<i
-    // 								className="fa-solid fa-eye-slash"
-    // 								id="eye"
-    // 								style={{
-    // 									position: 'absolute',
-    // 									top: '40%',
-    // 									right: '10px',
-    // 									transform: 'translateY(-50%)',
-    // 									cursor: 'pointer',
-    // 								}}
-    // 								onClick={handleclick}
-    // 							></i>
-    // 						) : (
-    // 							<i
-    // 								className="fa-solid fa-eye"
-    // 								id="eye"
-    // 								style={{
-    // 									position: 'absolute',
-    // 									top: '40%',
-    // 									right: '10px',
-    // 									transform: 'translateY(-50%)',
-    // 									cursor: 'pointer',
-    // 								}}
-    // 								onClick={handleclick}
-    // 							></i>
-    // 						)}
-    // 					</div>
-
-    // 					<button
-    // 						onClick={handleclick}
-    // 						style={{
-    // 							width: 'fit-content',
-    // 							position: 'absolute',
-    // 							right: '0%',
-    // 							top: '26%',
-    // 							background: 'transparent',
-    // 							color: '#10b981',
-    // 							border: 'none',
-
-    // 						}}
-    // 					></button>
-    // 					<FormButton type="submit">Continue</FormButton>
-    // 					<br />
-    // 					<br />
-    // 					{invalid && showInvalid()}
-    // 				</Form>
-    // 			</FormContent>
-    // 		</FormWrap>
-    // 	</Container>
-    // </>
-    <Container>
-      <FormContainer className="flex">
-        <LeftContainer>
-          <LeftHeading>Welcome!</LeftHeading>
-          <LeftPara>
-            Sign up to be a part of the community, because UMatter.
-          </LeftPara>
-          <Image src={SignUpImg} alt="Sign Up Graphic" />
-        </LeftContainer>
-        <SignUpContainer>
-          <SignUpForm onSubmit={handleSubmit} action="#">
-            <SignUph1>Create account</SignUph1>
+          <PasswordContainer>
             <FormInput
-              onChange={(e) => setData({ ...data, name: e.target.value })}
-              id="FullNameInput"
-              type="text"
-              placeholder="Full Name"
-              aria-label="Full Name"
+              onChange={(e) => setData({ ...data, password: e.target.value })}
+              id="PasswordInput"
+              type={passwordType}
+              placeholder="Password"
+              aria-label="Password"
             />
-            <FaUser className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden" aria-hidden="true"/>
 
+            {passwordType === "password" ? (
+              <BiSolidHide
+                onClick={handleclick}
+                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+              />
+            ) : (
+              <BiSolidShow
+                onClick={handleclick}
+                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+              />
+            )}
+          </PasswordContainer>
+          <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%] signupTable:hidden" />
+
+          <PasswordContainer>
             <FormInput
-              onChange={(e) => setData({ ...data, username: e.target.value })}
-              id="usernameInput"
-              type="text"
-              placeholder="Username"
-              aria-label="Username"
+              onChange={(e) =>
+                setData({ ...data, confirmpassword: e.target.value })
+              }
+              id="PasswordInput"
+              type={passwordConfirmType}
+              placeholder="Confirm Password"
+              aria-label="Confirm Password"
             />
-            <FaUser className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden" aria-hidden="true"/>
-
-            <FormInput
-              onChange={(e) => setData({ ...data, email: e.target.value })}
-              id="emailInput"
-              type="email"
-              placeholder="Email"
-              required
-              aria-label="Email"
-            />
-            <MdEmail className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden" aria-hidden="true"/>
-            <PhoneContainer>
-              <PhoneInput
-                international
-                defaultCountry="IN"
-                countryCallingCodeEditable={true}
-                placeholder="Phone number"
-                value={value}
-                onChange={handleOnChangePhoneNumber}
-                aria-label="Phone number"
+            {passwordConfirmType === "password" ? (
+              <BiSolidHide
+                onClick={Confirmhandleclick}
+                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
               />
-            </PhoneContainer>
-
-            {/* <PhoneContainer>
-              <FormInput
-                onChange={(e) =>
-                  setData({ ...data, countryCode: e.target.value })
-                }
-                id="CountryCode"
-                type="text"
-                placeholder="+XXX"
-              ></FormInput>
-              <FormInput
-                onChange={(e) =>
-                  setData({ ...data, contactNumber: e.target.value })
-                }
-                id="ContactNumber"
-                type="text"
-                placeholder="Phone Number"
-                maxLength={10}
-              ></FormInput>
-            </PhoneContainer> */}
-            <FaPhoneAlt className="absolute fill-teal-800 cursor-pointer top-[48%] left-[50%] signupTable:hidden" />
-
-            <PasswordContainer>
-              <FormInput
-                onChange={(e) => setData({ ...data, password: e.target.value })}
-                id="PasswordInput"
-                type={passwordType}
-                placeholder="Password"
-                aria-label="Password"
+            ) : (
+              <BiSolidShow
+                onClick={Confirmhandleclick}
+                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
               />
-              {/* {passwordType === "password" ? (
-                <BiSolidHide onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              ) : (
-                <BiSolidShow onClick={handleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              )} */}
-              {passwordType === "password" ? (
-                <BiSolidHide
-                  onClick={handleclick}
-                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
-                />
-              ) : (
-                <BiSolidShow
-                  onClick={handleclick}
-                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
-                />
-              )}
-            </PasswordContainer>
-            <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%] signupTable:hidden" />
+            )}
+          </PasswordContainer>
+          <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%] signupTable:hidden" />
 
-            <PasswordContainer>
-              <FormInput
-                onChange={(e) =>
-                  setData({ ...data, confirmpassword: e.target.value })
-                }
-                id="PasswordInput"
-                type={passwordConfirmType}
-                placeholder="Confirm Password"
-                aria-label="Confirm Password"
-              />
-              {/* {passwordConfirmType === "password" ? (
-                <BiSolidHide onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              ) : (
-                <BiSolidShow onClick={Confirmhandleclick} className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer" />
-              )} */}
-              {passwordConfirmType === "password" ? (
-                <BiSolidHide
-                  onClick={Confirmhandleclick}
-                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
-                />
-              ) : (
-                <BiSolidShow
-                  onClick={Confirmhandleclick}
-                  className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
-                />
-              )}
-            </PasswordContainer>
-            <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%] signupTable:hidden" />
+          <Captcha message={setTrackState} trackState={trackState} />
+          <SignUpButton
+            type="submit"
+            disabled={!trackState}
+            style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
+            className="mb-2 transition-all duration-300 ease-in-out"
+            aria-label="Sign Up"
+          >
+            Sign Up
+          </SignUpButton>
 
-            <Captcha message={setTrackState} trackState={trackState} />
-            <SignUpButton
-              type="submit"
-              disabled={!trackState}
-              style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
-              className="mb-2 transition-all duration-300 ease-in-out"
-              aria-label="Sign Up"
-            >
-              Sign Up
-            </SignUpButton>
-
-            {invalid && showInvalid()}
-            <label style={{ fontSize: '14px', color: 'green', textAlign: 'center' }}>
-              Already have an account!
-            </label>           
-             <NavLink to="/signin" style={{ fontSize: '14px', marginTop: '-20px' ,marginLeft: '240px' }}>
-              Signin
-            </NavLink> 
-
-          </SignUpForm>
-        </SignUpContainer>
-      </FormContainer>
-    </Container>
+          {invalid && showInvalid()}
+          <label
+            style={{ fontSize: "14px", color: "green", textAlign: "center" }}
+          >
+            Already have an account!
+          </label>
+          <NavLink
+            to="/signin"
+            style={{
+              fontSize: "14px",
+              marginTop: "-20px",
+              marginLeft: "240px",
+            }}
+          >
+            Signin
+          </NavLink>
+        </SignUpForm>
+      </SignUpContainer>
+    </FormContainer>
   );
 };
 

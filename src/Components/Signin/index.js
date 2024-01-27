@@ -3,126 +3,18 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 // import DarkMode from '../DarkMode/DarkMode';
-import { signInWithPopup } from "firebase/auth";
+import { signInWithRedirect} from "firebase/auth";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import { auth, provider } from "../../firebase-config";
+import { toast } from "react-toastify";
+import {signInWithEmailAndPassword} from 'firebase/auth';
 import SignInImg from "../../images/SignIn.webp";
 import {
   CheckBox,
   ForgotPassword,
   FormContainer,
-  Image
-  // Icons,
-  // FormButton,
-  // FormContent,
-  // Form,
-  // FormH1,
-  // SignInInput,
-  // FormLabel,
-  // FormWrap,
-  // Text,
-  ,
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  Image,
   NewContainer,
   PasswordContainer,
   RememberMe,
@@ -143,6 +35,7 @@ const SignIn = () => {
   let authorizationToken;
   const [passwordType, setPasswordType] = useState("password");
   const [data, setData] = useState({});
+  const [msg, setMsg] = useState("");
   const [invalid, setInvalid] = useState(false);
   const handleclick = (e) => {
     e.preventDefault();
@@ -155,7 +48,7 @@ const SignIn = () => {
 
   const navigateToProfile = () => {
     // 👇️ navigate to /contacts
-    navigate("/profile");
+    navigate("/");
   };
 
   const sendPostRequest = async (e) => {
@@ -164,25 +57,39 @@ const SignIn = () => {
     }
     console.log("sendPostRequest is called!!!");
     e.preventDefault();
-    const response = await fetch("https://umatter.onrender.com/SignIn", {
-      method: "POST",
-      body: JSON.stringify(data),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    });
-    if (response.status !== 200) {
-      setInvalid(true);
+    try {
+      // Sign in with Firebase Authentication
+      await signInWithEmailAndPassword(auth, data.email, data.password);
+      navigateToProfile();   
+      // Replace "/" with the actual path of your home page
+    } 
+    catch (error) {
+      toast.error(getErrorMessage(error), {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     }
-    const result = await response.json();
-    sessionStorage.removeItem("authorizationToken");
-    sessionStorage.removeItem("username");
-    const { jwtToken, username } = result;
-    authorizationToken = "Bearer ".concat(jwtToken.toString());
-    sessionStorage.setItem("authorizationToken", authorizationToken);
-    sessionStorage.setItem("username", username);
-    navigateToProfile();
   };
+
+  const getErrorMessage = (error) => {
+    switch (error.code) {
+      case "auth/invalid-email":
+        return "Invalid email address.";
+      case "auth/user-disabled":
+        return "Your account has been disabled.";
+      case "auth/user-not-found":
+      case "auth/wrong-password":
+        return "Invalid email or password.";
+      default:
+        return "An error occurred while signing in. Please try again.";
+    }
+  };  
+  
 
   const setBack = () => {
     setInvalid(false);
@@ -196,7 +103,7 @@ const SignIn = () => {
   const showInvalid = () => {
     return (
       <div class="alert alert-danger" role="alert">
-        Invalid Email or Password!
+        {msg}
       </div>
     );
   };
@@ -204,110 +111,14 @@ const SignIn = () => {
   // Firebase google authentication
   const handleGoogleLogin = async () => {
     try {
-      const user = await signInWithPopup(auth, provider);
-      localStorage.setItem("authorizationToken", user.user.accessToken);
-      localStorage.setItem("username", user.user.email);
+      await signInWithRedirect(auth, provider);
+      navigateToProfile();
     } catch (err) {
       console.log(err.message);
     }
   }
 
   return (
-    // <>
-    // 	{/* <DarkMode/> */}
-    // 	<Container>
-    // 		{/* <Navbar  /> */}
-    // 		<br />
-    // 		{/* <DarkMode/> */}
-    // 		<FormWrap>
-    // 			<FormContent>
-    // 				<Form onSubmit={sendPostRequest} action="#">
-    // 					<FormH1>Sign in to your account</FormH1>
-    // 					<FormLabel htmlFor="email">Email</FormLabel>
-    // 					<SignInInput
-    // 						onChange={(e) => setData({ ...data, email: e.target.value })}
-    // 						placeholder="email@example.com"
-    // 						type="email"
-    // 						id="email"
-    // 						require
-    // 					/>
-    // 					<FormLabel
-    // 						htmlFor="password"
-    // 						style={{
-    // 							display: 'flex',
-    // 							flexDirection: 'column',
-    // 							position: 'relative',
-
-    // 						}}
-    // 					>
-    // 						Password
-    // 						<SignInInput
-    // 						style={{
-    // 							color:'black',
-    // 						}}
-    // 							onChange={(e) =>
-    // 								setData({ ...data, password: e.target.value })
-    // 							}
-    // 							placeholder="Must have at least 8 characters"
-    // 							type={passwordType}
-    // 							id="password"
-    // 							require
-    // 						/>
-    // 						<button
-    // 							onClick={handleclick}
-    // 							style={{
-    // 								width: 'fit-content',
-    // 								position: 'absolute',
-    // 								right: '0%',
-    // 								top: '20%',
-    // 								background: 'transparent',
-    // 								border: 'none',
-    // 								color: 'green',
-    // 							}}
-    // 						>
-    // 							{passwordType === 'password' ? (
-    // 								<i class="fa-solid fa-eye-slash" id="eye"></i>
-    // 							) : (
-    // 								<i class="fa-solid fa-eye" id="eye"></i>
-    // 							)}
-    // 						</button>
-    // 					</FormLabel>
-    // 					<form
-    // 						style={{
-    // 							display: 'flex',
-    // 							position: 'relative',
-    // 							left: '35%',
-    // 							width: 'fit-content',
-    // 							bottom: '185%',
-    // 							fontSize: 'medium',
-    // 							color: 'white',
-    // 						}}
-    // 					>
-    // 						<input type="checkbox" id="rememberMe" />
-    // 						<br></br>
-    // 						<label htmlFor="rememberMe">Remember me</label>
-    // 					</form>
-    // 					<FormButton type="submit">Continue</FormButton>
-    // 					<br />
-    // 					{invalid && showInvalid()}
-    // 					<NavLink
-    // 						to="/signin/forgotPassword"
-    // 						style={{
-    // 							textAlign: 'center',
-    // 							color: 'white',
-    // 							marginTop: '10px',
-    // 							textDecoration: 'none',
-    // 						}}
-    // 					>
-    // 						Forgot Password ?
-    // 					</NavLink>
-    // 				</Form>
-
-    // 			</FormContent>
-    // 		</FormWrap>
-    // 	</Container>
-    // </>
-
     <NewContainer>
       <FormContainer>
         <SignInContainer>

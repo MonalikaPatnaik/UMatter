@@ -62,9 +62,9 @@ function Verify() {
         <FormContainer>
           <FPForm>
             <OTPimg src={OTPImg} alt="OTP image" />
-            <FPheading>OTP Verification</FPheading>
-            <FPpara>Enter the code sent to your registered E-mail ID</FPpara>
-            <OTPBoxContainer>
+            <FPheading>Check Your Inbox</FPheading>
+            <FPpara>We have sent you a mail for resetting your password.</FPpara>
+            {/* <OTPBoxContainer>
               {Otp.map((data, index) => (
                 <OtpInput
                   type="text"
@@ -81,7 +81,7 @@ function Verify() {
             <TimerContainer>
               <ResendPara>Resend OTP in 00 : {counter}</ResendPara>
               <ResendLink onClick={handleRetry}>Resend OTP?</ResendLink>
-            </TimerContainer>
+            </TimerContainer> */}
           </FPForm>
         </FormContainer>
       </NewContainer>

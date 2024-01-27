@@ -1,13 +1,7 @@
 import React, { useEffect, useState } from "react";
+import { auth } from "../../firebase-config";
 import {
-  FaAcquisitionsIncorporated,
   FaBars,
-  FaBox,
-  FaClosedCaptioning,
-  FaCross,
-  FaCrow,
-  FaExclamationTriangle,
-  FaMicrophoneSlash,
   FaRegWindowClose,
 } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
@@ -40,7 +34,17 @@ const glassStyle = {
 const Navbar = ({ toggle }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [navbarBg, setNavbarBg] = useState(glassStyle);
+  const [user, setUser] = useState(null);
 
+  useEffect(() => {
+    // Add an observer to check for user authentication state changes
+    const unsubscribe = auth.onAuthStateChanged((user) => {
+      setUser(user);
+    });
+
+    // Clean up the observer on component unmount
+    return () => unsubscribe();
+  }, []);
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
@@ -147,19 +151,21 @@ const Navbar = ({ toggle }) => {
           </Navitem>
 
           <NavBtnMobile>
-            <NavBtnLink onClick={handleToggle} to="/signin">
-              Sign In
-            </NavBtnLink>
             <NavBtnLink onClick={handleToggle} to="/signup">
-              Sign Up
+              Register
             </NavBtnLink>
           </NavBtnMobile>
         </NavMenu>
         <NavBtn>
-          <NavBtnLink to="/signin">Sign In</NavBtnLink>
-          <NavBtnLink to="/signup">Sign Up</NavBtnLink>
-          <DarkMode toggle={toggle} />
-        </NavBtn>
+      {user ? (
+        // Display user profile/account button when authenticated
+        <NavBtnLink to="/user-profile">Account</NavBtnLink>
+      ) : (
+        // Display register button when not authenticated
+        <NavBtnLink to="/signup">Register</NavBtnLink>
+      )}
+      <DarkMode toggle={toggle} />
+    </NavBtn>
       </NavbarContainer>
     </Nav>
   );
