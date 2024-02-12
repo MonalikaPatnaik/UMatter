@@ -114,7 +114,7 @@ const SignIn = () => {
       await signInWithRedirect(auth, provider);
       navigateToProfile();
     } catch (err) {
-      console.log(err.message);
+      console.log(err);
     }
   }
 

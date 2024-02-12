@@ -113,7 +113,7 @@ const Blogs = () => {
                 width: "100%",
                 borderRadius: "25px",
                 background: "#fff",
-                outline: isHover ? "2px solid rgb(1, 191, 113)" : "none",
+                // outline: isHover ? "2px solid rgb(1, 191, 113)" : "none",
                 border: "none",
                 fontSize: "18px",
                 paddingLeft: "20px",
