@@ -190,9 +190,9 @@ const SignIn = () => {
               SignUp
             </NavLink>
           </SignInForm>
-          <div className='flex relative mt-10 w-[80%] md:w-[60%]' onClick={handleGoogleLogin}>
-            <button className='py-3 rounded-xl text-black font-semibold w-[100%] border-2 border-black'>Sign in with Google</button>
-            <img src={require('../../assests/googleLogo.png')} className='w-10 absolute top-1.5 left-4' alt='google' />
+          <div className='google-login-container' onClick={handleGoogleLogin}>
+            <button className='login-button'>Sign in with Google</button>
+            <img src={require('../../assests/googleLogo.png')} style={{width:'2.5rem', position: 'absolute',left: '1rem',top: '0.375rem' }} alt='google' />
           </div>
         </SignInContainer>
 

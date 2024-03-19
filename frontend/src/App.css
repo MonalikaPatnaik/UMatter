@@ -52,3 +52,22 @@
   transition: all 0.2s ease-in-out;
   cursor: pointer;
 }
+.google-login-container{
+  display: flex;
+  width: 80%;
+  margin-top: 2.5rem;
+  position: relative;
+}
+.login-button{
+  cursor: pointer;
+  width: 100%;
+  border-radius: 0.75rem;
+  border-width: 2px;
+  font-weight: 600;
+  padding-bottom: 0.75rem;
+    padding-top: 0.75rem ;
+    --tw-border-opacity: 1;
+    border-color: rgb(0 0 0 / var(--tw-border-opacity));
+    --tw-text-opacity: 1;
+    color: rgb(0 0 0 / var(--tw-text-opacity));
+}
