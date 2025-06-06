@@ -1,41 +1,122 @@
 /* Swiper Custom CSS */
 
 .swiper {
-    position: unset !important;
-    margin-top:50px;
+  position: unset !important;
+  margin-top: 40px;
+  padding-bottom: 60px;
 }
 
-.swiper-button-next, .swiper-button-prev {
-    color: #A020F0;
-    z-index: 1;
+.swiper-slide {
+  height: auto;
+  display: flex;
+  align-items: stretch;
+}
+
+.swiper-button-next, 
+.swiper-button-prev {
+  color: var(--accent-clr);
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-top: -25px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+  background: var(--accent-clr);
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .swiper-button-prev {
-    left: 0;
+  left: -25px;
 }
+
 .swiper-button-next {
-    right: 0;
+  right: -25px;
 }
 
 .swiper-pagination {
-    position: relative;
-    z-index: 1; /* Ensure bullets are above content */
+  position: relative;
+  margin-top: 40px;
 }
 
 .swiper-pagination-bullet {
-    background-color: var(--text-clr);
-    z-index: 1;
-
+  background-color: var(--border-clr);
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  margin: 0 6px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .swiper-pagination-bullet-active {
-    background-color: #A020F0;
+  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+  opacity: 1;
+  transform: scale(1.2);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
 }
 
-/* media query for small screens */
+.swiper-pagination-bullet:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
 
-@media screen and (max-width:767px) {
-    .swiper-button-next, .swiper-button-prev {
-        display: none;
-    }
+/* Media queries for responsive design */
+@media screen and (max-width: 1024px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    width: 45px;
+    height: 45px;
+    margin-top: -22.5px;
+  }
+  
+  .swiper-button-prev {
+    left: -22.5px;
+  }
+  
+  .swiper-button-next {
+    right: -22.5px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
+  
+  .swiper-pagination {
+    margin-top: 30px;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .swiper {
+    margin-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .swiper-pagination {
+    margin-top: 20px;
+  }
 }

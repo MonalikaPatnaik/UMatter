@@ -1,150 +1,178 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-// Footer container
 export const FooterContainer = styled.footer`
-  background-color: #101522;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-  z-index: 99;
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
+  padding: 80px 0 40px 0;
+  position: relative;
+  overflow: hidden;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+    z-index: 1;
+  }
 `;
 
-// Footer wrap
 export const FooterWrap = styled.div`
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  max-width: 1200px;
   margin: 0 auto;
-  max-width: 1100px;
-  flex-direction: column;
+  padding: 0 20px;
+  position: relative;
+  z-index: 2;
 `;
 
-// Footer links container
 export const FooterLinksContainer = styled.div`
-  width: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-`;
-
-// Footer links wrapper
-export const FooterLinksWrapper = styled.div`
-  @media (max-width: 786px) {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: 1fr;
-  }
   width: 100%;
-  grid-template-columns: 1fr 1fr 1fr;
+  margin-bottom: 60px;
 
-  @media (min-width: 786px) {
-    &:nth-child(n) {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      justify-content: space-around;
-    }
-    &:nth-child(2) {
-      width: 100%;
-      display: grid;
-      align-self: inherit;
-      align-content: center;
-      justify-content: center;
-    }
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
-// Footer link items
+export const FooterLinksWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 60px;
+  width: 100%;
+  max-width: 800px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+`;
+
 export const FooterLinkItems = styled.div`
   display: flex;
   flex-direction: column;
-  box-sizing: border-box;
+  align-items: flex-start;
   color: #fff;
 
   &.socials {
-    display: flex;
     flex-direction: row;
-    grid-template-columns: repeat(6, 1fr);
-    align-items: center;
-    gap: 0.5rem;
-    margin-top: 1rem;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 40px;
   }
 
-  @media (min-width: 320px) {
+  @media (max-width: 768px) {
     align-items: center;
+    
     &.socials {
-      margin: 1rem;
+      margin-top: 20px;
     }
-  }
-
-  @media (min-width: 786px) {
-    align-items: flex-start;
-    text-align: left;
   }
 `;
 
-// Footer link title
 export const FooterLinkTitle = styled.h1`
-  font-size: 18px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  display: inline-block;
-  cursor: pointer;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 24px;
+  font-family: "Poppins", sans-serif;
   position: relative;
-  color: inherit;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  background: linear-gradient(135deg, #ffffff 0%, #667eea 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
-  &:hover,
-  &:focus {
-    color: #01bf71 !important;
+  &:hover {
     transform: translateY(-2px);
   }
 
-  &:after {
+  &::after {
     content: "";
     position: absolute;
     bottom: -8px;
     left: 0;
+    width: 50px;
+    height: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover::after {
     width: 100%;
-    height: 4px;
-    background-color: #01bf71;
+  }
+
+  @media (max-width: 768px) {
+    &::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
 `;
 
 export const FooterLinkTitleHr = styled.hr`
-  content: "";
-  border: 2px solid;
-  margin-top: 5px;
-  width: 52%;
-  color: #101522;
+  display: none;
 `;
 
 export const FooterLink = styled(Link)`
-  /* Your styles for FooterLink */
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin-bottom: 0.6rem;
-  font-size: 16px;
+  margin-bottom: 16px;
+  font-size: 1rem;
+  font-weight: 400;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  padding: 8px 0;
 
   &:hover {
-    color: #01bf71;
-    text-decoration: none;
-    text-decoration-line: none;
-    text-decoration-style: solid;
+    color: #667eea;
+    transform: translateX(8px);
   }
 
   &.icons {
-    text-align: center;
-    border-radius: 22px;
-    padding: 7px;
-    transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1),
-      background-color 0.3s ease-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, transparent 0%, rgba(255, 255, 255, 0.1) 100%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    &:hover::before {
+      opacity: 1;
+    }
 
     &:hover {
-      transform: translate(0, -10px);
-      background-color: white !important;
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: translateY(-8px) scale(1.1);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
     }
   }
 
@@ -153,80 +181,76 @@ export const FooterLink = styled(Link)`
   }
 
   &.insta:hover {
-    color: #e4405f !important;
+    background: linear-gradient(135deg, #e4405f 0%, #c13584 100%);
+    color: white !important;
   }
 
   &.fb:hover {
-    color: #1877f2 !important;
+    background: #1877f2;
+    color: white !important;
   }
 
   &.youtube:hover {
-    color: #ff0000 !important;
+    background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+    color: white !important;
   }
 
   &.twitter:hover {
-    color: #1da1f2 !important;
+    background: #1da1f2;
+    color: white !important;
   }
 
   &.linkdn:hover {
-    color: #0077b5 !important;
+    background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+    color: white !important;
   }
 
   &.github:hover {
-    color: black !important;
+    background: linear-gradient(135deg, #333 0%, #000 100%);
+    color: white !important;
   }
 `;
 
-// Social media
-export const SocialMedia = styled.section``;
+export const SocialMedia = styled.section`
+  width: 100%;
+`;
 
-// Social media wrap
 export const SocialMediaWrap = styled.div`
-  max-width: 1100px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
 `;
 
-// Social logo
 export const SocialLogo = styled(Link)`
-  /* Your styles for SocialLogo */
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 20px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 
   &:hover {
-    mask-image: linear-gradient(
-      -75deg,
-      rgba(0, 0, 0, 0.6) 30%,
-      #000 50%,
-      rgba(0, 0, 0, 0.6) 70%
-    );
-    mask-size: 200%;
-    animation: shine 2s infinite;
-    color: lightcyan;
-  }
-
-  @keyframes shine {
-    from {
-      mask-position: 150%;
-    }
-
-    to {
-      mask-position: -50%;
-    }
+    transform: scale(1.05);
+    filter: drop-shadow(0 0 20px rgba(102, 126, 234, 0.3));
   }
 `;
 
-// Website rights
 export const WebsiteRights = styled.small`
-  color: #fff;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 20px;
 `;
 
-// Social icons
 export const SocialIcons = styled.div``;
 
-// Social icons link
 export const SocialIconsLink = styled.a``;
