@@ -1,167 +1,36 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-/////////////////////// OLD UI ELEMENTS /////////////////////
-
-export const Container = styled.div`
-  min-height: 692px;
-  padding-top: 80px;
-  padding-bottom: 80px;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
-  overflow: hidden;
-  background: var(--bg-clr);
-`;
-
-export const FormWrap = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-`;
-
-export const Icons = styled(Link)`
-  margin-left: 32px;
-  margin-top: 32px;
-  text-decoration: none;
-  color: #fff;
-  font-weight: 700;
-  font-size: 32px;
-
-  @media screen and (max-width: 480px) {
-    margin-left: 16px;
-    margin-top: 8px;
-  }
-`;
-
-export const FormContent = styled.div`
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  @media screen and (max-width: 580px) {
-    padding: 10px 20px;
-  }
-`;
-
-export const Form = styled.form`
-  background: linear-gradient(45deg, black, rgb(1, 147, 86), rgb(10, 201, 122));
-  max-width: 550px;
-  height: auto;
-  width: 100%;
-  z-index: 1;
-  display: grid;
-  margin: 0 auto;
-  padding: 40px 32px;
-  border-radius: 4px;
-  box-shadow: 1px 2px 10px rgba(0, 0, 0, 0.9);
-
-  @media screen and (max-width: 400px) {
-    padding: 20px 32px;
-    height: 81%;
-  }
-`;
-
-export const FormH1 = styled.label`
-  margin-bottom: 40px;
-  color: #fff;
-  font-size: 1.4rem;
-  font-weight: 800;
-  text-align: center;
-`;
-
-export const FormLabel = styled.label`
-  margin-bottom: 8px;
-  color: #fff;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-`;
-
-export const FormInput = styled.input`
-  margin-bottom: 40px;
-  padding: 10px;
-  border: none;
-  border-radius: 9px;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background: rgb(255, 255, 255);
-  :focus {
-    border-bottom: 5px solid #01bf71;
-    transition: opacity 0.4s ease;
-    box-shadow: 1px 2px 10px #01bf71;
-  }
-  :invalid {
-    border-bottom: 5px solid red;
-  }
-  @media screen and (max-width: 435px) {
-    font-size: 14px;
-  }
-`;
-
-export const FormButton = styled.button`
-  background: #01bf71;
-  padding: 16px 10px;
-  border: none;
-  border-radius: 15px;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-  &:hover {
-    opacity: 0.8;
-    transition: opacity 0.25s ease;
-  }
-  :active {
-    background: #fff;
-    color: #01bf71;
-    opacity: 1;
-    border: 2px solid #01bf71;
-  }
-`;
-
-export const Text = styled.span`
-  text-align: center;
-  margin-top: 24px;
-  color: #fff;
-  font-size: 14px;
-`;
-
-//////////////////////// NEW UI ELEMENTS ///////////////////////
-
 export const NewContainer = styled.div`
-  /* width: 100%;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  top: 0;
-  z-index: 0;
+  background: var(--bg-clr);
+  min-height: 100vh;
+  position: relative;
   overflow: hidden;
-  background: var(--bg-clr); */
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+    z-index: 1;
+  }
 `;
 
 export const FormContainer = styled.div`
-    background-color: #fff;
   position: relative;
-  overflow: hidden;
   width: 100%;
-  max-width: 100%;
-  height:88vh;
+  min-height: 100vh;
   display: flex;
-  @media only screen and (max-width: 550px) {
-    flex-direction: column;
-    margin: 0;
+  z-index: 2;
   
-}
+  @media only screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const SignInContainer = styled.div`
@@ -170,11 +39,13 @@ export const SignInContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  min-height: 100%;
-  @media only screen and (max-width:550px){
+  min-height: 100vh;
+  padding: 40px 20px;
+
+  @media only screen and (max-width: 768px) {
     width: 100%;
-    margin : 3rem auto;
-}
+    padding: 40px 20px;
+  }
 `;
 
 export const RightContainer = styled.div`
@@ -183,154 +54,346 @@ export const RightContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(147.84deg, #01bf71 8.1%, #00492b 95.42%);
-  min-height: 100%;
+  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
 
-  @media only screen and (max-width:550px){
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+      radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 70% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    z-index: 1;
+  }
+
+  @media only screen and (max-width: 768px) {
     width: 100%;
-}
+    min-height: 40vh;
+    padding: 40px 20px;
+  }
 `;
 
 export const SignInForm = styled.form`
-  min-width: 100%;
-  height: 70%;
+  width: 100%;
+  max-width: 450px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-`;
+  
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 32px;
+  padding: 50px 40px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 
-export const SignInButton = styled.button`
-  width: 7rem;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  border-radius: 50px;
-  background: #01bf71;
-  white-space: nowrap;
-  color: #fff;
-  margin-top: 0.8rem;
-  cursor: pointer;
-  text-decoration: none;
-  margin-bottom: 1rem;
-
-  &:hover {
-    background: #00492b;
-    color: #ffffff;
+  @media only screen and (max-width: 768px) {
+    padding: 40px 30px;
+    margin: 20px;
   }
-
-  &:active {
-    transform: scale(0.95);
-  }
-`;
-
-export const RightHeading = styled.h1`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2rem;
-  line-height: 3rem;
-  color: #ffffff;
-`;
-
-export const RightPara = styled.p`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1rem;
-  color: #ffffff;
-  margin-top: 0.4rem;
-  width: 70%;
-  text-align: center;
 `;
 
 export const SignInh1 = styled.h1`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 2.3rem;
-  line-height: 4rem;
-  margin-bottom: 1rem;
-  color: #01bf71;
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  line-height: 1.2;
+  margin-bottom: 40px;
+  text-align: center;
+  
+  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 `;
 
 export const SignInLabel = styled.label`
-  text-align: left;
-  width: 70%;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 1rem;
-  line-height: 2rem;
-  color: #01bf71;
+  align-self: flex-start;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--text-clr);
+  margin-bottom: 8px;
+  opacity: 0.9;
 `;
 
 export const SignInInput = styled.input`
-  width: 70%;
-  padding: 0.5rem;
-  border-radius: 0;
-  border: None;
-  background: rgba(1, 191, 113, 0.3);
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 0.8rem;
-  color: Black;
-  margin-bottom: 1rem;
+  width: 100%;
+  padding: 16px 20px;
+  border-radius: 12px;
+  border: 2px solid var(--border-clr);
+  background: var(--card-bg);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: var(--text-clr);
+  margin-bottom: 20px;
   outline: none;
-  box-sizing: border-box;
-  border: 1px solid transparent;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 
   &::placeholder {
-    color: rgba(0, 0, 0, 0.5);
+    color: var(--text-clr);
+    opacity: 0.6;
   }
 
   &:hover {
-    border: 1px solid #01bf71;
+    border-color: var(--accent-clr);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.1);
   }
 
   &:focus {
-    border-radius: 0;
-    border: 2px solid #01bf71;
+    border-color: var(--accent-clr);
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    transform: translateY(-2px);
   }
-`;
 
-export const CheckBox = styled.input`
-  margin-right: 0.5rem;
-`;
-
-export const RememberMe = styled.div`
-  display: flex;
-  margin-bottom: 1rem;
-  label {
-    font-family: "Poppins";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 0.8rem;
-    line-height: 1rem;
-    color: #1e1e1e;
+  @media only screen and (max-width: 768px) {
+    padding: 14px 16px;
+    font-size: 14px;
   }
-`;
-
-export const ForgotPassword = styled.p`
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8rem;
-  line-height: 1rem;
-  color: #1e1e1e;
-  cursor: pointer;
 `;
 
 export const PasswordContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
   width: 100%;
+  
+  i {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: var(--text-clr);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    z-index: 10;
+    
+    &:hover {
+      opacity: 1;
+      color: var(--accent-clr);
+    }
+  }
 `;
 
-export const Image = styled.img``;
+export const RememberMe = styled.div`
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+  margin-bottom: 20px;
+  gap: 8px;
+  
+  label {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    color: var(--text-clr);
+    opacity: 0.8;
+    cursor: pointer;
+  }
+`;
+
+export const CheckBox = styled.input`
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent-clr);
+  cursor: pointer;
+`;
+
+export const SignInButton = styled.button`
+  width: 100%;
+  max-width: 200px;
+  padding: 16px 32px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+  color: white;
+  cursor: pointer;
+  margin: 20px 0;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+  }
+
+  &:hover::before {
+    left: 100%;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.4);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 14px 28px;
+    font-size: 14px;
+  }
+`;
+
+export const ForgotPassword = styled.p`
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  color: var(--accent-clr);
+  cursor: pointer;
+  margin: 10px 0;
+  transition: all 0.3s ease;
+  
+  &:hover {
+    color: var(--secondary-clr);
+    text-decoration: underline;
+  }
+`;
+
+export const RightHeading = styled.h1`
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.2;
+  color: #ffffff;
+  margin-bottom: 20px;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+`;
+
+export const RightPara = styled.p`
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  width: 80%;
+  text-align: center;
+  position: relative;
+  z-index: 2;
+`;
+
+export const Image = styled.img`
+  height: auto;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 2;
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover {
+    transform: scale(1.05) rotate(2deg);
+  }
+
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+    max-width: 300px;
+  }
+`;
+
+export const GoogleLoginContainer = styled.div`
+  width: 100%;
+  max-width: 450px;
+  margin-top: 20px;
+`;
+
+export const GoogleLoginButton = styled.button`
+  width: 100%;
+  padding: 16px 24px;
+  border: 2px solid var(--border-clr);
+  border-radius: 12px;
+  background: var(--card-bg);
+  color: var(--text-clr);
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+
+  &:hover {
+    border-color: var(--accent-clr);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(102, 126, 234, 0.1);
+  }
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    padding: 14px 20px;
+    font-size: 14px;
+  }
+`;
+
+export const AuthLinks = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  margin-top: 20px;
+  
+  label {
+    font-size: 14px;
+    color: var(--text-clr);
+    opacity: 0.8;
+  }
+  
+  a {
+    font-size: 14px;
+    color: var(--accent-clr);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      color: var(--secondary-clr);
+      text-decoration: underline;
+    }
+  }
+`;
+
+// Legacy elements for backward compatibility
+export const Container = styled.div``;
+export const FormWrap = styled.div``;
+export const Icons = styled(Link)``;
+export const FormContent = styled.div``;
+export const Form = styled.form``;
+export const FormH1 = styled.label``;
+export const FormLabel = styled.label``;
+export const FormInput = styled.input``;
+export const FormButton = styled.button``;
+export const Text = styled.span``;

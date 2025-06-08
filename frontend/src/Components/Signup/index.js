@@ -17,10 +17,10 @@ import {
   LeftPara,
   SignUph1,
   FormInput,
-  PhoneContainer,
   SignUpButton,
   PasswordContainer,
   Image,
+  AuthLinks,
 } from "./SignupElements";
 
 import { useState } from "react";
@@ -35,6 +35,7 @@ const SignUp = () => {
   const [passwordConfirmType, setConfirmPasswordType] = useState("password");
   const [data, setData] = useState({});
   const [trackState, setTrackState] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
 
   const handleclick = (e) => {
@@ -45,6 +46,7 @@ const SignUp = () => {
       setPasswordType("text");
     }
   };
+  
   const Confirmhandleclick = (e) => {
     e.preventDefault();
     if (passwordConfirmType === "text") {
@@ -53,36 +55,34 @@ const SignUp = () => {
       setConfirmPasswordType("text");
     }
   };
+  
   const validateEmail = (email) => {
     const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
     return emailRegex.test(email);
   };
 
   const validatePassword = (password) => {
-    // Password validation: at least 8 characters and contain at least one uppercase letter, one lowercase letter, and one digit
     const passwordRegex = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}/;
     return passwordRegex.test(password);
   };
+  
   const validateusername = (username) => {
-    // username  should contains only alphabets
     const usernameRegex = /[A-Za-z]{3}/;
     return usernameRegex.test(username);
   };
 
   const validatename = (name) => {
-    // name  should contains only alphabets
     const nameRegex = /[A-Za-z]{3}/;
     return nameRegex.test(name);
   };
 
   const navigateToProfile = () => {
-    // 👇️ navigate to /contacts
     navigate("/");
   };
+  
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Validate form inputs
     const { email, username, name, password, confirmpassword } = data;
 
     if (!email || !validateEmail(email)) {
@@ -92,7 +92,7 @@ const SignUp = () => {
     }
 
     if (!username || !validateusername(username)) {
-      setMsg("Please enter a username(contains only alphabets).");
+      setMsg("Please enter a username (contains only alphabets).");
       setInvalid(true);
       return;
     }
@@ -110,6 +110,7 @@ const SignUp = () => {
       setInvalid(true);
       return;
     }
+    
     if (password !== confirmpassword) {
       setMsg("Passwords do not match.");
       setInvalid(true);
@@ -129,15 +130,12 @@ const SignUp = () => {
   }
 
   const sendPostRequest = async () => {
-    console.log("sendPostRequest executed!!!");
+    setIsSubmitting(true);
     try {
-      // Create user with Firebase Authentication
       await createUserWithEmailAndPassword(auth, data.email, data.password);
-
       navigateToProfile();
       console.log("User created successfully!");
     } catch (error) {
-      // Handle errors, e.g., email already in use, weak password, etc.
       let errorMessage = "An error occurred during sign-up.";
 
       if (error.code === "auth/email-already-in-use") {
@@ -155,18 +153,19 @@ const SignUp = () => {
         draggable: true,
       });
     }
+    setIsSubmitting(false);
   };
 
   const showInvalid = () => {
     return (
-      <div className="alert alert-danger" role="alert">
+      <div className="p-4 mb-4 text-sm text-red-800 rounded-lg bg-red-50 border border-red-200" role="alert">
         {msg}
       </div>
     );
   };
 
   return (
-    <FormContainer className="flex">
+    <FormContainer>
       <LeftContainer>
         <LeftHeading>Welcome!</LeftHeading>
         <LeftPara>
@@ -174,19 +173,18 @@ const SignUp = () => {
         </LeftPara>
         <Image src={SignUpImg} alt="Sign Up Graphic" />
       </LeftContainer>
+      
       <SignUpContainer>
-        <SignUpForm onSubmit={handleSubmit} action="#">
-          <SignUph1>Create account</SignUph1>
+        <SignUpForm onSubmit={handleSubmit}>
+          <SignUph1>Create Account</SignUph1>
+          
           <FormInput
             onChange={(e) => setData({ ...data, name: e.target.value })}
             id="FullNameInput"
             type="text"
             placeholder="Full Name"
             aria-label="Full Name"
-          />
-          <FaUser
-            className="absolute top-[17%] fill-teal-800 left-[50%] cursor-pointer signupTable:hidden"
-            aria-hidden="true"
+            required
           />
 
           <FormInput
@@ -195,10 +193,7 @@ const SignUp = () => {
             type="text"
             placeholder="Username"
             aria-label="Username"
-          />
-          <FaUser
-            className="absolute cursor-pointer top-[27%] fill-teal-800 left-[50%] signupTable:hidden"
-            aria-hidden="true"
+            required
           />
 
           <FormInput
@@ -209,10 +204,6 @@ const SignUp = () => {
             required
             aria-label="Email"
           />
-          <MdEmail
-            className="cursor-pointer fill-teal-800 absolute top-[37%] left-[50%] signupTable:hidden"
-            aria-hidden="true"
-          />
 
           <PasswordContainer>
             <FormInput
@@ -221,73 +212,65 @@ const SignUp = () => {
               type={passwordType}
               placeholder="Password"
               aria-label="Password"
+              required
             />
-
             {passwordType === "password" ? (
               <BiSolidHide
                 onClick={handleclick}
-                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                size={20}
+                style={{ cursor: 'pointer' }}
               />
             ) : (
               <BiSolidShow
                 onClick={handleclick}
-                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                size={20}
+                style={{ cursor: 'pointer' }}
               />
             )}
           </PasswordContainer>
-          <MdPassword className="absolute fill-teal-800 top-[59%] left-[50%] signupTable:hidden" />
 
           <PasswordContainer>
             <FormInput
               onChange={(e) =>
                 setData({ ...data, confirmpassword: e.target.value })
               }
-              id="PasswordInput"
+              id="ConfirmPasswordInput"
               type={passwordConfirmType}
               placeholder="Confirm Password"
               aria-label="Confirm Password"
+              required
             />
             {passwordConfirmType === "password" ? (
               <BiSolidHide
                 onClick={Confirmhandleclick}
-                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                size={20}
+                style={{ cursor: 'pointer' }}
               />
             ) : (
               <BiSolidShow
                 onClick={Confirmhandleclick}
-                className="fill-teal-800 text-xl absolute top-[35%] right-[18%] transform translate-y-[-50%] cursor-pointer"
+                size={20}
+                style={{ cursor: 'pointer' }}
               />
             )}
           </PasswordContainer>
-          <MdPassword className="absolute fill-teal-800 top-[69%] left-[50%] signupTable:hidden" />
 
           <Captcha message={setTrackState} trackState={trackState} />
+          
           <SignUpButton
             type="submit"
-            disabled={!trackState}
-            style={{ cursor: `${trackState ? "pointer" : "not-allowed"}` }}
-            className="mb-2 transition-all duration-300 ease-in-out"
+            disabled={!trackState || isSubmitting}
             aria-label="Sign Up"
           >
-            Sign Up
+            {isSubmitting ? 'Creating Account...' : 'Sign Up'}
           </SignUpButton>
 
           {invalid && showInvalid()}
-          <label
-            style={{ fontSize: "14px", color: "green", textAlign: "center" }}
-          >
-            Already have an account!
-          </label>
-          <NavLink
-            to="/signin"
-            style={{
-              fontSize: "14px",
-              marginTop: "-20px",
-              marginLeft: "240px",
-            }}
-          >
-            Signin
-          </NavLink>
+          
+          <AuthLinks>
+            <label>Already have an account?</label>
+            <NavLink to="/signin">Sign In</NavLink>
+          </AuthLinks>
         </SignUpForm>
       </SignUpContainer>
     </FormContainer>

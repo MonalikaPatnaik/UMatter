@@ -64,10 +64,16 @@ export const ImgWrap = motion(styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
 `);
 
 export const Column1 = styled.div`
-  grid-area: ${({ imgStart }) => (imgStart ? "col2" : "col1")};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
   
   @media screen and (max-width: 768px) {
     order: ${({ imgStart }) => (imgStart ? "2" : "1")};
@@ -75,10 +81,11 @@ export const Column1 = styled.div`
 `;
 
 export const Column2 = styled.div`
-  grid-area: ${({ imgStart }) => (imgStart ? "col1" : "col2")};
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+  z-index: 1;
   
   @media screen and (max-width: 768px) {
     order: ${({ imgStart }) => (imgStart ? "1" : "2")};
@@ -88,6 +95,8 @@ export const Column2 = styled.div`
 export const TextWrapper = motion(styled.div`
   max-width: 100%;
   padding: 0;
+  position: relative;
+  z-index: 3;
 `);
 
 export const TopLine = styled.p`
@@ -170,6 +179,8 @@ export const Img = styled.img`
   border-radius: 24px;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
   
   &:hover {
     transform: scale(1.05) rotate(2deg);

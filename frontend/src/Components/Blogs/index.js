@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-//import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-//import Icon1 from "../../images/no-drinking.webp";
 import Icon4 from "../../images/5Ds.webp";
 import Icon5 from "../../images/Distraction tec.webp";
 import Icon3 from "../../images/Embracing_the_Power_of_Menstruation.webp";
@@ -19,21 +17,18 @@ import {
   BlogsIcon,
   BlogsP,
   BlogsWrapper,
-  ReadMoreButton, // Added ReadMoreButton import
+  ReadMoreButton,
+  SearchContainer,
+  SearchWrapper,
+  SearchInput,
+  SearchButton,
+  ClearButton,
+  BlogsTitle,
 } from "./BlogsElements";
 
 const Blogs = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [isHover, setIsHover] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHover(true);
-  };
-  const handleMouseLeave = () => {
-    setIsHover(false);
-  };
-
-  //const navigate = useNavigate();
   const handleSearch = (e) => {
     setSearchTerm(e.target.value);
   };
@@ -52,149 +47,61 @@ const Blogs = () => {
     blog.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
-  let content;
-  if (filteredBlogs.length === 0) {
-    content = <div>No results found</div>;
-  } else {
-    content = filteredBlogs.map((blog, index) => (
-      <BlogsCard key={index}>
-        <BlogsIcon src={blog.icon} />
-        <BlogsH1>
-          <b>{blog.title}</b>
-        </BlogsH1>
-        <BlogsP>{blog.content}</BlogsP>
-        {blog.hyperlink == "" ? (
-          <Link to="./abc">
-            <ReadMoreButton>Read more</ReadMoreButton>
-          </Link>
-        ) : (
-          <a href={blog.hyperlink} target="_blank">
-            <ReadMoreButton>Read more</ReadMoreButton>
-          </a>
-
-        )}
-      </BlogsCard>
-    ));
-  }
-
   return (
     <BlogsContainer id="Blogs">
-      <div style={{ height: "100px" }}></div>
-
-      <div className="w-full flex flex-col md:flex-row items-center justify-center">
-        <div
-          style={{
-            maxWidth: "400px",
-            width: "100%",
-          }}
-        >
-          <div
-            style={{
-              position: "relative",
-              height: "50px",
-              maxWidth: "380px",
-              background: "red",
-              margin: "auto",
-              boxShadow: "0 5px 10px rgba(0,0,0,0.25)",
-              borderRadius: "25px",
-            }}
-          >
-            <input
+      <BlogsTitle>Explore Our Blogs</BlogsTitle>
+      
+      <SearchContainer>
+        <div className="flex flex-col md:flex-row items-center justify-center">
+          <SearchWrapper>
+            <SearchInput
               type="text"
               placeholder="Search blogs..."
               value={searchTerm}
               onChange={handleSearch}
               onKeyPress={handleKeyPress}
-              onClick={handleMouseEnter}
-              onMouseOut={handleMouseLeave}
-              style={{
-                position: "absolute",
-                height: "100%",
-                width: "100%",
-                borderRadius: "25px",
-                background: "#fff",
-                // outline: isHover ? "2px solid rgb(1, 191, 113)" : "none",
-                border: "none",
-                fontSize: "18px",
-                paddingLeft: "20px",
-              }}
             />
-            <label
-              style={{
-                position: "absolute",
-                right: "0",
-                top: "0",
-                width: "50px",
-                background: "rgb(1, 191, 113)",
-                height: "100%",
-                textAlign: "center",
-                lineHeight: "50px",
-                color: "#fff",
-                fontSize: "20px",
-                borderRadius: "0 25px 25px 0",
-              }}
-            >
+            <SearchButton>
               <i className="fas fa-search"></i>
-            </label>
-          </div>
+            </SearchButton>
+          </SearchWrapper>
+          <ClearButton onClick={handleButtonClick}>
+            Clear
+          </ClearButton>
         </div>
+      </SearchContainer>
 
-        <button
-          className="search-button mt-3 md:mb-3"
-          onClick={handleButtonClick}
-          /* style={{
-            backgroundColor: "green", // Set background color to green
-            color: "white", // Set text color to white
-            borderRadius: "8px",
-            padding: "8px",
-            fontSize: "19px",
-            width: "100px", // Set width to your desired value
-            marginLeft: "8px", // Add any other desired inline styles
-          }}*/
-          style={{
-            borderRadius: "30px",
-            background: "rgb(1, 191, 113)",
-            whiteSpace: "nowrap",
-            padding: "15px 23px",
-            color: "rgb(255, 255, 255)",
-            fontSize: "16px",
-            outline: "none",
-            border: "1.5px solid black",
-            marginLeft: "7px",
-            marginTop: "7px",
-            cursor: "pointer",
-
-            textDecoration: "none",
-            hover: "blue",
-          }}
-        >
-          Clear
-        </button>
-      </div>
-
-      <div style={{ height: "50px" }}></div>
-      {/* <div style={{ height: "50px" }}></div> */}
       <BlogsWrapper>
-        {filteredBlogs.map((blog, index) => (
-          <BlogsCard key={index}>
-            <BlogsIcon src={blog.icon} />
-            <BlogsH1>
-              <b>{blog.title}</b>
-            </BlogsH1>
-            <BlogsP>{blog.content}</BlogsP>
-            {blog.hyperlink === "" ? (
-              <Link to="./abc">
-                <ReadMoreButton>Read more</ReadMoreButton>
-              </Link>
-            ) : (
-              <a href={blog.hyperlink} target="_blank">
-                <ReadMoreButton>Read more</ReadMoreButton>
-              </a>
-
-            )}
-          </BlogsCard>
-        ))}
-
+        {filteredBlogs.length === 0 ? (
+          <div style={{ 
+            gridColumn: "1 / -1", 
+            textAlign: "center", 
+            color: "var(--text-clr)",
+            fontSize: "1.2rem",
+            padding: "40px"
+          }}>
+            No results found
+          </div>
+        ) : (
+          filteredBlogs.map((blog, index) => (
+            <BlogsCard key={index}>
+              <BlogsIcon src={blog.icon} alt={blog.title} />
+              <BlogsH1>
+                <b>{blog.title}</b>
+              </BlogsH1>
+              <BlogsP>{blog.content}</BlogsP>
+              {blog.hyperlink === "" ? (
+                <Link to="./abc">
+                  <ReadMoreButton>Read more</ReadMoreButton>
+                </Link>
+              ) : (
+                <a href={blog.hyperlink} target="_blank" rel="noopener noreferrer">
+                  <ReadMoreButton>Read more</ReadMoreButton>
+                </a>
+              )}
+            </BlogsCard>
+          ))
+        )}
       </BlogsWrapper>
     </BlogsContainer>
   );
@@ -222,7 +129,7 @@ const blogsData = [
     icon: Icon8,
     title: "Isolation - the secret enemy",
     content:
-      "Nature is ideal for lowering stress levels, but it’s also a great way to remind yourself there’s a whole world out there and it can be comforting to see the bigger picture when we step outside our bubbles.",
+      "Nature is ideal for lowering stress levels, but it's also a great way to remind yourself there's a whole world out there and it can be comforting to see the bigger picture when we step outside our bubbles.",
     hyperlink:
       "https://alcoholchange.org.uk/blog/2023/week-five-isolation-the-secret-enemy",
   },
@@ -230,7 +137,7 @@ const blogsData = [
     icon: Icon10,
     title: "Learning how to say no",
     content:
-      "As well as fear, people can sniff out indecision, so you need to make sure that your rebuttal to why you aren’t drinking is both confident and watertight. It doesn’t need to be lengthy.",
+      "As well as fear, people can sniff out indecision, so you need to make sure that your rebuttal to why you aren't drinking is both confident and watertight. It doesn't need to be lengthy.",
     hyperlink: "https://www.betterup.com/blog/how-to-say-no",
   },
   {
