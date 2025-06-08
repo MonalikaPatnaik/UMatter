@@ -23,17 +23,17 @@ import {
 import manifest from "../../../src/assests/manifest.json";
 
 const faviconSrc = manifest.icons[0].src;
-const glassStyle = {
-  background: "rgba(40, 30, 30, 0.3)",
-  // borderRadius: "16px",
-  boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-  backdropFilter: "blur(7.1px)",
-  WebkitBackdropFilter: "blur(7.1px)",
-  border: "1px solid rgba(40, 30, 30, 0.18)",
-};
+// const glassStyle = {
+//   background: "rgba(40, 30, 30, 0.3)",
+//   // borderRadius: "16px",
+//   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
+//   backdropFilter: "blur(7.1px)",
+//   WebkitBackdropFilter: "blur(7.1px)",
+//   border: "1px solid rgba(40, 30, 30, 0.18)",
+// };
 const Navbar = ({ toggle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [navbarBg, setNavbarBg] = useState(glassStyle);
+  // const [navbarBg, setNavbarBg] = useState(glassStyle);
   const [user, setUser] = useState(null);
 
   useEffect(() => {
@@ -48,9 +48,9 @@ const Navbar = ({ toggle }) => {
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY;
-      setNavbarBg(
-        scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle
-      );
+      // setNavbarBg(
+      //   scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle
+      // );
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -91,10 +91,10 @@ const Navbar = ({ toggle }) => {
     navigate("/");
   };
 
-  const handleTeamClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/team");
-  };
+  // const handleTeamClick = () => {
+  //   setIsOpen(false); // Close the navbar
+  //   navigate("/team");
+  // };
 
   // Function to handle navbar toggle
   const handleToggle = () => {
@@ -102,7 +102,7 @@ const Navbar = ({ toggle }) => {
   };
 
   return (
-    <Nav style={navbarBg}>
+    <Nav>
       <NavbarContainer>
         <LogoContainer>
           <LogoinnerContainer>
@@ -144,11 +144,11 @@ const Navbar = ({ toggle }) => {
               Feedback{" "}
             </NavLinks>
           </Navitem>
-          <Navitem>
+          {/* <Navitem>
             <NavLinks to="#" onClick={handleTeamClick}>
               Team{" "}
             </NavLinks>
-          </Navitem>
+          </Navitem> */}
 
           <NavBtnMobile>
             <NavBtnLink onClick={handleToggle} to="/signup">

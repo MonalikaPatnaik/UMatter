@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js";
-import Video from "../../videos/video1.mp4";
+// import Video from "../../videos/video1.mp4";
 import {
   HeroContainer,
   HeroBg,
@@ -40,9 +40,9 @@ const HeroSection = () => {
   
   return (
     <HeroContainer id="home">
-      <HeroBg>
+      {/* <HeroBg>
         <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
-      </HeroBg>
+      </HeroBg> */}
       <HeroContent
         whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
         transition={{ duration: 0.8 }}
