@@ -1,56 +1,78 @@
 import React, { useState, useEffect, useRef } from "react";
 import Typed from "typed.js";
-// import Video from "../../videos/video1.mp4";
 import {
   HeroContainer,
-  HeroBg,
-  VideoBg,
   HeroContent,
   HeroBtnWrapper,
   HeroH1,
   HeroP,
+  Button,
   ArrowForward,
   ArrowRight,
+  FloatingShape
 } from "./HeroElements";
-import { Button } from "../ButtonElements";
 import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   const [hover, setHover] = useState(false);
   const el = useRef(null);
+  const typedRef = useRef(null);
 
   useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Make your life more blissful"],
-      typeSpeed: 50,
-      backSpeed: 50,
+    const options = {
+      strings: [
+        "Make your life more blissful",
+        "Find your inner peace",
+        "Start your wellness journey"
+      ],
+      typeSpeed: 40, // Slightly slower for better readability
+      backSpeed: 25, // Slower backspacing
+      backDelay: 2000, // Pause before starting to delete
+      startDelay: 500, // Initial delay before typing starts
       loop: true,
-      showCursor: false,
-    });
+      showCursor: true,
+      cursorChar: '|',
+      smartBackspace: true,
+      shuffle: false,
+      fadeOut: false,
+      fadeOutClass: 'typed-fade-out',
+      fadeOutDelay: 500,
+    };
+
+    typedRef.current = new Typed(el.current, options);
 
     return () => {
-      typed.destroy();
+      if (typedRef.current) {
+        typedRef.current.destroy();
+      }
     };
   }, []);
 
+
   const onHover = () => {
     setHover(!hover);
-  };  
-  
+  };
   
   return (
     <HeroContainer id="home">
-      {/* <HeroBg>
-        <VideoBg autoPlay loop muted src={Video} type="video/mp4" />
-      </HeroBg> */}
+      <FloatingShape />
+      <FloatingShape />
+      
       <HeroContent
-        whileInView={{ y: [100, 50, 0], opacity: [0, 0, 1] }}
-        transition={{ duration: 0.8 }}
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
       >
         <HeroH1>
           <span ref={el} style={{ display: "inline-block" }} />
         </HeroH1>
-        <HeroP>Register today and seize a fresh start for your life!</HeroP>
+        
+        <HeroP>
+          Embark on a transformative journey to wellness and self-discovery. 
+          Our expert-guided programs are designed to help you find balance, 
+          peace, and happiness in your daily life.
+        </HeroP>
+        
         <HeroBtnWrapper>
           <Button
             as={Link}
@@ -59,9 +81,10 @@ const HeroSection = () => {
             onMouseLeave={onHover}
             primary="true"
             dark="true"
-            style={{ textDecoration: "none" }}
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
           >
-            Take the first step {hover ? <ArrowForward /> : <ArrowRight />}
+            Begin Your Journey {hover ? <ArrowForward /> : <ArrowRight />}
           </Button>
         </HeroBtnWrapper>
       </HeroContent>

@@ -1,35 +1,35 @@
-import styled, { css, keyframes } from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { MdArrowForward, MdKeyboardArrowRight } from 'react-icons/md';
 import { motion } from 'framer-motion';
 
+// Animations
 const float = keyframes`
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-20px);
-  }
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
 `;
 
-const shimmer = keyframes`
-  0% {
-    background-position: -200px 0;
-  }
-  100% {
-    background-position: calc(200px + 100%) 0;
-  }
+const gradient = keyframes`
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+`;
+
+const pulse = keyframes`
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
 `;
 
 export const HeroContainer = styled.div`
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 0 30px;
-  height: 100vh;
+  padding: 0 5%;
+  min-height: 100vh;
   position: relative;
-  z-index: 1;
   overflow: hidden;
+  z-index: 1;
 
   &::before {
     content: '';
@@ -39,10 +39,9 @@ export const HeroContainer = styled.div`
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 80%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 80% 20%, rgba(118, 75, 162, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.05) 0%, transparent 50%);
-    z-index: 2;
+      radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+    z-index: 1;
   }
 
   &::after {
@@ -52,44 +51,27 @@ export const HeroContainer = styled.div`
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.02"><circle cx="30" cy="30" r="1"/></g></svg>');
-    z-index: 2;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04' fill-rule='evenodd'%3E%3Ccircle cx='60' cy='60' r='1'/%3E%3C/g%3E%3C/svg%3E");
+    z-index: 1;
+    opacity: 0.8;
   }
-`;
-
-export const HeroBg = styled.div`
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  overflow: hidden;
-  z-index: 1;
-`;
-
-export const VideoBg = styled.video`
-  width: 100%;
-  height: 100vh;
-  object-fit: cover;
-  opacity: 0.3;
-  filter: blur(2px);
 `;
 
 export const HeroContent = motion(styled.div`
   z-index: 3;
   max-width: 1200px;
-  position: absolute;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+  padding: 40px 0;
 `);
 
 export const HeroH1 = styled.h1`
-  margin-bottom: 32px;
-  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  margin: 0 0 24px;
+  font-size: clamp(2.5rem, 7vw, 5rem);
   line-height: 1.1;
   font-weight: 800;
   font-family: "Poppins", sans-serif;
@@ -97,124 +79,123 @@ export const HeroH1 = styled.h1`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  animation: ${float} 6s ease-in-out infinite;
+  background-size: 200% auto;
+  animation: ${gradient} 8s ease infinite;
+  position: relative;
+  display: inline-block;
   
   &::after {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-      90deg,
-      transparent,
-      rgba(255, 255, 255, 0.1),
-      transparent
-    );
-    animation: ${shimmer} 3s infinite;
-  }
-
-  @media screen and (max-width: 768px) {
-    margin-bottom: 24px;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 2px;
   }
 `;
 
 export const HeroP = styled.p`
-  margin-top: -10px;
+  margin: 0 0 40px;
   color: rgba(255, 255, 255, 0.9);
-  font-size: clamp(1.1rem, 3vw, 1.5rem);
-  text-align: center;
-  max-width: 600px;
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  max-width: 700px;
   line-height: 1.6;
-  font-weight: 400;
-  margin-bottom: 40px;
-  
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px 30px;
-  border-radius: 20px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-
-  @media screen and (max-width: 768px) {
-    padding: 16px 20px;
-    font-size: 1.1rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 12px 16px;
-    font-size: 1rem;
-  }
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 `;
 
 export const HeroBtnWrapper = styled.div`
-  margin-top: 32px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  margin-top: 20px;
 `;
 
-export const Button = styled.button`
-  text-decoration: none;
-  padding: 16px 40px;
-  font-size: 18px;
-  font-weight: 600;
-  border: none;
+export const Button = styled(motion.button)`
   border-radius: 50px;
+  background: ${({ primary }) => (primary ? '#667eea' : '#010606')};
+  white-space: nowrap;
+  padding: ${({ big }) => (big ? '14px 48px' : '12px 30px')};
+  color: ${({ dark }) => (dark ? '#fff' : '#010606')};
+  font-size: ${({ fontBig }) => (fontBig ? '20px' : '16px')};
+  outline: none;
+  border: none;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
   position: relative;
   overflow: hidden;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
-  box-shadow: 0 10px 25px -3px rgba(102, 126, 234, 0.3);
+  z-index: 1;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
   
   &::before {
     content: '';
     position: absolute;
     top: 0;
-    left: -100%;
-    width: 100%;
+    left: 0;
+    width: 0;
     height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.5s;
-  }
-  
-  &:hover::before {
-    left: 100%;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
   }
   
   &:hover {
     transform: translateY(-3px);
-    box-shadow: 0 20px 40px -3px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.6);
+    
+    &::before {
+      width: 100%;
+    }
   }
   
   &:active {
-    transform: translateY(-1px);
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 14px 32px;
-    font-size: 16px;
-  }
-
-  @media screen and (max-width: 480px) {
-    padding: 12px 28px;
-    font-size: 14px;
+    transform: translateY(1px);
   }
 `;
 
 export const ArrowForward = styled(MdArrowForward)`
   margin-left: 8px;
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
 `;
 
 export const ArrowRight = styled(MdKeyboardArrowRight)`
   margin-left: 8px;
   font-size: 20px;
-  transition: transform 0.3s ease;
+  transition: all 0.3s ease-in-out;
+`;
+
+// Decorative Elements
+export const FloatingShape = styled.div`
+  position: absolute;
+  border-radius: 50%;
+  z-index: 1;
+  filter: blur(40px);
+  opacity: 0.6;
+  
+  &:nth-child(1) {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    top: 10%;
+    left: 10%;
+    animation: ${float} 8s ease-in-out infinite;
+  }
+  
+  &:nth-child(2) {
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    bottom: 10%;
+    right: 10%;
+    animation: ${float} 10s ease-in-out infinite reverse;
+  }
 `;

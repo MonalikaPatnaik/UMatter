@@ -1,14 +1,14 @@
-import Icon1 from '../../images/image1.webp';
+// import Icon1 from '../../images/image1.webp';
 import Icon2 from '../../images/image2.webp';
 import Icon3 from '../../images/image3.webp';
 import Icon4 from '../../images/image4.webp';
 export const Services_Data=[
-    {
-      id: 'consult',
-      icon: Icon1,
-      title: 'Consult With Doctor',
-      description: 'Consult with professional doctors and therapists regarding your health.'
-    },
+    // {
+    //   id: 'consult',
+    //   icon: Icon1,
+    //   title: 'Consult With Doctor',
+    //   description: 'Consult with professional doctors and therapists regarding your health.'
+    // },
     {
       id: 'workshops',
       icon: Icon2,

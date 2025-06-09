@@ -7,7 +7,7 @@ export const TestimonialsContainer = motion(styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--bg-clr);
+  background: linear-gradient(135deg, #f8f9ff 0%, #f0f4ff 100%);
   position: relative;
   overflow: hidden;
 
@@ -19,8 +19,8 @@ export const TestimonialsContainer = motion(styled.div`
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 30% 30%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 70% 70%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
     z-index: 1;
   }
 
@@ -31,18 +31,17 @@ export const TestimonialsContainer = motion(styled.div`
 
 export const TestimonialsWrapper = styled.div`
   position: relative;
-  max-width: 1200px;
+  max-width: 1280px;
   width: 100%;
   margin: 0 auto;
   padding: 60px 40px;
   border-radius: 32px;
   z-index: 2;
-  
-  background: var(--glass-bg);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
 
   @media screen and (max-width: 768px) {
     padding: 40px 20px;
@@ -50,105 +49,117 @@ export const TestimonialsWrapper = styled.div`
   }
 `;
 
-export const TestimonialsCard = styled.div`
-  background: var(--card-bg);
+export const TestimonialCard = styled.div`
+  background: white;
   border-radius: 20px;
-  padding: 32px;
-  box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1);
-  border: 1px solid var(--border-clr);
+  padding: 40px 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  &::before {
+    content: '"';
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 120px;
+    color: #667eea;
+    font-family: Georgia, serif;
+    opacity: 0.1;
+    line-height: 1;
+  }
 
   &:hover {
     transform: translateY(-8px);
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-    border-color: var(--accent-clr);
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 24px;
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.3);
   }
 `;
 
-export const TestimonialsIcon = styled.img`
+export const TestimonialIcon = styled.img`
   width: 80px;
   height: 80px;
   border-radius: 50%;
   object-fit: cover;
-  margin-bottom: 20px;
-  border: 3px solid var(--accent-clr);
+  margin-bottom: 24px;
+  border: 3px solid #667eea;
   box-shadow: 0 8px 25px rgba(102, 126, 234, 0.2);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+`;
 
-  ${TestimonialsCard}:hover & {
-    transform: scale(1.1);
-    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
-  }
+export const TestimonialText = styled.p`
+  font-size: 18px;
+  line-height: 1.7;
+  color: #4a5568;
+  margin-bottom: 24px;
+  font-style: italic;
+  position: relative;
+  z-index: 2;
+`;
 
-  @media screen and (max-width: 768px) {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 16px;
-  }
+export const TestimonialAuthor = styled.h3`
+  font-size: 20px;
+  font-weight: 700;
+  color: #2d3748;
+  margin: 0 0 8px 0;
+  position: relative;
+  z-index: 2;
+`;
+
+export const TestimonialRole = styled.p`
+  font-size: 16px;
+  color: #718096;
+  margin: 0;
+  position: relative;
+  z-index: 2;
 `;
 
 export const TestimonialsH1 = styled.h1`
+  font-size: 3.5rem;
+  color: #2d3748;
   margin-bottom: 80px;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.1;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
   text-align: center;
   position: relative;
-  z-index: 2;
+  display: inline-block;
   
-  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
   &::after {
     content: '';
     position: absolute;
-    bottom: -16px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 80px;
     height: 4px;
-    background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
     border-radius: 2px;
   }
 
   @media screen and (max-width: 768px) {
+    font-size: 2.5rem;
     margin-bottom: 60px;
   }
 `;
 
-export const TestimonialsH2 = styled.h2`
-  font-size: 1.3rem;
-  font-weight: 700;
-  margin-bottom: 12px;
-  color: var(--text-clr);
-  font-family: "Poppins", sans-serif;
-
-  @media screen and (max-width: 768px) {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-`;
-
-export const TestimonialsP = styled.p`
-  font-size: 1rem;
+export const SectionSubtitle = styled.p`
+  font-size: 1.25rem;
+  color: #718096;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
   line-height: 1.6;
-  color: var(--text-clr);
-  opacity: 0.8;
-  flex-grow: 1;
+  position: relative;
+  z-index: 2;
 
   @media screen and (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
   }
 `;

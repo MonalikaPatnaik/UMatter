@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.footer`
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 100%);
-  padding: 80px 0 40px 0;
+  padding: 40px 0 20px 0;
   position: relative;
   overflow: hidden;
   
@@ -37,24 +37,23 @@ export const FooterLinksContainer = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
+    margin-bottom: 20px;
   }
 `;
 
 export const FooterLinksWrapper = styled.div`
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 60px;
-  width: 100%;
-  max-width: 800px;
+  gap: 30px;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
-    gap: 40px;
+    gap: 20px;
     text-align: center;
   }
 `;
@@ -64,19 +63,26 @@ export const FooterLinkItems = styled.div`
   flex-direction: column;
   align-items: flex-start;
   color: #fff;
+  margin: 0 10px;
+  text-align: left;
+  box-sizing: border-box;
 
   &.socials {
     flex-direction: row;
     justify-content: center;
     gap: 20px;
-    margin-top: 40px;
+    margin-top: 20px;
   }
 
   @media (max-width: 768px) {
     align-items: center;
-    
+    margin: 0;
+    padding: 10px;
+    width: 100%;
+    text-align: center;
+
     &.socials {
-      margin-top: 20px;
+      margin-top: 10px;
     }
   }
 `;
@@ -84,7 +90,7 @@ export const FooterLinkItems = styled.div`
 export const FooterLinkTitle = styled.h1`
   font-size: 1.5rem;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   font-family: "Poppins", sans-serif;
   position: relative;
   cursor: pointer;
@@ -130,7 +136,7 @@ export const FooterLinkTitleHr = styled.hr`
 export const FooterLink = styled(Link)`
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
   font-size: 1rem;
   font-weight: 400;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -230,7 +236,7 @@ export const SocialLogo = styled(Link)`
   font-size: 2rem;
   font-weight: 800;
   font-family: "Poppins", sans-serif;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -248,7 +254,7 @@ export const WebsiteRights = styled.small`
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.9rem;
   text-align: center;
-  margin-top: 20px;
+  margin-top: 10px;
 `;
 
 export const SocialIcons = styled.div``;

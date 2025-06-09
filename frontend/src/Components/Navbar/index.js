@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { auth } from "../../firebase-config";
-import {
-  FaBars,
-  FaRegWindowClose,
-} from "react-icons/fa";
+import { FaBars, FaTimes } from "react-icons/fa";
 import DarkMode from "../DarkMode/DarkMode";
 import { useNavigate } from "react-router-dom";
+import { smoothScrollTo, handleSmoothScroll } from "../../utils/smoothScroll";
 import {
   Nav,
   NavbarContainer,
@@ -23,149 +21,124 @@ import {
 import manifest from "../../../src/assests/manifest.json";
 
 const faviconSrc = manifest.icons[0].src;
-// const glassStyle = {
-//   background: "rgba(40, 30, 30, 0.3)",
-//   // borderRadius: "16px",
-//   boxShadow: "0 4px 30px rgba(0, 0, 0, 0.1)",
-//   backdropFilter: "blur(7.1px)",
-//   WebkitBackdropFilter: "blur(7.1px)",
-//   border: "1px solid rgba(40, 30, 30, 0.18)",
-// };
+
 const Navbar = ({ toggle }) => {
   const [isOpen, setIsOpen] = useState(false);
-  // const [navbarBg, setNavbarBg] = useState(glassStyle);
   const [user, setUser] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Add an observer to check for user authentication state changes
     const unsubscribe = auth.onAuthStateChanged((user) => {
       setUser(user);
     });
-
-    // Clean up the observer on component unmount
     return () => unsubscribe();
   }, []);
+
+  // Handle initial scroll if there's a hash in the URL
   useEffect(() => {
-    const handleScroll = () => {
-      const scrolled = window.scrollY;
-      // setNavbarBg(
-      //   scrolled > 0 ? { backgroundColor: "var(--bg-clr)" } : glassStyle
-      // );
+    const handleInitialScroll = () => {
+      if (window.location.hash) {
+        const id = window.location.hash.substring(1);
+        setTimeout(() => {
+          smoothScrollTo(id, 80, 1000);
+        }, 100);
+      }
     };
 
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    // Wait for the page to fully load before scrolling
+    window.addEventListener('load', handleInitialScroll);
+    return () => window.removeEventListener('load', handleInitialScroll);
   }, []);
 
-  const navigate = useNavigate();
-
-  const handleBlogsClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/blogs");
-  };
-  const handleFeedbackClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/feedback");
-  };
-
-  const handleHomeClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/");
-  };
-
-  const handleAboutClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/");
+  const handleNavClick = (e, sectionId) => {
+    e.preventDefault();
+    setIsOpen(false);
+    
+    if (window.location.pathname !== '/') {
+      // If not on home page, navigate first then scroll
+      navigate('/', { replace: true });
+      setTimeout(() => {
+        smoothScrollTo(sectionId, 80, 1000);
+      }, 100);
+    } else {
+      // If already on home page, just scroll
+      smoothScrollTo(sectionId, 80, 1000);
+    }
   };
 
-  const handleServicesClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/");
-  };
-
-  const handleTestimonialsClick = () => {
-    setIsOpen(false); // Close the navbar
-    navigate("/");
-  };
-
-  // const handleTeamClick = () => {
-  //   setIsOpen(false); // Close the navbar
-  //   navigate("/team");
-  // };
-
-  // Function to handle navbar toggle
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
+  const handlePageNavigation = (e, path) => {
+    e.preventDefault();
+    setIsOpen(false);
+    navigate(path);
   };
 
   return (
-    <Nav>
+    <Nav isOpen={isOpen}>
       <NavbarContainer>
-        <LogoContainer>
+        <LogoContainer to="/" onClick={() => window.scrollTo(0, 0)}>
           <LogoinnerContainer>
-            <img src={faviconSrc} alt="favicon" width="46" height="46" />
-            <NavLogo to="/">UMatter</NavLogo>
+            <img src={faviconSrc} alt="Logo" style={{ height: '40px' }} />
           </LogoinnerContainer>
-          <MobileIcon onClick={handleToggle}>
-            {isOpen ? <FaRegWindowClose /> : <FaBars />}
-          </MobileIcon>
+          <NavLogo>UMatter</NavLogo>
         </LogoContainer>
+
+        <MobileIcon onClick={toggle}>
+          {isOpen ? <FaTimes /> : <FaBars />}
+        </MobileIcon>
+
         <NavMenu isOpen={isOpen}>
           <Navitem>
-            <NavLinks to="home" onClick={handleHomeClick}>
+            <NavLinks 
+              to="/" 
+              onClick={(e) => handleNavClick(e, 'home')}
+            >
               Home
             </NavLinks>
           </Navitem>
           <Navitem>
-            <NavLinks to="about" onClick={handleAboutClick}>
+            <NavLinks 
+              to="/#about" 
+              onClick={(e) => handleNavClick(e, 'about')}
+            >
               About
             </NavLinks>
           </Navitem>
           <Navitem>
-            <NavLinks to="services" onClick={handleServicesClick}>
+            <NavLinks 
+              to="/#services" 
+              onClick={(e) => handleNavClick(e, 'services')}
+            >
               Services
             </NavLinks>
           </Navitem>
           <Navitem>
-            <NavLinks to="testimonials" onClick={handleTestimonialsClick}>
+            <NavLinks 
+              to="/#testimonials" 
+              onClick={(e) => handleNavClick(e, 'testimonials')}
+            >
               Testimonials
             </NavLinks>
           </Navitem>
           <Navitem>
-            <NavLinks to="#" onClick={handleBlogsClick}>
-              Blogs{" "}
+            <NavLinks 
+              to="/blogs" 
+              onClick={(e) => handlePageNavigation(e, '/blogs')}
+            >
+              Blogs
             </NavLinks>
           </Navitem>
-          <Navitem>
-            <NavLinks to="#" onClick={handleFeedbackClick}>
-              Feedback{" "}
-            </NavLinks>
-          </Navitem>
-          {/* <Navitem>
-            <NavLinks to="#" onClick={handleTeamClick}>
-              Team{" "}
-            </NavLinks>
-          </Navitem> */}
-
-          <NavBtnMobile>
-            <NavBtnLink onClick={handleToggle} to="/signup">
-              Register
-            </NavBtnLink>
-          </NavBtnMobile>
         </NavMenu>
+
+
         <NavBtn>
-      {user ? (
-        // Display user profile/account button when authenticated
-        <NavBtnLink to="/user-profile">Account</NavBtnLink>
-      ) : (
-        // Display register button when not authenticated
-        <NavBtnLink to="/signup">Register</NavBtnLink>
-      )}
-      <DarkMode toggle={toggle} />
-    </NavBtn>
+          <DarkMode />
+          {user ? (
+            <NavBtnLink to="/dashboard">Dashboard</NavBtnLink>
+          ) : (
+            <NavBtnLink to="/signin">Sign In</NavBtnLink>
+          )}
+        </NavBtn>
+
       </NavbarContainer>
     </Nav>
   );

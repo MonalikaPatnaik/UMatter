@@ -7,7 +7,7 @@ export const ServicesContainer = motion(styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--bg-clr);
+  background: linear-gradient(135deg, #f0f4ff 0%, #f8f9ff 100%);
   position: relative;
   overflow: hidden;
 
@@ -19,8 +19,8 @@ export const ServicesContainer = motion(styled.div`
     right: 0;
     bottom: 0;
     background: 
-      radial-gradient(circle at 20% 20%, rgba(102, 126, 234, 0.05) 0%, transparent 50%),
-      radial-gradient(circle at 80% 80%, rgba(118, 75, 162, 0.05) 0%, transparent 50%);
+      radial-gradient(circle at 20% 30%, rgba(102, 126, 234, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 80% 70%, rgba(118, 75, 162, 0.08) 0%, transparent 50%);
     z-index: 1;
   }
 
@@ -30,10 +30,10 @@ export const ServicesContainer = motion(styled.div`
 `);
 
 export const ServicesWrapper = styled.div`
-  max-width: 1200px;
+  max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 40px;
   padding: 0 20px;
   position: relative;
@@ -46,13 +46,66 @@ export const ServicesWrapper = styled.div`
   }
 `;
 
+export const ServicesIcon = styled.div`
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 28px;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e6ebff 100%);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.15);
+  
+  img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+  }
+  
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    padding: 3px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0.3;
+    transition: all 0.3s ease;
+  }
+  
+  &:hover {
+    transform: scale(1.1);
+    
+    &::after {
+      opacity: 1;
+      padding: 4px;
+    }
+    
+    img {
+      transform: scale(1.1);
+    }
+  }
+`;
+
+export const ServicesH2 = styled.h2`
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 16px;
+  transition: color 0.3s ease;
+`;
+
 export const ServicesCard = styled.div`
-  background: var(--glass-bg);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid var(--glass-border);
+  background: white;
   border-radius: 24px;
-  padding: 40px 32px;
+  padding: 48px 32px;
   text-align: center;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
@@ -62,126 +115,88 @@ export const ServicesCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
     opacity: 0;
-    transition: opacity 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    z-index: -1;
-  }
-
-  &:hover::before {
-    opacity: 0.05;
+    transition: opacity 0.3s ease;
   }
 
   &:hover {
-    transform: translateY(-12px) scale(1.02);
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.2);
-    border-color: var(--accent-clr);
-  }
-
-  @media screen and (max-width: 768px) {
-    padding: 32px 24px;
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(102, 126, 234, 0.15);
+    border-color: rgba(102, 126, 234, 0.2);
     
-    &:hover {
-      transform: translateY(-8px) scale(1.01);
+    &::before {
+      opacity: 1;
+    }
+    
+    ${ServicesIcon} {
+      transform: translateY(-5px) scale(1.05);
+      box-shadow: 0 15px 40px rgba(102, 126, 234, 0.3);
+    }
+    
+    ${ServicesH2} {
+      color: #4a5568;
     }
   }
 `;
 
-export const ServicesIcon = styled.img`
-  width: 120px;
-  height: 120px;
-  margin-bottom: 24px;
-  border-radius: 20px;
-  object-fit: cover;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-  
-  ${ServicesCard}:hover & {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-  }
-
-  @media screen and (max-width: 768px) {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 20px;
-  }
-`;
-
 export const ServicesH1 = styled.h1`
-  margin-bottom: 80px;
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  line-height: 1.1;
-  font-weight: 800;
-  font-family: "Poppins", sans-serif;
+  font-size: 3.5rem;
+  color: #2d3748;
+  margin-bottom: 20px;
   text-align: center;
   position: relative;
-  z-index: 2;
+  display: inline-block;
   
-  background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-
   &::after {
     content: '';
     position: absolute;
-    bottom: -16px;
+    bottom: -15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100px;
+    width: 80px;
     height: 4px;
-    background: linear-gradient(135deg, var(--accent-clr) 0%, var(--secondary-clr) 100%);
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
     border-radius: 2px;
   }
 
   @media screen and (max-width: 768px) {
-    margin-bottom: 60px;
-  }
-`;
-
-export const ServicesH2 = styled.h2`
-  font-size: 1.5rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--text-clr);
-  font-family: "Poppins", sans-serif;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  
-  ${ServicesCard}:hover & {
-    color: var(--accent-clr);
-  }
-
-  @media screen and (max-width: 768px) {
-    font-size: 1.3rem;
-    margin-bottom: 12px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
   }
 `;
 
 export const ServicesP = styled.p`
-  font-size: 1rem;
-  line-height: 1.6;
-  color: var(--text-clr);
-  opacity: 0.8;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #4a5568;
+  margin: 0;
   flex-grow: 1;
-  
-  ${ServicesCard}:hover & {
-    opacity: 1;
-  }
+`;
+
+export const SectionSubtitle = styled.p`
+  font-size: 1.25rem;
+  color: #718096;
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px;
+  line-height: 1.6;
+  position: relative;
+  z-index: 2;
 
   @media screen and (max-width: 768px) {
-    font-size: 0.9rem;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    padding: 0 20px;
   }
 `;

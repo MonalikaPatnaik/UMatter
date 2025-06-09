@@ -120,3 +120,109 @@
     margin-top: 20px;
   }
 }
+
+/* Testimonial Swiper Styles */
+.testimonial-swiper {
+  width: 100%;
+  padding: 20px 0 60px;
+  position: relative;
+}
+
+/* Navigation Arrows */
+.testimonial-swiper .swiper-button-prev,
+.testimonial-swiper .swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  color: #667eea;
+  transition: all 0.3s ease;
+  opacity: 0.8;
+}
+
+.testimonial-swiper .swiper-button-prev:hover,
+.testimonial-swiper .swiper-button-next:hover {
+  background: #667eea;
+  color: white;
+  transform: scale(1.1);
+  opacity: 1;
+}
+
+.testimonial-swiper .swiper-button-prev {
+  left: -25px;
+}
+
+.testimonial-swiper .swiper-button-next {
+  right: -25px;
+}
+
+.testimonial-swiper .swiper-button-prev::after,
+.testimonial-swiper .swiper-button-next::after {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* Pagination */
+.testimonial-swiper .swiper-pagination {
+  bottom: 0;
+  padding-top: 20px;
+  position: relative;
+  margin-top: 20px;
+}
+
+.testimonial-swiper .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  background: rgba(102, 126, 234, 0.3);
+  opacity: 1;
+  margin: 0 6px;
+  transition: all 0.3s ease;
+}
+
+.testimonial-swiper .swiper-pagination-bullet-active {
+  background: #667eea;
+  transform: scale(1.2);
+  box-shadow: 0 0 10px rgba(102, 126, 234, 0.5);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .testimonial-swiper .swiper-button-prev {
+    left: 10px;
+  }
+  
+  .testimonial-swiper .swiper-button-next {
+    right: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonial-swiper .swiper-button-prev,
+  .testimonial-swiper .swiper-button-next {
+    display: none;
+  }
+  
+  .testimonial-swiper .swiper-pagination {
+    margin-top: 10px;
+  }
+}
+
+/* Card Hover Effects */
+.testimonial-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px 25px;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.testimonial-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+}

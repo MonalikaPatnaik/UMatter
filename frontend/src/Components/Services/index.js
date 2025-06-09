@@ -1,202 +1,110 @@
-import React, { useState } from 'react';
-import { Services_Data } from '../Services/Services_Data';
-import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
+import React, { useEffect, useRef } from 'react';
+import { Services_Data } from './Services_Data';
+import { 
+  ServicesContainer, 
+  ServicesH1, 
+  ServicesH2, 
+  ServicesWrapper, 
+  ServicesCard, 
+  ServicesIcon, 
+  ServicesP,
+  SectionSubtitle
+} from './ServicesElements';
 import Typed from "typed.js";
 import { motion } from "framer-motion";
-import {
-  cardOneVariants,
-  cardTwoVariants,
-  cardThreeVariants,
-  cardFourVariants,
-} from "./CardAnimation";
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
+// Animation variants for the service cards
+const container = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.1
+    }
+  }
+};
+
+const item = {
+  hidden: { opacity: 0, y: 20 },
+  show: { 
+    opacity: 1, 
+    y: 0,
+    transition: {
+      duration: 0.5
+    }
+  }
+};
 
 const Services = () => {
   const navigate = useNavigate();
-  const [showConsultWithDoctor, setShowConsultWithDoctor] = useState(false);
-  const [showworkshops, setShowworkshops] = useState(false);
+  const el = useRef(null);
 
-  const handleConsultWithDoctorClick = () => {
-    setShowConsultWithDoctor(true);
-  };
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Our Services"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      loop: true,
+      showCursor: false,
+    });
 
-  function handleNavigation(n){
-    navigate(Services_Data[n].href);
-  }
-  const handleworkshops = () => {
-    setShowworkshops(true);
+    return () => {
+      typed.destroy();
+    };
+  }, []);
+
+
+  const handleCardClick = (path) => {
+    if (path) {
+      if (path.startsWith('http')) {
+        window.open(path, '_blank');
+      } else {
+        navigate(path);
+      }
+    }
   };
 
   return (
-    <ServicesContainer id="services">
+    <ServicesContainer
+      id="services"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={container}
+    >
       <ServicesH1>
-        <span style={{ display: "inline-block" }}>Our services</span>
+        <span ref={el} style={{ display: "inline-block" }} />
       </ServicesH1>
+      
+      <SectionSubtitle>
+        We offer a comprehensive range of mental health services designed to support your 
+        well-being journey. Our expert team is here to help you every step of the way.
+      </SectionSubtitle>
 
       <ServicesWrapper>
-        <motion.div variants={cardOneVariants} initial="hidden" animate="visible">
-        <Link to="/consultwithdoctor" target="_blank"><div onClick={handleConsultWithDoctorClick}>
-            <ServicesCard>
-              <ServicesIcon src={Services_Data[0].icon} />
-              <ServicesH2>
-                <b>{Services_Data[0].title}</b>
-              </ServicesH2>
-              <ServicesP>{Services_Data[0].description}</ServicesP>
+        {Services_Data.map((service, index) => (
+          <motion.div 
+            key={service.id} 
+            variants={item}
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <ServicesCard 
+              onClick={() => handleCardClick(service.href)}
+              className={service.href ? 'clickable' : ''}
+            >
+              <ServicesIcon>
+                <img src={service.icon} alt={service.title} />
+              </ServicesIcon>
+              <ServicesH2>{service.title}</ServicesH2>
+              <ServicesP>{service.description}</ServicesP>
             </ServicesCard>
-          </div>
-          </Link>
-        </motion.div>
-
-        <motion.div variants={cardTwoVariants} initial="hidden" animate="visible">
-        <Link to="/workshops" target="_blank"><div onClick={handleworkshops}></div>
-          <ServicesCard>
-            <ServicesIcon src={Services_Data[1].icon} />
-            <ServicesH2>
-              <b>{Services_Data[1].title}</b>
-            </ServicesH2>
-            <ServicesP>{Services_Data[1].description}</ServicesP>
-          </ServicesCard>
-          </Link>
-        </motion.div>
-
-        <motion.div variants={cardThreeVariants} initial="hidden" animate="visible"  >
-          <ServicesCard >
-            <ServicesIcon src={Services_Data[2].icon} />
-            <ServicesH2>
-              <b>{Services_Data[2].title}</b>
-            </ServicesH2>
-            <ServicesP>{Services_Data[2].description}</ServicesP>
-          </ServicesCard>
-        </motion.div>
-
-        <motion.div variants={cardFourVariants} initial="hidden" animate="visible">
-        <Link to={Services_Data[3].href}>
-          <ServicesCard>
-            <ServicesIcon src={Services_Data[3].icon} />
-            <ServicesH2>
-              <b>{Services_Data[3].title}</b>
-            </ServicesH2>
-            <ServicesP>{Services_Data[3].description}</ServicesP>
-          </ServicesCard>
-        </Link>
-        </motion.div>
+          </motion.div>
+        ))}
       </ServicesWrapper>
-
     </ServicesContainer>
   );
 };
 
 export default Services;
-
-
-// import React from 'react';
-// import Icon1 from '../../images/image1.webp';
-// import Icon2 from '../../images/image2.webp';
-// import Icon3 from '../../images/image3.webp';
-// import Icon4 from '../../images/image4.webp';
-// import DarkMode from "../DarkMode/DarkMode";
-// import { ServicesContainer, ServicesH1, ServicesH2, ServicesWrapper, ServicesCard, ServicesIcon, ServicesP } from './ServicesElements';
-
-// import { useEffect, useRef } from "react";
-// import Typed from "typed.js";
-// import { color, motion } from "framer-motion";
-// import { cardOneVariants, cardTwoVariants, cardThreeVariants, cardFourVariants } from "./CardAnimation";
-
-// const Services = () => {
-//   const el = useRef(null);
-
-//   useEffect(() => {
-//     const typed = new Typed(el.current, {
-//       strings: ["Our services"],
-//       typeSpeed: 50,
-//       backSpeed: 50,
-//       loop: true,
-//       showCursor: false,
-//     });
-
-//     return () => {
-//       typed.destroy();
-//     };
-//   }, []);
-
-//   return (
-    
-//     <ServicesContainer id="services">
-//       <ServicesH1>
-//         <span ref={el} style={{ display: "inline-block" }} />
-//       </ServicesH1>
-
-//       <ServicesWrapper>
-//         <motion.div
-//           variants={cardOneVariants}
-//           initial="hidden"
-//           animate="visible"
-//         >
-//           <ServicesCard>
-            
-
-//             <ServicesIcon src={Icon1} />
-//             <ServicesH2>
-//               <b>Consult With Doctor</b>
-//             </ServicesH2>
-//             <ServicesP>
-//               Consult with professional doctors and therapists regarding your health.
-//             </ServicesP>
-//           </ServicesCard>
-          
-//         </motion.div>
-
-//         <motion.div
-//           variants={cardTwoVariants}
-//           initial="hidden"
-//           animate="visible"
-//         >
-//           <ServicesCard >
-//             <ServicesIcon src={Icon2} />
-//             <ServicesH2>
-//               <b>Attend workshops</b>
-//             </ServicesH2>
-//             <ServicesP>
-//               Book your slot now for amazing therapies and sessions that will make your life better.
-//             </ServicesP>
-//           </ServicesCard>
-//         </motion.div>
-
-//         <motion.div
-//           variants={cardThreeVariants}
-//           initial="hidden"
-//           animate="visible"
-//         >
-//           <ServicesCard>
-//             <ServicesIcon src={Icon3} />
-//             <ServicesH2>
-//               <b>Connect with Friends</b>
-//             </ServicesH2>
-//             <ServicesP>
-//               Be a part of the amazing community and connect with them
-//             </ServicesP>
-//           </ServicesCard>
-//         </motion.div>
-
-//         <motion.div
-//           variants={cardFourVariants}
-//           initial="hidden"
-//           animate="visible"
-//         >
-//           <ServicesCard>
-//             <ServicesIcon src={Icon4} />
-//             <ServicesH2>
-//               <b>Habit Tracker</b>
-//             </ServicesH2>
-//             <ServicesP>
-//               Boost your potential by tracking your habits
-//             </ServicesP>
-//           </ServicesCard>
-//         </motion.div>
-//       </ServicesWrapper>
-//     </ServicesContainer>
-//   );
-// };
-
-// export default Services;
